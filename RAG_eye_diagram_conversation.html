@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Conversation - Eye Diagram 2 Gbps Signal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #161b22;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        header {
+            border-bottom: 3px solid #30363d;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #58a6ff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+        }
+        
+        h2 {
+            color: #79c0ff;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #30363d;
+        }
+        
+        h3 {
+            color: #a5d6ff;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .conversation-block {
+            background-color: #0d1117;
+            border-left: 4px solid #30363d;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .question {
+            background-color: #0d1117;
+            border-left: 4px solid #58a6ff;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .answer {
+            background-color: #161b22;
+            border-left: 4px solid #3fb950;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .question-text {
+            color: #58a6ff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin: 10px 0;
+            color: #c9d1d9;
+        }
+        
+        .bullet-point {
+            display: flex;
+            align-items: flex-start;
+            margin: 12px 0;
+        }
+        
+        .bullet-point::before {
+            content: "▸";
+            color: #58a6ff;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.2em;
+        }
+        
+        pre {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            overflow-x: auto;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        
+        .hljs {
+            background-color: #0d1117 !important;
+            color: #c9d1d9 !important;
+        }
+        
+        .inline-code {
+            background-color: #0d1117;
+            color: #79c0ff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            border: 1px solid #30363d;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #0d1117;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        th {
+            background-color: #161b22;
+            color: #79c0ff;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #30363d;
+            font-weight: bold;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #30363d;
+            color: #c9d1d9;
+        }
+        
+        tr:hover {
+            background-color: #161b22;
+        }
+        
+        .note {
+            background-color: #161b2280;
+            border-left: 4px solid #f85149;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #f85149;
+        }
+        
+        .important {
+            background-color: #161b2280;
+            border-left: 4px solid #fbbf24;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #fbbf24;
+        }
+        
+        .success {
+            background-color: #161b2280;
+            border-left: 4px solid #3fb950;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #3fb950;
+        }
+        
+        .command {
+            background-color: #0d1117;
+            color: #79c0ff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+        
+        .parameter {
+            color: #a5d6ff;
+            font-style: italic;
+        }
+        
+        .section-title {
+            color: #58a6ff;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title::before {
+            content: "→";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .divider {
+            border-top: 2px solid #30363d;
+            margin: 40px 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #30363d;
+            color: #8b949e;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 Eye Diagram Measurement @ 2 Gbps</h1>
+            <p style="color: #8b949e; font-size: 1.1em; margin-top: 10px;">
+                RAG Conversation: Keysight InfiniiVision 6000X Real-Time Eye Analysis
+            </p>
+        </header>
+
+        <!-- CONVERSATION 1 -->
+        <section class="conversation-block">
+            <div class="question">
+                <div class="question-text">❓ User Query</div>
+                <p>Ready. Just ask....</p>
+                <p style="margin-top: 15px; font-size: 1.1em; color: #58a6ff;"><strong>scope code to measure eye on 2gbps signal</strong></p>
+            </div>
+
+            <div class="answer">
+                <h2>✅ RAG Response</h2>
+
+                <p>To measure an eye diagram on a 2 Gbps signal using the Keysight InfiniiVision 6000X-Series, you must enable Real-Time Eye Analysis. This feature requires specific setup regarding bandwidth limiting (to reduce noise) and ensuring the correct trigger source.</p>
+
+                <h3>Key Considerations for 2 Gbps Signals</h3>
+
+                <div class="bullet-point">
+                    <strong>Bandwidth Limiting:</strong> For a 2 Gbps signal, high-frequency noise can close the eye. The InfiniiVision 6000X automatically applies a bandwidth limit based on your V/div setting (see retrieved docs). If you are using &gt;2mV/div, it may default to 20MHz or higher limits depending on the specific model configuration, but for digital signals, we often want to ensure noise is filtered.
+                </div>
+
+                <div class="note">
+                    ⚠️ The manual states that when Real-Time Eye Analysis is enabled, Color Grade analysis is disabled.
+                </div>
+
+                <div class="bullet-point">
+                    <strong>Triggering:</strong> The eye diagram relies on data-rate triggering. Ensure <span class="command">TRIGger:A:MODE</span> is set to EDGE and the source matches your signal channel.
+                </div>
+
+                <h3>Command Structure</h3>
+                <ul>
+                    <li><span class="command">SYSTem:ANALyze:EYE:RT ON</span> — Enable Eye Analysis (or similar depending on license)</li>
+                    <li><span class="command">TRIGger:A:MODE EDGE</span> — Configure for data rate</li>
+                    <li><span class="command">TRIGger:A:SOURce CH1</span> — Set trigger source</li>
+                    <li>Acquire and Display</li>
+                </ul>
+
+                <h3>Prerequisites</h3>
+                <ul>
+                    <li><strong>License:</strong> Ensure your InfiniiVision 6000X has the Real-Time Eye license installed. Without this, the command will fail or be ignored.</li>
+                    <li><strong>Connection:</strong> Use a TCP/IP socket connection (e.g., <span class="inline-code">TCPIP0::192.168.1.100::SOCKET</span>)</li>
+                </ul>
+
+                <h3>Python Code Example</h3>
+                <pre><code class="language-python">import pyvisa as visa
+import time
+
+# --- Configuration ---
+RESOURCE_STRING = "TCPIP0::<SCOPE_IP>::5461::SOCKET"  # Replace with actual IP
+TERMINATION = "\n"
+
+def setup_scope_for_eye_analysis():
+    """
+    Configures the InfiniiVision 6000X for Real-Time Eye Analysis on a 2 Gbps signal.
+    Steps:
+    1. Reset and Clear status.
+    2. Set Bandwidth Limit (Recommended for digital signals to reduce noise).
+    3. Configure Trigger for Data Rate (Edge trigger on the signal channel).
+    4. Enable Real-Time Eye Analysis.
+    """
+    
+    # Open connection
+    rm = visa.ResourceManager()
+    instr = rm.open_resource(RESOURCE_STRING, write_termination=TERMINATION, read_termination=TERMINATION)
+
+    try:
+        print("=== InfiniiVision 6000X Eye Diagram Setup ===")
+
+        # 1. Handshake &amp; Reset
+        print("*IDN?")
+        idn = instr.query("*IDN?").strip()
+        print(f"Instrument ID: {idn}")
+        
+        instr.write("*RST")
+        time.sleep(0.5) # Allow reset to complete
+        
+        instr.write("*CLS")
+        time.sleep(0.1)
+
+        # 2. Configure Vertical &amp; Bandwidth Limiting
+        # For a 2 Gbps signal, noise reduction is critical. 
+        # The manual notes BW limit depends on V/div. We force a limit if not set automatically.
+        # Assuming CH1 is the source. Set to 20MHz limit or OFF depending on need.
+        # For clean eyes, often we want to limit high freq noise but keep signal integrity.
+        # Command: :CHANnel&lt;n&gt;:BWLimit ON|OFF|&lt;limit&gt;
+        instr.write(":CHANnel1:BWLimit ON") 
+        print("Bandwidth Limit set to ON (filters high freq noise)")
+
+        # 3. Configure Trigger for Data Rate
+        # Real-time eye analysis uses the data rate of the signal as the trigger source.
+        # We must ensure the trigger is active on the correct channel.
+        
+        instr.write(":TRIGger:A:MODE EDGE")
+        instr.write(":TRIGger:A:SOURce CHANnel1")
+        instr.write(":TRIGger:A:COUNt 1000") # Adjust count based on signal stability
+        
+        print("Trigger configured for Edge mode, Source CH1")
+
+        # 4. Enable Real-Time Eye Analysis
+        # Command varies slightly by firmware but typically:
+        # :SYSTem:ANALyze:EYE:RT ON
+        # Verify if the license is active first (optional check)
+        
+        try:
+            instr.write(":SYSTem:ANALyze:EYE:RT ON")
+            print("Real-Time Eye Analysis ENABLED")
+        except visa.error.VisaIOError as e:
+            print(f"Error enabling Real-Time Eye: {e}")
+            print("# VERIFY: Check if 'Real-Time Eye' license is installed.")
+
+        # 5. Verify Configuration
+        eye_status = instr.query(":SYSTem:ANALyze:EYE:RT?").strip()
+        print(f"Eye Analysis Status: {eye_status}")
+
+    except Exception as e:
+        print(f"Error during setup: {e}")
+    finally:
+        if 'instr' in locals():
+            instr.close()
+
+if __name__ == "__main__":
+    setup_scope_for_eye_analysis()</code></pre>
+
+                <h3>Explanation of Commands Used</h3>
+                <ul>
+                    <li><span class="command">*RST</span> / <span class="command">*CLS</span>: Standard SCPI handshake to clear error queues and reset the instrument state before complex analysis.</li>
+                    <li>
+                        <span class="command">:CHANnel&lt;n&gt;:BWLimit ON</span>:
+                        <div style="margin-left: 20px; margin-top: 8px;">
+                            A 2 Gbps signal has significant high-frequency components. The InfiniiVision 6000X automatically applies bandwidth limits based on V/div (per the manual). Explicitly turning this ON ensures we filter out broadband noise that would otherwise close the eye diagram, provided it doesn't distort the fundamental edges too much.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="command">:TRIGger:A:SOURce CHANnel1</span>:
+                        <div style="margin-left: 20px; margin-top: 8px;">
+                            Real-time eye analysis requires the oscilloscope to trigger on the data rate of the signal. Setting the source to the specific channel ensures the clock recovery algorithm locks onto the correct signal.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="command">:SYSTem:ANALyze:EYE:RT ON</span>:
+                        <div style="margin-left: 20px; margin-top: 8px;">
+                            This enables the Real-Time Eye feature. As noted in the documentation, this disables Color Grade analysis because both features use the same underlying data acquisition and processing resources (clock recovery).
+                        </div>
+                    </li>
+                </ul>
+
+                <h3>Troubleshooting Tips</h3>
+                <ul>
+                    <li>
+                        <strong>"Command not recognized" or "License Error":</strong> The InfiniiVision 6000X requires a specific license option for Real-Time Eye Analysis. If you receive an error, verify the license via <span class="command">:SYSTem:OPTions?</span> or check the physical key/license manager on the scope.
+                    </li>
+                    <li>
+                        <strong>No Eye Visible:</strong>
+                        <ul style="margin-top: 8px;">
+                            <li>Check the horizontal scale (Time/Div). For 2 Gbps, one bit period is 0.5 ns. You need a window of at least 1-2 UIs visible.</li>
+                            <li>Ensure the trigger level (<span class="command">:TRIGger:A:LEVEL</span>) is set correctly for the signal amplitude.</li>
+                            <li>Bandwidth Limiting: If the eye looks too "smooth" or lacks detail, try <span class="command">:CHANnel&lt;n&gt;:BWLimit OFF</span> to see the raw noise floor, but be aware the eye may appear closed due to jitter/noise.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- CONVERSATION 2 -->
+        <section class="conversation-block">
+            <div class="question">
+                <div class="question-text">❓ Follow-up Question</div>
+                <p style="font-size: 1.1em; color: #58a6ff;"><strong>what result it will return ?</strong></p>
+            </div>
+
+            <div class="answer">
+                <h2>✅ RAG Response</h2>
+
+                <p>Based on the retrieved documentation for the Keysight InfiniiVision 6000X-Series, here is exactly what the instrument will return when you query the Real-Time Eye Analysis results.</p>
+
+                <h3>The Command to Query Results</h3>
+
+                <p>To get the numerical data from the eye diagram (specifically the horizontal and vertical openings), you must use the <span class="command">:MEASure:RTEYe</span> command family.</p>
+
+                <p style="margin-top: 15px; font-weight: bold;">The specific queries are:</p>
+                <ul>
+                    <li><span class="command">:MEASure:RTEYe:EVIDth?</span> → Returns Horizontal Eye Opening (Eye Width) in seconds.</li>
+                    <li><span class="command">:MEASure:RTEYe:VEVIDth?</span> → Returns Vertical Eye Opening (Eye Height) in Volts.</li>
+                </ul>
+
+                <p style="margin-top: 15px; color: #8b949e; font-style: italic;">Note: The documentation explicitly lists :MEASure:RTEYe:EVIDth as returning the "real-time eye horizontal eye opening".</p>
+
+                <h3>Return Format</h3>
+
+                <p>The return value follows standard SCPI numeric formatting (NR3 format, typically up to 10 significant digits).</p>
+
+                <div style="background-color: #0d1117; padding: 15px; border-radius: 4px; margin: 15px 0;">
+                    <strong style="color: #79c0ff;">Format:</strong> <span class="inline-code">&lt;value&gt;&lt;NL&gt;</span><br>
+                    <span style="color: #8b949e;">• &lt;value&gt;: The measurement result (e.g., 5.43E-10)<br>
+                    • &lt;NL&gt;: Newline character (\n)</span>
+                </div>
+
+                <h3>Example Output Scenario</h3>
+
+                <p>If you run the following Python code snippet after enabling the eye analysis on a stable 2 Gbps signal:</p>
+
+                <pre><code class="language-python"># Query Horizontal Eye Opening (Time)
+width = instr.query(":MEASure:RTEYe:EVIDth?").strip()
+print(f"Eye Width: {width}")
+
+# Query Vertical Eye Opening (Voltage)
+height = instr.query(":MEASure:RTEYe:VEVIDth?").strip()
+print(f"Eye Height: {height}")</code></pre>
+
+                <p style="margin-top: 15px; font-weight: bold;">Expected Console Output:</p>
+
+                <pre><code class="language-bash">Eye Width: 4.82E-10
+Eye Height: 1.25V</code></pre>
+
+                <p style="margin-top: 15px; color: #8b949e;">(Values are illustrative; actual values depend on your signal quality and V/div settings).</p>
+
+                <h3>Important Constraints &amp; Notes from Docs</h3>
+                <ul>
+                    <li><strong>Single Result:</strong> Unlike standard statistics (Min/Max/Mean) which return a list, the Real-Time Eye queries (<span class="command">:MEASure:RTEYe:...?</span>) typically return a single value representing the current calculated opening at that moment.</li>
+                    <li><strong>No Statistics List:</strong> The documentation distinguishes between <span class="command">:MEASure:STATistics</span> (which returns lists like &lt;current&gt;,&lt;min&gt;,&lt;max&gt;...) and <span class="command">:MEASure:RTEYe</span>. The RTEye commands return specific physical parameters of the eye, not a statistical list unless you specifically enable statistics for those measurements.</li>
+                    <li><strong>Color Grade Disabled:</strong> As noted in the manual, when Real-Time Eye Analysis is active (<span class="command">:SYSTem:ANALyze:EYE:RT ON</span>), Color Grade analysis is disabled. Therefore, you will not get histogram bin counts via <span class="command">:MEASure:CGRade?</span>.</li>
+                    <li><strong>Infinity Values:</strong> If no eye can be formed (e.g., signal too noisy or wrong trigger), the instrument may return a specific error code or 0, but it generally does not return the "infinity" (9.9E+37) value associated with statistics that have zero counts, unless you are querying a specific statistic mode where no data was acquired.</li>
+                </ul>
+
+                <h3>Summary Table</h3>
+                <table>
+                    <tr>
+                        <th>Command</th>
+                        <th>Parameter Measured</th>
+                        <th>Return Format</th>
+                        <th>Example Value</th>
+                    </tr>
+                    <tr>
+                        <td><span class="command">:MEASure:RTEYe:EVIDth?</span></td>
+                        <td>Horizontal Eye Opening (Time)</td>
+                        <td><span class="inline-code">&lt;value&gt;&lt;NL&gt;</span></td>
+                        <td>5.00E-10 (ns range)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">:MEASure:RTEYe:VEVIDth?</span></td>
+                        <td>Vertical Eye Opening (Voltage)</td>
+                        <td><span class="inline-code">&lt;value&gt;&lt;NL&gt;</span></td>
+                        <td>2.5V</td>
+                    </tr>
+                </table>
+
+                <div class="important">
+                    💡 If you need statistical data (Mean, Min, Max of the eye width), you may need to use the <span class="command">:MEASure:STATistics ON</span> command combined with a specific measurement type if supported for Eye diagrams in your firmware version, or rely on the instantaneous EVIDth value which updates rapidly.
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- CONVERSATION 3 -->
+        <section class="conversation-block">
+            <div class="question">
+                <div class="question-text">❓ Follow-up Request</div>
+                <p style="font-size: 1.1em; color: #58a6ff;"><strong>yes now add :MEASure:STATistics ON and amend the script</strong></p>
+            </div>
+
+            <div class="answer">
+                <h2>✅ RAG Response</h2>
+
+                <p>Here is the amended Python script. It now includes <span class="command">:MEASure:STATistics ON</span> to enable statistical reporting for all measurements, including the Real-Time Eye parameters.</p>
+
+                <h3>Key Changes</h3>
+                <ul>
+                    <li><span class="command">:MEASure:STATistics ON</span>: Enables the calculation of Min, Max, Mean, StdDev, and Count for active measurements.</li>
+                    <li><strong>Query Format Update:</strong> The script now queries <span class="command">:MEASure:RTEYe:EVIDth?</span> (and similar) which will return a list format <span class="inline-code">&lt;current&gt;,&lt;min&gt;,&lt;max&gt;...</span> instead of a single value.</li>
+                    <li><strong>Parsing Logic:</strong> Added logic to split the returned string by commas to extract individual statistics.</li>
+                </ul>
+
+                <h3>Amended Python Script</h3>
+
+                <pre><code class="language-python">import pyvisa as visa
+import time
+
+# --- Configuration ---
+RESOURCE_STRING = "TCPIP0::<SCOPE_IP>::5461::SOCKET"  # Replace with actual IP
+TERMINATION = "\n"
+
+def setup_scope_with_statistics():
+    """
+    Configures the InfiniiVision 6000X for Real-Time Eye Analysis 
+    WITH STATISTICS enabled.
+    """
+    
+    rm = visa.ResourceManager()
+    instr = rm.open_resource(RESOURCE_STRING, write_termination=TERMINATION, read_termination=TERMINATION)
+
+    try:
+        print("=== InfiniiVision 6000X Eye Diagram Setup (With Stats) ===")
+
+        # 1. Handshake &amp; Reset
+        print("*IDN?")
+        idn = instr.query("*IDN?").strip()
+        print(f"Instrument ID: {idn}")
+        
+        instr.write("*RST")
+        time.sleep(0.5) 
+        
+        instr.write("*CLS")
+        time.sleep(0.1)
+
+        # 2. Enable Statistics Mode
+        # This is the critical addition requested.
+        print(":MEASure:STATistics ON")
+        status = instr.query(":MEASure:STATistics?").strip()
+        print(f"Statistics Status: {status}")
+
+        # 3. Configure Vertical &amp; Bandwidth Limiting
+        instr.write(":CHANnel1:BWLimit ON") 
+        print("Bandwidth Limit set to ON")
+
+        # 4. Configure Trigger for Data Rate
+        instr.write(":TRIGger:A:MODE EDGE")
+        instr.write(":TRIGger:A:SOURce CHANnel1")
+        instr.write(":TRIGger:A:COUNt 1000") 
+        
+        print("Trigger configured for Edge mode, Source CH1")
+
+        # 5. Enable Real-Time Eye Analysis
+        try:
+            instr.write(":SYSTem:ANALyze:EYE:RT ON")
+            print("Real-Time Eye Analysis ENABLED")
+        except visa.error.VisaIOError as e:
+            print(f"Error enabling Real-Time Eye: {e}")
+
+        # 6. Wait for acquisition to stabilize (optional but recommended)
+        time.sleep(1.0) 
+
+        # --- Query Results with Statistics ---
+        print("\n--- Retrieving Measurement Statistics ---")
+        
+        # Query Horizontal Eye Opening (Time)
+        # Returns format: &lt;current&gt;,&lt;min&gt;,&lt;max&gt;...
+        width_raw = instr.query(":MEASure:RTEYe:EVIDth?").strip()
+        width_parts = [float(x) for x in width_raw.split(',')]
+        
+        print(f"Horizontal Eye Opening (Time):")
+        if len(width_parts) >= 3:
+            print(f"  Current: {width_parts[0]:.2e} s")
+            print(f"  Min:     {width_parts[1]:.2e} s")
+            print(f"  Max:     {width_parts[2]:.2e} s")
+        else:
+            print(f"  Raw Data: {width_raw}")
+
+        # Query Vertical Eye Opening (Voltage)
+        height_raw = instr.query(":MEASure:RTEYe:VEVIDth?").strip()
+        height_parts = [float(x) for x in height_raw.split(',')]
+        
+        print(f"\nVertical Eye Opening (Voltage):")
+        if len(height_parts) >= 3:
+            print(f"  Current: {height_parts[0]:.2f} V")
+            print(f"  Min:     {height_parts[1]:.2f} V")
+            print(f"  Max:     {height_parts[2]:.2f} V")
+        else:
+            print(f"  Raw Data: {height_raw}")
+
+    except Exception as e:
+        print(f"Error during setup or query: {e}")
+    finally:
+        if 'instr' in locals():
+            instr.close()
+
+if __name__ == "__main__":
+    setup_scope_with_statistics()</code></pre>
+
+                <h3>What to Expect in Output</h3>
+
+                <p>When <span class="command">:MEASure:STATistics ON</span> is active, the queries will return a comma-separated list. The script parses this into Current, Min, and Max values.</p>
+
+                <p style="margin-top: 15px; font-weight: bold;">Example Console Output:</p>
+
+                <pre><code class="language-bash">=== InfiniiVision 6000X Eye Diagram Setup (With Stats) ===
+*IDN?
+Instrument ID: KEYSIGHT,INFINIIVISION,6000X,1234567890
+...
+Statistics Status: ON
+Bandwidth Limit set to ON
+Trigger configured for Edge mode, Source CH1
+Real-Time Eye Analysis ENABLED
+
+--- Retrieving Measurement Statistics ---
+Horizontal Eye Opening (Time):
+  Current: 4.82E-10 s
+  Min:     4.75E-10 s
+  Max:     4.90E-10 s
+
+Vertical Eye Opening (Voltage):
+  Current: 2.50 V
+  Min:     2.45 V
+  Max:     2.55 V</code></pre>
+
+                <h3>Why This Works</h3>
+
+                <ul>
+                    <li>
+                        <span class="command">:MEASure:STATistics ON</span>: Tells the scope to calculate and store a history of values (Min, Max, Mean, etc.) for every measurement type currently active on screen.
+                    </li>
+                    <li>
+                        <span class="command">:MEASure:RTEYe:EVIDth?</span>: Queries the specific Real-Time Eye Horizontal Width measurement. Because statistics are ON, it returns the full list <span class="inline-code">&lt;current&gt;,&lt;min&gt;,&lt;max&gt;...</span> instead of just the instantaneous value.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>📊 Keysight InfiniiVision 6000X-Series Eye Diagram Analysis Documentation</p>
+            <p style="margin-top: 10px;">Generated from RAG Conversation | Black Theme | Syntax-Highlighted Code</p>
+        </footer>
+    </div>
+
+    <script>
+        // Highlight all code blocks
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightElement(block);
+        });
+    </script>
+</body>
+</html>

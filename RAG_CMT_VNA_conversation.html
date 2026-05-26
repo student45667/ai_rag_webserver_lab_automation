@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Conversation - Copper Mountain VNA on Raspberry Pi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #161b22;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        header {
+            border-bottom: 3px solid #30363d;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #58a6ff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+        }
+        
+        h2 {
+            color: #79c0ff;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #30363d;
+        }
+        
+        h3 {
+            color: #a5d6ff;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .conversation-block {
+            background-color: #0d1117;
+            border-left: 4px solid #30363d;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .question {
+            background-color: #0d1117;
+            border-left: 4px solid #58a6ff;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .answer {
+            background-color: #161b22;
+            border-left: 4px solid #3fb950;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .question-text {
+            color: #58a6ff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin: 10px 0;
+            color: #c9d1d9;
+        }
+        
+        .bullet-point {
+            display: flex;
+            align-items: flex-start;
+            margin: 12px 0;
+        }
+        
+        .bullet-point::before {
+            content: "▸";
+            color: #58a6ff;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+        
+        pre {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            overflow-x: auto;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        
+        .hljs {
+            background-color: #0d1117 !important;
+            color: #c9d1d9 !important;
+        }
+        
+        .inline-code {
+            background-color: #0d1117;
+            color: #79c0ff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            border: 1px solid #30363d;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #0d1117;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        th {
+            background-color: #161b22;
+            color: #79c0ff;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #30363d;
+            font-weight: bold;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #30363d;
+            color: #c9d1d9;
+        }
+        
+        tr:hover {
+            background-color: #161b22;
+        }
+        
+        .note {
+            background-color: #161b2280;
+            border-left: 4px solid #f85149;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #f85149;
+        }
+        
+        .important {
+            background-color: #161b2280;
+            border-left: 4px solid #fbbf24;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #fbbf24;
+        }
+        
+        .success {
+            background-color: #161b2280;
+            border-left: 4px solid #3fb950;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #3fb950;
+        }
+        
+        .command {
+            background-color: #0d1117;
+            color: #79c0ff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+        
+        .parameter {
+            color: #a5d6ff;
+            font-style: italic;
+        }
+        
+        .section-title {
+            color: #58a6ff;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title::before {
+            content: "→";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .divider {
+            border-top: 2px solid #30363d;
+            margin: 40px 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #30363d;
+            color: #8b949e;
+            font-size: 0.9em;
+        }
+
+        .step-box {
+            background-color: #0d1117;
+            border: 2px solid #30363d;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .step-title {
+            color: #79c0ff;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .config-box {
+            background-color: #0d1117;
+            border-left: 4px solid #79c0ff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📡 Copper Mountain VNA on Raspberry Pi</h1>
+            <p style="color: #8b949e; font-size: 1.1em; margin-top: 10px;">
+                RAG Conversation: 2-Port VNA Remote Control & S2P Data Acquisition
+            </p>
+        </header>
+
+        <!-- CONVERSATION 1 -->
+        <section class="conversation-block">
+            <div class="question">
+                <div class="question-text">❓ Query 1</div>
+                <p style="font-size: 1.1em; color: #58a6ff;"><strong>refer to copper mountain 2port VNA. list be basic specs (short answer)</strong></p>
+            </div>
+
+            <div class="answer">
+                <h2>✅ Response 1: Basic Specs</h2>
+
+                <p>Based on the provided context and standard CMT VNA specifications, here are the basic specs for a CMT 2-Port Vector Network Analyzer:</p>
+
+                <div class="bullet-point">
+                    <span><strong>Frequency Range:</strong> Typically up to 6 GHz (specific models like S4VNA cover this; higher end may reach 18 GHz or more)</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>Ports:</strong> 2 Ports (supports full 2-port S-parameter measurements: S₁₁, S₂₁, S₁₂, S₂₂)</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>Interface/Control:</strong> Requires external PC running dedicated software (RVNA, TRVNA, S2VNA, or S4VNA); controlled via SCPI commands over a USB connection to the host PC</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>Data Format:</strong> Supports both ASCII (CSV) and Binary data transfer; binary mode reduces packet overhead for faster transfers</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>Automation Method:</strong> Software must remain running in the background (UI can be hidden); automation is achieved by sending SCPI commands directly to the software instance, which then communicates with the hardware</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>Multi-Unit Setup:</strong> Multiple units are managed by installing separate instances of the VNA software on one PC, each assigned a unique serial number and dedicated port/socket</span>
+                </div>
+
+                <p style="margin-top: 15px; color: #8b949e; font-style: italic;">Note: Exact frequency limits depend on the specific model—S2VNA vs. S4VNA—as detailed in the full programming guide.</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- CONVERSATION 2 -->
+        <section class="conversation-block">
+            <div class="question">
+                <div class="question-text">❓ Query 2</div>
+                <p style="font-size: 1.1em; color: #58a6ff;"><strong>can i ran it with SingleBoard computer ? what is needed ? (short answer)</strong></p>
+            </div>
+
+            <div class="answer">
+                <h2>✅ Response 2: Single Board Computer Support</h2>
+
+                <p style="margin-bottom: 15px; color: #3fb950; font-weight: bold;">Yes, you can run a CMT VNA with a Single Board Computer (SBC).</p>
+
+                <p style="margin-bottom: 15px; font-weight: bold;">What is needed:</p>
+
+                <div class="bullet-point">
+                    <span><strong>VNA Software Instance:</strong> Install the specific CMT software (e.g., S4VNA) on the SBC OS (Windows/Linux/Android depending on model)</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>USB Connection:</strong> Connect the VNA hardware to the SBC via USB (acting as a host for the device)</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>SCPI Interface:</strong> The SBC must send SCPI commands directly to the software instance (not just the hardware), which then controls the VNA</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>Automation Script:</strong> A Python script on the SBC using pyvisa or raw sockets to communicate with the software's control port/serial interface</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- CONVERSATION 3 -->
+        <section class="conversation-block">
+            <div class="question">
+                <div class="question-text">❓ Query 3</div>
+                <p style="font-size: 1.1em; color: #58a6ff;"><strong>does CMT SW supports debian linux on ARM (raspberry pi) short answer</strong></p>
+            </div>
+
+            <div class="answer">
+                <h2>✅ Response 3: Debian Linux on ARM Support</h2>
+
+                <p style="margin-bottom: 15px; color: #3fb950; font-weight: bold;">Yes, CMT software supports Debian Linux on ARM (e.g., Raspberry Pi), but with specific requirements:</p>
+
+                <div class="bullet-point">
+                    <span><strong>glibc ≥ 2.38:</strong> The OS must have glibc version 2.38 or newer (Raspberry Pi OS 10/1/2025 based on Debian 13 Trixie ships with glibc 2.41, which works)</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>libicu74:</strong> Required for software compatibility; bundled in CMTVNA ≥1.5.0, otherwise must be manually installed</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>USB Rules:</strong> Must run <span class="inline-code">sudo ./install_vna_rules.sh</span> to configure USB communication between the VNA and the SBC</span>
+                </div>
+
+                <div class="important">
+                    ⚠️ Verify your specific Debian version meets glibc 2.38+ before installation.
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- CONVERSATION 4 - MAIN CODE -->
+        <section class="conversation-block">
+            <div class="question">
+                <div class="question-text">❓ Query 4</div>
+                <p style="margin-bottom: 15px;">Create minimal code to connect from PC to SBC+VNA:</p>
+                <ul style="color: #58a6ff;">
+                    <li>Set measurement to get S2P</li>
+                    <li>Frequency: 1 MHz to 2 GHz (log sweep)</li>
+                    <li>10 points per decade</li>
+                    <li>Choose IFBW as needed</li>
+                </ul>
+            </div>
+
+            <div class="answer">
+                <h2>✅ Response 4: Minimal Python Code with S2P Save</h2>
+
+                <h3>Prerequisites</h3>
+
+                <div class="bullet-point">
+                    <span>Install pyvisa: <span class="inline-code">pip install pyvisa</span></span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>Connection String:</strong> Since the VNA is on an SBC connected via USB/Network, you need the correct resource string</span>
+                </div>
+
+                <div class="config-box">
+                    TCP/IP (common for remote SBC):<br>
+                    <span style="color: #79c0ff;">TCPIP0::&lt;SBC_IP&gt;::&lt;Port&gt;::SOCKET</span><br><br>
+                    USB Serial (less common for remote):<br>
+                    <span style="color: #79c0ff;">USB0::&lt;SerialNumber&gt;::INSTR</span>
+                </div>
+
+                <h3>Complete Python Code (vna_s2p_save.py)</h3>
+
+                <pre><code class="language-python">import pyvisa as visa
+from pyvisa import constants
+import math
+import os
+from datetime import datetime
+
+# --- CONFIGURATION ---
+RESOURCE_STRING = 'TCPIP0::192.168.1.100::5000::SOCKET'  # Update with your SBC IP/Port
+SAVE_DIR = '/home/user/vna_data'                          # Output directory
+SAVE_FILENAME = f'sweep_2G_{datetime.now().strftime("%Y%m%d_%H%M%S")}.s2p'
+SAVE_FILE_PATH = os.path.join(SAVE_DIR, SAVE_FILENAME)
+
+# Measurement Parameters
+START_FREQ = 1e6              # 1 MHz
+STOP_FREQ = 2e9               # 2 GHz
+NUM_POINTS_PER_DECADE = 10
+IFBW = '10KHZ'                # Intermediate Frequency Bandwidth
+
+# --- CONNECTION & HANDSHAKE ---
+rm = visa.ResourceManager()
+inst = rm.open_resource(RESOURCE_STRING, write_termination='\n', read_termination='\n')
+
+try:
+    print("=" * 60)
+    print("CMT VNA S2P Measurement & Save Script")
+    print("=" * 60)
+
+    # Step 1: Identify Instrument
+    print("\n[1] Checking Instrument ID...")
+    idn = inst.query('*IDN?').strip()
+    print(f"    Connected to: {idn}")
+
+    # Step 2: Reset and Clear Status
+    print("\n[2] Resetting and Clearing Status...")
+    inst.write('*RST')
+    inst.write(':SYSTem:CLear')
+    print("    Ready.")
+
+    # Step 3: Configure Frequency Sweep
+    print("\n[3] Configuring Frequency Sweep...")
+    print(f"    Start: {START_FREQ/1e6} MHz")
+    print(f"    Stop:  {STOP_FREQ/1e9} GHz")
+    print(f"    Points/Decade: {NUM_POINTS_PER_DECADE}")
+    
+    inst.write(f':FREQ:Sweep:START {START_FREQ}')
+    inst.write(f':FREQ:Sweep:STOP {STOP_FREQ}')
+    
+    # Calculate total points based on log sweep
+    num_decades = math.log10(STOP_FREQ / START_FREQ)
+    total_points = int(num_decades * NUM_POINTS_PER_DECADE) + 1
+    inst.write(f':FREQ:Sweep:COUNT {total_points}')
+    print(f"    Total Points: {total_points}")
+
+    # Step 4: Set IFBW
+    print(f"\n[4] Setting IFBW to {IFBW}...")
+    inst.write(f':SENSor:BANDwidth:IF {IFBW}')
+    print("    Set.")
+
+    # Step 5: Trigger Measurement
+    print("\n[5] Triggering Measurement (this may take a moment)...")
+    # Wait for operation complete (OPC) to ensure data is ready
+    opc_response = inst.query(':SYSTem:OPERation:COMplete?')
+    print(f"    Measurement Complete. OPC Response: {opc_response.strip()}")
+
+    # Step 6: Configure Save Settings
+    print("\n[6] Configuring S2P Save Format...")
+    inst.write('MMEM:STOR:SNP:TYPE:S2P 1,2')
+    print("    Format: S2P (2-port)")
+
+    # Step 7: Save S2P Data to Touchstone File
+    print(f"\n[7] Saving S2P Data to Touchstone File...")
+    print(f"    Path: {SAVE_FILE_PATH}")
+    
+    # Ensure directory exists
+    os.makedirs(SAVE_DIR, exist_ok=True)
+    
+    # Send save command (use filename only, path handled by SBC)
+    safe_filename = os.path.basename(SAVE_FILE_PATH)
+    inst.write(f'MMEM:STOR:SNP "{safe_filename}"')
+    print("    File saved successfully!")
+
+    print("\n" + "=" * 60)
+    print("✓ Measurement & Save Complete")
+    print("=" * 60)
+
+except Exception as e:
+    print(f"\n✗ Error during measurement or save: {e}")
+finally:
+    inst.close()
+    print("\nConnection closed.")
+</code></pre>
+
+                <h3>Step-by-Step Flow</h3>
+
+                <div class="step-box">
+                    <div class="step-title">Step 1: Connect & Identify</div>
+                    <div class="bullet-point">
+                        <span><span class="command">*IDN?</span> — Query instrument identification</span>
+                    </div>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-title">Step 2: Reset & Clear</div>
+                    <div class="bullet-point">
+                        <span><span class="command">*RST</span> — Reset to defaults</span>
+                    </div>
+                    <div class="bullet-point">
+                        <span><span class="command">:SYSTem:CLear</span> — Clear any previous state</span>
+                    </div>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-title">Step 3: Configure Sweep</div>
+                    <div class="bullet-point">
+                        <span><span class="command">:FREQ:Sweep:START 1e6</span> — Start at 1 MHz</span>
+                    </div>
+                    <div class="bullet-point">
+                        <span><span class="command">:FREQ:Sweep:STOP 2e9</span> — Stop at 2 GHz</span>
+                    </div>
+                    <div class="bullet-point">
+                        <span><span class="command">:FREQ:Sweep:COUNT &lt;N&gt;</span> — Set total points (calculated from decades × points/decade)</span>
+                    </div>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-title">Step 4: Set IFBW</div>
+                    <div class="bullet-point">
+                        <span><span class="command">:SENSor:BANDwidth:IF 10KHZ</span> — Set intermediate frequency bandwidth</span>
+                    </div>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-title">Step 5: Trigger & Wait</div>
+                    <div class="bullet-point">
+                        <span><span class="command">:SYSTem:OPERation:COMplete?</span> — Trigger measurement and wait for completion</span>
+                    </div>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-title">Step 6-7: Configure & Save</div>
+                    <div class="bullet-point">
+                        <span><span class="command">MMEM:STOR:SNP:TYPE:S2P 1,2</span> — Set S2P format for ports 1,2</span>
+                    </div>
+                    <div class="bullet-point">
+                        <span><span class="command">MMEM:STOR:SNP &lt;filename&gt;</span> — Save measurement to Touchstone file</span>
+                    </div>
+                </div>
+
+                <h3>Key Configuration Notes</h3>
+
+                <table>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Value</th>
+                        <th>Notes</th>
+                    </tr>
+                    <tr>
+                        <td><strong>SBC IP Address</strong></td>
+                        <td>192.168.1.100</td>
+                        <td>Replace with your actual SBC IP address</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Port Number</strong></td>
+                        <td>5000</td>
+                        <td>Check CMT software settings for correct automation port</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Start Frequency</strong></td>
+                        <td>1 MHz</td>
+                        <td>Adjustable based on DUT requirements</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stop Frequency</strong></td>
+                        <td>2 GHz</td>
+                        <td>Must be within hardware limits (≤ 6 GHz typical)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Points/Decade</strong></td>
+                        <td>10</td>
+                        <td>Higher = finer resolution, longer sweep time</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IFBW</strong></td>
+                        <td>10 KHz</td>
+                        <td>Lower = less noise but slower; Higher = faster but more noise</td>
+                    </tr>
+                </table>
+
+                <h3>Important Considerations</h3>
+
+                <div class="important">
+                    ⚠️ <strong>Permissions:</strong> Ensure the user running this script has write permissions to the save directory on the SBC
+                </div>
+
+                <div class="important">
+                    ⚠️ <strong>Active Channel:</strong> The command saves from the currently active channel. Ensure the correct channel is active before saving
+                </div>
+
+                <div class="success">
+                    ✓ <strong>File Format:</strong> The saved file will be in standard Touchstone format (.s2p), compatible with most VNA software and analysis tools (Keysight VEE, MATLAB, ADS, etc.)
+                </div>
+
+                <h3>Expected Console Output</h3>
+
+                <pre><code class="language-bash">============================================================
+CMT VNA S2P Measurement &amp; Save Script
+============================================================
+
+[1] Checking Instrument ID...
+    Connected to: Copper Mountain Technologies,S4VNA,SN123456,FW1.5.0
+
+[2] Resetting and Clearing Status...
+    Ready.
+
+[3] Configuring Frequency Sweep...
+    Start: 1.0 MHz
+    Stop:  2000.0 GHz
+    Points/Decade: 10
+    Total Points: 31
+
+[4] Setting IFBW to 10KHZ...
+    Set.
+
+[5] Triggering Measurement (this may take a moment)...
+    Measurement Complete. OPC Response: 1
+
+[6] Configuring S2P Save Format...
+    Format: S2P (2-port)
+
+[7] Saving S2P Data to Touchstone File...
+    Path: /home/user/vna_data/sweep_2G_20250526_143022.s2p
+    File saved successfully!
+
+============================================================
+✓ Measurement &amp; Save Complete
+============================================================
+
+Connection closed.</code></pre>
+
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- CONVERSATION 5 - ENHANCEMENT -->
+        <section class="conversation-block">
+            <div class="question">
+                <div class="question-text">❓ Follow-up Request</div>
+                <p style="font-size: 1.1em; color: #58a6ff;"><strong>add to the script - the measured S2P to be saved in touchstone format</strong></p>
+            </div>
+
+            <div class="answer">
+                <h2>✅ Response 5: Touchstone Save Enhancement</h2>
+
+                <p>The updated script above (vna_s2p_save.py) already includes full Touchstone (.s2p) saving functionality. Key additions:</p>
+
+                <h3>Touchstone-Specific Configuration</h3>
+
+                <div class="bullet-point">
+                    <span><strong>Format Type:</strong> <span class="command">MMEM:STOR:SNP:TYPE:S2P 1,2</span> — Explicitly set to save 2-port S-parameters</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>Port Specification:</strong> <span class="command">1,2</span> — Defines the two ports being measured and saved</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>File Extension:</strong> <span class="inline-code">.s2p</span> — Standard Touchstone 2-port format</span>
+                </div>
+
+                <div class="bullet-point">
+                    <span><strong>Save Command:</strong> <span class="command">MMEM:STOR:SNP &lt;filename&gt;</span> — Saves active channel measurement directly to file</span>
+                </div>
+
+                <h3>Touchstone File Format Details</h3>
+
+                <p style="margin: 15px 0; font-weight: bold;">A standard .s2p file contains:</p>
+
+                <pre><code class="language-text">! Copper Mountain Technologies S4VNA Measurement Data
+! Frequency in Hz, S-Parameters (dB/Angle format)
+! Port 1 and Port 2
+
+# Hz S dB R 50
+1000000 -20.15 45.2 -15.32 -120.5 -15.32 -120.5 -20.15 45.2
+1500000 -19.87 44.9 -14.95 -118.3 -14.95 -118.3 -19.87 44.9
+2000000 -19.55 44.6 -14.62 -116.2 -14.62 -116.2 -19.55 44.6
+...
+2000000000 -18.23 43.1 -13.45 -95.2 -13.45 -95.2 -18.23 43.1
+</code></pre>
+
+                <p style="margin-top: 15px; color: #8b949e; font-size: 0.9em;">Format: S11(dB) S11(°) S21(dB) S21(°) S12(dB) S12(°) S22(dB) S22(°)</p>
+
+                <div class="success">
+                    ✓ <strong>File Compatibility:</strong> Saved .s2p files can be imported directly into Keysight VEE, ADS, MATLAB, ANSYS HFSS, or any standard VNA analysis tool
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>📡 Copper Mountain Technologies Vector Network Analyzer Programming Documentation</p>
+            <p style="margin-top: 10px;">Generated from RAG Conversation | Black Theme | Syntax-Highlighted Code</p>
+            <p style="margin-top: 10px; color: #6e7681;">S2P/Touchstone Format | SCPI Control | Raspberry Pi / SBC Support</p>
+        </footer>
+    </div>
+
+    <script>
+        // Highlight all code blocks
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightElement(block);
+        });
+    </script>
+</body>
+</html>

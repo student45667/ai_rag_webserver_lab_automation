@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Conversation - E36300 PSU Voltage Sequencing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #161b22;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        header {
+            border-bottom: 3px solid #30363d;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #58a6ff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+        }
+        
+        h2 {
+            color: #79c0ff;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #30363d;
+        }
+        
+        h3 {
+            color: #a5d6ff;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .conversation-block {
+            background-color: #0d1117;
+            border-left: 4px solid #30363d;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .question {
+            background-color: #0d1117;
+            border-left: 4px solid #58a6ff;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .answer {
+            background-color: #161b22;
+            border-left: 4px solid #3fb950;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .question-text {
+            color: #58a6ff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin: 10px 0;
+            color: #c9d1d9;
+        }
+        
+        .bullet-point {
+            display: flex;
+            align-items: flex-start;
+            margin: 12px 0;
+        }
+        
+        .bullet-point::before {
+            content: "▸";
+            color: #58a6ff;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+        
+        pre {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+            overflow-x: auto;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        
+        .hljs {
+            background-color: #0d1117 !important;
+            color: #c9d1d9 !important;
+        }
+        
+        .inline-code {
+            background-color: #0d1117;
+            color: #79c0ff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            border: 1px solid #30363d;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #0d1117;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        th {
+            background-color: #161b22;
+            color: #79c0ff;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #30363d;
+            font-weight: bold;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #30363d;
+            color: #c9d1d9;
+        }
+        
+        tr:hover {
+            background-color: #161b22;
+        }
+        
+        .note {
+            background-color: #161b2280;
+            border-left: 4px solid #f85149;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #f85149;
+        }
+        
+        .important {
+            background-color: #161b2280;
+            border-left: 4px solid #fbbf24;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #fbbf24;
+        }
+        
+        .success {
+            background-color: #161b2280;
+            border-left: 4px solid #3fb950;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #3fb950;
+        }
+        
+        .command {
+            background-color: #0d1117;
+            color: #79c0ff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+        
+        .parameter {
+            color: #a5d6ff;
+            font-style: italic;
+        }
+        
+        .section-title {
+            color: #58a6ff;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title::before {
+            content: "→";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .divider {
+            border-top: 2px solid #30363d;
+            margin: 40px 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #30363d;
+            color: #8b949e;
+            font-size: 0.9em;
+        }
+
+        .step-box {
+            background-color: #0d1117;
+            border: 2px solid #30363d;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .step-title {
+            color: #79c0ff;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Keysight E36300 PSU Voltage Sequencing</h1>
+            <p style="color: #8b949e; font-size: 1.1em; margin-top: 10px;">
+                RAG Conversation: E36300 Series Power Supply Unit (PSU) Programming
+            </p>
+        </header>
+
+        <!-- SINGLE CONVERSATION -->
+        <section class="conversation-block">
+            <div class="question">
+                <div class="question-text">❓ User Request</div>
+                <p style="margin-bottom: 15px;">Refer to E36300 Series PSU manual, create minimal code for:</p>
+                <ul style="color: #58a6ff;">
+                    <li>Set Vout to 3V</li>
+                    <li>After 1 second → Set to 5V</li>
+                    <li>Max current: 0.5A</li>
+                </ul>
+            </div>
+
+            <div class="answer">
+                <h2>✅ RAG Response</h2>
+
+                <p>Based on the Keysight E36300 Series Programming Guide (9018-04577) and User's Guide, here is the minimal Python code to achieve your request.</p>
+
+                <h3>Key Technical Details from Manual</h3>
+
+                <ul>
+                    <li>
+                        <strong>Command Structure:</strong> The <span class="command">APPLY</span> command handles both voltage/current setting and sequencing in one call for this series.
+                        <div style="margin-left: 20px; margin-top: 8px; background-color: #0d1117; padding: 12px; border-radius: 4px; border-left: 3px solid #79c0ff;">
+                            <strong style="color: #79c0ff;">Syntax:</strong> <span class="inline-code">APPLy &lt;Channel&gt;,&lt;Voltage&gt;[,&lt;Current&gt;]</span>
+                        </div>
+                    </li>
+                    <li style="margin-top: 15px;">
+                        <strong>Sequencing (Step 1 → Step 2):</strong> For simple step changes in E36300, sending two <span class="command">APPLY</span> commands with a delay between them is the standard approach unless using the advanced <span class="command">LIST</span> subsystem (which requires pre-loading steps).
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong>Channel:</strong> You must specify the channel (e.g., <span class="command">CH1</span>, <span class="command">P6V</span>, <span class="command">P25V</span>). Assuming CH1 for this example.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong>Termination:</strong> Explicitly set to <span class="inline-code">\n</span> as per SCPI standards and requirements.
+                    </li>
+                </ul>
+
+                <h3>Minimal Python Code (PyVISA)</h3>
+
+                <pre><code class="language-python">import pyvisa
+import time
+
+# 1. Setup VISA Resource Manager
+rm = pyvisa.ResourceManager()
+
+# 2. Define Instrument Address (Replace with actual IP/Port)
+# Example: TCPIP0::192.168.1.50::INSTR
+resource_name = "TCPIP0::<YOUR_HOST>::<PORT>::SOCKET" 
+
+try:
+    # Open connection
+    inst = rm.open_resource(resource_name, write_termination='\n', read_termination='\n')
+
+    print("--- E36300 Sequence Setup ---")
+
+    # 3. Handshake & Reset (Best Practice)
+    print("Identifying instrument...")
+    idn = inst.query("*IDN?").strip()
+    print(f"Found: {idn}")
+
+    print("Resetting to defaults...")
+    inst.write("*RST")
+    
+    print("Clearing status registers...")
+    inst.write("*CLS")
+
+    # 4. Execute Sequence
+    channel = "CH1"
+    
+    # Step A: Set Voltage to 3V, Current Limit to 0.5A
+    cmd_a = f"SOURce:{channel} VOLTage 3\nSOURce:{channel} CURRent 0.5\nOUTPut ON"
+    print(f"Sending Step 1 (3V @ 0.5A): {cmd_a}")
+    inst.write(cmd_a)
+
+    # Wait 1 second before changing voltage
+    time.sleep(1.0)
+
+    # Step B: Set Voltage to 5V, Current Limit remains 0.5A (or re-specify if needed)
+    cmd_b = f"SOURce:{channel} VOLTage 5\nSOURce:{channel} CURRent 0.5\nOUTPut ON"
+    print(f"Sending Step 2 (5V @ 0.5A): {cmd_b}")
+    inst.write(cmd_b)
+
+    # Optional: Verify final state
+    v_meas = float(inst.query("MEASure:VOLTage?").strip())
+    c_meas = float(inst.query("MEASure:CURRent?").strip())
+    print(f"Verification - Measured Vout: {v_meas}V, Iout: {c_meas}A")
+
+except Exception as e:
+    print(f"Error occurred: {e}")
+finally:
+    # 5. Cleanup
+    if 'inst' in locals():
+        inst.close()</code></pre>
+
+                <h3>Explanation of Commands Used</h3>
+
+                <table>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><span class="command">*RST</span></td>
+                        <td>Resets the instrument to factory defaults (clears previous settings)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">SOURce:CH1 VOLTage &lt;val&gt;</span></td>
+                        <td>Sets the output voltage for Channel 1</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">SOURce:CH1 CURRent &lt;val&gt;</span></td>
+                        <td>Sets the maximum current limit (OCP) to 0.5A</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">OUTPut ON</span></td>
+                        <td>Enables the channel after setting parameters (required after setting voltage/current if previously off)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">time.sleep(1.0)</span></td>
+                        <td>Implements the 1-second delay between steps</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">MEASure:VOLTage?</span> / <span class="command">MEASure:CURRent?</span></td>
+                        <td>Queries the actual measured values to verify load is powered correctly (Safety Check)</td>
+                    </tr>
+                </table>
+
+                <h3>Command Flow Breakdown</h3>
+
+                <div class="step-box">
+                    <div class="step-title">Step 1: Initialize</div>
+                    <div class="bullet-point">
+                        <span><strong>*IDN?</strong> — Identify the instrument (verify connection)</span>
+                    </div>
+                    <div class="bullet-point">
+                        <span><strong>*RST</strong> — Reset to factory defaults</span>
+                    </div>
+                    <div class="bullet-point">
+                        <span><strong>*CLS</strong> — Clear status registers</span>
+                    </div>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-title">Step 2: Configure & Enable (First Voltage)</div>
+                    <div class="bullet-point">
+                        <span><strong>SOURce:CH1 VOLTage 3</strong> — Set to 3V</span>
+                    </div>
+                    <div class="bullet-point">
+                        <span><strong>SOURce:CH1 CURRent 0.5</strong> — Set current limit to 0.5A</span>
+                    </div>
+                    <div class="bullet-point">
+                        <span><strong>OUTPut ON</strong> — Enable output</span>
+                    </div>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-title">Step 3: Wait 1 Second</div>
+                    <div class="bullet-point">
+                        <span><strong>time.sleep(1.0)</strong> — Allow settling time</span>
+                    </div>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-title">Step 4: Change Voltage (Second Voltage)</div>
+                    <div class="bullet-point">
+                        <span><strong>SOURce:CH1 VOLTage 5</strong> — Set to 5V</span>
+                    </div>
+                    <div class="bullet-point">
+                        <span><strong>SOURce:CH1 CURRent 0.5</strong> — Maintain current limit</span>
+                    </div>
+                    <div class="bullet-point">
+                        <span><strong>OUTPut ON</strong> — Ensure output stays enabled</span>
+                    </div>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-title">Step 5: Verify & Cleanup</div>
+                    <div class="bullet-point">
+                        <span><strong>MEASure:VOLTage?</strong> — Query actual voltage reading</span>
+                    </div>
+                    <div class="bullet-point">
+                        <span><strong>MEASure:CURRent?</strong> — Query actual current reading</span>
+                    </div>
+                    <div class="bullet-point">
+                        <span><strong>Close connection</strong> — Cleanup resources</span>
+                    </div>
+                </div>
+
+                <h3>Safety Notes</h3>
+
+                <ul>
+                    <li>
+                        <span class="important">⚠️ Voltage Limits:</span> Ensure your load can handle a step from 3V to 5V. Sudden voltage changes can stress components.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <span class="important">⚠️ Current Limit:</span> The limit is set to 0.5A for both steps. If the load draws less than this, it will run in <strong>Constant Voltage (CV) mode</strong>. If it tries to draw more, it will trip into <strong>Constant Current (CC) mode</strong> at 0.5A.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <span class="important">⚠️ Grounding:</span> Ensure the PSU chassis is grounded before connecting loads, especially when switching voltages rapidly.
+                    </li>
+                </ul>
+
+                <h3>Expected Console Output</h3>
+
+                <pre><code class="language-bash">--- E36300 Sequence Setup ---
+Identifying instrument...
+Found: KEYSIGHT,E36300,SN1234567890,FW1.0
+
+Resetting to defaults...
+Clearing status registers...
+Sending Step 1 (3V @ 0.5A): SOURce:CH1 VOLTage 3
+SOURce:CH1 CURRent 0.5
+OUTPut ON
+
+[Wait 1 second...]
+
+Sending Step 2 (5V @ 0.5A): SOURce:CH1 VOLTage 5
+SOURce:CH1 CURRent 0.5
+OUTPut ON
+
+Verification - Measured Vout: 5.000V, Iout: 0.000A</code></pre>
+
+                <h3>Common Variations</h3>
+
+                <div style="background-color: #0d1117; padding: 15px; border-radius: 6px; margin: 15px 0;">
+                    <p style="color: #79c0ff; font-weight: bold; margin-bottom: 10px;">If you need to control a different channel:</p>
+                    <ul style="margin: 0;">
+                        <li><span class="inline-code">P6V</span> — 0–6V, 5.15A channel</li>
+                        <li><span class="inline-code">P25V</span> — 0–25V, 1.03A channel</li>
+                        <li><span class="inline-code">N25V</span> — −25V to 0V, 1.03A channel</li>
+                    </ul>
+                    <p style="color: #8b949e; margin-top: 10px; font-size: 0.9em;">Simply replace <span class="inline-code">CH1</span> with the desired channel in the code above.</p>
+                </div>
+
+                <h3>Advanced: Using APPLY Command (Condensed)</h3>
+
+                <p style="margin-bottom: 10px;">The E36300 also supports the condensed <span class="command">APPLY</span> syntax:</p>
+
+                <pre><code class="language-python"># Alternative: Using APPLY command
+inst.write("APPLY CH1,3,0.5")      # Step 1: 3V, 0.5A
+time.sleep(1.0)
+inst.write("APPLY CH1,5,0.5")      # Step 2: 5V, 0.5A</code></pre>
+
+                <p style="color: #8b949e; margin-top: 10px;">This is shorter but less explicit. Both methods work identically on the E36300.</p>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>⚡ Keysight E36300 Series Power Supply Programming Documentation</p>
+            <p style="margin-top: 10px;">Generated from RAG Conversation | Black Theme | Syntax-Highlighted Code</p>
+            <p style="margin-top: 10px; color: #6e7681;">Reference: E36300 Series Programming Guide (9018-04577)</p>
+        </footer>
+    </div>
+
+    <script>
+        // Highlight all code blocks
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightElement(block);
+        });
+    </script>
+</body>
+</html>
