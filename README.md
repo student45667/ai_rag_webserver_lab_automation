@@ -20,6 +20,17 @@
 12. [Example Workflows](#example-workflows)
 13. [Troubleshooting](#troubleshooting)
 
+
+![Screenshot](images/Screenshot%202026-05-26%20at%2010.12.28.png)
+
+[RAG Conversation - Copper Mountain VNA on Raspberry Pi](RAG%20Conversation%20-%20Copper%20Mountain%20VNA%20on%20Raspberry%20Pi.pdf)
+
+[RAG Conversation - E36300 PSU Voltage Sequencing](RAG%20Conversation%20-%20E36300%20PSU%20Voltage%20Sequencing.pdf)
+
+[RAG Conversation - Eye Diagram 2 Gbps Signal](RAG%20Conversation%20-%20Eye%20Diagram%202%20Gbps%20Signal.pdf)
+
+
+
 ---
 
 ## Overview
