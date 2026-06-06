@@ -1,0 +1,3740 @@
+# 9018-04577
+
+**Source:** 9018-04577.pdf
+
+---
+
+## Page 1
+
+Programmable DC Power Supplies
+E36300 Series
+
+### PROGRAMMING GUIDE
+
+
+## Page 2
+
+Notices 7
+CopyrightNotice 7
+ManualPartNumber 7
+Edition 7
+Publishedby 7
+Warranty 7
+TechnologyLicenses 7
+U.S.GovernmentRights 8
+ThirdPartyLicenses 8
+WasteElectricalandElectronicEquipment(WEEE) 8
+DeclarationsofConformity 9
+SafetyInformation 9
+
+### 1 E36300SeriesRemoteOperation 11
+
+IntroductiontotheSCPILanguage 12
+
+### CommandFormatUsedinthisManual 13
+
+
+### CommandSeparators 13
+
+QueryingParameterSettings 14
+SCPICommandTerminators 14
+IEEE-488.2CommonCommands 14
+SCPIParameterTypes 15
+HaltinganOutputinProgress 16
+ProgrammingRangesandOutputIdentifiers 16
+ChannelsandChannelLists 17
+Channellistparameter 17
+SCPI ErrorMessages 18
+Executionerrorcodes 18
+
+### Calibrationerrorcodes 24
+
+Self-testerrorcodes 24
+ResetandNon-volatileSettings 25
+Reset(*RST)settings 25
+Non-volatilesettings 28
+Non-volatileLAN settings 28
+SCPIStatusRegisters 29
+Whatisaneventregister? 30
+Whatisanenableregister? 30
+Whatisamultiplelogicaloutput? 31
+TheQuestionableStatusregister 32
+TheQuestionableInstrumentregister 32
+TheQuestionableInstrumentSummaryregister 32
+TheStandardEventregister 33
+TheStatusBytesummaryregister 33
+UsingServiceRequest(SRQ)andserialPOLL 34
+Using*STB?toreadtheStatusByte 34
+Usingthemessageavailablebit(MAV) 34
+TointerruptyourbuscontrollerusingSRQ 35
+Todeterminewhenacommandsequenceiscompleted 35
+Using*OPCtosignalwhendataisintheoutputbuffer 35
+
+### 2 SCPIProgramming 37
+
+ABORtSubsystem 38
+ABORt(@<chanlist>) 38
+
+### 2 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 3
+
+ABORt:DLOG 38
+APPLySubsystem 39
+APPLyP6V|P25V|N25V|CH1|CH2|CH3,[,<voltage>|DEFault|MINimum|MAXimum[,<current>|DEFault
+|MINimum|MAXimum]]APPLy?P6V|P25V|N25V|CH1|CH2|CH3, 39
+
+### CALibrationSubsystem 40
+
+
+### CALibration:ASAVEON|OFF|1|0CALibration:ASAVE? 40
+
+
+### CALibration:COUNt? 40
+
+
+### CALibration:CURRent[:DATA][:HIGH]<current>,(@<chanlist>) 40
+
+
+### CALibration:CURRent[:DATA]:LOW<current>,(@<chanlist>) 41
+
+
+### CALibration:CURRent:LEVel[:HIGH]MINimum|MAXimum,(@<chanlist>) 41
+
+
+### CALibration:CURRent:LEVel:LOWMINimum|MAXimum,(@<chanlist>) 41
+
+
+### CALibration:DATE"<string>"CALibration:DATE?(@<chanlist>) 42
+
+
+### CALibration:SAVE 42
+
+
+### CALibration:SECure:CODE<newcode> 42
+
+
+### CALibration:SECure:STATeON|OFF|1|0,<code>CALibration:SECure:STATe? 42
+
+
+### CALibration:STRing"<string>"CALibration:STRing? 43
+
+
+### CALibration:VOLTage[:DATA]<numericvalue>,(@<chanlist>) 43
+
+
+### CALibration:VOLTage:LEVelMINimum|MAXimum,(@<chanlist>) 43
+
+CURRentSubsystem 44
+[SOURce:]CURRent[:LEVel][:IMMediate][:AMPLitude]<current>|MINimum|MAXimum|DEFault,(@<chan-
+list>)[SOURce:]CURRent[:LEVel][:IMMediate][:AMPLitude]?MINimum|MAXimum|DEFault,(@<chanlist>) 44
+[SOURce:]CURRent[:LEVel]:TRIGgered[:AMPLitude]<current>|MINimum|MAXimum,(@<chanlist>)
+[SOURce:]CURRent[:LEVel]:TRIGgered[:AMPLitude]?MINimum|MAXimum,(@<chanlist>) 45
+[SOURce:]CURRent:MODEFIXed|STEP|LIST,(@<chanlist>)[SOURce:]CURRent:MODE?(<@chanlist>) 45
+[SOURce:]CURRent:PROTection:CLEar,(@<chanlist>) 46
+[SOURce:]CURRent:PROTection:DELay[:TIME]<time>|MINimum| MAXimum,(@<chanlist>)
+[SOURce:]CURRent:PROTection:DELay[:TIME]?[MINimum| MAXimum,](@<chanlist>) 46
+[SOURce:]CURRent:PROTection:DELay:STARtSCHange|CCTRans,(@<chanlist>)
+[SOURce:]CURRent:PROTection:DELay:STARt?(@<chanlist>) 46
+[SOURce:]CURRent:PROTection:STATeON|OFF|1|0,(@<chanlist>)[SOURce:]CURRent:PROTection:STATe?
+(@<chanlist>) 47
+[SOURce:]CURRent:PROTection:TRIPped? 47
+DIGitalSubsystem 48
+[SOURce:]DIGital:INPut:DATA? 48
+[SOURce:]DIGital:OUTPut:DATA<value>[SOURce:]DIGital:OUTPut:DATA? 48
+[SOURce:]DIGital:PIN<1-3>:FUNCtion[SOURce:]DIGital:PIN<1-3>:FUNCtion? 49
+[SOURce:]DIGital:PIN<1-3>:POLarityPOSitive|NEGative[SOURce:]DIGital:PIN<1-3>:POLarity? 50
+[SOURce:]DIGital:TOUTput:BUS[:ENABle]0|OFF|1|ON[SOURce:]DIGital:TOUTput:BUS[:ENABle]? 50
+DISPlaySubsystem 51
+DISPlay[:WINDow][:STATe]ON|OFF|1|0DISPlay[:WINDow][:STATe]? 51
+DISPlay[:WINDow]:TEXT[:DATA]"<string>"DISPlay[:WINDow]:TEXT[:DATA]? 51
+DISPlay[:WINDow]:VIEWMETER1|METER3DISPlay[:WINDow]:VIEW? 51
+FETChSubsystem 52
+FETCh[:SCALar]:DLOG?<number>,(@<chanlist>) 52
+IEEE-488Subsystem 53
+
+### *CLS 53
+
+*ESE<enablevalue>*ESE? 53
+
+### *ESR? 53
+
+
+### *IDN? 54
+
+
+### *OPC*OPC? 54
+
+
+### *PSC0|1*PSC? 54
+
+
+### *RCL0|1|2|...|8| 9 55
+
+KeysightE36300SeriesProgrammingGuide 3
+
+## Page 4
+
+
+### *RST 55
+
+
+### *SAV0|1|2|...|8| 9 56
+
+*SRE<enablevalue>*SRE? 56
+
+### *STB? 57
+
+
+### *TRG 57
+
+
+### *TST? 57
+
+
+### *WAI 57
+
+INITiateSubsystem 58
+INITiate[:IMMediate](@<chanlist>) 58
+INITiate:CONTinuousON|OFF|1|0,(@<chanlist>)INITiate:CONTinuous?(@<chanlist>) 58
+INITiate[:IMMediate]:DLOG<"filename"> 58
+INSTrumentSubsystem 59
+INSTrument[:SELect]P6V|P25V|N25V|CH1|CH2|CH3,INSTrument[:SELect]? 59
+INSTrument:COUPle[:TRIGger]ALL|NONE|<list>INSTrument:COUPle[:TRIGger]? 59
+INSTrument:NSELect1|2|3INSTrument:NSELect? 60
+LISTSubsystem 61
+[SOURce:]LIST:COUNt<count>|INFinity,[(@<chanlist>)[SOURce:]LIST:COUNt?[MINimum|MAXimum|
+INFinity,](@<chanlist>) 61
+[SOURce:]LIST:CURRent[:LEVel]<value>{,<value>},(@<chanlist>)[SOURce:]LIST:CURRent[:LEVel]]?
+(@<chanlist>) 61
+[SOURce:]LIST:CURRent:POINts?[(@<chanlist>) 62
+[SOURce:]LIST:DWELl<value>{,<value>},(@<chanlist>)[SOURce:]LIST:DWELl?(@<chanlist>) 62
+[SOURce:]LIST:DWELl:POINts?[(@<chanlist>)] 63
+[SOURce:]LIST:STEPAUTO|ONCE,(@<chanlist>)[SOURce:]LIST:STEP?(@<chanlist>) 63
+[SOURce:]LIST:TERMinate:LASTON|OFF|1|0,(@<chanlist>)[SOURce:]LIST:TERMinate:LAST?(@<chan-
+list>) 63
+[SOURce:]LIST:TOUTput:BOSTep[:DATA]<Bool>{,<Bool>},[(@<chanlist>)]SOURce:]LIST:TOUTput:BOSTep
+[:DATA]?[(@<chanlist>)] 64
+[SOURce:]LIST:TOUTput:BOSTep:POINts?(@<chanlist>) 64
+[SOURce:]LIST:TOUTput:EOSTep[:DATA]<Bool>{,<Bool>},[(@<chanlist>)][SOURce:]LIST:TOUTput:EOSTep
+[:DATA]?[(@<chanlist>)] 65
+[SOURce:]LIST:TOUTput:EOSTep:POINts?(@<chanlist>) 65
+[SOURce:]LIST:VOLTage[:LEVel]<value>{,<value>},(@<chanlist>)[SOURce:]LIST:VOLTage[:LEVel]?
+(@<chanlist>) 66
+[SOURce:]LIST:VOLTage:POINts?[(@<chanlist>) 66
+LXISubsystem 67
+LXI:IDENtify[:STATe]ON|OFF|1|0LXI:IDENtify[:STATe?]ON|OFF|1|0Thecommandallowsyoutosetthe
+propertytoONtochangetheLXIstatusindicatortothe"Identify"state.SettingthispropertyOFFchanges
+theLXIstatusindicatorto"NoFault".ThequeryreturnsthestateoftheLXIstatusindicator.ParameterTypical
+returnON|OFF|1|00or1SetstheLXI statusindicatorto"NoFault": LXI:IDEN0 67
+LXI:MDNS[:STATe]ON|OFF|1|0:LXI:MDNS[:STATe?]ON|OFF|1|0 67
+MEASureSubsystem 68
+MEASure[:SCALar]:CURRent[:DC]?[P6V|P25V|N25V|CH1|CH2|CH3,](@<chanlist>) 68
+MEASure[:SCALar]:VOLTage[:DC]?[P6V|P25V|N25V|CH1|CH2|CH3,](@<chanlist>) 68
+MMEMorySubsystem 69
+MMEMory:EXPort:DLOG<"filename"> 69
+OUTPutSubsystem 70
+OUTPut[:STATe]ON| 1|OFF| 0,(@<chanlist>)]OUTPut[:STATe]?[(@<chanlist>)] 70
+OUTPut[:STATe]COUPle:CHANNelALL|NONE|<list>OUTPut[:STATe]:COUPle:CHANNel? 70
+OUTPut[:STATe]:DELay:FALL<delay>,(@<chanlist>)OUTPut[:STATe]:DELay:FALL?[MIN| MAX,](@<chan-
+list>) 71
+
+### 4 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 5
+
+OUTPut[:STATe]:DELay:RISE<delay>,(@<chanlist>)OUTPut[:STATe]:DELay:RISE?[MIN| MAX,](@<chanlist>)71
+OUTPut:INHibit:MODELATChing|LIVE| OFFOUTPut:INHibit:MODE? 72
+OUTPut:PAIROFF|PARallel|SERiesOUTPut:PAIR? 72
+OUTPut:PON:STATeRST|RCL0|RCL1|RCL2|....|RCL8|RCL9OUTPut:PON:STATe? 73
+OUTPut:PROTection:CLEar[(@<chanlist>) 73
+OUTPut:TRACk[:STATe]ON|OFF|1|0OUTPut:TRACk[:STATe]? 73
+SENSeSubsystem 74
+SENSe:DLOG:FUNCtion:CURRentON|OFF|1|0,(@<chanlist>)SENSe:DLOG:FUNCtion:CURRent? 74
+SENSe:DLOG:FUNCtion:MINMON|OFF|1|0SENSe:DLOG:FUNCtion:MINM? 74
+SENSe:DLOG:FUNCtion:VOLTageON|OFF|1|0,(@<chanlist>)SENSe:DLOG:FUNCtion:VOLTage? 74
+SENSe:DLOG:PER<time>SENSe:DLOG:PER? 75
+SENSe:DLOG:TIME<time>SENSe:DLOG:TIME? 75
+SENSe:DLOG:TINTerval<time>SENSe:DLOG:TINTerval? 75
+STATusSubsystem 76
+STATus:PRESet 76
+STATus:QUEStionable:[:EVENt]? 76
+STATus:QUEStionable:ENABle<enablevalue>STATus:QUEStionable:ENABle? 76
+STATus:QUEStionable:INSTrument[:EVENt]? 76
+STATus:QUEStionable:INSTrument:ENABle<enablevalue>STATus:QUEStionable:INSTrument:ENABle? 77
+STATus:QUEStionable:INSTrument:ISUMmary<n>[:EVENt]? 77
+STATus:QUEStionable:INSTrument:ISUMmary<n>:CONDition? 77
+STATus:QUEStionable:INSTrument:ISUMmary<n>:ENABle<enablevalue>STATus:QUES-
+tionable:INSTrument:ISUMmary<n>:ENABle? 78
+SYSTemSubsystem 79
+SYSTem:BEEPer[:IMMediate] 79
+SYSTem:BEEPer:STATeON|OFF|1|0SYSTem:BEEPer:STATe? 79
+SYSTem:COMMunicate:RLSTateLOCal|REMote|RWLockSYSTem:COMMunicate:RLSTate? 79
+SYSTem:DATE<yyyy>,<mm>,<dd>SYSTem:DATE? 80
+SYSTem:ERRor[:NEXT]? 80
+SYSTem:LOCal 80
+SYSTem:PERSona:MANufacturer"<string>"SYSTem:PERSon- 8-
+a:MANufacturer?SYSTem:PERSona:MANufacturer:DEFaultSYSTem:PERSona:MANufacturer:DEFault? 1
+SYSTem:PERSona:MODelE3631XA|E3631ASYSTem:PERSon-
+a:MODel?SYSTem:PERSona:MODel:DEFaultSYSTem:PERSona:MODel:DEFault? 81
+SYSTem:REMote 81
+SYSTem:RWLock 82
+SYSTem:SECurity:IMMediate 82
+SYSTem:SET0|1|2|3|4|5|6|7|8|9SYSTem:SET? 82
+SYSTem:TIME<hh>,<mm>,<ss>SYSTem:TIME? 83
+SYSTem:VERSion? 83
+TriggerSubsystem 84
+TRIGger:DLOG[:IMMediate] 84
+TRIGger:DLOG:SOURceBUS|EXTernal|IMMediateTRIGger:DLOG:SOURce? 84
+TRIGger[:SEQuence]:DELay<seconds>|MINimum|MAXimum,(@<chanlist>)TRIGger[:SEQuence]:DELay?
+[MINimum| MAXimum](@<chanlist>) 85
+TRIGger[:SEQuence]:SOURceBUS|EXTernal|IMMediate| PIN1|PIN2|PIN3,(@<chanlist>)TRIGger
+[:SEQuence]:SOURce?(@<chanlist>) 85
+TriggeringCommands 87
+VOLTageSubsystem 88
+[SOURce:]VOLTage[:LEVel][:IMMediate][:AMPLitude]<voltage>|MINimum|MAXimum|DEFault,(@<chan-
+list>)[SOURce:]VOLTage[:LEVel][:IMMediate][:AMPLitude]?MINimum|MAXimum|DEFault,(@<chanlist>) 88
+KeysightE36300SeriesProgrammingGuide 5
+
+## Page 6
+
+[SOURce:]VOLTage[:LEVel]:TRIGgered[:AMPLitude]<voltage>|MINimum|MAXimum,(@<chanlist>)
+[SOURce:]VOLTage[:LEVel]:TRIGgered[:AMPLitude]?MINimum|MAXimum,(@<chanlist>) 88
+[SOURce:]VOLTage:MODEFIXed|STEP |LIST, (@<chanlist>)[SOURce:]VOLTage:MODE?(@<chanlist>) 88
+[SOURce:]VOLTage:PROTection[:LEVel][:AMPLitude]<voltage>|MINimum|MAXimum,(@<chanlist>)
+[SOURce:]VOLTage:PROTection[:LEVel]?MINimum|MAXimum,(@<chanlist>) 89
+[SOURce:]VOLTage:PROTection:CLEar(@<chanlist>) 89
+[SOURce:]VOLTage:RANGeP6V|P25V|LOW| HIGH,(@<chanlist>)[SOURce:]VOLTage:RANGe?(@<chan-
+list>) 90
+[SOURce:]VOLTage:PROTection:TRIPped? 90
+[SOURce:]VOLTage:SENSe[:SOURce]INTernal|EXTernal,(@<chanlist>)[SOURce:]VOLTage:SENSe
+[:SOURce]?(@<chanlist>) 90
+
+### 6 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 7
+
+Notices
+Copyright Notice
+©KeysightTechnologies2017-2025
+Nopartofthismanualmaybereproducedinanyformorbyanymeans(includingelectronicstorageandretrievalor
+translationintoaforeignlanguage)withoutprioragreementandwrittenconsentfromKeysightTechnologiesas
+governedbyUnitedStatesandinternationalcopyrightlaws.
+Manual Part Number
+
+### E36311-90008
+
+Edition
+Edition12,June2025
+Published by
+KeysightTechnologies
+BayanLepasFreeIndustrialZone
+11900BayanLepas,Penang
+Malaysia
+Warranty
+
+### THEMATERIALCONTAINEDINTHISDOCUMENTISPROVIDED“ASIS,”ANDISSUBJECTTOBEINGCHANGED,
+
+
+### WITHOUTNOTICE,INFUTUREEDITIONS.FURTHER,TOTHEMAXIMUMEXTENTPERMITTEDBYAPPLICABLE
+
+
+### LAW,KEYSIGHTDISCLAIMSALLWARRANTIES,EITHEREXPRESSORIMPLIED,WITHREGARDTOTHISMANUAL
+
+
+### ANDANYINFORMATIONCONTAINEDHEREIN,INCLUDINGBUTNOTLIMITEDTOTHEIMPLIEDWARRANTIESOF
+
+
+### MERCHANTABILITYANDFITNESSFORAPARTICULARPURPOSE.KEYSIGHTSHALLNOTBELIABLEFORERRORS
+
+
+### ORFORINCIDENTALORCONSEQUENTIALDAMAGESINCONNECTIONWITHTHEFURNISHING,USE,OR
+
+
+### PERFORMANCEOFTHISDOCUMENTOROFANYINFORMATIONCONTAINEDHEREIN.SHOULDKEYSIGHTAND
+
+
+### THEUSERHAVEASEPARATEWRITTENAGREEMENTWITHWARRANTYTERMSCOVERINGTHEMATERIALIN
+
+
+### THISDOCUMENTTHATCONFLICTWITHTHESETERMS,THEWARRANTYTERMSINTHESEPARATEAGREEMENT
+
+
+### SHALLCONTROL.
+
+Technology Licenses
+Thehardwareand/orsoftwaredescribedinthisdocumentarefurnishedunderalicenseandmaybeusedorcopied
+onlyinaccordancewiththetermsofsuchlicense.
+KeysightE36300SeriesProgrammingGuide 7
+
+## Page 8
+
+U.S. Government Rights
+TheSoftwareis“commercialcomputersoftware,”asdefinedbyFederalAcquisitionRegulation(“FAR”)2.101.
+PursuanttoFAR12.212and27.405-3andDepartmentofDefenseFARSupplement(“DFARS”)227.7202,theU.S.
+governmentacquirescommercialcomputersoftwareunderthesametermsbywhichthesoftwareiscustomarily
+providedtothepublic.Accordingly,KeysightprovidestheSoftwaretoU.S.governmentcustomersunderits
+standardcommerciallicense,whichisembodiedinitsEndUserLicenseAgreement(EULA),acopyofwhichcanbe
+foundathttp://www.keysight.com/find/sweula.ThelicensesetforthintheEULArepresentstheexclusiveauthority
+bywhichtheU.S.governmentmayuse,modify,distribute,ordisclosetheSoftware.TheEULAandthelicenseset
+forththerein,doesnotrequireorpermit,amongotherthings,thatKeysight:(1)Furnishtechnicalinformationrelated
+tocommercialcomputersoftwareorcommercialcomputersoftwaredocumentationthatisnotcustomarilyprovided
+tothepublic;or(2)Relinquishto,orotherwiseprovide,thegovernmentrightsinexcessoftheserightscustomarily
+providedtothepublictouse,modify,reproduce,release,perform,display,ordisclosecommercialcomputer
+softwareorcommercialcomputersoftwaredocumentation.Noadditionalgovernmentrequirementsbeyondthose
+setforthintheEULAshallapply,excepttotheextentthatthoseterms,rights,orlicensesareexplicitlyrequiredfrom
+allprovidersofcommercialcomputersoftwarepursuanttotheFARandtheDFARSandaresetforthspecificallyin
+writingelsewhereintheEULA.Keysightshallbeundernoobligationtoupdate,reviseorotherwisemodifythe
+Software.WithrespecttoanytechnicaldataasdefinedbyFAR2.101,pursuanttoFAR12.211and27.404.2and
+DFARS227.7102,theU.S.governmentacquiresnogreaterthanLimitedRightsasdefinedinFAR27.401orDFAR
+
+### 227.7103-5(c),asapplicableinanytechnicaldata.
+
+Third Party Licenses
+Portionsofthissoftwarearelicensedbythirdpartiesincludingopensourcetermsandconditions.Totheextentsuch
+licensesrequirethatKeysightmakesourcecodeavailable,wewilldosoatnocosttoyou.Formoreinformation,
+pleasecontactKeysightsupportathttps://www.keysight.com/find/assist.
+Waste Electrical and Electronic Equipment (WEEE)
+ThisproductcomplieswiththeWEEEDirective)marketingrequirement.Theaffixedproductlabel(seebelow)
+indicatesthatyoumustnotdiscardthiselectrical/electronicproductindomestichouseholdwaste.
+ProductCategory:WithreferencetotheequipmenttypesintheWEEEdirectiveAnnex1,thisproductisclassifiedas
+“MonitoringandControlinstrumentation”product.Donotdisposeindomestichouseholdwaste.
+Toreturnunwantedproducts,contactyourlocalKeysightoffice,orsee
+about.keysight.com/en/companyinfo/environment/takeback.shtmlformoreinformation.
+
+### 8 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 9
+
+Declarations of Conformity
+DeclarationsofConformityforthisproductandforotherKeysightproductsmaybedownloadedfromtheWeb.Goto
+http://regulations.corporate.keysight.com/DoC/search.htmandclickon“DeclarationsofConformity.”Youcan
+thensearchbyproductnumbertofindthelatestDeclarationofConformity.
+Safety Information
+ACAUTIONnoticedenotesahazard.Itcallsattentiontoanoperatingprocedure,practice,orthelikethat,ifnotcorrectlyper-
+formedoradheredto,couldresultindamagetotheproductorlossofimportantdata.DonotproceedbeyondaCAUTIONnotice
+untiltheindicatedconditionsarefullyunderstoodandmet.
+AWARNINGnoticedenotesahazard.Itcallsattentiontoanoperatingprocedure,practice,orthelikethat,ifnotcorrectlyper-
+formedoradheredto,couldresultinpersonalinjuryordeath.DonotproceedbeyondaWARNINGnoticeuntiltheindicatedcon-
+ditionsarefullyunderstoodandmet.
+KeysightE36300SeriesProgrammingGuide 9
+
+## Page 10
+
+
+### 10 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 11
+
+
+### 1 E36300 Series Remote Operation
+
+IntroductiontotheSCPILanguage
+ProgrammingRangesandOutputIdentifiers
+ChannelsandChannelLists
+SCPIErrorMessages
+ResetandNon-volatileSettings
+SCPIStatusRegisters
+ThischapterdescribestheremoteoperationfortheE36300Series
+programmableDCpowersupply.
+KeysightE36300SeriesProgrammingGuide 11
+
+## Page 12
+
+Introduction to the SCPI Language
+StandardCommandsforProgrammableInstruments(SCPI)isanASCII-basedinstrumentcommandlanguage
+designedfortestandmeasurementinstruments.RefertoSimplifiedProgrammingOverviewforbasictechniquesfor
+programmingthepowersupplyovertheremoteinterface.
+SCPIcommandsarebasedonahierarchicalstructure,alsoknownasatreesystem.Inthissystem,associated
+
+### commandsaregroupedtogetherunderacommonnodeorroot,thusformingsubsystems.AportionoftheSOURce
+
+subsystemisshownbelowtoillustratethetreesystem.
+[SOURce:]
+CURRent<current>|MIN|MAX|
+CURRent?MIN|MAX
+CURRent:
+TRIGgered<current>|MIN|MAX}
+TRIGgered?MIN|MAX
+VOLTage<voltage>|MIN|MAX
+VOLTage?MIN|MAX
+VOLTage:
+TRIGgered<voltage>|MIN|MAX
+TRIGgered?MIN|MAX
+SOURceistherootkeywordofthecommand,CURRentandVOLTagearesecond-levelkeywords,andTRIGgeredis
+thethird-levelkeyword.Acolon(:)separatesacommandkeywordfromalower-levelkeyword.
+
+### 12 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 13
+
+
+### CommandFormatUsedinthisManual
+
+Theformatusedtoshowcommandsinthismanualisshownbelow:
+CURRent<current>|MINimum|MAXimum
+Thecommandsyntaxshowsmostcommands(andsomeparameters)asamixtureofupper-caseandlower-case
+letters.Theupper-caselettersindicatetheabbreviatedspellingforthecommand.Forshorterprogramlines,send
+theabbreviatedform.Forbetterprogramreadability,sendthelongform.
+Forexample,intheabovesyntaxstatement,CURRandCURRENTarebothacceptableforms.Youcanuseupper-
+caseorlower-caseletters.Therefore,CURRENT,curr,andCurrareallacceptable.Otherforms,suchasCURand
+CURREN,willgenerateanerror.
+Averticalbar(|)separatesmultipleparameterchoicesforagivencommandstring.
+Anglebrackets(<>)indicatethatyoumustspecifyavaluefortheenclosedparameter.Forexample,theabove
+syntaxstatementshowsthecurrentparameterenclosedinanglebrackets.Thebracketsarenotsentwiththe
+
+### commandstring.Youmustspecifyavaluefortheparameter(suchasCURR0.1).
+
+Someparametersareenclosedinsquarebrackets([]).Thebracketsindicatethattheparameterisoptionalandcan
+beomitted.Thebracketsarenotsentwiththecommandstring.Ifyoudonotspecifyavalueforanoptional
+
+### parameter,thepowersupplychoosesadefaultvalue.
+
+Acolon(:)separatesacommandkeywordfromalower-levelkeyword.Youmustinsertablankspacetoseparatea
+
+### parameterfromacommandkeyword.Ifacommandrequiresmorethanoneparameter,youmustseparateadjacent
+
+
+### parametersusingacommaasshownbelow:
+
+APPLyP6V,3.5,1.5
+
+### CommandSeparators
+
+Acolon(:)separatesacommandkeywordfromalower-levelkeywordasshownbelow:
+SOURce:CURRent:TRIGgered
+Asemicolon(;)isusedtoseparatetwocommandswithinthesamesubsystem,andcanalsominimizetyping.For
+
+### example,sendingthefollowingcommandstring:
+
+
+### SOUR:VOLTMIN;CURRMAX
+
+isthesameassendingthefollowingtwocommands:
+
+### SOUR:VOLTMIN
+
+
+### SOUR:CURRMAX
+
+Useacolonandasemicolontolinkcommandsfromdifferentsubsystems.Forexample,inthefollowingcommand
+string,anerrorisgeneratedifyoudonotusethecolonandsemicolon:
+
+### DISP:TEXT:CLE;:SOUR:CURRMIN
+
+KeysightE36300SeriesProgrammingGuide 13
+
+## Page 14
+
+UsingtheMINandMAXparameters
+YoucansubstituteMINimumorMAXimuminplaceofaparameterformanycommands.Forexample,considerthe
+followingcommand:
+CURRent{<current>|MIN|MAX}
+Insteadofselectingaspecificcurrent,youcansubstituteMINimumtosetthecurrenttoitsminimumvalueor
+MAXimumtosetthecurrenttoitsmaximumvalue.
+QueryingParameterSettings
+Youcanquerythevalueofmostparametersbyaddingaquestionmark(?)tothecommand.Forexample,the
+followingcommandsetstheoutputcurrentto5A:
+
+### CURR5
+
+Youcanquerythevaluebyexecuting:
+
+### CURR?
+
+Youcanalsoquerythemaximumorminimumvalueallowedwiththepresentfunctionasfollows:
+
+### CURR?MAX;CURR?MIN
+
+Ifyousendtwoquerycommandswithoutreadingtheresponsefromthefirst,andthenattempttoreadthesecond
+response,youmayreceivesomedatafromthefirstresponsefollowedbythecompletesecondresponse.Toavoid
+this,donotsendaquerycommandwithoutreadingtheresponse.Whenyoucannotavoidthissituation,senda
+deviceclearbeforesendingthesecondquerycommand.
+SCPICommandTerminators
+Acommandstringsenttothepowersupplymustterminatewitha<newline>character.TheIEEE-488EOI(end-or-
+identify)messageisinterpretedasa<newline>characterandcanbeusedtoterminateacommandstringinplace
+ofa<newline>character.A<carriagereturn>followedbya<newline>isalsoaccepted.Commandstring
+terminationwillalwaysresetthecurrentSCPIcommandpathtotherootlevel.The<newline>characterhasthe
+ASCIIdecimalcodeof10.
+IEEE-488.2CommonCommands
+TheIEEE-488.2standarddefinesasetofcommoncommandsthatperformfunctionslikereset,self-test,andstatus
+operations.Commoncommandsalwaysbeginwithanasterisk(*),arefourtofivecharactersinlength,andmay
+includeoneormoreparameters.Thecommandkeywordisseparatedfromthefirstparameterbyablankspace.Use
+asemicolon(;)toseparatemultiplecommandsasshownbelow:
+
+### *RST;*CLS;*ESE32;*OPC?
+
+
+### 14 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 15
+
+SCPIParameterTypes
+TheSCPIlanguagedefinesseveraldifferentdataformatstobeusedinprogrammessagesandresponsemessages.
+Numericparameters
+
+### Commandsthatrequirenumericparameterswillacceptallcommonlyuseddecimalrepresentationsofnumbers
+
+includingoptionalsigns,decimalpoints,andscientificnotation.Specialvaluesfornumericparameterslike
+MINimum,MAXimum,andDEFaultarealsoaccepted.
+Youcanalsosendengineeringunitsuffixes(V,A,orSEC)withnumericparameters.Ifonlyspecificnumericvalues
+areaccepted,thepowersupplywillautomaticallyroundtheinputnumericparameters.Thefollowingcommand
+usesanumericparameter:
+CURR<current>|MIN|MAX
+Discreteparameters
+DiscreteparametersareusedtoprogramsettingsthathavealimitednumberofvaluessuchasBUSandIMM.Query
+responseswillalwaysreturntheshortforminallupper-caseletters.Thefollowingcommandusesdiscrete
+
+### parameters:
+
+
+### TRIG:SOUR{BUS|IMM}
+
+Booleanparameters
+Booleanparametersrepresentasinglebinaryconditionthatiseithertrueorfalse.Forafalsecondition,thepower
+supplywillacceptOFFor0.Foratruecondition,thepowersupplywillacceptONor1.Whenyouqueryaboolean
+setting,thepowersupplywillalwaysreturn0or1.Thefollowingcommandusesabooleanparameter:
+
+### DISP{OFF|ON}
+
+Stringparameters
+StringparameterscancontainvirtuallyanysetofASCIIcharacters.Astringmustbeginandendwithmatching
+quotes;eitherwithasinglequoteorwithadoublequote.Youcanincludethequotedelimiteraspartofthestringby
+typingittwicewithoutanycharactersinbetween.Thefollowingcommandusesastringparameter:
+DISP:TEXT<quotedstring>
+KeysightE36300SeriesProgrammingGuide 15
+
+## Page 16
+
+HaltinganOutputinProgress
+YoucansendadeviceclearatanytimetostopanoutputinprogressovertheGPIBinterface.Thestatusregisters,
+theerrorqueue,andallconfigurationstatesareleftunchangedwhenadeviceclearmessageisreceived.Device
+clearperformsthefollowingactions.
+– Thepowersupply'sinputandoutputbuffersarecleared.
+– Thepowersupplyispreparedtoacceptanewcommandstring.
+– ThefollowingcommandsendsadeviceclearovertheGPIBinterfaceusingKeysightBASIC.
+CLEAR705IEEE-488DeviceClear
+– ThefollowingstatementshowshowtosendadeviceclearovertheGPIBinterfaceusingtheGPIBCommand
+LibraryforCorQuickBASIC.
+Programming Ranges and Output Identifiers
+Outputsettingcommandsrequireaparameterforprogrammingrangesandanoutputnameoranoutputnumberas
+theidentifierofeachoutput.Mostquerieswillreturnaparameter.Theprogrammingrangeforaparametervaries
+accordingtotheselectedoutputofthepowersupply.Thefollowingtableliststheprogrammingranges,output
+names,andoutputnumbersforeachoutput.
+Refertothistabletoidentifyparameterswhenprogrammingthepowersupply.
++6Voutput +25Voutput -25Voutput1
+Outputidentifier P6V P25V N25V
+Outputnumber 1 2 3
+Voltage Programmingrange 0to6.18V 0to+25.75V 0to-25.75V
+MAX value 6.18V 25.75V 0V
+MIN value 0V 0V -25.75V
+*RSTvalue(defaultvalue) 0V 0V 0V
+Current Programmingrange 0to5.15A 0to1.03A 0to1.03A
+MAX value 5.15A 1.03A 1.03A
+
+### 10.3A2 2.06A2 2.06A2
+
+MIN value 0.001A 0.001A 0.001A
+*RSTvalue(defaultvalue) 5A 1A 1A
+
+### 10A2 2A2 2A2
+
+
+### 1.ApplicableforE36311AorwhenSCPIIDissettoE3631A(E36312AandE36313A).Innormaloperation,theE36312A
+
+andE36313Awilloutputas+25V.
+
+### 2.ApplicableforE36313A.
+
+
+### 16 KeysightE36300SeriesProgrammingGuide
+
+
+### Tables
+
+|  | +6Voutput | +25Voutput | -25Voutput1 |
+|---|---|---|---|
+
+## Page 17
+
+Channels and Channel Lists
+Theinstrumenthasthreeoutputchannels:P6V,P25V,andN25V.ThesearealsoreferredtoasCH1,CH2,andCH3,
+respectively.
+Channellistparameter
+Youcanalsousethechannellistparametertoaddressoneormorechannels.Youcaneitherlistchannels:
+(@1)
+(@1,2)
+(@3,1,2)
+oryoucanlistarangeofchannels:
+(@1:3)
+(@2:3)
+Achannellistalwaysstartswithan@andisenclosedinparenthese.
+Forexample,(@2)specifieschannel2and(@1:3)specifieschannels1through3.Thechannellist,shownas
+<chanlist>throughoutthisdocument,mustbeprecededwiththe@symbolandmustbeenclosedinparentheses().
+Amaximumofthreechannelsmaybespecifiedthroughacombinationofsinglechannelsandranges.Queryresults
+arechannellistorder-sensitive.Resultsarereturnedintheordertheyarespecifiedinthelist.
+Whenaddingachannellistparametertoaquery,youmustincludeaspacecharacterbetweenthequeryindic-
+ator(?)andthechannellistparameter.Otherwiseerror–103,invalidseparatorwilloccur.
+KeysightE36300SeriesProgrammingGuide 17
+
+## Page 18
+
+SCPI Error Messages
+TheinstrumentreturnserrormessagesinaccordancewiththeSCPIstandard.
+—Upto20errorscanbestoredintheinstrument'serrorqueue,andtheERRORannunciatorturnsonwhenoneor
+moreerrorsareintheerrorqueue.
+—Errorretrievalisfirst-in-first-out(FIFO),anderrorsareclearedasyoureadthem.Whenyouhavereadallerrors
+fromtheerrorqueue,theERRannunciatorturnsoff.
+—Ifmorethan20errorshaveoccurred,thelasterrorstoredinthequeue(themostrecenterror)isreplacedwith-
+350,"Queueoverflow".Noadditionalerrorsarestoreduntilyouremoveerrorsfromthequeue.Ifnoerrorshave
+occurredwhenyoureadtheerrorqueue,theinstrumentrespondswith+0,"Noerror".
+—SendSYSTem:ERRor?toreadthemostrecenterror.Eacherrorisintheformat:-104,"Datatypeerror".
+—Toreadtheerrorqueuefromthefrontpanel,pressUtilities>Error.Iftherearemorethan10errorsonthedisplay,
+pressNexttoscrolltothenextpage.
+—Theerrorqueueisclearedbypowercyclesand*CLS.,butnot*RST.
+Executionerrorcodes
+Theinstrument'serrorcodesarelistedbelow:
+Code Text
+
+### 0000 Noerror
+
+ThisistheresponsetotheERR?querywhentherearenoerrors.
+-100 Commanderror
+Agenericsyntaxerror.
+-101 Invalidcharacter
+Aninvalidcharacterwasfoundinthecommandstring.Youmayhaveinsertedacharactersuchas#,$,or%inthecommand
+keywordorwithinaparameter.
+
+### Example:OUTP:TRAC#ON
+
+-102 Syntaxerror
+Invalidsyntaxwasfoundinthecommandstring.Youmayhaveinsertedablankspacebeforeorafteracoloninthecommand
+header,orbeforeacomma.
+
+### Example:VOLT:LEV,1
+
+-103 Invalidseparator
+Aninvalidseparatorwasfoundinthecommandstring.Youmayhaveusedacommainsteadofacolon,semicolon,orblankspace-
+oryoumayhaveusedablankspaceinsteadofacomma.
+
+### Example:TRIG:SOUR,BUSorAPPLP6V1.01.0
+
+-104 Datatypeerror
+Thewrongparametertypewasfoundinthecommandstring.Youmayhavespecifiedanumberwhereastringwasexpected,orvice
+versa.
+-105 GETnotallowed
+AGroupExecuteTrigger(GET)isnotallowedwithinacommandstring.
+
+### 18 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 19
+
+Code Text
+-108 Parameternotallowed
+Moreparameterswerereceivedthanexpectedforthecommand.Youmayhaveenteredanextraparameter,oryouaddedapara-
+metertoacommandthatdoesnotacceptaparameter.
+
+### Example:OUTP?10
+
+-109 Missingparameter
+Fewerparameterswerereceivedthanexpectedforthecommand.Youomittedoneormoreparametersthatarerequiredforthis
+
+### command.
+
+
+### Example:APPL
+
+-110 Commandheadererror
+Anerrorwasdetectedintheheader.
+-111 Headerseparatorerror
+Acharacterthatwasnotavalidheaderseparatorwasfoundinthecommandstring.
+-112 Programmnemonictoolong
+Acommandheaderwasreceivedwhichcontainedmorethanthemaximum12charactersallowed.
+-113 Undefinedheader
+Acommandwasreceivedthatisnotvalidforthispowersupply.Youmayhavemisspelledthecommandoritmaynotbeavalidcom-
+mand.Ifyouareusingtheshortformofthecommand,rememberthatitmaycontainuptofourletters.
+
+### Example:TRIGG:DEL3
+
+-114 Headersuffixoutofrange
+Thenumericsuffixattachedtoacommandheaderisnotoneoftheallowablevalues.
+
+### Example:STAT:QUES:INST:ISUM4?
+
+-120 Numericdataerror
+Aninvalidnumberwasspecifiedforanumericparameter.
+
+### Example:VOLT1.0E+320000
+
+-121 Invalidcharacterinnumber
+Aninvalidcharacterwasfoundinthenumberspecifiedforaparametervalue.
+
+### Example:*ESE#B01010102
+
+-123 Numericoverflow
+Anumericparameterwasfoundwhoseexponentwaslargerthan32,000.
+-124 Toomanydigits
+Anumericparameterwasfoundwhosemantissacontainedmorethan255digits,excludingleadingzeros.
+-128 Numericdatanotallowed
+Anumericparameterwasreceivedbutacharacterstringwasexpected.
+
+### Example:DISP:TEXT123
+
+-130 Suffixerror
+Asuffixwasincorrectlyspecifiedforanumericparameter.Youmayhavemisspelledthesuffixorthenumericparameterdoesnot
+acceptasuffix.
+
+### Example:TRIG:DEL0.5SECS
+
+-131 Invalidsuffix
+Asuffixwasincorrectlyspecifiedforanumericparameter.Youmayhavemisspelledthesuffix.
+
+### Example:TRIG:DEL0.5SECS
+
+-134 Suffixtoolong
+Asuffixforanumericparametercontainedtoomanycharacters.
+KeysightE36300SeriesProgrammingGuide 19
+
+## Page 20
+
+Code Text
+-138 Suffixnotallowed
+Asuffixwasreceivedfollowinganumericparameterwhichdoesnotacceptasuffix.
+
+### Example:STAT:QUES:ENAB18SEC(SECisnotavalidsuffix).
+
+-140 Characterdataerror
+Agenericcharacterdataerror.
+-141 Invalidcharacterdata
+Eitherthecharacterdataelementcontainedaninvalidcharacterortheparticularelementreceivedwasnotvalidfortheheader.
+-144 Characterdatatoolong
+Thecharacterdataelementcontainedtoomanycharacters.
+-148 Characterdatanotallowed
+Adiscreteparameterwasreceivedbutacharacterstringoranumericparameterwasexpected.Checkthelistofparametersto
+verifythatyouhaveusedavalidparametertype.
+
+### Example:DISP:TEXTON
+
+-150 Stringdataerror
+Agenericstringdataerror.
+-151 Invalidstringdata
+Aninvalidcharacterstringwasreceived.Checktoseeifyouhaveenclosedthecharacterstringinsingleordoublequotes.
+
+### Example:DISP:TEXT’ON
+
+-158 Stringdatanotallowed
+Acharacterstringwasreceivedbutisnotallowedforthecommand.Checkthelistofparameterstoverifythatyouhaveusedavalid
+
+### parametertype.
+
+
+### Example:TRIG:DEL’zero’
+
+-160 Blockdataerror
+Agenericblockdataerror.
+-161 Invalidblockdata
+Thenumberofdatabytessentdoesnotmatchthenumberofbytesspecifiedintheheader.
+-168 Blockdatanotallowed
+Datawassentinarbitraryblockformatbutisnotallowedforthiscommand.
+-170 Expressionerror
+Agenericexpressionerror.
+-171 Invalidexpression
+Theexpressiondataelementwasinvalid.
+-178 Expressiondatanotallowed
+Expressiondataelementwassentbutisnotallowedforthiscommand.
+-200 Executionerror
+Agenericsyntaxerror.
+-220 Parametererror
+Adataelementrelatederroroccurred.
+-221 Settingsconflict
+Adataelementcouldnotbeexecutedbecauseofthepresentinstrumentstate.
+
+### 20 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 21
+
+Code Text
+-222 Dataoutofrange
+Anumericparametervalueisoutsidethevalidrangeforthecommand.
+
+### Example:TRIG:DEL-3
+
+-223 Toomuchdata
+Acharacterstringwasreceivedbutcouldnotbeexecutedbecausethestringlengthwasmorethan40characters.Thiserrorcanbe
+generatedbytheCALibration:STRingcommand.
+-224 Illegalparametervalue
+Adiscreteparameterwasreceivedwhichwasnotavalidchoiceforthecommand.Youmayhaveusedaninvalidparameterchoice.
+
+### Example:DISP:STATXYZ(XYZisnotavalidchoice).
+
+-225 Outofmemory
+Thedevicehasinsufficientmemorytoperformtherequestedoperation.
+-230 Datacorruptorstale
+Possibleinvaliddata.Anewreadingwasstartedbutnotcompleted.
+-231 Dataquestionable
+Themeasurementaccuracyissuspect.
+-240 Hardwareerror
+Thecommandcouldnotbeexecutedbecauseofahardwareproblemwiththeinstrument.
+-241 Hardwaremissing
+Thecommandcouldnotbeexecutedbecauseofmissinghardware,suchasanoption.
+-260 Expressionerror
+Anexpressionprogramdataelementrelatederroroccurred.
+-261 Matherrorinexpression
+Anexpressionprogramdataelementcouldnotbeexecutedduetoamatherror.
+-400 QueryError
+Agenericerrorquery.
+-410 QueryINTERRUPTED
+Acommandwasreceivedwhichsendsdatatotheoutputbuffer,buttheoutputbuffercontaineddatafromapreviouscommand(the
+previousdataisnotoverwritten).Theoutputbufferisclearedwhenpowerhasbeenoff,oraftera*RST(reset)commandhasbeen
+executed.
+-420 QueryUNTERMINATED
+Thepowersupplywasaddressedtotalk(i.e.,tosenddataovertheinterface)butacommandhasnotbeenreceivedwhichsends
+datatotheoutputbuffer.Forexample,youmayhaveexecutedanAPPLycommand(whichdoesnotgeneratedata)andthenattemp-
+tedanENTERstatementtoreaddatafromtheremoteinterface.
+-430 QueryDEADLOCKED
+Acommandwasreceivedwhichgeneratestoomuchdatatofitintheoutputbufferandtheinputbufferisalsofull.Commandexe-
+cutioncontinuesbutalldataislost.
+-440 QueryUNTERMINATEDafterindefiniteresponse
+Aquerywasreceivedinthesameprogrammessageafteraqueryindicatinganindefiniteresponsewasexecuted.
+
+### 304 Voltandcurrinincompatibletransientmodes
+
+VoltageandcurrentcannotbeinStepandListmodeatthesametime.
+
+### 307 Listlengthsarenotequivalent
+
+Oneormorelistsarenotthesamelength.
+
+### 308 Thiscommandisnotallowwhilelistisrunning
+
+KeysightE36300SeriesProgrammingGuide 21
+
+## Page 22
+
+Code Text
+
+### 513 LANinvalidIPaddress
+
+
+### 514 LANduplicateIPaddress
+
+
+### 515 LANfailedtorenewDHCPlease
+
+
+### 516 LANfailedtoconfigure
+
+
+### 517 LANfailedtoinitialize
+
+
+### 518 LANVXI-11fault
+
+
+### 543 Configurationmismatched
+
+
+### 550 3.3Vpowerlost
+
+
+### 551 5.0Vpowerlost
+
+
+### 552 12Vpowerlost
+
+
+### 561 Analogboard(CH1)doesnotrespond
+
+
+### 562 Analogboard(CH2)doesnotrespond
+
+
+### 563 Analogboard(CH3)doesnotrespond
+
+
+### 564 Analogboard(CH1)overtemperature
+
+
+### 565 Analogboard(CH2)overtemperature
+
+
+### 566 Analogboard(CH3)overtemperature
+
+
+### 567 Analogboard(CH1)commandtimedout
+
+
+### 568 Analogboard(CH2)commandtimedout
+
+
+### 569 Analogboard(CH3)commandtimedout
+
+
+### 600 Analogboard(CH1)failedtoenterbootloader
+
+
+### 601 Analogboard(CH2)failedtoenterbootloader
+
+
+### 602 Analogboard(CH3)failedtoenterbootloader
+
+
+### 603 Analogboard(CH1)failedtocomm(SEMFail)
+
+
+### 604 Analogboard(CH2)failedtocomm(SEMFail)
+
+
+### 605 Analogboard(CH3)failedtocomm(SEMFail)
+
+
+### 606 Analogboard(CH1)failedtocomm(UNSPECIFIED)
+
+
+### 607 Analogboard(CH2)failedtocomm(UNSPECIFIED)
+
+
+### 608 Analogboard(CH3)failedtocomm(UNSPECIFIED)
+
+
+### 610 Fantestfailed
+
+
+### 611 EEPROMloadfailed
+
+
+### 612 EEPROMchecksumfailed
+
+
+### 613 EEPROMsavefailed
+
+
+### 614 Invalidserialnumber
+
+
+### 615 InvalidMACaddress
+
+
+### 616 Frontpaneldoesnotrespond
+
+
+### 22 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 23
+
+Code Text
+
+### 720 CH3isnotallowedwhenserial/parallel/trackisenabled
+
+CH3isnotallowedtobeused/disabledwhenserial/parallel/trackisenabled.
+
+### 721 Calibrationisnotallowedwhenserial/parallelisenabled
+
+
+### Calibrationisnotallowedtobeused/disabledwhenserial/parallel/trackisenabled.
+
+
+### 722 Multiplechannelsselectionisnotallowedduringcalibration
+
+
+### Calibrationcanonlybedoneonechannelatatime.
+
+
+### 729 Notallowtoenableoutput
+
+PossiblecauseduetoOVP/OTP/OCP.
+
+### 735 Cannotchangewhiletriggerisinitiated
+
+Datacan’tbealterastriggerhasalreadybeeninitiated.Abortthetriggertochangedata.
+
+### 736 Triginitdisallowaschanneliscoupledwithanotherchannelthathastriginitiated
+
+
+### 737 ThiscommandisonlysupportedinE3631Apersonamode
+
+NotsupportedbyE3631XAmodels.
+
+### 738 ThiscommandisonlysupportedinE3631XApersonamode
+
+NotsupportedbyE3631Amodel.
+
+### 739 ChannellistisignoredbythiscommandinE3631Apersonamode
+
+ChannellistisnotsupportedbyE3631Apersonamode.Thecommandisstillexecutedontheselectedchannelbutisnotusingthe
+channellistprovided.
+
+### 742 Illegaloperation.ListsystemhasstartedforCH2orCH3
+
+Stopthelistbeforedoingthisoperation.
+
+### 743 Operationnotallowedwheninparallel/seriesmode
+
+Changethemodebeforedoingthisoperation.
+
+### 750 USBnotconnected
+
+ThismaybeduetodataloggerrequiringaUSBthumbdrivetobeconnected.
+
+### 751 USBhostaccessfailed
+
+ThismaybeduetoDUTfailstoaccesstheUSBthumbdrive.
+
+### 752 InsufficientspaceinUSBdrive
+
+Thismaybeduetothememorysizerequiredbydataloggerislargerthantheavailablefreespace.
+
+### 753 Dataloggerisrunning
+
+Dataloggersettingcan’tbechangedwhileit’srunning.
+
+### 754 Dataloggerdonothavevaliddata
+
+Fetchisnotallowedasdataloggerdoesn’thavevaliddata.
+
+### 800 CH2andCH3coupledbytracksystem
+
+TheOUTP:TRAC shouldbeoffwhencouplingbetweentheCH2outputandCH3output.
+
+### 801 CH2andCH3coupledbytriggersubsystem
+
+TheCH2outputandCH3outputshouldbeuncoupledtoenablethetrackingoperationforthoseoutputs.
+
+### 900 Firmwareupdatefailed
+
+KeysightE36300SeriesProgrammingGuide 23
+
+## Page 24
+
+
+### Calibrationerrorcodes
+
+Thefollowingerrorsindicatefailuresthatmayoccurduringacalibration.
+Code Text
+
+### 577 Analogboard(CH1)calibrationfailed
+
+
+### 578 Analogboard(CH2)calibrationfailed
+
+
+### 579 Analogboard(CH3)calibrationfailed
+
+
+### 581 Invalidstate.Calsecured
+
+
+### 582 Invalidsecurecode
+
+
+### 583 Securecodetoolong
+
+
+### 584 FailedtocalibratevoltageDAC
+
+
+### 585 FailedtocalibratevoltageADC
+
+
+### 586 FailedtocalibrateOVP
+
+
+### 587 FailedtocalibratecurrentDAC
+
+
+### 588 FailedtocalibratecurrentADC
+
+
+### 590 InvalidCalibrationsequence
+
+
+### 591 Failedtocalibratelowrangecurrent
+
+
+### 592 Thisactionisnotallowedascalibrationhasnotcompleted
+
+Self-testerrorcodes
+Thefollowingerrorsindicatefailuresthatmayoccurduringaself-test.
+Code Text
+
+### 530 (CH1)Analogbiasoutput15Vtestfailed
+
+
+### 531 (CH2)Analogbiasoutput15Vtestfailed
+
+
+### 532 (CH3)Analogbiasoutput15Vtestfailed
+
+
+### 533 (CH1)SystemADCtestfailed
+
+
+### 534 (CH2)SystemADCtestfailed
+
+
+### 535 (CH3)SystemADCtestfailed
+
+
+### 536 (CH1)SystemDACtestfailed
+
+
+### 537 (CH2)SystemDACtestfailed
+
+
+### 538 (CH3)SystemDACtestfailed
+
+
+### 539 (CH1)IncorrectModelnumber
+
+
+### 540 (CH2)IncorrectModelnumber
+
+
+### 541 (CH3)IncorrectModelnumber
+
+
+### 542 (FP)IncorrectModelnumber
+
+
+### 24 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 25
+
+Reset and Non-volatile Settings
+Thefollowingtablesshowtheresetandnon-volatilesettings.Theseparametersaresettotheindicateddefault
+valuesatpower-onorafter*RST.
+Reset(*RST)settings
+Theinstrument'sresetsettingsarelistedbelow:
+SCPIcommand Defaultvalue
+INSTrument:SELect 1
+INSTrument:NSELect 1
+INSTrument:COUPle None.OnlyapplicabletoE3631Apersonamode.
+OUTPut:STATe OFF
+OUTPut:STATe:DELay:FALL 0
+OUTPut:STATe:DELay:RISE 0
+OUTPut:TRACk:STATe OFF
+OUTPut:PAIR OFF
+LIST:VOLTage MIN
+LIST:CURRent MIN
+LIST:DWELl 0.01
+LIST:COUNt 1
+LIST:TERMinate:LAST OFF
+
+### LIST:STEP AUTO
+
+LIST:TOUTput:BOSTep OFF
+LIST:TOUTput:EOSTep OFF
+CURRent Outputdependentvalue
+For11Aor12Amodel:
+-Channel1=5A
+-Channel2and3=1A
+For13Amodel(highpower):
+-Channel1=10A
+-Channel2and3=2A
+For12Amodel(lowpower+ parallelmode):
+-Channel1=5A
+-Channel2=2A
+For13Amodel(highpower+ parallelmode):
+-Channel1=10A
+-Channel2=4A
+KeysightE36300SeriesProgrammingGuide 25
+
+## Page 26
+
+SCPIcommand Defaultvalue
+CURRent:TRIGgered Forgeneralmode,thedefaultvalueisminwhichis0.
+ForE3631Apersonamode,itisoutputdependent
+value.
+For11Aor12Amodel:
+-Channel1=5A
+-Channel2and3=1A
+For13Amodel(highpower):
+-Channel1=10A
+-Channel2and3=2A
+For12Amodel(lowpower+ parallelmode):
+-Channel1=5A
+-Channel2=2A
+For13Amodel(highpower+ parallelmode):
+-Channel1=10A
+-Channel2=4A
+CURRent:PROTection:STATe OFF
+CURRent:PROTection:DELay 50ms
+CURRent:PROTection:DELay:STARt SCH
+CURRent:MODE FIX
+VOLTage MIN(0)
+VOLTage:TRIGgered MIN(0)
+VOLTage:MODE FIX
+VOLTage:PROTection Outputdependentvalue(MAX)
+
+### OFFMODE:
+
+-Channel1=6.6
+-Channel2=27.5
+-Channel3=27.5(standardmode)
+-Channel3=-27.5(E3631AmodeorE36311A)
+
+### SERIESMODE:
+
+-Channel1=6.6
+-Channel2=55
+-Channel3=Notavailable
+VOLTage:RANGe -
+VOLTage:SENSe Internal(0)
+DIGital:OUTPut:DATA 0
+DIGital:TOUTput:BUS FALSE
+INITiate:CONTinuous FALSE
+TRIGger:DELay 0
+TRIGger:SOURce BUS
+
+### 26 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 27
+
+SCPIcommand Defaultvalue
+DISPlay ON
+DISPlay:TEXT “”(empty)
+DISPlay:VIEW METER3
+SYSTem:BEEPer:STATe ON
+SYSTem:COMMunicate:RLSTate -
+LXI:IDENtify:STATe -
+LXI:MDNS:STATe -
+
+### CALibration:CURRent -
+
+
+### CALibration:CURRent:LOW -
+
+
+### CALibration:CURRent:LEVel -
+
+
+### CALibration:CURRent:LEVel:LOW -
+
+
+### CALibration:VOLTage -
+
+
+### CALibration:VOLTage:LEVel -
+
+
+### CALibration:CURRent:LEVel:LOW -
+
+
+### CALibration:VOLTage -
+
+
+### CALibration:VOLTage:LEVel -
+
+
+### CALibration:SECure:CODE -
+
+
+### CALibration:SECure:STATe -
+
+
+### CALibration:STRing -
+
+STATus:QUEStionable:ENABle -
+STATus:QUEStionable:INSTrument:ENABle -
+STATus:QUEStionable:INSTrument:ISUMmary -
+STATus:QUEStionable:INSTrument:ISUMmary:ENABle -
+SENSe:DLOG:FUNCtion:CURRent Allchannelsoff
+SENSe:DLOG:FUNCtion:MINM Off
+SENSe:DLOG:FUNCtion:VOLTage Allchannelson
+SENSe:DLOG:PER 0.2s
+SENSe:DLOG:TIME 30s
+SENSe:DLOG:TINTerval 0.2s
+KeysightE36300SeriesProgrammingGuide 27
+
+## Page 28
+
+Non-volatilesettings
+Theinstrument'snon-volatilesettingsarelistedbelow:
+SCPIcommand Defaultvalue
+OUTPut:STATe:COUPle:CHANnel(channelgrouping) NONE
+OUTPut:STATe:INHibit:MODE(outputInhibitmode) OFF
+OUTPut:PON:STATE *RST
+DIGital:PIN<1-3>:FUNCtion(digitalportfunction) DigitalIn
+DIGital:PIN<1-3>:POLarity(digitalportpolarity) Positive
+
+### Calibrationpassword 0
+
+
+### Calibrationdate -
+
+GPIBAddress 5
+SYSTem:DATE -
+SYSTem:TIME -
+SYSTem:PERSona:MODel E3631XA
+SYSTem:PERSona:MANufacturer KeysightTechnologies
+Non-volatileLAN settings
+Theinstrument'snon-volatileLANsettingsarelistedbelow:
+SCPIcommand Defaultvalue
+GetIPAddress Automatic
+IPAddress 192.168.10.1
+SubnetMask 255.255.255.0
+DefaultGateway 192.168.10.1
+ObtainDNSserverfromDHCP Enabled
+DNSserver Blank
+Hostname K-x-xxxxx
+DynamicDNSnamingservice Enabled
+Domainname Blank
+Webpassword Keysight
+
+### 28 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 29
+
+SCPI Status Registers
+AllSCPIinstrumentsimplementstatusregistersinthesameway.Thestatussystemrecordsvariousinstrument
+conditionsinthreeregistergroups:theStatusByteregister,theStandardEventregister,andtheQuestionable
+Statusregistergroups.TheStatusByteregisterrecordshigh-levelsummaryinformationreportedintheother
+registergroups.ThefigurebelowillustratestheSCPIstatussystemusedbythepowersupply.
+KeysightE36300SeriesProgrammingGuide 29
+
+## Page 30
+
+Whatisaneventregister?
+Aneventregisterisaread-onlyregisterthatreportsdefinedconditionswithintheinstrument.Bitsinanevent
+registerarelatched.Onceaneventbitisset,subsequentstatechangesareignored.Bitsinaneventregisterare
+automaticallyclearedbyaqueryofthatregister(suchas*ESR?orSTAT:QUES:EVEN?)orbysendingthe*CLS(clear
+status)command.Areset(*RST)ordeviceclearwillnotclearbitsineventregisters.Queryinganeventregister
+returnsadecimalvalueofthebinary-weightedsumofallbitssetintheregister.
+Whatisanenableregister?
+AnenableregisterdefineswhichbitsinthecorrespondingeventregisterarelogicallyORedtogethertoformasingle
+summarybit.Enableregistersarebothreadableandwritable.Queryinganenableregisterwillnotclearit.The*CLS
+(clearstatus)commanddoesnotclearenableregistersbutitdoesclearthebitsintheeventregisters.Toenablebits
+inanenableregister,youmustwriteadecimalvaluewhichcorrespondstothebinary-weightedsumofthebitsyou
+wishtoenableintheregister.
+
+### 30 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 31
+
+Whatisamultiplelogicaloutput?
+ThethreelogicaloutputsofthepowersupplyincludeanINSTrumentsummarystatusregisterandanindividual
+instrumentISUMmaryregisterforeachlogicaloutput.TheISUMmaryregistersreporttotheINSTrumentregister,
+whichinturnreportstobit13oftheQuestionablestatusregister,asshowninthediagrambelow.
+Thisstatusregisterconfigurationallowsastatuseventtobecross-referencedbyoutputandtypeofevent.The
+INSTrumentregisterindicateswhichoutput(s)havegeneratedanevent.TheISUMmaryregisterisapseudo-
+questionablestatusregisterforaparticularlogicaloutput.
+KeysightE36300SeriesProgrammingGuide 31
+
+## Page 32
+
+TheQuestionableStatusregister
+TheQuestionableStatusregisterprovidesinformationaboutunexpectedinstrumentoperation.Bit13summarizes
+questionableoutputs.Forexample,ifoneoutputisinconstantvoltagemodeandlosesregulationduetoan
+overload,bit13isset(latched).SendtheSTAT:QUES?querytoreadtheregister.Tomakeuseofbit13,youmust
+firstenabletheregistersyouwishtosummarizewithbit13.SendSTAT:QUES:INST:ENAB14toenablethe
+QuestionableInstrumentregister.ThensendSTAT:QUES:INST:ISUM<n>:ENAB3foreachsupplytoenablethe
+QuestionableInstrumentSummaryregister,wherenis1,2,or3.
+Bit Value Name Description
+0-3 0 (unused) Alwayssetto0.
+
+### 4 16 (unused) Alwayssetto0.
+
+5-12 0 (unused) Alwayssetto0.
+
+### 13 8192 ISUM SummaryofQUES:INSTandQUES:INST:ISUMregisters.
+
+14-15 0 (unused) Alwayssetto0.
+TheQuestionableInstrumentregister
+TheQuestionableInstrumentregisterprovidesinformationaboutunexpectedoperationsforeachofthethree
+supplies.Forexampleifthe+6Vsupplyisintheconstantvoltagemodeandlosesregulation,thenbit1set
+indicatingapossibleoverloadinthe+6Vsupply.The+25Vsupplyisreportedasbit2,andthe-25Vsupplyasbit3.
+SendthecommandSTATQUES:INST?toreadtheregister.TheSTAT:QUES:INST:ISUM<n>registersmustbe
+enabledtomakeuseoftheQuestionableInstrumentregister.SendSTAT:QUES:INST:ISUM<n>:ENAB3toenable
+outputn.
+TheQuestionableInstrumentSummaryregister
+TherearethreeQuestionableInstrumentSummaryregisters,oneforeachsupplyoutput.Theseregistersprovide
+informationaboutvoltageandcurrentregulation.Bit0issetwhenthevoltagebecomesunregulated,andbit1isset
+ifthecurrentbecomesunregulated.Forexampleifasupplywhichisoperatingasavoltagesource(constantvoltage
+mode)momentarilygoestoconstantcurrentmode,bit0issettoindicatethatthevoltageoutputisnotregulated.
+Toreadtheregisterforeachsupply,sendSTAT:QUES:INST:ISUM<n>?,wherenis1,2,or3.
+Todeterminetheoperatingmode(CVorCC)forthepowersupplysendSTAT:QUES:INST:ISUM<n>:COND?,wheren
+is1,2,or3dependingontheoutput.Bit1trueindicatestheoutputisinconstantvoltagemode,bit0trueindicates
+constantcurrentmode,bothbitstrueindicatesneitherthevoltagenorthecurrentisregulated,andbothbitsfalse
+indicatestheoutputsofthepowersupplyareoff.
+TheQuestionableStatusEventregisterisclearedwhenyouexecutethe*CLS(clearstatus)commandorquerythe
+eventregisterusingtheSTATus:QUEStionable[:EVENt]?query.
+TheQuestionableStatusEnableregisterisclearedbytheSTATus:QUEStionable:ENABle0command.
+
+### 32 KeysightE36300SeriesProgrammingGuide
+
+
+### Tables
+
+| Value | Name | Description |
+|---|---|---|
+
+## Page 33
+
+TheStandardEventregister
+TheStandardEventregisterreportsthefollowingtypesofinstrumentevents:power-ondetected,commandsyntax
+errors,commandexecutionerrors,self-testorcalibrationerrors,queryerrors,orwhenan*OPCcommandis
+executed.AnyoralloftheseconditionscanbereportedintheStandardEventSummarybit(ESB,bit5)ofStatus
+Byteregisterthroughtheenableregister.Tosettheenableregistermask,youwriteadecimalvaluetotheregister
+usingthe*ESE(EventStatusEnable)command.
+Anerrorcondition(StandardEventregisterbits2,3,4,or5)willalwaysrecordoneormoreerrorsinthepower
+supply'serrorqueue.ReadtheerrorqueueusingtheSYSTem:ERRor?command.
+Bit Value Name Description
+
+### 0 1 OPC OperationComplete.Allcommandspriortoandincludingan*OPCcommandhavebeenexecuted.
+
+
+### 1 0 (unused) Alwayssetto0.
+
+
+### 2 4 QYE QueryError.Thepowersupplytriedtoreadtheoutputbufferbutitwasempty.Or,anewcommandlinewas
+
+receivedbeforeapreviousqueryhadbeenread.Or,boththeinputandoutputbuffersarefull.
+
+### 3 8 DDE DeviceError.Aself-testorcalibrationerroroccurred.
+
+
+### 4 16 EXE ExecutionError.Anexecutionerroroccurred.
+
+
+### 5 32 CME CommandError.Acommandsyntaxerroroccurred.
+
+
+### 6 0 (unused) Alwayssetto0.
+
+
+### 7 128 PON PowerOn.Powerhasbeenturnedoffandonsincethelasttimetheeventregisterwasreadorcleared
+
+TheStandardEventregisterisclearedwhenyouexecutethe*CLS(clearstatus)commandoryouquerytheevent
+registerusingthe*ESR?(EventStatusregister)command.
+TheStandardEventEnableregisterisclearedwhenyouexecutethe*ESE0commandoryouturnonthepowerand
+havepreviouslyconfiguredthepowersupplyusingthe*PSC1command.
+Forexample,youmustsendthe*ESE24(8+16)toenableDDEandEXEbits.Similarly,24isreturnedwhenyou
+havequeriedthestatusoftheStandardEventregisterandtheDDEandEXEconditionshaveoccurred.
+TheStatusBytesummaryregister
+TheStatusBytesummaryregisterreportsconditionsfromtheotherstatusregisters.Querydatawaitinginthe
+outputbufferisimmediatelyreportedthroughthe“MessageAvailable”bit(bit4)ofStatusByteregister.Bitsinthe
+summaryregisterarenotlatched.ClearinganeventregisterclearsthecorrespondingStatusBytesummaryregister
+bits.Readingallmessagesintheoutputbuffer,includingpendingqueries,clearsthemessageavailablebit.
+Bit Value Name Description
+0-1 0 (unused) Alwayssetto0.
+
+### 2 4 ERR OneormoreerrorshavebeenstoredintheErrorQueue.
+
+
+### 3 8 QUES Oneormorebitsaresetinthequestionablestatusregister(bitsmustbe“enabled”intheenableregister).
+
+
+### 4 16 MAV Dataisavailableinthepowersupplyoutputbuffer.
+
+
+### 5 32 ESB Oneormorebitsaresetinthestandardeventregister(bitsmustbe“enabled”intheenableregister).
+
+
+### 6 64 RQS Thepowersupplyisrequestingservice(serialpoll).
+
+KeysightE36300SeriesProgrammingGuide 33
+
+### Tables
+
+| Value | Name | Description |
+|---|---|---|
+
+| Value | Name | Description |
+|---|---|---|
+
+## Page 34
+
+Bit Value Name Description
+
+### 7 0 (unused) Alwayssetto0.
+
+The*CLS (clearstatus)commandclearstheStatusByteSummaryRegister.QueryingtheStandardEventregister
+(*ESR?)clearsonlybit5intheStatusBytesummaryregister.Forexample,24(8+16)isreturnedwhenyouquery
+theStatusByteregisterandtheQUESandMAVconditionshaveoccurred.
+TheStatusByteEnableregister(RequestService)isclearedwhenyouexecutethe*SRE0commandoryouturnon
+thepowerandhavepreviouslyconfiguredthepowersupplyusingthe*PSC1command.Forexample,youmust
+sendthe*SRE96(32+64)toenableESBandRQSbits.
+UsingServiceRequest(SRQ)andserialPOLL
+YoumustconfigureyourbuscontrollertorespondtotheIEEE-488servicerequest(SRQ)interrupttousethis
+capability.UsetheStatusByteenableregister(*SREcommand)toselectwhichsummarybitswillsetthelow-level
+IEEE-488servicerequestsignal.Whenbit6(requestservice)issetintheStatusByte,anIEEE-488servicerequest
+interruptmessageisautomaticallysenttothebuscontroller.Thebuscontrollermaythenpolltheinstrumentson
+thebustoidentifywhichonerequestedservice(theinstrumentwithbit6setinitsStatusByte).
+TherequestservicebitisclearedonlybyreadingtheStatusByteusinganIEEE-488serialpollorbyreadingthe
+eventregisterwhosesummarybitiscausingtheservicerequest.
+ToreadtheStatusBytesummaryregister,sendtheIEEE-488serialpollmessage.Queryingthesummaryregister
+willreturnadecimalvaluewhichcorrespondstothebinary-weightedsumofthebitssetintheregister.Serialpoll
+willautomaticallyclearthe“requestservice”bitintheStatusBytesummaryregister.Nootherbitsareaffected.
+Performingaserialpollwillnotaffectinstrumentthroughput.
+TheIEEE-488standarddoesnotensuresynchronizationbetweenyourbuscontrollerprogramandtheinstru-
+ment.Usethe*OPC?commandtoguaranteethatcommandspreviouslysenttotheinstrumenthavecom-
+pleted.Executingaserialpollbeforea*RST,*CLS,orothercommandshavecompletedcancauseprevious
+conditionstobereported.
+Using*STB?toreadtheStatusByte
+The*STB?(StatusByte)queryislikeaserialpoll,butitisprocessedlikeanyotherquery.The*STB?command
+returnsthesameresultasaserialpoll,butthe“requestservice”bit(bit6)isnotcleared.
+The*STB?queryisnothandledautomaticallybytheIEEE-488businterfacehardwareandwillbeexecutedonlyafter
+previouscommandshavecompleted.Pollingisnotpossibleusingthe*STB?query.The*STB?querydoesnotclear
+theStatusBytesummaryregister.
+Usingthemessageavailablebit(MAV)
+YoucanusetheStatusByte“messageavailable”bit(bit4)todeterminewhendataisavailabletoreadintoyourbus
+controller.Thepowersupplysubsequentlyclearsbit4onlyafterallmessageshavebeenreadfromtheoutput
+buffer.
+
+### 34 KeysightE36300SeriesProgrammingGuide
+
+
+### Tables
+
+| Value | Name | Description |
+|---|---|---|
+
+## Page 35
+
+TointerruptyourbuscontrollerusingSRQ
+
+### 1. Sendadeviceclearmessagetoclearthepowersupply'soutputbuffer(e.g.,CLEAR705).
+
+
+### 2. Cleartheeventregisterswiththe*CLS(clearstatus)command.
+
+
+### 3. Setuptheenableregistermasks.Executethe*ESEcommandtosetuptheStandardEventregisterandthe
+
+*SREcommandfortheStatusByte.
+
+### 4. Sendthe*OPC?(operationcompletequery)commandandentertheresulttoensuresynchronization.
+
+
+### 5. Enableyourbuscontroller'sIEEE-488SRQinterrupt.
+
+Todeterminewhenacommandsequenceiscompleted
+
+### 1. Sendadeviceclearmessagetoclearthepowersupply'soutputbuffer(e.g.,CLEAR705).
+
+
+### 2. Cleartheeventregisterswiththe*CLS(clearstatus)command.
+
+
+### 3. Enablethe“operationcomplete”bit(bit0)intheStandardEventregisterbyexecutingthe*ESE1command.
+
+
+### 4. Sendthe*OPC?(operationcompletequery)commandandentertheresulttoensuresynchronization.
+
+
+### 5. Executeyourcommandstringtoprogramthedesiredconfiguration,andthenexecutethe*OPC(operationcom-
+
+plete)commandasthelastcommand.Whenthecommandsequenceiscompleted,the“operationcomplete”
+bit(bit0)issetintheStandardEventregister.
+
+### 6. Useaserialpolltodeterminewhenbit5(standardevent)issetintheStatusBytesummaryregister.Youcould
+
+alsoconfiguretheinstrumentforanSRQinterruptbysending*SRE32(StatusByteenableregister,bit5).
+Using*OPCtosignalwhendataisintheoutputbuffer
+Generally,itisbesttousethe“operationcomplete”bit(bit0)intheStandardEventregistertosignalwhena
+
+### commandsequencefinishes.Thisbitissetintheregisterbyan*OPCcommand.Ifyousend*OPCafteracommand
+
+thatloadsaqueryresponseintheinstrument'soutputbuffer,youcanusethe“operationcomplete”bittodetermine
+whenthemessageisavailable.However,iftoomanymessagesaregeneratedbeforethe*OPCcommandexecutes
+(sequentially),theoutputbufferwillfillandtheinstrumentwillstopprocessingcommands.
+KeysightE36300SeriesProgrammingGuide 35
+
+## Page 36
+
+
+### 36 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 37
+
+
+### 2 SCPI Programming
+
+ABORtSubsystem
+APPLySubsystem
+
+### CALibrationSubsystem
+
+CURRentSubsystem
+DIGitalSubsystem
+DISPlaySubsystem
+FETChSubsystem
+IEEE-488Subsystem
+INITiateSubsystem
+INSTrumentSubsystem
+LISTSubsystem
+LXISubsystem
+MEASureSubsystem
+MMEMorySubsystem
+OUTPutSubsystem
+SENSeSubsystem
+STATusSubsystem
+SYSTemSubsystem
+TriggeringCommands
+VOLTageSubsystem
+ThischapterdescribesthesubsystemcommandsavailabletotheE36300
+SeriesprogrammableDCpowersupply.
+KeysightE36300SeriesProgrammingGuide 37
+
+## Page 38
+
+ABORt Subsystem
+ABORt(@<chanlist>)
+Thecommandclearsanypendingdelayedtriggerandreturnsthetriggersystemtoidle.IfINIT:CONTisenabled,
+ABORtdoesnotturnoffcontinuoustriggers.ThiscommandalsoresetstheWTGbitintheQuestionableInstrument
+Summarystatusregister.
+
+### Parameter Typicalreturn
+
+(@<chanlist>) (none)
+Abortsthetriggeredactionofchannel1: ABOR(@1)
+ABORt:DLOG
+ThecommandstopsthecurrentdataloggingsessionsimilartopressingtheRun/Stoppedkeyontheinstrument.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Stopsthecurrentdataloggingsession: ABOR:DLOG
+
+### 38 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 39
+
+APPLy Subsystem
+APPLyP6V|P25V|N25V|CH1|CH2|CH3,[,<voltage>|DEFault|MINimum|MAXimum[,<current>|
+DEFault|MINimum|MAXimum]]
+APPLy?P6V|P25V|N25V|CH1|CH2|CH3,
+ThecommandiscombinationofINSTrument:SELect,[SOURce:]CURRent,and[SOURce:]VOLTagecommands.The
+valuesofthevoltageandcurrentofthespecifiedoutputwillchangeassoonasthecommandisexecuted.
+Youcanidentifyeachoutputbytheoutputname(P6V,P25V,N25V,ch1,ch2,orch3).Forthevoltageandcurrent
+
+### parametersoftheAPPLycommand,therangesdependontheoutputcurrentlyselected.Youcansubstitute
+
+“MINimum”,“MAXimum”,or“DEFault”inplaceofaspecificvalueforthevoltageandcurrentparameters.Ifyou
+specifyonlyonevaluefortheparameter,thepowersupplyregardsitasvoltagesettingvalue.Ifyoudonotspecify
+anyvaluefortheparameter,theAPPLycommandonlyselectstheoutputspecifiedandactsastheINSTrument
+
+### command.
+
+Thequeryreturnsthepowersupply'spresentvoltageandcurrentvaluesforeachoutputasaquotedstringasshown
+inthesamplestringbelow(thequotationmarksarereturnedaspartofthestring).Ifanyoutputidentifierisnot
+specified,thevoltageandthecurrentofthecurrentlyselectedoutputarereturned.
+"5.000000,1.000000"
+Referringtotheabovestring,thefirstnumber5.000000isthevoltagelimitvalueandthesecondnumber1.000000
+isthecurrentlimitvalueforthespecifiedoutput.
+Output Rangeofvalues
+<voltage> P6V=(MAX=6.18V|MIN=0V|DEF=0V)
+
+### P25V=(MAX=25.75V|MIN=0V|DEF=0V)
+
+
+### N25V=(MAX=-25.75V|MIN=0V|DEF=0V)
+
+Note:ThenegativevoltagevaluesforN25VisonlyforE3631APersonamode.
+<current> P6V=(MAX=5.15A|MIN=0A|DEF=5A)
+P6V=(MAX=10.3A|MIN=0A|DEF=10A)(ApplicableforE36313A)
+
+### P25V=(MAX=1.03A|MIN=0A|DEF=1A)
+
+P25V=(MAX=2.06A|MIN=0A|DEF=2A)(ApplicableforE36313A)
+
+### N25V=(MAX=1.03A|MIN=0A|DEF=1A)
+
+N25V=(MAX=2.06A|MIN=0A|DEF=2A)(ApplicableforE36313A)
+
+### Parameter Typicalreturn
+
+<voltage>|DEF|MIN|MAX, <voltage>,<current>
+<current>|DEF|MIN|MAX
+*RST<DEFinRangeofvalues>
+Setsthemaximumvoltageandcurrentof+6Voutput: APPLP6V,MAX,MAX
+KeysightE36300SeriesProgrammingGuide 39
+
+## Page 40
+
+
+### CALibration Subsystem
+
+Thecalibrationcanonlybedoneonechannelatatime,hencethechannellistforallcalibrationcommandswill
+onlyacceptonechannel.
+
+### CALibration:ASAVEON|OFF|1|0
+
+
+### CALibration:ASAVE?
+
+Thecommandenablesordisablesautomaticsavingofcalibrationconstants.WhentheAutoSavefeatureis
+enabled,thecalibrationdatawillautomaticallymovetheCALdatafromvolatilememorytonon-volatilememory
+whenleavingtheCALstate.
+Thequeryreturns0(OFF)or1(ON).
+
+### Parameter Typicalreturn
+
+ON|OFF|1|0 0or1
+EnablestheCALautosavefeature: CAL:ASAVE1
+
+### CALibration:COUNt?
+
+Thequeryreturnsthenumberoftimesthepowersupplyhasbeencalibrated.Yourpowersupplywascalibrated
+beforeitleftthefactory.Whenyoureceiveyourpowersupply,readthecounttodetermineitsinitialvalue.Sincethe
+valueincrementsbyoneforeachcalibrationpoint,acompletecalibrationforthreeoutputswillincreasethevalueby
+threecounts.
+
+### Parameter Typicalreturn
+
+(none) <count>
+Returnsthecalibrationcount: CAL:COUN?
+
+### CALibration:CURRent[:DATA][:HIGH]<current>,(@<chanlist>)
+
+Thecommandallowsyoutoenteranoutputcurrentvaluethatyouobtainedbyreadingadigitalmultimeter(DMM).
+Selectacalibrationlevel(CAL:CURR:LEV)forthevaluebeingentered.Thiscommandcanonlybeusedwhen
+
+### calibrationisunsecuredandoutputisON.
+
+
+### Parameter Typicalreturn
+
+<current> (none)
+SetstheoutputcurrentvalueobtainedbyreadingaDMMforexample5A: CAL:CURR5
+
+### 40 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 41
+
+
+### CALibration:CURRent[:DATA]:LOW<current>,(@<chanlist>)
+
+OnlysupportedbyE36312AandE36313Amodels.
+Thecommandallowsyoutoenteranoutputcurrentvaluethatyouobtainedbyreadingadigitalmultimeter(DMM).
+ThiscommandissimilartoCALibration:CURRent[:DATA][:HIGH],butitisonlyusedforsmallcurrentcalibration.This
+
+### commandcanonlybeusedwhencalibrationisunsecuredandoutputisON.
+
+
+### Parameter Typicalreturn
+
+<current> (none)
+SetstheoutputcurrentvalueobtainedbyreadingaDMMforexample0.5A: CAL:CURR:LOW
+
+### 0.5
+
+
+### CALibration:CURRent:LEVel[:HIGH]MINimum|MAXimum,(@<chanlist>)
+
+Beforeusingthiscommand,youmustselecttheoutputwhichistobecalibratedbyusingtheINSTrument
+
+### command.Thiscommandcanonlybeusedaftercalibrationisunsecured.Itsetsthepowersupplytoacalibration
+
+pointthatisenteredwithCALibration:CURRent[:DATA]command.Duringcalibration,twopointsmustbeentered
+andthelow-endpoint(MIN)mustbeselectedandenteredfirst.
+
+### Parameter Typicalreturn
+
+MINimum|MAXimum (none)
+Calibratestheoutputcurrentforchannel1totheminimumrange: CAL:CURR:LEVMIN,(@1)
+
+### CALibration:CURRent:LEVel:LOWMINimum|MAXimum,(@<chanlist>)
+
+Beforeusingthiscommand,youmustselecttheoutputwhichistobecalibratedbyusingtheINSTrument
+
+### command.Thiscommandcanonlybeusedaftercalibrationisunsecured.Thiscommandissimilarto
+
+
+### CALibration:CURRent:LEVel[:HIGH],butitisonlyusedforsmallcurrentcalibration.Itsetsthepowersupplytoa
+
+
+### calibrationpointthatisenteredwithCALibration:CURRent[:DATA]command.Duringcalibration,twopointsmust
+
+beenteredandthelow-endpoint(MIN)mustbeselectedandenteredfirst.
+
+### Parameter Typicalreturn
+
+MINimum|MAXimum (none)
+Calibratestheoutputcurrentforchannel1totheminimumrange: CAL:CURR:LEV:LOWMIN,(@1)
+KeysightE36300SeriesProgrammingGuide 41
+
+## Page 42
+
+
+### CALibration:DATE"<string>"
+
+
+### CALibration:DATE?(@<chanlist>)
+
+Thecommandstoresthedatethatthepowersupplywaslastcalibratedinnonvolatilememory.Thiscommandis
+equivalenttotheCALibration:STRingcommand.
+Thequeryreturnsthedate.Ifnodateisstored,anemptyquotedstring("")isreturned.
+
+### Parameter Typicalreturn
+
+"<string>" "<string>"
+Entersthecalibrationdate:CAL:DATE"4/22/17"
+
+### CALibration:SAVE
+
+Thecommandsavescalibrationconstantsinnon-volatilememoryafterthecalibrationprocedurehasbeen
+completed.Whenyouexit( CALibration:STATeOFF)withoutsaving,thepreviousconstantsarerestored.IftheAuto
+Savefeatureisnotenabled,youneedtosendCALSavecommandtostorethenewCALdatatonon-volatile
+memory.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Savescalibrationconstants: CAL:SAVE
+
+### CALibration:SECure:CODE<newcode>
+
+Thecommandentersanewsecuritypasscode.Tochangethepasscode,firstunsecurethepowersupplyusingthe
+oldpasscode.Then,enterthenewpasscode.Thepasscodecanbesetupto9digits.
+
+### Parameter Typicalreturn
+
+<newcode> (none)
+Setsthenewsecuritypasscodeto12345:CAL:SEC:CODE12345
+
+### CALibration:SECure:STATeON|OFF|1|0,<code>
+
+
+### CALibration:SECure:STATe?
+
+Thecommandunsecuresorsecuresthepowersupplyforcalibration,usingthecodespecifiedbyCALibration
+SECure:CODE.
+Thequeryreturns0(calibrationunsecured)or1(calibrationsecured).
+
+### Parameter Typicalreturn
+
+ON|OFF|1|0,<code> 1or0
+Securesthepowersupplyforcalibration:CAL:SEC:STATON,0
+
+### 42 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 43
+
+
+### CALibration:STRing"<string>"
+
+
+### CALibration:STRing?
+
+Thecommandsavesupto40charactersofinformation,suchasthelastcalibrationdate,thenextcalibrationdue
+date,orthepowersupply’sserialnumber.Youmustunsecuretheinstrumentbeforesavingthestring,butyoucan
+readthestringregardlessofthesecuritystatus.
+Thequeryreturnsaquotedstring.
+
+### Parameter Typicalreturn
+
+"<string>" "<string>"
+Setsthestringto"4/22/17": CAL:STR"4/22/17"
+
+### CALibration:VOLTage[:DATA]<numericvalue>,(@<chanlist>)
+
+Thecommandentersavoltagevalueofaselectedoutputthatyouobtainedbyreadinganexternalmeter.Before
+usingthiscommand,youmustfirstunsecurecalibrationandselectacalibrationlevel(CAL:VOLT:LEV)forthevalue
+beingentered.Twosuccessivevalues(oneforeachendofthecalibrationrange)mustbeselectedandentered.The
+powersupplythencomputesnewcalibrationconstantsandstorestheminnon-volatilememory.
+
+### Parameter Typicalreturn
+
+<numericvalue> (none)
+SetstheoutputvoltagevalueobtainedbyreadingaDMMforexample5V:CAL:VOLT5
+
+### CALibration:VOLTage:LEVelMINimum|MAXimum,(@<chanlist>)
+
+ThecommandsetsthepowersupplytoacalibrationpointthatisenteredwithCAL:VOLT[:DATA]command.Before
+usingthiscommand,youmustfirstunsecurecalibrationandusetheINSTrumentcommandtoselecttheoutputto
+becalibrated.Duringcalibration,thelow-endpoint(MIN)mustbeselectedandenteredfirst,followedbythehigh-
+endpoint(MAX).
+
+### Parameter Typicalreturn
+
+MINimum|MAXimum (none)
+Calibratestheminimumvoltage:CAL:VOLT:LEVMIN
+KeysightE36300SeriesProgrammingGuide 43
+
+## Page 44
+
+CURRent Subsystem
+[SOURce:]CURRent[:LEVel][:IMMediate][:AMPLitude]<current>|MINimum|MAXimum|DEFault,
+(@<chanlist>)
+[SOURce:]CURRent[:LEVel][:IMMediate][:AMPLitude]?MINimum|MAXimum|DEFault,(@<chanlist>)
+Thecommanddirectlyprogramstheimmediatecurrentlevelofthepowersupplyinamperes.Theimmediatelevelis
+thecurrentlimitvalueoftheoutputselectedwiththeINSTrumentcommand.
+Thequeryreturnsanumberintheform+n.nnnnnnnnE+nnforeachchannelspecified.
+Model Defaultvalue
+E36311AorE36312A CH1:(DEF=5A)
+
+### CH2:(DEF=1A)
+
+
+### CH3:(DEF=1A)
+
+
+### E36313A CH1:(DEF=10A)
+
+
+### CH2:(DEF=2A)
+
+
+### CH3:(DEF=2A)
+
+E36312A(parallelmode) CH1:(DEF=5A)
+
+### CH2:(DEF=2A)
+
+E36313A(parallelmode) CH1:(DEF=10A)
+
+### CH2:(DEF=4A)
+
+
+### Parameter Typicalreturn
+
+0-maximum|MIN|MAX| DEF(Themaximumvalueis <currentlevel>
+dependentonthecurrentratingofthepowermodule)
+*RST<DEFinDefaultvalue>
+Setstheoutputcurrentlevelto3A: CURR3,(@1)
+
+### 44 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 45
+
+[SOURce:]CURRent[:LEVel]:TRIGgered[:AMPLitude]<current>|MINimum|MAXimum,(@<chanlist>)
+[SOURce:]CURRent[:LEVel]:TRIGgered[:AMPLitude]?MINimum|MAXimum,(@<chanlist>)
+Thecommandprogramsthetriggeredcurrentlevelofthespecifiedoutputchannel.Unitsareinamperes.The
+triggeredlevelisastoredvaluethatistransferredtotheoutputwhenanoutputstepistriggered.
+Thequeryreturnstheprogrammedtriggeredlevelintheform+n.nnnnnnnnE+nnforeachchannelspecified.
+Multipleresponsesareseparatedbycommas.
+Mode Defaultvalue
+Generalmode Forgeneralmode,thedefaultvalueisminwhichis0.
+E3631Apersonamode ForE3631Apersonamode,thedefaultvalueisOutputdependentvalue.
+For11Aor12Amodel:
+Channel1=5A
+Channel2and3=1A
+For13Amodel(highpower):
+Channel1=10A
+Channel2and3=2A
+
+### Parameter Typicalreturn
+
+0-maximum|MIN|MAX(Themaximumvalueisdependent <currentlevel>
+onthecurrentratingofthepowermodule)
+*RST<DEFinDefaultvalues>
+Setsthetriggeredcurrentto1Aonchannels1and2: CURR:TRIG1,(@1,2)
+[SOURce:]CURRent:MODEFIXed|STEP|LIST,(@<chanlist>)
+[SOURce:]CURRent:MODE?(<@chanlist>)
+Thecommanddetermineswhathappenstotheoutputcurrentwhenthetransientsystemisinitiatedandtriggered.
+Thequeryreturnsthecurrentmodeforeachchannelspecified.Multipleresponsesareseparatedbycommas.
+Mode Description
+FIXed Nothinghappens.Theoutputcurrentremainsattheimmediatevalue.
+STEP Theoutputgoestothetriggeredlevelwhenatriggeroccurs.
+LIST Theoutputfollowsthelistvalueswhenatriggeroccurs.
+Note:OnlysupportedbyE36312AandE36313Amodels.
+KeysightE36300SeriesProgrammingGuide 45
+
+## Page 46
+
+
+### Parameter Typicalreturn
+
+FIX|STEP|LIST FIX,STEP,orLIST
+
+### *RSTFIX
+
+Setsthecurrentmodeofchannel3toStep: CURR:MODESTEP,(@3)
+[SOURce:]CURRent:PROTection:CLEar,(@<chanlist>)
+Thecommandclearsanovercurrentprotectionevent.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Clearsanovercurrentprotectionevent: CURR:PROT:CLE
+[SOURce:]CURRent:PROTection:DELay[:TIME]<time>|MINimum| MAXimum,(@<chanlist>)
+[SOURce:]CURRent:PROTection:DELay[:TIME]?[MINimum| MAXimum,](@<chanlist>)
+Setsthetimeinmillisecondsthattheovercurrentprotectionistemporarilydisabledafteracurrentlevelchange.
+Minimumvalueis0andmaximumvalueis3600seconds.
+Thequeryreturnstheovercurrentprotectiondelayinmillisecondsintheform+n.nnnnnnnnE+nn.
+
+### Parameter Typicalreturn
+
+0–3600.000|MIN|MAX| <delayvalue>
+
+### *RST0.050
+
+Setstheprotectiondelayto0.2secondsforchannel1: CURR:PROT:DEL0.2,(@1)
+[SOURce:]CURRent:PROTection:DELay:STARtSCHange|CCTRans,(@<chanlist>)
+[SOURce:]CURRent:PROTection:DELay:STARt?(@<chanlist>)
+Thecommandspecifiestheconditionsunderwhichtheovercurrentprotectiondelaytimerstarts:
+Mode Description
+SCHange Transitionsintoconstantcurrentmodeareautomaticallyignoredduringaprogrammedsettingschangeinvoltage,current,or
+outputstate.Attheendofthesettingschange,thedelaytimerstarts,allowingadditionalprotectiondelaytime.Thereisno
+protectiondelayoutsideofthesetimewindows.
+CCTRans Theovercurrentprotectiondelaytimerisstartedbyanytransitionoftheoutputintoconstantcurrentmode.
+
+### 46 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 47
+
+ThequeryreturnsSCHorCCTR.
+
+### Parameter Typicalreturn
+
+SCH|CCTR SCHorCCTR
+
+### *RSTSCH
+
+SetsCCTRansasthecurrentprotectiondelaymodeforchannel1: CURR:PROT:DEL:STARCCTR,(@1)
+[SOURce:]CURRent:PROTection:STATeON|OFF|1|0,(@<chanlist>)
+[SOURce:]CURRent:PROTection:STATe?(@<chanlist>)
+Thecommandenablesordisablesovercurrentprotection,whichcausestheinstrumenttogointoaprotectedstate
+whenthepowersupplystatusisinconstantcurrentmodeforatimelongerthantheOCPdelay.OutputwillbeOFF
+afterOCPistripped.AnovercurrentconditioncanbeclearedwiththeCURR:PROT:CLEcommandafterthe
+conditionthatcausedtheOCPtripisremoved.
+Thequeryreturns1(ON) or0(OFF)ortheovercurrentprotectionstate.
+
+### Parameter Typicalreturn
+
+ON| 1|OFF| 0 1or0
+
+### *RSTOFF
+
+Enablethecurrentprotectionstate: CURR:PROT:STATON,(@1)
+[SOURce:]CURRent:PROTection:TRIPped?
+Thequeryindicateswhetheranovercurrentprotectionoccurred(1)ornot(0).Thisisresetto0by
+CURRent:PROTection:CLEar.
+
+### Parameter Typicalreturn
+
+(none) 1or0
+Indicateswhetheranovercurrentprotectionoccurred: CURR:PROT:TRIP?
+KeysightE36300SeriesProgrammingGuide 47
+
+## Page 48
+
+DIGital Subsystem
+OnlysupportedbyE36312AandE36313Amodels.
+[SOURce:]DIGital:INPut:DATA?
+Thequeryreturnsthestateofthedigitalcontrolportpins.
+
+### Parameter Typicalreturn
+
+(none) <bitvalue>
+Returnsthestateofthedigitalcontrolport: DIG:INP:DATA?
+[SOURce:]DIGital:OUTPut:DATA<value>
+[SOURce:]DIGital:OUTPut:DATA?
+ThecommandsetstheoutputdataonthedigitalcontrolportwhenthatportisconfiguredforDigitalI/Ooperation.
+Theporthasthreesignalpinsandadigitalgroundpin.Inthebinary-weightedvaluethatiswrittentotheport,the
+pinsarecontrolledaccordingtothefollowingbitassignments:
+Pin 1 2 3
+Bitnumber 0 1 2
+Decimalvalue 1 2 4
+Thequeryreturnsthestateofthedigitalcontrolportpins.
+
+### Parameter Typicalreturn
+
+0-7 <bitvalue>
+
+### *RST0
+
+Programspins1,and3withbitnumber0=1andbitnumber2=4: DIG:OUTP:DATA5
+
+### 48 KeysightE36300SeriesProgrammingGuide
+
+
+### Tables
+
+| 1 | 2 | 3 |
+|---|---|---|
+
+## Page 49
+
+[SOURce:]DIGital:PIN<1-3>:FUNCtion
+[SOURce:]DIGital:PIN<1-3>:FUNCtion?
+Thecommandsetsthefunctionsofthedigitalportpins.Thepinfunctionsaresavedinnon-volatilememory.
+Thequeryreturnsthesettingofpins1,2,or3.
+Function Description
+DIO Thepinisageneral-purposeground-referenceddigitalinput/output.Theoutputcanbesetwith[SOURce:]DIGit-
+al:OUTPut:DATA.
+DINPut Thepinisindigitalinput-onlymode.Thedigitaloutputdataofthecorrespondingpinisignored.
+TOUTput Thepinisconfiguredasatriggeroutput.Whenconfiguredasatriggeroutput,thepinwillonlygenerateoutputtriggersifthe
+Listtransientsystemhasbeenconfiguredtogeneratedtriggersignals.See:[SOURce:]LIST:TOUTput:BOSTep,and
+[SOURce:]LIST:TOUTput:EOSTep.
+TINPut Thepinisconfiguredasatriggerinput.Whenconfiguredasatriggerinput,thepincanbeselectedasthesourcefortransient
+triggersignals.SeeTRIGger[:SEQuence]:SOURce.
+FAULt Appliesonlytopin1.SettingFAULtmeansthatpin1functionsasanisolatedfaultoutput.Thefaultsignalistruewhenanyout-
+putisinaprotectedstate(fromOC,OV,OT,INH).NotealsothatPin2servesastheisolatedcommonforpin1.Whenpin1is
+settotheFAULtfunction,theinstrumentignoresanycommandstoprogrampin2.Queriesofpin2willreturnFAULt.Ifpin1is
+changedfromFAULttoanotherfunction,pin2issettoDINPut.
+INHibit Appliesonlytopin3.Whenpin3isconfiguredasaninhibitinput,atruesignalatthepinwilldisablealloutputchannels.
+ONCouple WhenconfiguredasanOncontrol,thepinwillsynchronizetheoutputOnstatebetweenmainframes.Onlyonepincanbecon-
+figuredasanOncontrol.Thepinwillfunctionasbothaninputandanoutput.Thepolarityofthepinisfixedandcannotbepro-
+grammed.
+OFFCouple WhenconfiguredasanOffcontrol,thepinwillsynchronizetheoutputOffstatebetweenmainframes.Onlyonepincanbecon-
+figuredasanOffcontrol.Thepinwillfunctionasbothaninputandanoutput.Thepolarityofthepinisfixedandcannotbepro-
+grammed.
+
+### Parameter Typicalreturn
+
+
+### DIO|DINP|TOUT|TINP|FAUL|INH|ONC|OFFC DIO,DINP,TOUT,TINP,FAUL,INH,ONC,
+
+orOFFC
+Setspin1toFaultmode: DIG:PIN1:FUNCFAUL
+KeysightE36300SeriesProgrammingGuide 49
+
+## Page 50
+
+[SOURce:]DIGital:PIN<1-3>:POLarityPOSitive|NEGative[SOURce:]DIGital:PIN<1-3>:POLarity?
+Thecommandsetsthepolarityofthedigitalportpins.Thepinpolaritiesaresavedinnon-volatilememory.
+Thequeryreturnsthepolarity,POSorNEG.
+Polarity Description
+POSitive SettingapolaritytoPOSitivemeansthatalogicaltruesignalisavoltagehighatthepin.Fortriggerinputsandoutputs,POSitive
+meansarisingedge.
+NEGative SettingthepolarityNEGativemeansthatalogicaltruesignalisavoltagelowatthepin.Fortriggerinputsandoutputs,NEGative
+meansafallingedge.
+
+### Parameter Typicalreturn
+
+POS|NEG POSorNEG
+Setspin1tonegativepolarity: DIG:PIN1:POLNEG
+[SOURce:]DIGital:TOUTput:BUS[:ENABle]0|OFF|1|ON[SOURce:]DIGital:TOUTput:BUS[:ENABle]?
+ThecommandallowsaBUStriggertobesenttoanydigitalportpinthathasbeenconfiguredasatriggeroutput.
+ThestateiseitherON(1)orOFF(0).AtriggerisgeneratedwhenthestateisTrue(ON).Atriggerisnotgenerated
+whenthestateisFalse(OFF).ABUStriggerisgeneratedusingthe*TRGcommand.
+Thequeryreturns0(OFF)ifthetriggersignalwillnotbegeneratedwhenaBUStriggercommandoccurs,and1(ON)
+ifatriggersignalwillbegeneratedwhenaBUStriggercommandoccurs.
+Pins1to3mustbeconfiguredastriggeroutputsbeforetheycangenerateatriggersignal.See
+[SOURce:]DIGital:PIN<1-3>:FUNCtionand[SOURce:]DIGital:PIN<1-3>:POLarity.
+
+### Parameter Typicalreturn
+
+OFF|0|ON|1 0or1
+
+### *RSTOFF
+
+EnablesBUS-generatedtriggersignalsonthedigitalpins: DIG:TOUT:BUSON
+
+### 50 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 51
+
+DISPlay Subsystem
+DISPlay[:WINDow][:STATe]ON|OFF|1|0
+DISPlay[:WINDow][:STATe]?
+Thecommandturnsthefront-paneldisplayofforon.Whenthedisplayisturnedoff,outputsarenotsenttothe
+displayandallannunciatorsaredisabled.Thedisplaystateisautomaticallyturnedonwhenyoureturntothelocal
+mode.Pressandhold[Local]forafewsecondstoreturntothelocalmode.
+Thequeryreturns0(OFF)or1(ON).
+
+### Parameter Typicalreturn
+
+ON|OFF|1|0 0or1
+Turnsthefrontpaneldisplayoff: DISPOFF
+DISPlay[:WINDow]:TEXT[:DATA]"<string>"
+DISPlay[:WINDow]:TEXT[:DATA]?
+Thecommanddisplaysamessageofupto30charactersonthefrontpanel.Additionalcharactersaretruncated.
+Commas,periods,andsemicolonsshareadisplayspacewiththeprecedingcharacter,andarenotconsidered
+individualcharacters.
+Thequeryreturnsthequotedstring.
+
+### Parameter Typicalreturn
+
+"<string>" "<string>"
+Setsthestringdisplayedonthefrontpanelto"Keysight": DISP:TEXT"Keysight"
+DISPlay[:WINDow]:VIEWMETER1|METER3
+DISPlay[:WINDow]:VIEW?
+Thecommandselects1-or3-channelmeterview.METER1displaysonebigoutputchannelwith2smallless
+detailedchannels.METER3displaysall3outputchannels.
+ThequeryreturnsMETER1orMETER3.
+
+### Parameter Typicalreturn
+
+METER1|METER3 METER1orMETER3
+
+### *RSTMETER3
+
+Setsthefrontpaneltodisplayall3outputchannels:DISP:VIEWMETER3
+KeysightE36300SeriesProgrammingGuide 51
+
+## Page 52
+
+FETCh Subsystem
+OnlysupportedbyE36312AandE36313Amodels.
+FETCh[:SCALar]:DLOG?<number>,(@<chanlist>)
+Thequeryfetchesnumbersofloggeddatafromthechannels.Thefetcheddataisthenextdataafterthelastfetched
+datainthepreviousfetch.
+
+### Parameter Typicalreturn
+
+0to65536 <binarylist>
+Fetches10loggeddatafromchannel1enabledwithbothvoltageandcurrentdatalogging:
+
+### FETC:DLOG?10,(@1)
+
+
+### 52 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 53
+
+IEEE-488 Subsystem
+
+### *CLS
+
+Thecommandclearsalleventregisters,andtheStatusByteregister.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Clearsalleventregisters,andtheStatusByteregister: *CLS
+*ESE<enablevalue>
+
+### *ESE?
+
+ThecommandenablesbitsintheStandardEventEnableregister.TheselectedbitsarethenreportedtotheStatus
+Byte.
+Thequeryreturnsthedecimalvalueofthebinary-weightedsumofallbitsintheStandardEventenableregister.
+
+### Parameter Typicalreturn
+
+Adecimalvaluethatcorrespondstothebinary-weighted <bitvalue>
+sumofthebitsintheregister.
+Enablebit3and4intheenableregister: *ESE34
+Standardeventstatusenableregister
+Bit Value Name Description
+
+### 0 1 OPC OperationComplete.Allcommandspriortoandincludingan*OPCcommandhavebeenexecuted.
+
+
+### 1 0 (unused) Alwayssetto0.
+
+
+### 2 4 QYE QueryError.Thepowersupplytriedtoreadtheoutputbufferbutitwasempty.Or,anewcommandlinewas
+
+receivedbeforeapreviousqueryhadbeenread.Or,boththeinputandoutputbuffersarefull.
+
+### 3 8 DDE DeviceError.Aself-testorcalibrationerroroccurred.
+
+
+### 4 16 EXE ExecutionError.Anexecutionerroroccurred.
+
+
+### 5 32 CME CommandError.Acommandsyntaxerroroccurred.
+
+
+### 6 0 (unused) Alwayssetto0.
+
+
+### 7 128 PON PowerOn.Powerhasbeenturnedoffandonsincethelasttimetheeventregisterwasreadorcleared
+
+
+### *ESR?
+
+Thequeryreturnsthedecimalvalueofthebinary-weightedsumofallbitsintheStandardEventregister.
+
+### Parameter Typicalreturn
+
+(none) <bitvalue>
+Readeventstatusenableregister: *ESR?
+KeysightE36300SeriesProgrammingGuide 53
+
+### Tables
+
+| Value | Name | Description |
+|---|---|---|
+
+## Page 54
+
+
+### *IDN?
+
+Thequeryreturnstheinstrument'sidentificationstring.Anexampleisshownbelow.
+Keysight Technologies,E36311A,MY00000001,X.X.X-X.X.X-X.X
+Thefourcomma-separatedfieldsarethemanufacturer'sname,themodelnumber,theserialnumber,andthe
+revisioncode.Thefirst"X.X.X"intherevisioncodesisthefirmwarerevisionnumberforthecontrollerfirmware;the
+secondisforthefrontpanelfirmware;andthethirdisforthemainboardfirmware.
+
+### Parameter Typicalreturn
+
+(none) <ASCIIstringwithcomma-
+separatedfields>
+Returntheinstrument'sidentificationstring: *IDN?
+
+### *OPC
+
+
+### *OPC?
+
+Thecommandsetsthe“OperationComplete”bit(bit0)oftheStandardEventregisterafterthecommandis
+executed.
+Thequeryreturns1totheoutputbufferafterthecommandisexecuted.
+
+### Parameter Typicalreturn
+
+(none) 1
+SetstheOperationCompletebit:*OPC
+Returna1whenthecommandiscomplete:*OPC?
+
+### *PSC0|1
+
+
+### *PSC?
+
+ThecommandclearstheStatusByteandtheStandardEventregisterenablemaskswhenpoweristurnedon(*PSC
+1).When*PSC0isineffect,theStatusByteandStandardEventregisterenablemasksarenotclearedwhenpower
+isturnedon.
+Thequeryreturnsa0(*PSC0)ora1(*PSC1).
+
+### Parameter Typicalreturn
+
+0|1 0or1
+CleartheStatusByteandStandardEventregisterenablemasks:*PSC1
+
+### 54 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 55
+
+
+### *RCL0|1|2|...|8| 9
+
+Thecommandrecallsapreviouslystoredstatefromoneoftennon-volatilestoragelocations.Torecallastored
+state,youmustusethesamememorylocationusedpreviouslytostorethestate.Yourecall*RSTstatesorvaluesof
+thepowersupplyfromamemorylocationthatwasnotpreviouslyspecifiedasastoragelocation.
+
+### Parameter Typicalreturn
+
+0-9 (none)
+Recallthestatefromlocation1:*RCL1
+
+### *RST
+
+Thecommandresetstheinstrumenttoitspower-ondefaultstate.RefertoFactoryResetStateforacompletelisting
+oftheinstrument'sfactoryconfiguration.Itdoesnotclearanyofthestatusregistersortheerrorqueue.Italsodoes
+notaffectanyinterfaceerrorconditions.
+*RSTalsoforcestheABORtcommands.Thiscancelsanyoutputtriggeractionspresentlyinprocessandresetsthe
+WTGbitsintheStatusQuestionableInstrumentSummaryRegisters.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Resettheinstrument:*RST
+KeysightE36300SeriesProgrammingGuide 55
+
+## Page 56
+
+
+### *SAV0|1|2|...|8| 9
+
+Thecommandsavesthecurrentinstrumentstateusingoneoftennon-volatilestoragelocations.
+Theinstrumentstatesincludes:
+– Voltage,current,OVP,OCPdelay,OCPstate,andOCPdelaystart
+– Outputsense*
+– Outputstate,selectedoutputandcoupletriggerchanneloperationmode(Independent,Series,ParallelorTrack)*
+– OutputOn/Offsequencing*
+– Outputlistsettings*
+– Triggersettings*
+– DigitalI/Ooutputdataandbussettings*
+– Dataloggertriggersource*
+*OnlysupportedbyE36312AandE36313Amodels.
+Savingastateoverwritesthepreviousstate(ifany)storedinthatlocation.
+Whenshippedfromthefactory,storagelocations0 through 9areempty.
+
+### Parameter Typicalreturn
+
+0-9 (none)
+Savethestatetolocation1:*SAV1
+*SRE<enablevalue>
+
+### *SRE?
+
+ThecommandenablesthebitsintheStatusByteEnableregister.
+Thequeryreturnsthedecimalvalueofthebinary-weightedsumofallbitssetintheregister.
+
+### Parameter Typicalreturn
+
+Adecimalvaluethatcorrespondstothebinary-weighted <bitvalue>
+sumofthebitsintheregister.
+Enablebit3and4intheenableregister: *SRE34
+
+### 56 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 57
+
+
+### *STB?
+
+ThequeryqueriestheStatusByteSummaryregisterandreturnsthesameresultasaserialpollbutthe“Request
+Service”bit(bit6)isnotclearedifaserialpollhasoccurred.
+
+### Parameter Typicalreturn
+
+(none) <bitvalue>
+Readthestatusbyte: *STB?
+
+### *TRG
+
+ThecommandgeneratesaneventtriggertothetriggersystemwhenthetriggersystemhasaBUS(software)trigger
+asitstriggersource(TRIG:SOURBUS).Ifthetriggersystemisnotinitiated,the*TRGcommandissimplyignored.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Generatesanimmediatetrigger: *TRG
+
+### *TST?
+
+Thequeryreturnsa0iftheself-testpassesoranon-zerovalueifitfails.Iftheself-testfails,theinstrumentalso
+generatesanerrormessagewithadditionalinformationonwhythetestfailed.
+
+### Parameter Typicalreturn
+
+(none) 0or1
+Performsaninstrumentself-test: *TST?
+
+### *WAI
+
+Thecommandwaitsforallpendingoperationstocompletebeforeexecutinganyadditionalremoteinterface
+
+### commands.Thiscommandisusedonlyinthetriggeredmodetowaitforapendingdelayedtrigger.
+
+
+### Parameter Typicalreturn
+
+(none) (none)
+Performsaninstrumentself-test: *WAI
+KeysightE36300SeriesProgrammingGuide 57
+
+## Page 58
+
+INITiate Subsystem
+INITiate[:IMMediate](@<chanlist>)
+Thecommandenablestheoutputtriggersystem.Whenanoutputtriggerisinitiated,aneventonaselectedtrigger
+sourcecausesthespecifiedtriggeringactiontooccur.Ifthetriggersystemisnotinitiated,alltriggersareignored.
+
+### Parameter Typicalreturn
+
+(@<chanlist>) (none)
+Initiatesthetriggersystemonchannel1: INIT(@1)
+INITiate:CONTinuousON|OFF|1|0,(@<chanlist>)
+INITiate:CONTinuous?(@<chanlist>)
+Thecommandcontinuouslyinitiatestheoutputtriggersystem.Thisallowsmultipletriggerstogeneratemultiple
+outputtransientswithnointermediatecommands.TheenabledstateisON(1);thedisabledstateisOFF(0).With
+continuoustriggeringdisabled,theoutputtriggersystemmustbeinitiatedforeachtriggerusingtheINITcommand.
+Thequeryreturns0ifcontinuoustransientsaredisabled(OFF),and1ifcontinuoustransientsareenabled(ON).
+
+### Parameter Typicalreturn
+
+ON|OFF|1|0 1or0
+Initiatesthetriggersystemonchannel1continuously: INIT:CONTON,(@1)
+INITiate[:IMMediate]:DLOG<"filename">
+Thecommandstartstheinternaldataloggingsession.Thefilenameinwhichtosavethedatashouldbethefullpath
+andfilename.
+
+### Parameter Typicalreturn
+
+<"filename"> (none)
+Setsthesettingtologthedataas“log_1.csv”fileinthedrive“External”: INIT:DLOG"Extern-
+al:/log_1.csv"
+
+### 58 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 59
+
+INSTrument Subsystem
+INSTrument[:SELect]P6V|P25V|N25V|CH1|CH2|CH3,
+INSTrument[:SELect]?
+Thecommandselectstheoutputtobeprogrammed.ThenamesCH1,CH2,andCH3aresimplyothernamesfor
+P6V,P25V,andN25V,respectively.Whenoneoutputisselected,theotheroutputsareunavailableforprogramming.
+ThesubsystemsthatareaffectedbytheINSTrumentcommandare[SOURce:]CURRent,[SOURce:]VOLTage,
+MEASure,andCALibration.P6Vistheidentifierfor+6Voutput,P25Visfor+25VoutputandN25Visfor-25V
+output.
+ThequeryreturnstheoutputcurrentlyselectedbyINSTrument[:SELect]orINSTrument:NSELectaseither“P6V”,
+“P25V”,or“N25V”.
+
+### Parameter Typicalreturn
+
+
+### P6V|P25V|N25V|CH1|CH2|CH3 P6V|P25V|N25V
+
+Selectschannel1tobeprogrammed: INSTP6V
+INSTrument:COUPle[:TRIGger]ALL|NONE|<list>
+INSTrument:COUPle[:TRIGger]?
+ThiscommandisonlysupportedinE3631Apersonamode.
+Thecommanddefinesatriggercouplingbetweenpowersupplyoutputs.Thecouplecommandconsistsofan
+optionalsubsystemnodefollowedbyasingleparameter.Theonlyvalidparameterfortheoptionalsubsystemnode
+istheTRIGgersubsystem.Ifnonodefollowsthecouplecommand,TRIGgersubsystemisassumedtobecoupled.
+Theparameterindicatestowhichlogicaloutputsthespecifiedcouplingistoapply.YoumaycoupleALLoutputs,
+NONE oftheoutputs,oralistofoutputs,suchasP6V,N25V.At*RST,alloutputsareuncoupled.Notethat
+OUTPut:TRACkmustbeoffbeforeyoucancouplethe±25Voutputs.
+Thequeryreturnsthecurrentlycoupledoutput.Returns“ALL”,“NONE”,oralist.Ifnooutputiscoupled,“NONE”is
+returned.Ifallthreeoutputsarecoupled,“ALL”isreturned.Ifalistofoutputsiscoupled,thelistisreturned.
+
+### Parameter Typicalreturn
+
+ALL|NONE|<list> ALL,NONE,or<list>
+
+### *RSTNONE
+
+Coupleschannel1and2outputs: INST:COUPP6V,P25V
+KeysightE36300SeriesProgrammingGuide 59
+
+## Page 60
+
+INSTrument:NSELect1|2|3
+INSTrument:NSELect?
+Thecommandselectstheoutputtobeprogrammedbyanumericvalue,asopposedtotheoutputidentifierusedin
+theINSTrument[:SELect]command.Thenumbers1through3refertoP6V,P25V,andN25V,respectively.
+ThequeryreturnstheoutputcurrentlyselectedbyINSTrument:NSELectorINSTrument[:SELect]aseither1,2,or3.
+
+### Parameter Typicalreturn
+
+1|2|3 1|2|3
+Selectschannel1outputtobeprogrammed: INST:NSEL1
+
+### Exampleofoutputcoupling(onlyforE3631Apersonamode)
+
+Thefollowingprogramcouplesthe+6Vand+25Voutputswithtriggeredvoltageandcurrentlevels.Itthentriggers
+thenewlyprogrammedvoltageandcurrentvalues.
+INST:SELP6V Selectthe+6Voutput
+VOLT:MODESTEP SetthevoltagemodetoStep
+VOLT:TRIG5 Setthetriggeredvoltageto5V
+CURR:MODESTEP SetthecurrentmodetoStep
+CURR:TRIG3 Setthetriggeredcurrentto3A
+INST:SELP25V Selectthe+25Voutput
+VOLT:MODESTEP SetthevoltagemodetoStep
+VOLT:TRIG20 Setthetriggeredvoltageto20V
+CURR:MODESTEP SetthecurrentmodetoStep
+CURR:TRIG0.5 Setthetriggeredcurrentto0.5A
+INST:COUPP6V,P25V Couplethe+6Vand+25Voutputs
+TRIG:SOURIMM Setthetriggertoimmediate*
+INIT Triggerthevoltageandcurrentvaluesforthe+6Vandthe+25Voutputs
+*Ifyouselectthebustriggersource,youmustsend*TRGorGroupExecuteTrigger(GET)tostartthetriggeraction
+aftersendingINITiate.
+
+### 60 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 61
+
+LIST Subsystem
+OnlysupportedbyE36312AandE36313Amodels.
+[SOURce:]LIST:COUNt<count>|INFinity,[(@<chanlist>)
+[SOURce:]LIST:COUNt?[MINimum|MAXimum|INFinity,](@<chanlist>)
+Thecommandsetsthenumberoftimesthatthelistisexecutedbeforeitiscompleted.Thelistcountrangeis1to
+
+### 9999.
+
+Thequeryreturnsthelistcountforeachchannelspecified.Multipleresponsesareseparatedbycommas.Ifarepeat
+countof9.9E37isreturned,itmeansthelistissettorepeatcontinuously.
+UsetheINFinityparametertoexecutealistcontinuously.
+UseABORttostopthelistatanytime.Whenthelistisaborted,theoutputreturnstothesettingsthatwerein
+effectbeforetheliststarted.
+
+### Parameter Typicalreturn
+
+1-9999|MIN|MAX|INF <listcount>
+
+### *RST1
+
+Setsthelistcountforchannel1to10: LIST:COUN10,(@1)
+[SOURce:]LIST:CURRent[:LEVel]<value>{,<value>},(@<chanlist>)
+[SOURce:]LIST:CURRent[:LEVel]]?(@<chanlist>)
+Thecommandspecifiesthecurrentsettingforeachliststepinamperes.Acomma-delimitedlistofupto100steps
+maybeprogrammed.
+Thequeryreturnstheprogrammedcurrentlevelintheform+n.nnnnnnnnE+nn.Multipleresponsesareseparatedby
+commas.
+Theorderinwhichthecurrentvaluesareentereddeterminesthesequencewhenthelistexecutes.Tocreatea
+validlist,theVoltage,Current,BOST,EOST,andDwelllistsmusteitherallbethesamelength,orhavealength
+of1,whichisinterpretedashavingthesamelengthasthelistwiththemaximumlength.
+Thecommandoverwritesanypreviouslyprogrammedcurrentlist;itdoesnotappendtothepreviouslist.
+KeysightE36300SeriesProgrammingGuide 61
+
+## Page 62
+
+
+### Parameter Typicalreturn
+
+0tomaximum.Themaximumvaluedependsonratingof <listvalue1>,
+thepowermodule. <listvalue2>,
+<listvalue3>...
+*RST1stepsettotheminimumprogrammablevalue.
+Programsacurrentlistcontaining5stepsforchannel1: LIST:CURR5,4,3,2,1,(@1)
+[SOURce:]LIST:CURRent:POINts?[(@<chanlist>)
+Thequeryreturnsthenumberofcurrentpointsforthespecifiedchannelorchannellist,orthechannelbasedon
+INST:SELifnochannelisspecified.Multipleresponsesareseparatedbycommas.
+
+### Parameter Typicalreturn
+
+(none) <points>
+Returnsthenumberofpointsinthecurrentlistforchannel1: LIST:CURR:POIN?(@1)
+[SOURce:]LIST:DWELl<value>{,<value>},(@<chanlist>)
+[SOURce:]LIST:DWELl?(@<chanlist>)
+Thecommandspecifiesthedwelltimeforeachliststep.Acomma-delimitedlistofupto100stepsmaybe
+programmed.Dwelltimeisthetimethattheoutputwillremainataspecificstep.Dwelltimescanbeprogrammed
+from0.01through3600secondswiththeresolutionof1millisecond.
+Thequeryreturnstheprogrammeddwelltimeintheform+n.nnnnnnnnE+nn.Multipleresponsesareseparatedby
+commas.
+Attheendofthedwelltime,theoutputstateoftheunitdependsuponthe[SOURce:]LIST:STEPprogramset-
+tings.Theorderinwhichthedwellvaluesareentereddeterminesthesequencewhenthelistexecutes.
+Tocreateavalidlist,theVoltage,Current,BOST,EOST,andDwelllistsmusteitherallbethesamelength,or
+havealengthof1,whichisinterpretedashavingthesamelengthasthelistwiththemaximumlength.
+Thiscommandoverwritesanypreviouslyprogrammeddwelllist;itdoesnotappendtothepreviouslist.
+
+### Parameter Typicalreturn
+
+
+### 0.01–3600.000 <listvalue1>,
+
+<listvalue2>,
+
+### *RST0.01
+
+<listvalue3>...
+Programsadwelllistcontaining5stepsforchannel1: LIST:DWEL0.2,0.8,1.5,0.8,0.2,(@1)
+
+### 62 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 63
+
+[SOURce:]LIST:DWELl:POINts?[(@<chanlist>)]
+Thequeryreturnsthenumberofpoints(steps)inthedwelllist,notthepointvalues.Multipleresponsesare
+separatedbycommas.
+
+### Parameter Typicalreturn
+
+(none) <points>
+Returnsthenumberofpointsinthedwelllist: LIST:DWEL:POIN?(@1)
+[SOURce:]LIST:STEPAUTO|ONCE,(@<chanlist>)
+[SOURce:]LIST:STEP?(@<chanlist>)
+Thecommandspecifieshowthelistrespondstotriggers.
+Thequeryreturnstheliststepsetting.Multipleresponsesareseparatedbycommas.
+Step Description
+AUTO Theoutputautomaticallyadvancestoeachstep,afterthereceiptofaninitialstartingtrigger.Thestepsarepacedbythedwelllist.
+Aseachdwelltimeelapses,thenextstepisimmediatelyoutput.Thisspecifiesadwell-pacedlist.
+ONCE Theoutputremainsatthepresentstepuntilatriggeradvancesittothenextstep.Triggersthatarriveduringthedwelltimeare
+ignored.Thisspecifiesatrigger-pacedlist.
+
+### Parameter Typicalreturn
+
+AUTO|ONCE AUTOorONCE
+
+### *RSTAUTO
+
+Setstheliststepsettingofchannel1toONCE: LIST:STEPONCE,(@1)
+[SOURce:]LIST:TERMinate:LASTON|OFF|1|0,(@<chanlist>)
+[SOURce:]LIST:TERMinate:LAST?(@<chanlist>)
+Specifiesthevaluewhenthelistterminates.Thestateiseither1(ON)or0(OFF).WhenON,theoutputvoltageor
+currentremainsatthelaststepvalue,andthatvaluebecomestheIMMediatevaluewhenthelistcompletes.When
+OFF,orwhenthelistisaborted,theoutputreturnstothesettingsthatwereineffectbeforetheliststarted.The
+queryreturns0(OFF)or1(ON).
+
+### Parameter Typicalreturn
+
+OFF|0|ON|1 0or1
+
+### *RSTOFF
+
+Setstheliststepsettingofchannel1toONCE: LIST:STEPONCE,(@1)
+KeysightE36300SeriesProgrammingGuide 63
+
+## Page 64
+
+[SOURce:]LIST:TOUTput:BOSTep[:DATA]<Bool>{,<Bool>},[(@<chanlist>)]
+SOURce:]LIST:TOUTput:BOSTep[:DATA]?[(@<chanlist>)]
+Thecommandspecifieswhichliststepsgenerateatriggersignalatthebeginningofthestep(BOSTep).Acomma-
+delimitedlistofupto100stepsmaybeprogrammed.ThestateiseitherON(1)orOFF(0).
+AtriggerisonlygeneratedwhenthestateissettoON.Thetriggersignalcanbeusedasatriggersourcefor
+transientsofotherchannels,andfordigitalportpinsconfiguredastriggeroutputs.
+Thequeryreturns0ifnotriggerisgenerated,and1ifatriggerisgenerated.Multipleresponsesareseparatedby
+commas.
+TheorderinwhichtheBOSTepvaluesareentereddeterminesthesequencewhenthelistexecutes.
+Tocreateavalidlist,theVoltage,Current,BOST,EOST,andDwelllistsmusteitherallbethesamelength,or
+havealengthof1,whichisinterpretedashavingthesamelengthasthelistwiththemaximumlength.
+ThiscommandoverwritesanypreviouslyprogrammedBOSTeplist;itdoesnotappendtothepreviouslist.
+
+### Parameter Typicalreturn
+
+OFF|0|ON|1 <listvalue1>,
+<listvalue2>,
+*RST1stepwithavalueofOFF
+<listvalue3>...
+Specifiesthattriggerswillbegeneratedatthebeginningofthesecondstepofa5-steplistfor
+channel1: LIST:TOUT:BOST0,1,1,1,1,(@1)
+[SOURce:]LIST:TOUTput:BOSTep:POINts?(@<chanlist>)
+Thequeryreturnsacomma-separatedlistofthenumberofpoints(steps)inthebeginningofthesteptriggerlist
+(BOSTep),notthepointvaluesforthespecifiedchannels.
+
+### Parameter Typicalreturn
+
+(none) <points>
+ReturnsthenumberofpointsintheBOSTeplistforchannel1: LIST:TOUT:BOST:POIN?(@1)
+
+### 64 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 65
+
+[SOURce:]LIST:TOUTput:EOSTep[:DATA]<Bool>{,<Bool>},[(@<chanlist>)]
+[SOURce:]LIST:TOUTput:EOSTep[:DATA]?[(@<chanlist>)]
+Thecommandspecifieswhichliststepsgenerateatriggersignalattheendofthestep(EOSTep).Acomma-
+delimitedlistofupto100stepsmaybeprogrammed.ThestateiseitherON(1)orOFF(0).
+AtriggerisonlygeneratedwhenthestateissettoON.Thetriggersignalcanbeusedasatriggersourcefor
+transientsofotherchannels,andfordigitalportpinsconfiguredastriggeroutputs.
+Thequeryreturns0ifnotriggerisgenerated,and1ifatriggerisgenerated.Multipleresponsesareseparatedby
+commas.
+TheorderinwhichtheEOSTepvaluesareentereddeterminesthesequencewhenthelistexecutes.
+Tocreateavalidlist,theVoltage,Current,BOST,EOST,andDwelllistsmusteitherallbethesamelength,or
+havealengthof1,whichisinterpretedashavingthesamelengthasthelistwiththemaximumlength.
+ThiscommandoverwritesanypreviouslyprogrammedEOSTeplist;itdoesnotappendtothepreviouslist.
+
+### Parameter Typicalreturn
+
+OFF|0|ON|1 <listvalue1>,
+<listvalue2>,
+*RST1stepwithavalueofOFF
+<listvalue3>...
+Specifiesthattriggerswillbegeneratedattheendofthesecondstepofa5-steplistforchan-
+nel1: LIST:TOUT:EOST0,1,1,1,1,(@1)
+[SOURce:]LIST:TOUTput:EOSTep:POINts?(@<chanlist>)
+Thequeryreturnsacomma-separatedlistofthenumberofpoints(steps)intheendofthesteptriggerlist(EOSTep),
+notthepointvaluesforthespecifiedchannels.
+
+### Parameter Typicalreturn
+
+(none) <points>
+ReturnsthenumberofpointsintheEOSTeplistforchannel1: LIST:TOUT:EOST:POIN?(@1)
+KeysightE36300SeriesProgrammingGuide 65
+
+## Page 66
+
+[SOURce:]LIST:VOLTage[:LEVel]<value>{,<value>},(@<chanlist>)
+[SOURce:]LIST:VOLTage[:LEVel]?(@<chanlist>)
+Thecommandspecifiesthevoltagesettingforeachliststepinvolts.Acomma-delimitedlistofupto100stepsmay
+beprogrammed.
+Theorderinwhichthevoltagevaluesareentereddeterminesthesequencewhenthelistexecutes.
+Tocreateavalidlist,theVoltage,Current,BOST,EOST,andDwelllistsmusteitherallbethesamelength,or
+havealengthof1,whichisinterpretedashavingthesamelengthasthelistwiththemaximumlength.
+Thiscommandoverwritesanypreviouslyprogrammedvoltagelist;itdoesnotappendtothepreviouslist.
+Thequeryreturnstheprogrammedvoltagelevelintheform+n.nnnnnnnnE+nnforeachchannelspecified.Multiple
+responsesareseparatedbycommas.
+
+### Parameter Typicalreturn
+
+0tomaximum.Themaximumvaluedependsonratingof <listvalue1>,
+thepowermodule. <listvalue2>,
+<listvalue3>...
+*RST1stepsettotheminimumprogrammablevalue.
+Programsavoltagelistcontaining5stepsforchannel1: LIST:VOLT1,2,3,4,5,(@1)
+[SOURce:]LIST:VOLTage:POINts?[(@<chanlist>)
+Thequeryreturnsthenumberofvoltagepointsforthespecifiedchannelorchannellist,orthechannelbasedon
+INST:SELifnochannelisspecified.Multipleresponsesareseparatedbycommas.
+
+### Parameter Typicalreturn
+
+(none) <points>
+Returnsthenumberofpointsinthevoltagelistforchannel1: LIST:VOLT:POIN?(@1)
+
+### 66 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 67
+
+LXI Subsystem
+OnlysupportedbyE36312AandE36313Amodels.
+LXI:IDENtify[:STATe]ON|OFF|1|0
+LXI:IDENtify[:STATe?]ON|OFF|1|0
+ThecommandallowsyoutosetthepropertytoONtochangetheLXIstatusindicatortothe"Identify"state.Setting
+thispropertyOFFchangestheLXIstatusindicatorto"NoFault".
+ThequeryreturnsthestateoftheLXIstatusindicator.
+
+### Parameter Typicalreturn
+
+ON|OFF|1|0 0or1
+SetstheLXI statusindicatorto"NoFault": LXI:IDEN0
+LXI:MDNS[:STATe]ON|OFF|1|0
+:LXI:MDNS[:STATe?]ON|OFF|1|0
+ThecommandallowsyoutocontrolthemDNSservice.
+ThequeryreturnsthecontrolofthemDNSservice.
+
+### Parameter Typicalreturn
+
+ON|OFF|1|0 0or1
+TurnsonthemDNS service: LXI:MDNS1
+KeysightE36300SeriesProgrammingGuide 67
+
+## Page 68
+
+MEASure Subsystem
+MEASure[:SCALar]:CURRent[:DC]?[P6V|P25V|N25V|CH1|CH2|CH3,](@<chanlist>)
+Thequeryreturnsthecurrentmeasuredatthespecifiedoutput.Ifnooutputidentifierisspecified,thecurrentofthe
+currentlyselectedoutputisreturned.
+
+### Parameter Typicalreturn
+
+(none) <current>
+Returnsthecurrentmeasuredforchannel1: MEAS:CURR?CH1
+MEASure[:SCALar]:VOLTage[:DC]?[P6V|P25V|N25V|CH1|CH2|CH3,](@<chanlist>)
+Thequeryreturnsthevoltagemeasuredatthespecifiedoutput.Ifnooutputidentifierisspecified,thevoltageofthe
+currentlyselectedoutputisreturned.
+
+### Parameter Typicalreturn
+
+(none) <voltage>
+Returnsthevoltagemeasuredforchannel1: MEAS:VOLT?P6V
+
+### 68 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 69
+
+MMEMory Subsystem
+OnlysupportedbyE36312AandE36313Amodels.
+MMEMory:EXPort:DLOG<"filename">
+ThecommandsavestheloggeddatainCSVformatintothepathandfilenamespecifiedinthe<"filename">.This
+
+### commanddoesnotchangethesavedpathandfilenamesettings.
+
+
+### Parameter Typicalreturn
+
+<"filename"> (none)
+Exportstheloggeddatainto“External:\datalog.csv”: MMEM:EXP:DLOG"External:\datalog.csv"
+KeysightE36300SeriesProgrammingGuide 69
+
+## Page 70
+
+OUTPut Subsystem
+OUTPut[:STATe]ON| 1|OFF| 0,(@<chanlist>)]
+OUTPut[:STATe]?[(@<chanlist>)]
+Thecommandenablesordisablesthespecifiedoutput.ThenamesCH1,CH2,andCH3aresimplyothernamesfor
+P6V,P25V,andN25V,respectively.At*RST,alloutputsareoff.
+Thequeryreturnstheoutputstateofthepowersupply.Thereturnedvalueis0(OFF)or1(ON).
+YoucannotenableordisabletheoutputsindividuallyinE3631Amodeforthepowersupply.Allthethreechan-
+nelswillbeturnedONorOFFatthesametimeinE3631Amode.However,ingeneralmode,youcanenableor
+disableoutputsindependently.Foroutputquery,ifnochannelisspecified,thereturnedvalueistheoutput
+statebasedoncurrentselectedchannelINSTrument:SELect?.
+Ifoutputsequencingisenabled,thequeryreturnstheconfigurationstateinsteadoftheactualoutputstate.
+Forexample,ifyouhavea10soutputdelayandquerytheoutputstaterightafteryouturntheoutputon,the
+querywillreturn1(ON)eventhoughtheactualoutputwillbeoffuntilthedelayends.
+Enablingordisablinganycoupledoutputcausesallcoupledoutputstoturnonoroffaccordingtotheiruser-
+programmeddelaysandprogramminglevels.Ifonecoupledchanneltrips(overvoltage,overcurrent,orover-
+temperature),theothercoupledchannelsarenotimpacted.
+
+### Parameter Typicalreturn
+
+ON| 1|OFF| 0 1or0
+
+### *RST0
+
+Disableschannel1: OUTP0,(@1)
+OUTPut[:STATe]COUPle:CHANNelALL|NONE|<list>
+OUTPut[:STATe]:COUPle:CHANNel?
+Thecommandspecifieswhichoutputchannelsarecontrolledbytheoutputsynchronizationfunction.Theoutput
+channelsthathavebeensynchronizedorcoupledwillturnonandofftogetherwhenanyoneofthemisturnedonor
+off,orwhenasignalisreceivedfromadigitalconnectorpinthathasbeenconfiguredasanOncoupleoranOff
+couplepin.
+Therecanbeonlyonesetofcoupledchannels;settinganewcouplingreplacesanexistingcoupling.
+Thequeryreturnsthechannelsthatarecoupled.Multipleresponsesareseparatedbycommas.
+Whenthiscommandissent,alloutputchannelsgototheoutputOFF state.Thisparameterisnon-volatileand
+notaffectedby*RST.
+
+### 70 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 71
+
+
+### Parameter Typicalreturn
+
+ALL|NONE|<list> <coupledchannels>
+
+### *RSTNONE
+
+Coupleschannels1and2: OUTP:COUP:CHANP6V,P25V
+OUTPut[:STATe]:DELay:FALL<delay>,(@<chanlist>)
+OUTPut[:STATe]:DELay:FALL?[MIN| MAX,](@<chanlist>)
+Thecommandsetsthedelayinsecondsthatthepowersupplywaitsbeforedisablingthespecifiedoutput.This
+allowsmultipleoutputchannelstoturnoffinsequence.Eachoutputwillnotturnoffuntilitsdelaytimehaselapsed.
+Thiscommandeffectson-to-offtransitionsincludingchangesintheOUTPut[:STATe].Thecommanddoesnotaffect
+transitionstooffcausedbyprotectionfunctions.Delaytimescanbeprogrammedfrom0to3600secondswiththe
+resolutionof1millisecond.
+Thequeryreturnstheparameterintheform+n.nnnnnnnnE+nn.Theparameterreturnedistheprogrammeddelay
+time.
+
+### Parameter Typicalreturn
+
+0–3600.000|MIN|MAX| <delayvalue>
+
+### *RST0
+
+Setsadelayof0.2sforchannel1beforeturningtheoutputoff: OUTP:DEL:FALL0.2,(@1)
+OUTPut[:STATe]:DELay:RISE<delay>,(@<chanlist>)
+OUTPut[:STATe]:DELay:RISE?[MIN| MAX,](@<chanlist>)
+Thecommandsetsthedelayinsecondsthatthepowersupplywaitsbeforeenablingthespecifiedoutput.This
+allowsmultipleoutputchannelstoturnoninsequence.Eachoutputwillnotturnonuntilitsdelaytimehaselapsed.
+Thiscommandaffectsalloff-to-ontransitionsincludingchangesintheOUTPut[:STATe]aswellastransitionsdueto
+OUTPut:PROTection:CLEar.Delaytimescanbeprogrammedfrom0to3600secondswiththeresolutionof1
+millisecond.
+Thequeryreturnstheparameterintheform+n.nnnnnnnnE+nn.Theparameterreturnedistheprogrammeddelay
+time.
+
+### Parameter Typicalreturn
+
+0–3600.000|MIN|MAX| <delayvalue>
+
+### *RST0
+
+Setsadelayof0.5sforchannel1beforeturningtheoutputon:: OUTP:DEL:RISE0.5,(@1)
+KeysightE36300SeriesProgrammingGuide 71
+
+## Page 72
+
+OUTPut:INHibit:MODELATChing|LIVE| OFF
+OUTPut:INHibit:MODE?
+OnlysupportedbyE36312AandE36313Amodels.
+ThecommandselectstheoperationmodeoftheInhibitinput(INH).TheinhibitfunctionshutsdownALLoutput
+channelsinresponsetoanexternalsignalontheInhibitinput.IfanoutputchannelhasbeenturnedoffbyOUTPut
+[:STATe],theinhibitfunctiondoesnotaffecttheoutputchannelwhileitisintheOFFstate.TheInhibitmodesetting
+isstoredinnon-volatilememory.
+ThequeryreturnsLATC,LIVE,orOFF.
+Mode Description
+LATChing AtransitiontoTrueontheInhibitinputdisablesalloutputs,andtheyremaindisableduntiltheInhibitinputgoesFalseandthe
+latchedINHstatusbitisclearedbyOUTPut:PROTection:CLEarorafront-panelprotectionclear.
+LIVE TheenabledoutputsfollowthestateoftheInhibitinput.OutputsaredisabledifInhibitistrueandenabledifInhibitisfalse.
+OFF TheInhibitinputisignored.
+
+### Parameter Typicalreturn
+
+LATC|LIVE|OFF LATC,LIVE,orOFF
+
+### *RSTOFF
+
+SetstheInhibitinputtoLivemode: OUTP:INH:MODELIVE
+OUTPut:PAIROFF|PARallel|SERies
+OUTPut:PAIR?
+OnlysupportedbyE36312AandE36313Amodels.
+Thecommandspecifiesthepowersupply'soperationmode.Couplingandtrackingmustnotbeusedinwhenthe
+instrumentisoperatinginparallelorseries.
+Thequeryreturnsthepowersupply'soperationmode.
+
+### Parameter Typicalreturn
+
+OFF|PAR|SER|TRAC OFF,PAR,SER,orTRAC
+
+### *RSTOFF
+
+Specifiesthepowersupply'soperationmodetoparallel: OUTP:PAIRPAR
+
+### 72 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 73
+
+OUTPut:PON:STATeRST|RCL0|RCL1|RCL2|....|RCL8|RCL9
+OUTPut:PON:STATe?
+Thecommandspecifieswhetherthepowersupply'spower-onstateisthe*RSTstate(default)orthestatestoredin
+oneoftenmemorylocations.
+ThequeryreturnseitherRSTorRCL#,where#isadigitfrom0to9.
+
+### Parameter Typicalreturn
+
+
+### RST|RCL0|RCL1|RCL2|RCL3|RCL4|RCL5|RCL6| RST,RCL0,RCL1,RCL2,RCL3,
+
+
+### RCL7|RCL8|RCL9 RCL4,RCL5,RCL6,RCL7,RCL8,
+
+orRCL9
+
+### *RSTRST
+
+Setschannel1power-onstatestoredinmemorylocation1atpoweron: OUTP:PON:STAT
+
+### RCL1
+
+OUTPut:PROTection:CLEar[(@<chanlist>)
+Thecommandclearsthelatchthatdisablestheoutputduetoanovervoltageorovercurrentcondition.Youmust
+cleartheconditionsthatcausethefaultbeforeexecutingthiscommand.Youcanthenrestoretheoutputtothe
+statethatexistedbeforethefaultconditionoccurred.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Clearsthelatchthatdisableschannel1duetoanovervoltageorovercurrentcondition: OUTP:PROT:CLE(@1)
+OUTPut:TRACk[:STATe]ON|OFF|1|0
+OUTPut:TRACk[:STATe]?
+Thecommandenablesordisablesthepowersupplytooperateinthetrackmode.Whenthetrackmodeisfirst
+enabled,theabsolutevalueofthe-25Vsupplywillbesettothesamevoltagelevelasthe+25Vsupply.Once
+enabled,anychangeoftheprogrammedvoltagelevelineither+25Vsupplyor-25Vsupplywillbereflectedinthe
+othersupply.TheOUTPut:TRACkOFFcommandreturnsthepowersupplytothenon-trackmode.The±25Vsupplies
+mustnotbecoupledtoenabletrackmode.At*RST,thetrackmodeisdisabled.
+Thequeryreturnsthetrackmodestateofthepowersupply.Thereturnedvalueis0(OFF)or1(ON).
+
+### Parameter Typicalreturn
+
+ON| 1|OFF| 0 1or0
+
+### *RST0
+
+Enablesthepowersupplytooperateinthetrackmode: OUTP:TRACON
+KeysightE36300SeriesProgrammingGuide 73
+
+## Page 74
+
+SENSe Subsystem
+OnlysupportedbyE36312AandE36313Amodels.
+SENSe:DLOG:FUNCtion:CURRentON|OFF|1|0,(@<chanlist>)
+SENSe:DLOG:FUNCtion:CURRent?
+Thecommandenablesordisablescurrentdataloggingofthechannelsstatedin(@<chanlist>).
+Thequeryreturnsthestatus(onoroff)ofthecurrentdataloggingenableofthechannelsstatedin(@<chanlist>).
+
+### Parameter Typicalreturn
+
+ON|OFF|1|0 (none)
+Enablescurrentdataloggingofchannel1and2: SENS:DLOG:FUNC:CURR1,(@1,2)
+SENSe:DLOG:FUNCtion:MINMON|OFF|1|0
+SENSe:DLOG:FUNCtion:MINM?
+Thecommandenablesordisablestheloggingofminimumandmaximumvaluesforeachsampleofdata.
+Thequeryreturnswhethertheloggingofminimumandmaximumvaluesisenabled.
+
+### Parameter Typicalreturn
+
+ON|OFF|1|0 (none)
+Enablestheloggingoftheminimumandmaximumforeachsampleof
+data: SENS:DLOG:FUNC:MINM1
+SENSe:DLOG:FUNCtion:VOLTageON|OFF|1|0,(@<chanlist>)
+SENSe:DLOG:FUNCtion:VOLTage?
+Thecommandenablesordisablesvoltagedataloggingofthechannelsstatedin(@<chanlist>).
+Thequeryreturnsthestatus(onoroff)ofthevoltagedataloggingofthechannelsstatedin(@<chanlist>).
+
+### Parameter Typicalreturn
+
+ON|OFF|1|0 (none)
+Enablesvoltagedataloggingofchannel1to3: SENS:DLOG:FUNC:VOLT1,(@1:3)
+
+### 74 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 75
+
+SENSe:DLOG:PER<time>
+SENSe:DLOG:PER?
+Thecommandsetsthesampleperiodconsistingoftheenteredvalueinseconds.Forthesampleperiod,the
+minimumis200ms,andithastobeinintegralof200ms,whilethemaximumis60s.Theenteredvaluewillbe
+roundedtothenearest200msintegral.
+Thequeryreturnsthesampleperiodinseconds.
+
+### Parameter Typicalreturn
+
+
+### 0.2to60 (none)
+
+Setsthesampleperiodto400ms: SENS:DLOG:PER0.4
+SENSe:DLOG:TIME<time>
+SENSe:DLOG:TIME?
+Thecommandsetsthesampleduration,theenteredvalueisinseconds.Forsampleduration,themaximumis30000
+hours(forsingleoutput,dependingonthememorysize)andupto7MBofdata.
+Thequeryreturnsthesampledurationinseconds.
+
+### Parameter Typicalreturn
+
+1to108000000 (none)
+Setsthesampledurationto2minutes: SENS:DLOG:TIME120
+SENSe:DLOG:TINTerval<time>
+SENSe:DLOG:TINTerval?
+Thecommandsetsthesampleperiodconsistingoftheenteredvalueinseconds.Forthesampleperiod,the
+minimumis200ms,andithastobeinintegralof200ms,whilethemaximumis60s.Theenteredvaluewillbe
+roundedtothenearest200msintegral.
+Thequeryreturnsthesampleperiodinseconds.
+
+### Parameter Typicalreturn
+
+
+### 0.2to60 (none)
+
+Setsthesampleperiodto400ms: SENS:DLOG:TINT0.4
+KeysightE36300SeriesProgrammingGuide 75
+
+## Page 76
+
+STATus Subsystem
+STATus:PRESet
+Thecommandsetsthequestionableenableregisterstotheirpower-onvalues.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Setsthequestionableenableregisterstotheirpower-onvalues: STAT:PRES
+STATus:QUEStionable:[:EVENt]?
+Thequeryreturnsadecimalvaluewhichcorrespondstothebinary-weightedsumofallbitsintheregister.
+
+### Parameter Typicalreturn
+
+(none) <bitvalue>
+Returnsadecimalvaluewhichcorrespondstothebinary-weightedsumofallbitsinthe
+register:STAT:QUES:EVENT?
+STATus:QUEStionable:ENABle<enablevalue>
+STATus:QUEStionable:ENABle?
+ThecommandenablesbitsintheQuestionableStatusenableregister.Theselectedbitsarethenreportedtothe
+StatusByte.
+Thequeryreturnsabinary-weighteddecimalrepresentingthebitssetintheenableregister.
+
+### Parameter Typicalreturn
+
+Adecimalvaluethatcorrespondstothebinary-weighted <bitvalue>
+sumofthebitsintheregister.
+Enablebit4inthequestionableenableregister:STAT:QUES:ENAB16
+STATus:QUEStionable:INSTrument[:EVENt]?
+ThequeryqueriestheQuestionableInstrumenteventregisterandreturnsthedecimalvalueofthebinary-weighted
+sumofallbitsintheQuestionableInstrumenteventregisterandclearstheregister.
+
+### Parameter Typicalreturn
+
+(none) (none)
+ReturnsthedecimalvalueoftheQuestionableInstrumenteventregister:STAT:QUES:INST?
+
+### 76 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 77
+
+STATus:QUEStionable:INSTrument:ENABle<enablevalue>
+STATus:QUEStionable:INSTrument:ENABle?
+ThecommandsetsthevalueoftheQuestionableInstrumentenableregister.Thisregisterisamaskforenabling
+specificbitsfromtheQuestionableInstrumenteventregistertosettheInstrumentSummarybit(ISUM,bit13)ofthe
+QuestionableStatusregister.The“ISUM”bitoftheQuestionableStatusregisteristhelogicalORofallthe
+QuestionableInstrumenteventregisterbitsthatareenabledbytheQuestionableInstrumentenableregister.
+ThequeryreturnsthevalueoftheQuestionableInstrumentenableregister.
+
+### Parameter Typicalreturn
+
+AdecimalvalueoftheQuestionableInstrumentenable <bitvalue>
+register.
+Enablebit4inthequestionableinstrumentenableregister:STAT:QUES:INST:ENAB16
+STATus:QUEStionable:INSTrument:ISUMmary<n>[:EVENt]?
+ThequeryreturnsthevalueoftheQuestionableInstrumentIsummaryeventregisterforaspecificoutputofthe
+powersupply.Theparticularoutputmustbespecifiedbyanumericvalue(<n>=1,2,or3).SeeProgrammingRanges
+andOutputIdentifiersfortheoutputnumber.Theeventregisterisaread-onlyregisterwhichholds(latches)all
+events.ReadingtheQuestionableInstrumentIsummaryeventregisterclearsit.
+
+### Parameter Typicalreturn
+
+(none) (none)
+ReturnsthevalueoftheQuestionableInstrumentIsummaryeventregisterforoutput1:
+
+### STAT:QUES:INST:ISUM1?
+
+STATus:QUEStionable:INSTrument:ISUMmary<n>:CONDition?
+ThequeryreturnstheCVorCCconditionofthespecifiedoutput(<n>=1,2,or3),asshowninthetablebelow.
+Returnedvalue Description
+
+### 0 Theoutputisofforunregulated.
+
+
+### 1 TheoutputisinCC (constantcurrent)operatingmode.
+
+
+### 2 TheoutputisinCV (constantvoltage)operatingmode.
+
+
+### 3 Theoutputhasahardwarefailure.
+
+
+### Parameter Typicalreturn
+
+(none) 0,1,2,or3
+ReturnstheCVorCCconditionoftheinstrumentforoutput1:
+
+### STAT:QUES:INST:ISUM1:COND?
+
+KeysightE36300SeriesProgrammingGuide 77
+
+## Page 78
+
+STATus:QUEStionable:INSTrument:ISUMmary<n>:ENABle<enablevalue>
+STATus:QUEStionable:INSTrument:ISUMmary<n>:ENABle?
+ThecommandsetsthevalueoftheQuestionableInstrumentIsummaryenableregisterforaspecificoutputofthe
+three-outputpowersupply.Theparticularoutputmustbespecifiedbyanumericvalue(<n>=1,2,or3).See
+ProgrammingRangesandOutputIdentifiersfortheoutputnumber.Thisregisterisamaskforenablingspecificbits
+fromtheQuestionableInstrumentIsummaryeventregistertosettheInstrumentSummarybit(bit1,2,and3)ofthe
+QuestionableInstrumentregister.Thesebits1,2,andbit3arethelogicalORofalltheQuestionableInstrument
+IsummaryeventregisterbitsthatareenabledbytheQuestionableInstrumentIsummaryenableregister.
+ThequeryreturnsthevalueoftheQuestionableInstrumentIsummaryenableregister(<n>=1,2,or3).
+
+### Parameter Typicalreturn
+
+(none) 1,2,or3
+ReturnsthevalueoftheQuestionableInstrumentIsummaryenableregisterforoutput1:
+
+### STAT:QUES:INST:ISUM1:ENAB?
+
+
+### 78 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 79
+
+SYSTem Subsystem
+SYSTem:BEEPer[:IMMediate]
+Thecommandissuesasinglebeepimmediately.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Issuesasinglebeepimmediately: SYST:BEEP
+SYSTem:BEEPer:STATeON|OFF|1|0
+SYSTem:BEEPer:STATe?
+Thecommandenablesordisablesthebeeper.
+Thequeryreturns0(OFF)or1(ON).
+
+### Parameter Typicalreturn
+
+ON|OFF|1|0 0or1
+Turnsonthebeeper: SYST:BEEP:STATON
+SYSTem:COMMunicate:RLSTateLOCal|REMote|RWLock
+SYSTem:COMMunicate:RLSTate?
+Thecommandsetsthepowersupplytoremoteorlocalmode.TheLOCalparameteristhesameasSYSTem:LOCal,
+theREMoteparameteristhesameasSYSTem:REMote,andtheRWLockparameteristhesameasSYSTemRWLock.
+ThequeryreturnsLOC,REM,orRWL.
+
+### Parameter Typicalreturn
+
+LOC|REM|RWL LOC,REM,orRWL
+Setsthepowersupplytoremote: SYST:COMM:RLSTREM
+KeysightE36300SeriesProgrammingGuide 79
+
+## Page 80
+
+SYSTem:DATE<yyyy>,<mm>,<dd>
+SYSTem:DATE?
+OnlysupportedbyE36312AandE36313Amodels.
+Thecommandsetsthedateofthepowersupply'sreal-timeclock.Therangeofvaluesfortheyearisfrom2000–
+
+### 2099.
+
+Thequeryreturnsthedateintheform+2017,+7,+26.
+
+### Parameter Typicalreturn
+
+<yyyy>,<mm>,<dd> <yyyy,mm,dd>
+SetsthedatetoApril1,2017: SYST:DATE2017,4,1
+SYSTem:ERRor[:NEXT]?
+Thequeryreturnsthepowersupply'serrorqueueofupto20errors.Thepowersupplybeepsonceandturnsonthe
+front-panelERRannunciatorwhenanerrorhasbeendetected.Upto20errorscanbestoredintheerrorqueue.See
+ErrorMessages.
+Errorsareretrievedinfirst-in-first-out(FIFO)order.TheERRannunciatorturnsoffafterthelasterrorisread.
+Thepowersupplybeepsonceeachtimeanerrorisgenerated.
+Ifmorethan20errorshaveoccurred,thelasterrorstoredinthequeue(themostrecenterror)isreplacedwith
+-350,“Queueoverflow”.Noadditionalerrorsarestoreduntilyouremoveerrorsfromthequeue.Ifnoerrors
+haveoccurred,theSYST:ERR?queryreturns+0,“Noerror”.
+Theerrorqueueisclearedwhenpowerhasbeenofforaftera*CLS(clearstatus)commandhasbeen
+executed.The*RST(reset)commanddoesnotcleartheerrorqueue.
+
+### Parameter Typicalreturn
+
+(none) <+0,"Noerror">
+Readsandclearsthefirsterrorinerrorqueue: SYST:ERR?
+SYSTem:LOCal
+Thecommandplacesthepowersupplyinthelocalmode.Allfront-panelkeysarefullyfunctional.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Setsthepowersupplyinthelocalmode: SYST:LOC
+
+### 80 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 81
+
+SYSTem:PERSona:MANufacturer"<string>"
+SYSTem:PERSona:MANufacturer?
+SYSTem:PERSona:MANufacturer:DEFault
+SYSTem:PERSona:MANufacturer:DEFault?
+Thecommandchangesthemanufactureridentity.Thiscommandisusedtochangethemanufacturer'sIDstringfor
+backwardcompatibility.Thisaffectsthefollowingidentityitems:
+*IDN?contains"Agilent"insteadof"Keysight".
+TheDEFaultcommandreturnsthemanufacturer'sIDbacktoKeysight.
+Thequeryreturnsthemanufacturer'sID.
+
+### Parameter Typicalreturn
+
+"<string>" KeysightTechnologies
+SetsthemanufactureridentitytoHEWLETT-PACKARD: SYST:PERS:MAN'HEWLETT-PACKARD'
+SYSTem:PERSona:MODelE3631XA|E3631A
+SYSTem:PERSona:MODel?
+SYSTem:PERSona:MODel:DEFault
+SYSTem:PERSona:MODel:DEFault?
+Thecommandchangesthemodelnumber.ThiscommandisusedtochangethemainframemodelIDstringfor
+backwardcompatibility.
+TheDEFaultcommandreturnstheoriginalmodelidentification.
+Thequeryreturnsthemodel.
+
+### Parameter Typicalreturn
+
+E3631XA|E3631A E3631XAorE3631A
+SetsthemodeltoE3631A: SYST:PERS:MODE3631A
+SYSTem:REMote
+Thecommandplacesthepowersupplyintoremotemodeforremoteoperation.Allfront-panelkeysaredisabled
+exceptforLock/Unlockkey.Youcanunlockthefront-panelkeysbyholdingtheLock/Unlockkeyforafewseconds.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Setstoremotemode: SYST:REM
+KeysightE36300SeriesProgrammingGuide 81
+
+## Page 82
+
+SYSTem:RWLock
+Thecommandplacesthepowersupplyintheremotemode.ThiscommandisthesameasSYSTem:REMoteexcept
+thatallfront-panelkeysaredisabledincludingtheLock/Unlockkey.Youcanunlockthefront-panelkeysbyusing
+SYSTem:LOCal.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Setstoremotemodedisablingallfront-panelkeys: SYST:RWL
+SYSTem:SECurity:IMMediate
+Thecommandclearsallusermemoryandrebootstheinstrument.Thiscommandistypicallyusedtopreparethe
+instrumentforremovalfromasecurearea.Itsanitizesalluserdatabywritingallzerostoflashmemoryandthen
+performingachiperaseaspermanufacturer'sdatasheet.Identificationdata(instrumentfirmware,modelnumber,
+serialnumber,MACaddressandcalibrationdata)isnoterased.Afterthedataiscleared,theinstrumentisrebooted.
+Thisprocedureisnotrecommendedforuseinroutineapplicationsbecauseofthepossibilityofunintendedlossof
+data.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Sanitizesthepowersupply: SYST:SEC:IMM
+SYSTem:SET0|1|2|3|4|5|6|7|8|9
+SYSTem:SET?
+Thecommandsetstheinstrumenttoaspecifiedstate.Itcanbeusedtogetaninstrumentstateandlaterrestorethe
+instrumentbacktothatstate.
+Thequeryreturnstheinstrumentpresentstoredstate(store0-9).
+
+### Parameter Typicalreturn
+
+0|1|2|3|4|5|6|7|8|9 0,1,2,3,4,5,6,7,8,or9
+Setstheinstrumentstateto3: SYST:SET3?
+
+### 82 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 83
+
+SYSTem:TIME<hh>,<mm>,<ss>
+SYSTem:TIME?
+Thecommandsetstherealtimeclockinhours(hh),minutes(mm),andseconds(ss).Thevaluesmayrangefrom
+0,0,0(midnight)to23,59,59(onesecondbeforemidnight).
+Thequeryreturnstherealtimeclockinhours(hh),minutes(mm),andseconds(ss).
+
+### Parameter Typicalreturn
+
+<0-23>,<0-59>,<0-59> +<hh>,+<mm>,+<ss>
+Setstherealtimeclockto13:30:15: SYST:TIME13,30,15
+SYSTem:VERSion?
+ThequeryreturnsthepresentSCPIversionofthepowersupply.ThereturnedvalueisastringintheformofYYYY.V
+where“YYYY”representtheyearoftheversion,andthe“V”representsthecurrentversionnumberoftheSCPI.
+
+### Parameter Typicalreturn
+
+(none) "<version>"
+ReturnstheSCPIversion:: SYST:VERS?
+KeysightE36300SeriesProgrammingGuide 83
+
+## Page 84
+
+Trigger Subsystem
+TRIGger:DLOG[:IMMediate]
+OnlysupportedbyE36312AandE36313Amodels.
+Thecommandsendsanimmediatetriggersignaltothedatalogger.Thiswilltriggerthedatalogregardlessofthe
+selectedtriggersource.Youmustinitiate(run)thedataloggerbeforeyoutriggerit.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Triggersthedataloggerimmediately: TRIG:DLOG
+TRIGger:DLOG:SOURceBUS|EXTernal|IMMediate
+TRIGger:DLOG:SOURce?
+OnlysupportedbyE36312AandE36313Amodels.
+Thecommandselectsthetriggersourceforthedatalogger.
+ThequeryreturnsBUS,EXT,orIMM.
+Source Description
+BUS Selectsaremoteinterfacetriggercommand.
+EXTernal Selectsallconnectorpinsthathavebeenconfiguredastriggersources.
+IMMediate Setsthetriggersourcetotrue.AssoonasthedataloggerisINITiated,itwillsendthetriggerimmediately.
+
+### Parameter Typicalreturn
+
+BUS|EXT|IMM BUS,EXT,orIMM
+SelectsBUSasthedatalogtriggersource: TRIG:DLOG:SOURBUS
+
+### 84 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 85
+
+TRIGger[:SEQuence]:DELay<seconds>|MINimum|MAXimum,(@<chanlist>)
+TRIGger[:SEQuence]:DELay?[MINimum| MAXimum](@<chanlist>)
+Thecommandsetsthetimedelaybetweenthedetectionofaneventonthespecifiedtriggersourceandthestartof
+anycorrespondingtriggeractiononthepowersupplyoutput.Selectfrom0to3600seconds.Minimumvalueis0
+andmaximumvalueis3600seconds.
+Thequeryreturnstheprogrammedtriggertimedelayintheform+n.nnnnnnnnE+nnforeachchannelspecified.
+Multipleresponsesareseparatedbycommas.
+
+### Parameter Typicalreturn
+
+0–3600.000|MIN|MAX| <delayvalue>
+
+### *RST0
+
+Setsthetriggertimedelayto5secondsonchannels1and2: TRIG:DEL5,(@1,2)
+TRIGger[:SEQuence]:SOURceBUS|EXTernal|IMMediate| PIN1|PIN2|PIN3,(@<chanlist>)
+TRIGger[:SEQuence]:SOURce?(@<chanlist>)
+TheE36311AmodelonlysupportsBUSandIMMediate.
+Thecommandselectsthetriggersourcefortheoutputtriggersystem.
+ThequeryreturnsBUS,EXT,IMMorPIN<n>.
+PIN<n>mustbeconfiguredastriggerinputbeforeitcanbeusedasatriggersource.See
+[SOURce:]DIGital:PIN<n>:FUNCtionand[SOURce:]DIGital:PIN<n>:POLarity.
+Source Description
+BUS Selectsaremoteinterfacetriggercommand.
+EXTernal SelectsALLconnectorpinsthathavebeenconfiguredastriggersources.
+IMMediate Setsthetriggersourcetotrue.AssoonastheoutputisINITiated,itwillsendthetriggerimmediately.
+PIN<n> Selectsadigitalportpinconfiguredasatriggerinputwhere<n>indicatesthepinnumber.
+
+### Parameter Typicalreturn
+
+BUS|EXT|IMM|PIN1|PIN2|PIN3 BUS,EXT,IMM,PIN1,PIN2,or
+
+### PIN3
+
+
+### *RSTBUS
+
+Selectspin1astheoutputtriggersourceforchannel2: TRIG:SOURPIN1,(@2)
+KeysightE36300SeriesProgrammingGuide 85
+
+## Page 86
+
+Programexample
+Theprogrambelowsetsthe+6Vsupplytoanoutputof3V/1Aimmediately:
+INSTP6V Selectthe+6Voutput
+VOLT:MODESTEP SetthevoltagemodetoStep
+VOLT:TRIG3 Settriggeredvoltageto3V
+CURR:MODESTEP SetthecurrentmodetoStep
+CURR:TRIG1 Settriggeredcurrentto1A
+TRIG:SOURIMM Selecttheimmediatetriggersource
+INIT Initiatethetriggersystem
+
+### 86 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 87
+
+Triggering Commands
+Theinstrument'striggeringsystemallowsyoutochangevoltageandcurrentoutputwhenatriggerisreceived.The
+typicalprocessis:
+
+### 1. SelectoneormoreoutputswiththeINSTrument:SELectcommand.
+
+
+### 2. ConfigurethetriggeredoutputlevelsbyusingCURRent:TRIGgeredandVOLTage:TRIGgered.
+
+
+### 3. ConfigurethevoltageandcurrentmodetoStepbyusingVOLTage:MODEandCURRent:MODE.
+
+
+### 4. Specifythetriggersource,eitherBUSorIMMediate.
+
+
+### 5. IfyouareusingtheBUStriggersource,youmaychoosetosetatimedelaybetweenthedetectionofthetrigger
+
+andthestartofanycorrespondingoutputchange.
+
+### 6. SendanINITiate[:IMMediate]command.IftheIMMediatesourceisselected,theselectedoutputissettothe
+
+triggeredlevelimmediately.IftheBUStriggersourceisselected,theoutputissettothetriggeredlevelafterthe
+instrumentreceivesthe*TRGcommand.
+KeysightE36300SeriesProgrammingGuide 87
+
+## Page 88
+
+VOLTage Subsystem
+[SOURce:]VOLTage[:LEVel][:IMMediate][:AMPLitude]<voltage>|MINimum|MAXimum|DEFault,
+(@<chanlist>)
+[SOURce:]VOLTage[:LEVel][:IMMediate][:AMPLitude]?MINimum|MAXimum|DEFault,(@<chanlist>)
+Thecommandprogramstheimmediateoutputvoltageleveloftheoutputinvolts.Theimmediatelevelisthevoltage
+limitvalueoftheselectedoutputwiththeINSTrumentcommand.
+Thequeryreturnstheoutputvoltageleveloftheoutputinvolts.MAXandMINreturnthehighestandlowest
+programmablevoltagelevelsrespectivelyfortheselectedrange.
+
+### Parameter Typicalreturn
+
+0-maximum|MIN|MAX| DEF(Themaximumvalueis <voltagelevel>
+dependentonthevoltageratingofthepowermodule)
+
+### *RSTMIN
+
+Setstheoutputvoltagelevelto20V: VOLT20,(@2)
+[SOURce:]VOLTage[:LEVel]:TRIGgered[:AMPLitude]<voltage>|MINimum|MAXimum,(@<chanlist>)
+[SOURce:]VOLTage[:LEVel]:TRIGgered[:AMPLitude]?MINimum|MAXimum,(@<chanlist>)
+Thecommandprogramsthetriggeredvoltagelevelofthespecifiedoutputchannelinvolts.Thetriggeredlevelisa
+storedvaluethatistransferredtotheoutputwhenanoutputstepistriggered.
+Thequeryreturnstheprogrammedtriggeredlevelintheform+n.nnnnnnnnE+nnforeachchannelspecified.
+Multipleresponsesareseparatedbycommas.
+
+### Parameter Typicalreturn
+
+0-maximum|MIN|MAX(Themaximumvalueisdependent <voltagelevel>
+onthevoltageratingofthepowermodule)
+
+### *RSTMIN
+
+Setsthetriggeredvoltagelevelto5V: VOLT:TRIG5,(@1)
+[SOURce:]VOLTage:MODEFIXed|STEP |LIST, (@<chanlist>)
+[SOURce:]VOLTage:MODE?(@<chanlist>)
+Thecommanddetermineswhathappenstotheoutputvoltagewhenthetransientsystemisinitiatedandtriggered.
+Thequeryreturnsthevoltagemodeforeachchannelspecified.Multipleresponsesareseparatedbycommas.
+Mode Description
+FIXed Nothinghappens.Theoutputvoltageremainsattheimmediatevalue.
+STEP Theoutputgoestothetriggeredlevelwhenatriggeroccurs.
+LIST Theoutputfollowsthelistvalueswhenatriggeroccurs.
+Note:OnlysupportedbyE36312AandE36313Amodels.
+
+### 88 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 89
+
+
+### Parameter Typicalreturn
+
+FIX|STEP|LIST FIX,STEP,orLIST
+
+### *RSTFIX
+
+Setsthevoltagemodeofchannel2toStep: VOLT:MODESTEP,(@2)
+[SOURce:]VOLTage:PROTection[:LEVel][:AMPLitude]<voltage>|MINimum|MAXimum,(@<chanlist>)
+[SOURce:]VOLTage:PROTection[:LEVel]?MINimum|MAXimum,(@<chanlist>)
+Thecommandsetsthelevelatwhichovervoltageprotectiontrips,involts.
+Thequeryreturns+n.nnnnnnnnE+nninvolts.
+Operationmode Maximumvalue
+OFFMode CH1:(MAX=6.6)
+
+### CH2:(MAX=27.5)
+
+
+### CH3:(MAX=27.5)
+
+OFFModeforE36311AorE3631Ausing CH1:(MAX=6.6)
+
+### :SYST:PERS:MODE3631A CH2:(MAX=27.5)
+
+
+### CH3:(MAX=-27.5)
+
+SERiesMode CH1:(MAX=6.6)
+
+### CH2:(MAX=55)
+
+
+### CH3:(MAX=N/A)
+
+
+### Parameter Typicalreturn
+
+CH1:0.5-MAX <voltagelevel>
+
+### CH2:1.5-MAX
+
+*RST<MAXinMaximumvalue>
+Setsthelevelatwhichovervoltageprotectiontripsto20V: VOLT:PROT20,(@2)
+[SOURce:]VOLTage:PROTection:CLEar(@<chanlist>)
+Thecommandclearsanovervoltageprotectionevent.
+
+### Parameter Typicalreturn
+
+(none) (none)
+Clearsanovervoltageprotectionevent: VOLT:PROT:CLE
+KeysightE36300SeriesProgrammingGuide 89
+
+## Page 90
+
+[SOURce:]VOLTage:RANGeP6V|P25V|LOW| HIGH,(@<chanlist>)
+[SOURce:]VOLTage:RANGe?(@<chanlist>)
+Thecommandsetstheoutputvoltagerangeonmodelsthathavemultipleranges.Thepowersupplyonlysupport1
+rangeforvoltage,acceptingandreturningarangethatcorrespondstothesinglerange.
+Thequeryreturnsthepresentlyselectedrange.
+
+### Parameter Typicalreturn
+
+P6V|P25V|LOW|HIGH <voltagerange>
+Queriestheoutputvoltagerangeforchannel1:SOUR:VOLT:RANG?(@1)
+[SOURce:]VOLTage:PROTection:TRIPped?
+Thequeryindicateswhetheranovervoltageprotectionoccurred(1)ornot(0).Thisisresetto0by
+VOLTage:PROTection:CLEar.
+
+### Parameter Typicalreturn
+
+(none) 1or0
+Indicateswhetheranovervoltageprotectionoccurred: VOLT:PROT:TRIP?
+[SOURce:]VOLTage:SENSe[:SOURce]INTernal|EXTernal,(@<chanlist>)
+[SOURce:]VOLTage:SENSe[:SOURce]?(@<chanlist>)
+OnlysupportedbyE36312AandE36313Amodels.
+Thecommandspecifieswhetherthepowersupplyusesremoteorlocalsensing.
+Thequeryreturnstheselectedstateoftheremotesenserelay.
+Sense Description
+INTernal Setstheremotesenserelaystolocalsensing.Thefrontpanelremotesenseterminalsareinternallyconnectedtotheoutput
+terminals.The2wireindicatorison.
+EXTernal Setstheremotesenserelaystoremotesensing.Thefrontpanelremotesenseterminalsarenotinternallyconnectedtothe
+outputterminalsandmustbeconnectedtotheexternalload.The4wireindicatorison.
+
+### Parameter Typicalreturn
+
+INT|EXT INTorEXT
+
+### *RSTINT
+
+Setsthesensemodetoexternal(4-wire): VOLT:SENS:SOUREXT,(@1)
+
+### 90 KeysightE36300SeriesProgrammingGuide
+
+
+## Page 91
+
+This information is subject to change
+without notice.
+© Keysight Technologies 2017-2025
+Edition 12, June 2025
+Printed in Malaysia
+
+
+### E36311-90008
+
+www.keysight.com
+

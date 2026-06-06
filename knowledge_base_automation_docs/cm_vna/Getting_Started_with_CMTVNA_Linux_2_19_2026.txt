@@ -1,0 +1,19 @@
+OVERVIEW:
+CMTVNA software requires libicu74 and glibc 2.38 or newer. Starting from CMTVNA 1.5.0, libicu74 is bundled into the binary, so it doesn't need to be installed separately anymore.
+
+If a library is missing, it must be manually installed. If an OS ships with a glibc version older than 2.38, it would be very challenging to install 2.38 so make sure the OS has glibc 2.38 or newer before attempting to run CMTVNA software. To check the glibc version on your system, run:
+ldd --version
+
+EXAMPLE 1:
+The Raspberry Pi OS released on 10/1/2025 based on Debian 13 Trixie ships with glibc 2.41. 
+
+Create the USB rules for CMT VNAs. This step is essential for the USB connection between VNA and the CMTVNA software. Run:
+sudo ./install_vna_rules.sh
+
+Now preparation is done and cmtvna can be run by:
+./cmtvna
+
+EXAMPLE 2:
+On Ubuntu 24.04 LTS, some libraries might be missing. To install them, run:
+sudo apt update
+sudo apt install libxcb-cursor0 libxcb-xinerama0 libxkbcommon-x11-0

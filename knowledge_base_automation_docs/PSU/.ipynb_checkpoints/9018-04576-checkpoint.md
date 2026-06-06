@@ -1,0 +1,6736 @@
+# 9018-04576
+
+**Source PDF:** `9018-04576.pdf`
+
+**Extracted:** 1779769266.3345892
+
+---
+
+## Page 1
+
+Programmable DC Power Supplies
+E36300 Series
+
+### USER GUIDE
+
+
+## Page 2
+
+Notices 5
+CopyrightNotice 5
+ManualPartNumber 5
+Edition 5
+Publishedby 5
+Warranty 5
+TechnologyLicenses 5
+U.S.GovernmentRights 6
+ThirdPartyLicenses 6
+WasteElectricalandElectronicEquipment(WEEE) 6
+DeclarationsofConformity 7
+SafetyInformation 7
+SafetyandRegulatoryInformation 8
+SafetyConsiderations 8
+SafetySymbols 9
+RegulatoryMarkings 10
+SouthKoreanClassAEMCdeclaration: 10
+SafetyandEMCRequirements 10
+EnvironmentalConditions 11
+
+### 1 GettingStarted 12
+
+ProductIntroduction 13
+Frontpanelataglance 14
+Rearpanelataglance 16
+Meterview 17
+Dataloggerview 19
+Dimensiondiagram 20
+Setuptheinstrument 20
+PrepareInstrumentforUse 21
+Initialinspection 21
+Standardshippeditems 21
+Documentationandfirmwarerevisions 21
+Recommendedcalibrationinterval 21
+OptionsandFuseInformation 22
+EnsurethecorrectACinputvoltageandfusesettings 22
+
+### ProgrammingRanges 24
+
+Installation 25
+Connectingthepowercord 25
+Connectingtheoutputs 26
+Parallelandseriesconnections(E36312AandE36313Aonly) 29
+4-wiresenseconnection(E36312AandE36313Aonly) 31
+
+### InterfaceConnections 33
+
+InstallingtheoptionalGPIBinterface(E36312AandE36313Aonly) 37
+Rackmountingtheinstrument 38
+RemoteInterfaceConfiguration 39
+KeysightIO LibrariesSuite 39
+GPIBconfiguration 39
+LANconfiguration 40
+Usingsockets 45
+MoreaboutIPaddressesanddotnotation 45
+RemoteControl 46
+
+### 2 KeysightE36300SeriesUser'sGuide
+
+
+## Page 3
+
+Webinterface 46
+Technicalconnectiondetails 47
+UsetheBuilt-inHelpSystem 48
+Viewthehelpinformationforthefrontpanelkey 48
+Viewthelistofhelptopics 48
+FirmwareUpdate 50
+FrontPanelMenuReference 51
+
+### 2 GeneralOperatingInformation 52
+
+TurningtheUnitOn 53
+Viewtheerrorlog 54
+ControllingtheOutputs 55
+Step1-Selectanoutput 55
+Step2-Settheoutputvoltageandcurrent 55
+Step3-Enabletheoutput 56
+Step4-Viewtheoutputvoltageandcurrent 56
+Constantvoltageandconstantcurrent 57
+UsingtheProtectionFunction 58
+Protectionfunction 58
+Configuringprotection 58
+ClearsandOVPandOCPEvent 60
+Specifying2-Wireor4-WireSense(E36312AandE36313AOnly) 61
+UsingtheTrackingOperation 62
+ConfiguringtheOutputTurnOnTurnOffSequence(E36312AandE36313AOnly) 63
+Step1–Settheoutputvoltageandcurrentoftheoutputchannels: 63
+Step2–Configuretheturn-onturn-offdelays: 63
+Step3–Couplingselectedoutputs: 63
+Step4–UsetheAllOutputsOnandOffkeys: 64
+SpecifyingtheOperationMode(E36312AandE36313AOnly) 65
+UsingtheDigitalControlPort(E36312AandE36313AOnly) 66
+Bi-directionaldigitalIO 66
+Digitalinput 68
+Faultoutput 68
+Inhibitinput 69
+Fault/inhibitsystemprotection 70
+Triggerinput 71
+Triggeroutput 72
+Outputcouplecontrols 72
+UsingtheOutputLIST(E36312AandE36313AOnly) 75
+Step1–Add/removestepsto/fromtheLIST 75
+Step2–Configuretheoutputsequence 76
+Step3–Runtheoutputsequencelist 78
+UsingtheDataLoggerFunction(E36312AandE36313AOnly) 80
+Loggingdata 80
+Step1–Programthesequencefortheoutputchannels 80
+Step2–Configurethedataloggertraces 81
+Step3–Configurethedataloggerproperties 82
+Step4–TurnonOutput1,startthesequencingandlogthedata. 82
+Step5–Exportthedata 83
+Dataloggerview 84
+Adjustingthewaveformdisplay 85
+Dataloggerpropertiesandwaveformsettings 86
+KeysightE36300SeriesUser'sGuide 3
+
+## Page 4
+
+Savethedatalog 88
+Locking/UnlockingtheFrontPanel 91
+CapturingaScreen 91
+EnablingtheE3631AMode(PersonaMode) 92
+UtilitiesMenu 93
+UtilitiesMenu-StoreandRecallState 93
+StoreSettings 94
+RecallSettings 96
+PowerOnSetting 97
+SettoDefaults 97
+UtilitiesMenu-I/OConfiguration 98
+LANSettings 98
+DigitalIO(E36312AandE36313Aonly) 99
+GPIB(optionalandapplicabletoE36312AandE36313Aonly) 99
+UtilitiesMenu-Test/Setup 100
+
+### Calibration 100
+
+SelfTest 100
+UserSettings 101
+LowRange 102
+Help 102
+UtilitiesMenu-Error 103
+UtilitiesMenu-ManageFiles 104
+Action 104
+Browse 104
+FileName 105
+
+### 3 CharacteristicsandSpecifications 106
+
+### 4 KeysightE36300SeriesUser'sGuide
+
+
+## Page 5
+
+Notices
+Copyright Notice
+©KeysightTechnologies2017-2023
+Nopartofthismanualmaybereproducedinanyformorbyanymeans(includingelectronicstorageandretrievalor
+translationintoaforeignlanguage)withoutprioragreementandwrittenconsentfromKeysightTechnologiesas
+governedbyUnitedStatesandinternationalcopyrightlaws.
+Manual Part Number
+
+### E36311-90001
+
+Edition
+Edition6,October2023
+Published by
+KeysightTechnologies
+BayanLepasFreeIndustrialZone
+11900BayanLepas,Penang
+Malaysia
+Warranty
+
+### THEMATERIALCONTAINEDINTHISDOCUMENTISPROVIDED“ASIS,”ANDISSUBJECTTOBEINGCHANGED,
+
+### WITHOUTNOTICE,INFUTUREEDITIONS.FURTHER,TOTHEMAXIMUMEXTENTPERMITTEDBYAPPLICABLE
+
+### LAW,KEYSIGHTDISCLAIMSALLWARRANTIES,EITHEREXPRESSORIMPLIED,WITHREGARDTOTHISMANUAL
+
+### ANDANYINFORMATIONCONTAINEDHEREIN,INCLUDINGBUTNOTLIMITEDTOTHEIMPLIEDWARRANTIESOF
+
+### MERCHANTABILITYANDFITNESSFORAPARTICULARPURPOSE.KEYSIGHTSHALLNOTBELIABLEFORERRORS
+
+### ORFORINCIDENTALORCONSEQUENTIALDAMAGESINCONNECTIONWITHTHEFURNISHING,USE,OR
+
+### PERFORMANCEOFTHISDOCUMENTOROFANYINFORMATIONCONTAINEDHEREIN.SHOULDKEYSIGHTAND
+
+### THEUSERHAVEASEPARATEWRITTENAGREEMENTWITHWARRANTYTERMSCOVERINGTHEMATERIALIN
+
+### THISDOCUMENTTHATCONFLICTWITHTHESETERMS,THEWARRANTYTERMSINTHESEPARATEAGREEMENT
+
+### SHALLCONTROL.
+
+Technology Licenses
+Thehardwareand/orsoftwaredescribedinthisdocumentarefurnishedunderalicenseandmaybeusedorcopied
+onlyinaccordancewiththetermsofsuchlicense.
+KeysightE36300SeriesUser'sGuide 5
+
+## Page 6
+
+U.S. Government Rights
+TheSoftwareis“commercialcomputersoftware,”asdefinedbyFederalAcquisitionRegulation(“FAR”)2.101.
+PursuanttoFAR12.212and27.405-3andDepartmentofDefenseFARSupplement(“DFARS”)227.7202,theU.S.
+governmentacquirescommercialcomputersoftwareunderthesametermsbywhichthesoftwareiscustomarily
+providedtothepublic.Accordingly,KeysightprovidestheSoftwaretoU.S.governmentcustomersunderits
+standardcommerciallicense,whichisembodiedinitsEndUserLicenseAgreement(EULA),acopyofwhichcanbe
+foundathttp://www.keysight.com/find/sweula.ThelicensesetforthintheEULArepresentstheexclusiveauthority
+bywhichtheU.S.governmentmayuse,modify,distribute,ordisclosetheSoftware.TheEULAandthelicenseset
+forththerein,doesnotrequireorpermit,amongotherthings,thatKeysight:(1)Furnishtechnicalinformationrelated
+tocommercialcomputersoftwareorcommercialcomputersoftwaredocumentationthatisnotcustomarilyprovided
+tothepublic;or(2)Relinquishto,orotherwiseprovide,thegovernmentrightsinexcessoftheserightscustomarily
+providedtothepublictouse,modify,reproduce,release,perform,display,ordisclosecommercialcomputer
+softwareorcommercialcomputersoftwaredocumentation.Noadditionalgovernmentrequirementsbeyondthose
+setforthintheEULAshallapply,excepttotheextentthatthoseterms,rights,orlicensesareexplicitlyrequiredfrom
+allprovidersofcommercialcomputersoftwarepursuanttotheFARandtheDFARSandaresetforthspecificallyin
+writingelsewhereintheEULA.Keysightshallbeundernoobligationtoupdate,reviseorotherwisemodifythe
+Software.WithrespecttoanytechnicaldataasdefinedbyFAR2.101,pursuanttoFAR12.211and27.404.2and
+DFARS227.7102,theU.S.governmentacquiresnogreaterthanLimitedRightsasdefinedinFAR27.401orDFAR
+
+### 227.7103-5(c),asapplicableinanytechnicaldata.
+
+Third Party Licenses
+Portionsofthissoftwarearelicensedbythirdpartiesincludingopensourcetermsandconditions.Totheextentsuch
+licensesrequirethatKeysightmakesourcecodeavailable,wewilldosoatnocosttoyou.Formoreinformation,
+pleasecontactKeysightsupportathttps://www.keysight.com/find/assist.
+Waste Electrical and Electronic Equipment (WEEE)
+ThisproductcomplieswiththeWEEEDirective)marketingrequirement.Theaffixedproductlabel(seebelow)
+indicatesthatyoumustnotdiscardthiselectrical/electronicproductindomestichouseholdwaste.
+ProductCategory:WithreferencetotheequipmenttypesintheWEEEdirectiveAnnex1,thisproductisclassifiedas
+“MonitoringandControlinstrumentation”product.Donotdisposeindomestichouseholdwaste.
+Toreturnunwantedproducts,contactyourlocalKeysightoffice,orsee
+about.keysight.com/en/companyinfo/environment/takeback.shtmlformoreinformation.
+
+### 6 KeysightE36300SeriesUser'sGuide
+
+
+## Page 7
+
+Declarations of Conformity
+DeclarationsofConformityforthisproductandforotherKeysightproductsmaybedownloadedfromtheWeb.Goto
+https://regulations.about.keysight.com/DoC/default.htm.Youcanthensearchbyproductnumbertofindthelatest
+DeclarationofConformity.
+Safety Information
+ACAUTIONnoticedenotesahazard.Itcallsattentiontoanoperatingprocedure,practice,orthelikethat,ifnotcorrectlyper-
+formedoradheredto,couldresultindamagetotheproductorlossofimportantdata.DonotproceedbeyondaCAUTIONnotice
+untiltheindicatedconditionsarefullyunderstoodandmet.
+AWARNINGnoticedenotesahazard.Itcallsattentiontoanoperatingprocedure,practice,orthelikethat,ifnotcorrectlyper-
+formedoradheredto,couldresultinpersonalinjuryordeath.DonotproceedbeyondaWARNINGnoticeuntiltheindicatedcon-
+ditionsarefullyunderstoodandmet.
+KeysightE36300SeriesUser'sGuide 7
+
+## Page 8
+
+Safety and Regulatory Information
+Safety Considerations
+Thefollowinggeneralsafetyprecautionsmustbeobservedduringallphasesofoperation,service,andrepairofthis
+instrument.Failuretocomplywiththeseprecautionsorwithspecificwarningselsewhereinthismanualviolates
+safetystandardsofdesign,manufacture,andintendeduseoftheinstrument.KeysightTechnologiesassumesno
+liabilityforthecustomer'sfailuretocomplywiththeserequirements.
+
+### BEFOREAPPLYINGPOWER
+
+–Verifythattheproductissettomatchtheavailablelinevoltageandthatthecorrectfuseisinstalled.Usethelabel
+ontherearoftheinstrumenttoconfigurethepower.SeeOptionsandFuseInformationforadditionaldetails.
+–Ensurethemainssupplyvoltagefluctuationdonotexceed±10%ofthenominalsupplyvoltage.
+
+### GROUNDTHEINSTRUMENT
+
+ThisproductisaSafetyClassIinstrument(providedwithaprotectiveearthterminal).Tominimizeshockhazard,the
+instrumentchassisandcabinetmustbeconnectedtoanelectricalground.Theinstrumentmustbeconnectedtothe
+ACpowersupplymainsthroughathree-conductorpowercable,withthethirdwirefirmlyconnectedtoanelectrical
+ground(safetyground)atthepoweroutlet.Anyinterruptionoftheprotective(grounding)conductorordisconnection
+oftheprotectiveearthterminalwillcauseapotentialshockhazardthatcouldresultinpersonalinjury.Iftheinstru-
+mentistobeenergizedviaanexternalautotransformerforvoltagereduction,becertainthattheautotransformer
+commonterminalisconnectedtotheneutral(earthedpole)oftheACpowerlines(supplymains).
+
+### DONOTOPERATEINANEXPLOSIVEATMOSPHEREORWETENVIRONMENTS
+
+Donotoperatethedevicearoundflammablegasesorfumes,vapor,orwetenvironments.
+
+### DONOTOPERATEDAMAGEDORDEFECTIVEINSTRUMENTS
+
+Instrumentsthatappeardamagedordefectiveshouldbemadeinoperativeandsecuredagainstunintendedoperation
+untiltheycanberepairedbyqualifiedservicepersonnel.
+
+### DONOTSUBSTITUTEPARTSORMODIFYINSTRUMENT
+
+Becauseofthedangerofintroducingadditionalhazards,donotinstallsubstitutepartsorperformanyunauthorized
+modificationtotheinstrument.ReturntheinstrumenttoaKeysightTechnologiesSalesandServiceOfficeforservice
+andrepairtoensurethatsafetyfeaturesaremaintained.TocontactKeysightforsalesandtechnicalsupport,referto
+thesupportlinksonthefollowingKeysightwebsite:www.keysight.com/find/assist(worldwidecontactinform-
+ationforrepairandservice).
+
+### USETHEPOWERCORDPROVIDED
+
+Usethedevicewiththepowercordprovidedwiththeshipment.
+
+### USETHEDEVICEASSPECIFIED
+
+Ifthedeviceisusedinamannernotspecifiedbymanufacturer,thedeviceprotectionmaybeimpaired.
+
+### DONOTBLOCKVENTILATIONHOLES
+
+Donotblockanyoftheventilationholesofthedevice.
+
+### OBSERVEALLDEVICEMARKINGSBEFORECONNECTINGTODEVICE
+
+Observeallmarkingsonthedevicebeforeconnectinganywiringtothedevice.
+
+### 8 KeysightE36300SeriesUser'sGuide
+
+
+## Page 9
+
+
+### TURNDEVICEOFFBEFORECONNECTINGTOOUTPUTTERMINALS
+
+Turnoffthedevicepowerbeforeconnectingtotheoutputterminals.
+
+### ENSURECOVERISSECUREDINPLACE
+
+Donotoperatethedevicewiththecoverremovedorloosened.
+
+### TURNDEVICEOFFAND REMOVE ALLCONNECTIONSBEFOREINSTALLINGTHE GPIBINTERFACE
+
+Turnoffthepowerandremoveallconnections,includingthepowercord,fromtheinstrumentpriorinstallationofthe
+GPIBinterface.
+
+### CLEANWITHSLIGHTLYDAMPENEDCLOTH
+
+Cleantheoutsideoftheinstrumentwithasoft,lint-free,slightlydampenedcloth.Donotusedetergent,volatile
+liquids,orchemicalsolvents.
+ConnectUSBcablewithferritecoretotherearpanelUSBportoftheinstrument.
+Safety Symbols
+Symbol Description
+Caution,riskofdanger(refertothemanualforspecificWarningorCautioninformation)
+Protectiveearth(ground)terminal.
+Frameorchassis(ground)terminal.
+Standbysupply.TheinstrumentisnotcompletelydisconnectedfromACmainswhenswitchisoff.
+Alternatingcurrent(AC).
+Plus,positivepolarity.
+Minus,negativepolarity.
+TheWARNINGsigndenotesahazard.Itcallsattentiontoaprocedure,practice,orthelike,which,ifnotcorrectlyperformed
+oradheredto,couldresultinpersonalinjury.DonotproceedbeyondaWARNINGsignuntiltheindicatedconditionsare
+fullyunderstoodandmet.
+TheCAUTIONsigndenotesahazard.Itcallsattentiontoanoperatingprocedure,orthelike,which,ifnotcorrectly
+performedoradheredto,couldresultindamagetoordestructionofpartoralloftheproduct.Donotproceedbeyond
+CAUTIONsignuntiltheindicatedconditionsarefullyunderstoodandmet.
+TheNOTEsigndenotesimportantinformation.Itcallsattentiontoaprocedure,practice,conditionorthelike,whichis
+essentialtohighlight.
+KeysightE36300SeriesUser'sGuide 9
+
+## Page 10
+
+Regulatory Markings
+Symbol Description
+TheRCMmarkisaregisteredtrademarkoftheAustralianCommunicationsandMediaAuthority.
+TheCEmarkisaregisteredtrademarkoftheEuropeanCommunity.ThisCEmarkshowsthattheproduct
+complieswithalltherelevantEuropeanLegalDirectives.
+ICES/NMB-001indicatesthatthisISMdevicecomplieswiththeCanadianICES-001.
+CetappareilISMestconformealanormeNMB-001duCanada.
+ISMGRP.1ClassAindicatesthatthisisanIndustrialScientificandMedicalGroup1ClassAproduct.
+Thissymbolindicatesthetimeperiodduringwhichnohazardousortoxicsubstanceelementsareexpectedto
+leakordeteriorateduringnormaluse.Fortyyearsistheexpectedusefullifeoftheproduct.
+ThissymbolisaSouthKoreanClassAEMCDeclaration.ThisisaClassAinstrumentsuitableforprofessional
+useandinelectromagneticenvironmentoutsideofthehome.
+TheCSAmarkisaregisteredtrademarkoftheCanadianStandardsAssociation.
+South Korean Class A EMC declaration:
+Informationtotheuser:
+Thisequipmenthasbeenconformityassessedforuseinbusinessenvironments.Inaresidentialenvironmentthis
+equipmentmaycauseradiointerference.
+– ThisEMCstatementappliestotheequipmentonlyforuseinbusinessenvironment.
+사용자안내문
+이기기는업무용환경에서사용할목적으로적합성평가를받은기기로서
+가정용환경에서사용하는경우전파간섭의우려가있습니다.
+– 사용자안내문은“업무용방송통신기자재”에만적용한다.
+Safety and EMC Requirements
+ThispowersupplyisdesignedtocomplywiththefollowingsafetyandEMC(ElectromagneticCompatibility)
+requirements:
+– LowVoltageDirective2014/35/EU
+– EMCDirective2014/30/EU
+
+### 10 KeysightE36300SeriesUser'sGuide
+
+
+### Tables on this Page
+
+| 사용자안내문 |
+|---|
+| 이기기는업무용환경에서사용할목적으로적합성평가를받은기기로서 가정용환경에서사용하는경우전파간섭의우려가있습니다. |
+
+## Page 11
+
+Environmental Conditions
+TheE36300Seriesisdesignedforindooruseandinanareawithlowcondensation.Thetablebelowshowsthe
+generalenvironmentalrequirementsforthisinstrument.
+Environmentalcondition Requirement
+Temperature Operatingcondition:0°Cto40°C
+Storagecondition:–20°Cto70°C
+Humidity Operatingcondition:Upto80%RHat40°C(non-condensing)
+Storagecondition:Upto90%RHat65°C(non-condensing)
+Altitude Upto2000m
+Pollutiondegree 2
+KeysightE36300SeriesUser'sGuide 11
+
+## Page 12
+
+
+### 1 Getting Started
+
+ProductIntroduction
+PrepareInstrumentforUse
+OptionsandFuseInformation
+
+### ProgrammingRanges
+
+Installation
+RemoteInterfaceConfiguration
+RemoteControl
+UsingtheBuilt-inHelpSystem
+FirmwareUpdate
+FrontPanelMenuReference
+ThischaptergetsyoustartedwiththeE36300SeriesprogrammableDC
+powersupply.
+
+### 12 KeysightE36300SeriesUser'sGuide
+
+
+## Page 13
+
+Product Introduction
+TheKeysightE36300SeriesisaseriesofthreeDCbenchandsystempowersupplies.Allthreemodelsinclude:
+– Threeoutputs:
+
+### – 6V/5A,+25V/1A,-25V/1A(E36311A)
+
+### – 6V/5A,+25V/1A,+25V/1A(E36312A)
+
+### – 6V/10A,+25V/2A,+25V/2A(E36313A)
+
+– Highperformancefunctionality:accuracy,transientresponse,andrise/falltime
+– Colorful,information-packed4.3"LCD display
+– CodecompatibleandworksliketheE3631AwheninE3631Amode
+– Threerack-units(3U),1/2-rackformfactor
+– Lowacousticnoise
+– Excellentusability
+– USB IOinterface
+– NISPOMsecurity(Optional)
+– WebInterface
+– SCPIprogrammability
+– BenchVueapplication
+– 3-yearwarrantystandard
+– Keysightworldwidesupport
+Themodel-specificfeaturesareshownbelow.
+
+### Feature E36311A E36312A E36313A
+
+Poweroutput 80W 80W 160W
+IOinterface USBstandard USB/LANstandard, USB/LANstandard,
+GPIBoptional GPIBoptional
+Lowcurrentmeasurement P P
+Outputlistcapability P P
+Datalogging P P
+Outputsequencing P P
+Highpower(160W) P
+Auto-Series/Parallelmode P P
+Rearconnections P P
+KeysightE36300SeriesUser'sGuide 13
+
+### Tables on this Page
+
+| E36311A | E36312A | E36313A |
+|---|---|---|
+
+## Page 14
+
+Frontpanelataglance
+Item Description
+
+### 1 Information-packed,highcontrastLEDdisplay;easilyviewableevenfromsharpangles
+
+### 2 Outputselectionkeys
+
+Selectsanoutputtocontrol.Thelitkeyindicatestheselectedoutput.
+Tip:Whenthiskeyisselected,pressingthiskeyagainwilltogglebetweenmultipleandsingleoutputview.
+
+### 3 Voltage/Currentknobs
+
+Setthevoltageandcurrentoftheselectedoutput.
+
+### 4 MeterView,TrackingandStore/Recallkeys
+
+–[MeterView]turnsonthemeterviewfortheselectedoutput.
+–[Tracking]turnsonoroffthetrackmodeforoutput2and3.(E36312AandE36313Aonly)
+–[Store/Recall]openstheStore/Recallmenu.
+
+### 5 Navigationkeys.
+
+–Navigatethroughthecontroldialogwindows;press[Enter]keytoselectacontrol.
+
+### 6 Numerickeypad
+
+–Entersnumericvalues.Press[Enter]keytocompletetheentry.
+–Deletesthevaluesenteredintothedialogusingthebackkey.
+
+### 7 OutputOnkey
+
+TurnsindividualoutputsOnorOff;outputsareonwhenthekeyislit.
+
+### 8 Outputterminals
+
+### 14 KeysightE36300SeriesUser'sGuide
+
+
+## Page 15
+
+Item Description
+
+### 9 Earthgroundreference
+
+### 10 On/StandbykeyandLEDindicator
+
+Turnsontheinstrument.IftheLEDisamber,theinstrumentisinstandbymodewithACinletpowerconnected,andifitisgreen,the
+instrumentison.
+
+### 11 AllOutputOn/Offkey
+
+TurnsalloutputsOnandOffaccordingtothespecifiedturn-onandturn-offdelays.
+
+### 12 Softkeys
+
+Accessesthesoftfrontpanelmenu.
+
+### 13 USBport
+
+AllowsanexternalUSBdrivetobeconnectedtotheinstrument.(E36312AandE36313Aonly)
+KeysightE36300SeriesUser'sGuide 15
+
+## Page 16
+
+Rearpanelataglance
+Item Description
+
+### 1 Output2and3terminalport(E36312AandE36313Aonly)
+
+### 2 Earthgroundreference(E36312AandE36313Aonly)
+
+### 3 Kensingtonsecurityslot
+
+### 4 Output1terminalport(E36312AandE36313Aonly)
+
+### 5 DigitalI/Oterminalport(E36312AandE36313Aonly)
+
+### 6 LANport(E36312AandE36313Aonly)
+
+### 7 USBport
+
+### 8 GPIBport(E36312AandE36313AOptionGPIBonly)
+
+### 9 ACinlet
+
+### 10 ACselectorfuse-holderassembly
+
+### 11 ACselector
+
+### 12 Fanventilationhole
+
+### 16 KeysightE36300SeriesUser'sGuide
+
+
+## Page 17
+
+Meterview
+Thepowersupply'sfrontpanelfeaturesahighcontrastLEDdisplay.
+Press[MeterView].Thiskeytogglesbetweenmultipleandsingleoutputview.
+MultipleOutputView SingleOutputView
+Item Description
+
+### 1 Outputidentifier
+
+Whenanoutputisselected,thebackgroundbecomeshighlighted.Theselectedoutputisdisplayedinanenlargedformatinsingle
+outputview.
+
+### 2 Remotesensestatus
+
+2wireor4wireindicatesthat2-wireor4-wiresensingmeasurementisinuse.
+
+### 3 Outputstatus
+
+OFF:Theoutputisoff OV:Over-voltageprotectionistripped
+CV:Theoutputisinconstantvoltagemode OC:Over-currentprotectionistripped
+CC:Theoutputisinconstantcurrentmode OT:Over-temperatureprotectionistripped
+UR:Theoutputisunregulated
+
+### 4 Outputmeters
+
+Displaystheactualoutputvoltageandcurrent.Displayspowerinsingleoutputview.
+
+### 5 Outputsettings
+
+Displaysthepresentoutputvoltageandcurrentsettings.Usethenumerickeypadorturnthefrontpanelvoltageorcurrentknobto
+adjustthesesettings.
+
+### 6 Interfacestatus
+
+:TheinstrumentisconnectedtoUSB. :TheinstrumentisnotconnectedtoLAN.
+:TheinstrumentisconnectedtoLAN. (blinking):TheLANconnectionisatfault.
+(blinking):Theinstrumentisunderidentificationmodevia
+remoteinterface.
+KeysightE36300SeriesUser'sGuide 17
+
+## Page 18
+
+Item Description
+
+### 7 Ratingsandprotection
+
+Displaysthepresentover-voltageprotection(OVP)settingandwhetherover-currentprotection(OCP)isonoroff.
+
+### 8 Outputdelay
+
+DisplaystheOCP,OutputOnandOutputOffdelayvalues.
+
+### 9 Softfrontpanelmenu
+
+### 18 KeysightE36300SeriesUser'sGuide
+
+
+## Page 19
+
+Dataloggerview
+PressDataLoggerfromthesoftfrontpanelmenu.
+Item Description
+
+### 1 Tracecontrols
+
+Identifiesthevoltageorcurrenttracethatwillbedisplayed.Dashes(----)indicatethatthespecifiedtraceisturnedoff.Selectthe
+traceandpress[Enter]toturnitonoroff.
+
+### 2 Outputtraces
+
+Voltage,current,orpowertraces.VoltagetracesV1,V2andV3isshown.PressAutoScaletoautoscalealltraces.
+
+### 3 Status
+
+IndicateswhethertheDataLoggerisloggingdata,donelogging,orisempty.
+
+### 4 Filename
+
+Indicatesthefiletowhichthedataisbeinglogged.
+
+### 5 Databar&timeelapsed
+
+Displaystheprogressofthedatalogger.Theyellowbarindicatesthevisibledata.Numberstotheleftindicatetimeelapsed/total
+duration.
+
+### 6 Time/Div
+
+Indicatesthehorizontaltime-basesetting.
+
+### 7 Offsettime
+
+Indicatesthetimethattherightgridlineisoffsetorawayfromtheendofthedatalog.
+
+### 8 Gridtime
+
+Displaysthetimeonthegridline
+KeysightE36300SeriesUser'sGuide 19
+
+## Page 20
+
+Dimensiondiagram
+Setuptheinstrument
+Placetheinstrument'sfeetonaflat,smoothhorizontalsurface.Connectoutputtothefrontpanelorconnectoutput
+andsenseleadstotherearpanel(E36312AandE36313Aonly),beingcarefulnottoshorttheleadstogether.Attach
+thepowercabletotherearpanel,thenplugitintomainpower.ConnectLAN,USBorGPIBcablesasdesired,and
+youmayalsosecuretheinstrumentwithasecuritylockcable.
+Beforedisconnectingcablesandcordsfromtheinstrument,turntheinstrumentoffusingthefront-panel
+On/Standbykeyanddisconnectfromthesupplysourcebyunpluggingthedetachablepowercord.
+
+### 20 KeysightE36300SeriesUser'sGuide
+
+
+## Page 21
+
+Prepare Instrument for Use
+Initialinspection
+Whenyoureceiveyourpowersupply,inspectitforanyobviousdamagethatmayhaveoccurredduringshipment.If
+thereisdamage,notifytheshippingcarrierandnearestKeysightSalesandSupportOfficeimmediately.Referto
+www.keysight.com/find/assist.
+Untilyouhavecheckedoutthepowersupply,savetheshippingcartonandpackingmaterialsincasetheunithasto
+bereturned.CheckthelistunderStandardShippedItemsandverifythatyouhavereceivedtheseitemswithyour
+instrument.Ifanythingismissing,pleasecontactyournearestKeysightSalesandSupportOffice.
+Standardshippeditems
+– KeysightE36311A/E36312A/E36313ADCpowersupply
+– ACpowercord
+– Certificateofcalibration
+– Oneconnectorkit(P/N:E36312-89001)(E36312AandE36313Aonly):
+–One10A,3.5mmfemale4-pinterminalblockconnector
+–One12A,5mmfemale4-pinterminalblockconnector
+–One12A,5mmfemale8-pinterminalblockconnector
+Documentationandfirmwarerevisions
+TheKeysightE36300Seriesdocumentationlistedbelowcanbedownloadedforfreethroughourwebsiteat
+www.keysight.com/find/e36300manuals.
+– KeysightE36300SeriesprogrammableDCPowerSuppliesUser'sGuide.Thismanual.
+– KeysightE36300SeriesprogrammableDCPowerSuppliesProgrammingGuide.
+– KeysightE36300SeriesprogrammableDCPowerSuppliesServiceGuide.
+Forthelatestfirmwarerevisionandfirmwareupdateinstruction,gotowww.keysight.com/find/e36300firmware.
+Recommendedcalibrationinterval
+KeysightTechnologiesrecommendsaoneyearcalibrationcyclefortheE36300SeriesprogrammableDCpower
+supplies.
+KeysightE36300SeriesUser'sGuide 21
+
+## Page 22
+
+Options and Fuse Information
+Ensureyouordertheproperinstrumentoptionforthemainspowerthatwillbeusedfortheinstrument.
+Options0EM,0E3,and0E9determinewhichpower-linevoltageisselectedatthefactory.
+Option Description
+0EM 115VAC±10%,50/60Hzinputvoltage
+0E3 230VAC±10%,50/60Hzinputvoltage
+0E9 100VAC±10%,50/60Hzinputvoltage
+EnsurethecorrectACinputvoltageandfusesettings
+Usetheproperswitchsettings
+TochangetheinputACvoltageselectoronthepowersupply,usethetwoACselectorswitchesontheundersideof
+thepowersupplyasshown.
+Forexample,toselect230V,slidetheleftswitchtotheleftandtherightswitchtotheright,asillustratedinthe
+diagrambelowtheswitches.
+Toselect115V,slidebothswitchestotheleft,andtoselect100V,slidethetwoswitchestowardseachother.
+
+### 22 KeysightE36300SeriesUser'sGuide
+
+
+## Page 23
+
+Usethecorrectfuse
+Thefollowingtabledescribesthefusethatyoushouldusewitheachofthepowersupply'soption.
+Option Fuse Description Fusetype Manufacturer Application
+partnumber
+E36311A-0E9 2110-1672 Fuse4A,125VTime-delay Medium-Acting Littelfuse 100Vand115Vlinevoltage
+
+### E36311A-0EM
+
+### E36312A-0E9
+
+### E36312A-0EM
+
+E36311A-0E3 2110-1640 Fuse2A,250VTime-delay Slow-Blo 230Vlinevoltage
+
+### E36312A-0E3
+
+E36313A-0E9 2110-1673 Fuse7A,125VTime-delay Medium-Acting 100Vand115Vlinevoltage
+
+### E36313A-0EM
+
+E36313A-0E3 2110-0954 Fuse3.5A,250VTime-delay Slow-Blo 230Vlinevoltage
+Toconfigurethecorrectfuse,followthethreestepsshownbelow:
+Pullthefuseholderoutofthe Removeandinserttheproper Re-insertthefuseholderintothe
+powersupply. fuseintothefuseholder. powersupply.
+KeysightE36300SeriesUser'sGuide 23
+
+### Tables on this Page
+
+| Fuse partnumber | Description | Fusetype | Manufacturer | Application |
+|---|---|---|---|---|
+
+## Page 24
+
+
+### Programming Ranges
+
+Thefollowingtableshowsthemaximumvoltage,current,andpowerthatcanbeprogrammedforeachmodel.
+
+### Parameter +6Voutput +25Voutput -25Voutput1
+
+OutputIdentifier P6V P25V N25V
+OutputNumber 1 2 3
+Voltage MAXimum 6.18V 25.75V 0V
+MINimum 0V 0V -25.75V
+DEFault(*RST) 0V 0V 0V
+Current MAXimum 5.15A 1.03A 1.03A
+
+### 10.3A2 2.06A2 2.06A2
+
+MINimum 0.001A 0.001A 0.001A
+DEFault(*RST) 5A 1A 1A
+
+### 10A2 2A2 2A2
+
+Note:
+
+### 1.ApplicableforE36311AorwhenSCPIID issettoE3631A(E36312AandE36313A).Innormaloperation,the
+
+E36312AandE36313Awilloutputas+25V.
+
+### 2.ApplicableforE36313A.
+
+### 24 KeysightE36300SeriesUser'sGuide
+
+
+### Tables on this Page
+
+| +6Voutput | +25Voutput | -25Voutput1 |
+|---|---|---|
+
+## Page 25
+
+Installation
+Connectingthepowercord
+Connectingtheoutputs
+Parallelandseriesconnections
+4-wiresenseconnection
+
+### Interfaceconnections
+
+InstallingtheoptionalGPIBinterface
+Rackmountingtheinstrument
+Connectingthepowercord
+
+### FIREHAZARD
+
+Useonlythepowercordthatwassuppliedwithyourinstrument.Usingothertypesofpowercordsmaycause
+overheatingofthepowercord,resultinginfire.
+
+### SHOCKHAZARD
+
+Thepowercordprovidesachassisgroundthroughathirdconductor.Becertainthatyourpoweroutletisof
+thethree-conductortypewiththecorrectpinconnectedtoearthground.
+EnsuretheACvoltagesettingontherearpaneliscorrectlysetpriorconnectingthepowercord.
+ConnectthepowercordtotheACinletconnectorontherearoftheunit.Ifthewrongpowercordwasshippedwith
+yourunit,contactyournearestKeysightSalesandSupportOffice.
+RemovingthepowercordwilldisconnectACinputpowertotheunit.
+KeysightE36300SeriesUser'sGuide 25
+
+## Page 26
+
+Connectingtheoutputs
+Allloadsshouldeitherbeconnectedtothefrontpanelbindingpostorrearpaneloutput.
+Bindingposts
+
+### SHOCKHAZARD
+
+TurnoffACpowerbeforeconnectingwirestothefrontpanel.Allwiresandstrapsmustbeproperlyconnected
+withthebindingpostssecurelytightened.
+ThebindingpostsacceptwiressizesuptoAWG14inlocation(A).Securelyfastenallwiresbyhand-tighteningthe
+bindingposts.Youcanalsoinsertstandardbananaplugsintothefrontoftheconnectorsasshownin(B).Achassis
+groundbindingpostislocatedonthefrontpanelforconvenience.
+Maximumcurrentrating:
+
+### (A)=20A
+
+### (B)=15A
+
+Rearoutputsconnections
+
+### SHOCKHAZARD
+
+TurnoffACpowerbeforeconnectingwirestotherearpanel.Allwiresandstrapsmustbeproperlyconnected
+withtheterminalblockscrewssecurelytightened.
+Disconnecttheconnectorplugtomakeyourwireconnections.The12Aconnectorplugacceptswiressizesfrom
+AWG12toAWG30.WiresizessmallerthanAWG20arenotrecommended.Connecttheloadwirestothe+and-
+terminals.Connectthesensewirestothe+sand-sterminals.
+Securelyfastenallwiresbytighteningthescrewterminals.Inserttheconnectorplugintothebackoftheunit.
+Securethe12Aconnectorbytighteningthelockingscrews.Achassisgroundbindingpostislocatednexttothefan
+ventilationholeforgroundconnections.
+PartnumberinformationfortheconnectorkitisprovidedunderStandardShippedItems.
+
+### 26 KeysightE36300SeriesUser'sGuide
+
+
+## Page 27
+
+Wiresizing
+
+### FIREHAZARD
+
+Selectawiresizelargeenoughtocarryshort-circuitcurrentwithoutoverheating(refertothefollowingtable).
+Tosatisfysafetyrequirements,loadwiresmustbeheavyenoughnottooverheatwhilecarryingtheshort-cir-
+cuitoutputcurrentoftheunit..
+AWG Suggestedmaximum mΩ/ft mΩ/m
+current(A)1
+
+### 12 25 1.59 5.2
+
+### 14 20 2.53 8.3
+
+### 16 13 4.02 13.2
+
+### 18 10 6.39 21.0
+
+### 20 7 10.2 33.5
+
+### 22 5 16.1 52.8
+
+### 24 3.5 25.7 84.3
+
+Notes:
+
+### 1.Singleconductorinfreeairat30°Cwithinsulation
+
+Outputisolation
+Theoutputsofallthreepowersuppliesareisolatedfromearthground.Anyoutputterminalmaybegrounded,oran
+externalvoltagesourcemaybeconnectedbetweenanyterminaloutputandground.However,outputterminals
+mustbekeptwithin±240Vdcofground.The±25Vsuppliesaretiedtogetheratonecommonterminal(Appliesto
+E36311AorwhenthepowersupplyisinE3631Amode).Anyoneofthethreeterminalscanbetiedtogroundas
+needed.Anearthgroundterminalisprovidedonthefrontpanelforconvenience.
+Multipleloads
+Whenconnectingmultipleloadstothepowersupply,eachloadshouldbeconnectedtotheoutputterminalsusing
+separateconnectingwires.Thisminimizesmutualcouplingeffectsbetweenloadsandtakesfulladvantageofthe
+lowoutputimpedanceofthepowersupply.Eachpairofwiresshouldbeasshortaspossibleandtwistedorshielded
+toreduceleadinductanceandnoisepick-up.Ifashieldisused,connectoneendtothepowersupplyground
+terminalandleavetheotherenddisconnected.
+Ifcablingconsiderationsrequiretheuseofdistributionterminalsthatarelocatedremotelyfromthepowersupply,
+connectoutputterminalstothedistributionterminalsbyapairoftwistedorshieldedwires.Connecteachloadto
+thedistributionterminalsseparately.
+Formultipleloadapplication,allloadsshouldeitherbeconnectedtothefrontpanelbindingpostorrearpanel
+output.
+TurnonACpowerbeforeconnectingloadstopreventcurrentsfromdamagingtheloads.
+KeysightE36300SeriesUser'sGuide 27
+
+### Tables on this Page
+
+| Suggestedmaximum current(A)1 | mΩ/ft | mΩ/m |
+|---|---|---|
+
+## Page 28
+
+Frontpanel
+Rearpanel(E36312AandE36313Aonly)
+
+### 28 KeysightE36300SeriesUser'sGuide
+
+
+## Page 29
+
+Parallelandseriesconnections(E36312AandE36313Aonly)
+Parallelconnections
+Seriesconnections
+Parallelconnections
+Onlyconnectoutputsthathaveidenticalvoltageandcurrentratingsinparallel.
+Connectingoutputsinparallelprovidesagreatercurrentcapabilitythancanbeobtainedfromasingleoutput.
+ThefollowingfiguresshowhowtoconnecttwooutputswheninAuto-Parallelmode.
+Frontpanel
+Rearpanel
+Thefigureontheleftillustrates2-wiresensing.Ifvoltagedropintheloadleadsisaconcern,thefigureontheright
+showshowtoconnectthesenseleadsdirectlyattheload.
+KeysightE36300SeriesUser'sGuide 29
+
+## Page 30
+
+Seriesconnections
+
+### SHOCKHAZARD
+
+Floatingvoltagesmustnotexceed240VDC.Nooutputterminalmaybemorethan240VDCfromchassis
+ground.
+Onlyconnectoutputsthathaveidenticalvoltageandcurrentratingsinseries.
+Topreventcurrentsfromdamagingthepowersystemwhentheloadisconnected,alwaysturnseries-con-
+nectedoutputsonandofftogether.Donotleaveoneoutputonwhiletheotherisoff.
+Connectingoutputsinseriesprovidesagreatervoltagecapabilitythancanbeobtainedfromasingleoutput.
+ThefollowingfiguresshowhowtoconnecttwooutputstoasingleloadinAuto-Seriesmode.
+Frontpanel
+Rearpanel
+Ifvoltagedropintheloadleadsisaconcern,connectthesenseleadsofoutput2andoutput3for4-wiresensingas
+showninthefigureontheright.
+
+### 30 KeysightE36300SeriesUser'sGuide
+
+
+## Page 31
+
+4-wiresenseconnection(E36312AandE36313Aonly)
+
+### SHOCKHAZARD
+
+TurnoffACpowerbeforemakingrearpanelconnections.Allwiresandstrapsmustbeproperlyconnectedwith
+theterminalblockscrewssecurelytightened
+Thepowersupplyincludesbuilt-inrelaysthatconnectordisconnectthe±senseterminalsfromtheircorresponding
+±outputterminals.Asshipped,thesenseterminalsareinternallyconnectedtotheoutputterminals.Thisisreferred
+toas2-wire,orlocalsensing.
+4-wire,orremotesensingimprovesthevoltageregulationattheloadbymonitoringthevoltageattheloadrather
+thanattheoutputterminals.Thisautomaticallycompensatesforthevoltagedropintheloadleads,whichis
+especiallyusefulforCVoperationwithloadimpedancethatvaryorhavesignificantleadresistance.Becauseremote
+sensingisindependentofotherpowersupplyfunctions,itcanbeusedregardlessofhowtheinstrumentis
+programmed.RemotesensinghasnoeffectduringCCoperation.
+Thefollowingfiguresillustrateloadconnectionsusing2-wiresensingand4-wiresensing.
+Connecttheloadtotheoutputterminalsusingseparateconnectingwires.Keepthewire-pairasshortaspossible
+andtwistorbundleittoreduceleadinductanceandnoisepickup.Keeptheloadleadsunder14.7meters(50feet)
+perleadbecauseofinductanceeffects.
+Connectthesenseleadsasclosetotheloadaspossible.DoNOTbundlethesensewire-pairtogetherwiththeload
+leads;keeptheloadwiresandsensewiresseparate.Thesenseleadscarryonlyafewmilliamperesofcurrentand
+canbealightergaugethantheloadleads.However,anyvoltagedropinthesenseleadscandegradethevoltage
+regulationoftheinstrument.Trytokeepthesenseleadresistancelessthanabout0.5Ωperlead(thisrequires20
+AWGorheavierfora50footlength).
+Afterturningtheuniton,activate4-wireremotevoltagesensingbypressingSourceSettings>Sense4w.Referto
+Specifying2-Wireor4-WireSense.
+KeysightE36300SeriesUser'sGuide 31
+
+## Page 32
+
+Opensenseleads
+Thesenseleadsarepartoftheoutput'sfeedbackpath.Connecttheminsuchawaysothattheydonot
+inadvertentlybecomeopencircuited.Thepowersupplyincludesprotectionresistorsthatreducetheeffectofopen
+senseleadsduring4-wire-sensing.Ifthesenseleadsopenduringoperation,thepowersupplyreturnstothelocal
+sensingmode,withthevoltageattheoutputterminalsapproximately5%higherthantheprogrammedvalue.
+Over-voltageprotectionconsiderations
+Youmusttakeintoaccountanyvoltagedropintheloadleadswhensettingtheover-voltagetrippoint.Thisis
+becausetheOVPcircuitsensesattheoutputterminalsandnotatthesenseterminals.Duetothevoltagedropin
+theloadleads,thevoltagesensedbytheOVPcircuitcouldbehigherthanthevoltagebeingregulatedattheload.
+Outputnoiseconsiderations
+AnynoisepickeduponthesenseleadswillappearattheoutputterminalsandmayadverselyaffectCVload
+regulation.Twistthesenseleadsorusearibboncabletominimizethepickupofexternalnoise.Inextremelynoisy
+environmentsitmaybenecessarytoshieldthesenseleads.Groundtheshieldatthepowersupplyendonly;donot
+usetheshieldasoneofthesensingconductors.
+
+### 32 KeysightE36300SeriesUser'sGuide
+
+
+## Page 33
+
+
+### InterfaceConnections
+
+GPIBconnections
+USBconnections
+LANconnections-siteandprivate
+Digitalportconnections
+Thissectiondescribeshowtoconnecttothevariouscommunicationinterfacesonyourpowersupply.Forfurther
+informationaboutconfiguringtheremoteinterfaces,refertoRemoteInterfaceConfiguration.
+Ifyouhavenotalreadydoneso,installtheKeysightIOLibrariesSuite,whichcanbefoundatwww.key-
+sight.com/find/iolib.Fordetailedinformationaboutinterfaceconnections,refertotheKeysightTech-
+nologiesUSB/LAN/GPIBInterfacesConnectivityGuideincludedwiththeKeysightIOLibrariesSuite.
+GPIBconnections(optionalforE36312AandE36313A)
+ThefollowingfigureillustratesatypicalGPIBinterfacesystem.
+
+### 1.IfyoudonothaveaGPIBinterfacecardinstalledonyourcomputer,turnoffyourcomputerandinstalltheGPIB
+
+card.
+
+### 2.ConnectyourinstrumenttotheGPIBinterfacecardusingaGPIBinterfacecable.
+
+### 3.UsetheConnectionExpertutilityoftheKeysightIOLibrariesSuitetoconfiguretheGPIBcard’sparameters.
+
+### 4.ThepowersupplyisshippedwithitsGPIBaddresssetto5.Usethefrontpanelmenuifyouneedtochangethe
+
+GPIBaddress.
+
+### 5.YoucannowuseInteractiveIOwithintheConnectionExperttocommunicatewithyourinstrument,oryoucan
+
+programyourinstrumentusingthevariousprogrammingenvironments.
+USBconnections
+ThefollowingfigureillustratesatypicalUSBinterfacesystem.
+KeysightE36300SeriesUser'sGuide 33
+
+## Page 34
+
+
+### 1.ConnectyourinstrumenttotheUSBportonyourcomputerusingaUSBcable.
+
+### 2.WiththeConnectionExpertutilityoftheKeysightIOLibrariesSuiterunning,thecomputerwillautomatically
+
+recognizetheinstrument.Thismaytakeseveralseconds.Whentheinstrumentisrecognized,yourcomputerwill
+displaytheVISAalias,IDNstring,andVISAaddress.ThisinformationislocatedintheUSBfolder.Youcanalsoview
+theinstrument’sVISAaddressfromthefrontpanelmenu.
+
+### 3.YoucannowuseInteractiveIOwithintheConnectionExperttocommunicatewithyourinstrument,oryoucan
+
+programyourinstrumentusingthevariousprogrammingenvironments.
+LANconnections-siteandprivate(E36312AandE36313Aonly)
+AsiteLANisalocalareanetworkinwhichLAN-enabledinstrumentsandcomputersareconnectedtothenetwork
+throughrouters,hubs,and/orswitches.Theyaretypicallylarge,centrally-managednetworkswithservicessuchas
+DHCPandDNSservers.ThefollowingfigureillustratesatypicalsiteLANsystem.
+
+### 1.ConnecttheinstrumenttothesiteLANortoyourcomputerusingaLANcable.Theas-shippedinstrumentLAN
+
+settingsareconfiguredtoautomaticallyobtainanIPaddressfromthenetworkusingaDHCPserver(DHCPisset
+On).TheDHCPserverwillregistertheinstrument’shostnamewiththedynamicDNSserver.Thehostnameaswell
+astheIPaddresscanthenbeusedtocommunicatewiththeinstrument.ThefrontpanelLANindicatorwillcomeon
+whentheLANporthasbeenconfigured.
+IfyouneedtomanuallyconfigureanyinstrumentLANsettings,refertoRemoteInterfaceConfiguration
+forinformationaboutconfiguringtheLANsettingsfromthefrontpaneloftheinstrument.
+
+### 2.UsetheConnectionExpertutilityoftheKeysightIOLibrariesSuitetoaddthepowersupplyandverifya
+
+### connection.Toaddtheinstrument,youcanrequesttheConnectionExperttodiscovertheinstrument.Ifthe
+
+instrumentcannotbefound,addtheinstrumentusingitshostnameorIPaddress.
+Ifthisdoesnotwork,referto“TroubleshootingGuidelines”intheKeysightTechnologiesUSB/LAN/GPIBInter-
+facesConnectivityGuideincludedwiththeKeysightIOLibrariesSuite.
+
+### 3.YoucannowuseInteractiveIOwithintheConnectionExperttocommunicatewithyourinstrument,oryoucan
+
+programyourinstrumentusingthevariousprogrammingenvironments.YoucanalsousetheWebbrowseronyour
+computertocommunicatewiththeinstrumentasdescribedunderRemoteControl.
+AprivateLANisanetworkinwhichLAN-enabledinstrumentsandcomputersaredirectlyconnected,andnot
+connectedtoasiteLAN.Theyaretypicallysmall,withnocentrally-managedresources.Thefollowingfigure
+illustratesatypicalprivateLANsystem.
+
+### 34 KeysightE36300SeriesUser'sGuide
+
+
+## Page 35
+
+
+### 1.ConnecttheinstrumenttothecomputerusingaLANcrossovercable.Alternatively,connectthecomputerand
+
+theinstrumenttoastandalonehuborswitchusingregularLANcables.
+MakesureyourcomputerisconfiguredtoobtainitsaddressfromDHCPandthatNetBIOSoverTCP/IPis
+enabled.NotethatifthecomputerhadbeenconnectedtoasiteLAN,itmaystillretainpreviousnetworkset-
+tingsfromthesiteLAN.WaitoneminuteafterdisconnectingitfromthesiteLANbeforeconnectingittothe
+privateLAN.ThisallowsWindowstosensethatitisonadifferentnetworkandrestartthenetworkcon-
+figuration.
+
+### 2.Thefactory-shippedinstrumentLANsettingsareconfiguredtoautomaticallyobtainanIPaddressfromasite
+
+networkusingaDHCPserver.Youcanleavethesesettingsastheyare.MostKeysightproductsandmostcomputers
+willautomaticallychooseanIPaddressusingauto-IPifaDHCPserverisnotpresent.EachassignsitselfanIP
+addressfromtheblock169.254.nnn.Notethatthismaytakeuptooneminute.ThefrontpanelLANindicatorwill
+comeonwhentheLANporthasbeenconfigured.
+TurningoffDHCPreducesthetimerequiredtofullyconfigureanetworkconnectionwhenthepowersupplyis
+turnedon.TomanuallyconfiguretheinstrumentLANsettings,refertoRemoteInterfaceConfigurationfor
+informationaboutconfiguringtheLANsettingsfromthefrontpaneloftheinstrument.
+
+### 3.UsetheConnectionExpertutilityoftheKeysightIOLibrariesSuitetoaddthepowersupplyandverifya
+
+### connection.Toaddtheinstrument,youcanrequesttheConnectionExperttodiscovertheinstrument.Ifthe
+
+instrumentcannotbefound,addtheinstrumentusingitshostnameorIPaddress.
+Ifthisdoesnotwork,referto“TroubleshootingGuidelines”intheKeysightTechnologiesUSB/LAN/GPIBInter-
+facesConnectivityGuideincludedwiththeKeysightIOLibrariesSuite.
+
+### 4.YoucannowuseInteractiveIOwithintheConnectionExperttocommunicatewithyourinstrument,oryoucan
+
+programyourinstrumentusingthevariousprogrammingenvironments.YoucanalsousetheWebbrowseronyour
+computertocommunicatewiththeinstrumentasdescribedunderRemoteControl.
+Digitalportconnections(E36312AandE36313Aonly)
+A4-pinconnectorisprovidedoneachinstrumenttoaccessthethreedigitalcontrolportfunctions.Thedigital
+controlconnectoracceptswiresizesfromAWG16toAWG22.
+Itisgoodengineeringpracticetotwistandshieldallsignalwirestoandfromthedigitalconnectors.Ifshielded
+wireisused,connectonlyoneendoftheshieldtothechassisgroundtopreventgroundloops.
+KeysightE36300SeriesUser'sGuide 35
+
+## Page 36
+
+Pinfunctions
+Thefollowingtabledescribesthepossiblepinconfigurationforthedigitalportfunctions.Foracompletedescription
+oftheelectricalcharacteristicsofthedigitalI/Oport,refertotheproductdatasheet.
+Pinfunction Availableconfigurablepins
+DigitalI/OandDigitalIn Pins1through3
+ExternalTriggerIn/Out Pins1through3
+FaultOut Pin1andPin2
+InhibitIn Pin3
+OutputCoupling Pins1through3
+Common Pin4
+Inadditiontotheconfigurablepinfunctions,theactivesignalpolarityforeachpinisalsoconfigurable.When
+Positivepolarityisselected,alogicaltruesignalisavoltagehighatthepin.WhenNegativepolarityisselected,a
+logicaltruesignalisavoltagelowatthepin.
+Formoreinformationonconfiguringthedigitalportfunctions,refertoUsingtheDigitalControlPort.
+
+### 36 KeysightE36300SeriesUser'sGuide
+
+
+## Page 37
+
+InstallingtheoptionalGPIBinterface(E36312AandE36313Aonly)
+
+### TURNOFFPOWERANDREMOVEALLCONNECTIONSPRIORTOINSTALLATION
+
+Turnoffthepowerandremoveallconnections,includingthepowercord,fromtheinstrumentpriorinstall-
+ationoftheGPIBinterface.
+
+### RETAINGPIBCOVERPLATE
+
+AfterinstallingtheGPIBoption,retainthecoverplateforuseintheeventthatyoueverremovetheGPIB
+option.Theinstrumentshouldneverbeconnectedtopowerorinputsontheoutputterminalswithouteither
+theGPIBmoduleorthecoverplatesecurelycoveringtherear-panelopening.
+Thefollowingtoolsarerequired.
+– T10Torxdriver
+Makesureyouturnthepowersupplyupsidedownbeforeproceed.
+UseT10Torxdrivertoremovethescrewfromthe Locatetheconnector,justinsidetheunit,toconnect
+GPIBcoverplate.Retainthescrewforuselaterin thecablethatisattachedtotheGPIBmodule.
+thisprocedure.
+Then,removethecoverplatebyslidingittotheleft.
+Attachthecabletotheconnectorlocatedinthe PutthemoduleintotheunitandslidetheGPIBboard
+previousstep. totherightsothatitisflushedagainstthe
+instrument'ssheetmetal.Usethescrewthatwas
+removedearliertosecuretheGPIBplateinplace.
+ThisconcludestheGPIBinstallationprocedure.
+KeysightE36300SeriesUser'sGuide 37
+
+## Page 38
+
+Rackmountingtheinstrument
+UsetheRackMountkitasstatedbelowtorackmounttheinstrument.Installationinstructionsareprovided
+withtherackmountkit.
+Topreventoverheating,donotblockairflowtoorfromtheinstrument.Allowenoughclearanceattherear,
+sides,andbottomoftheinstrumenttopermitadequateinternalairflow.
+Thepowersupplycanbemountedinastandard19-inchrackcabinet.Theyaredesignedtofitinthreerack-units
+(3U)ofspace.
+Removethefeetbeforerackmountingtheunit.Donotblocktheairintakeandexhaustsatthesidesandrearofthe
+unit.
+Rackmountingasingleinstrument
+Torackmountasingleinstrument,orderadapterkit(1CM116A).
+Rackmountinginstrumentsside-by-side
+Torackmounttwoinstrumentsside-by-side,orderlock-linkkit(5061-8769).Besuretousethesupportrailsinthe
+rackcabinet.
+Rackmountkitwithouthandles(1CM104A) Fronthandlekit(1CN107A)
+Rackmountkitwithhandles(1CP108A) Forinstrumentwithpreviouslysuppliedhandles,order
+flangekit(1CM105A).
+
+### 38 KeysightE36300SeriesUser'sGuide
+
+
+## Page 39
+
+Remote Interface Configuration
+Theinstrumentsupportsremoteinterfacecommunicationoverthreeinterfaces:USB,GPIB,andLAN.
+– USBInterface:Usetherear-panelUSBporttocommunicatewithyourPC.
+– GPIBInterface:Settheinstrument'sGPIBaddressandconnecttoyourPCusingaGPIBcable.
+– LANInterface:Bydefault,DHCPison,whichmayenablecommunicationoverLAN.TheacronymDHCPstandsfor
+DynamicHostConfigurationProtocol,aprotocolforassigningdynamicIPaddressestonetworkeddevices.With
+dynamicaddressing,adevicecanhaveadifferentIPaddresseverytimeitconnectstothenetwork.
+KeysightIO LibrariesSuite
+EnsurethattheKeysightIOLibrariesSuiteisinstalledbeforeyouproceedfortheremoteinterfacecon-
+figuration.
+KeysightIO LibrariesSuiteisacollectionoffreeinstrumentcontrolsoftwarethatautomaticallydiscovers
+instrumentsandallowsyoutocontrolinstrumentsoverLAN,USB,GPIB,RS-232,andotherinterfaces.Formore
+information,ortodownloadIOLibraries,gotowww.keysight.com/find/iosuite.
+GPIBconfiguration
+TherearenoSCPIcommandstoconfiguretheGPIBparameter.AllGPIBconfigurationmustbedonefromthe
+frontpanel.
+EachdeviceontheGPIB(IEEE-488)interfacemusthaveauniquewholenumberaddressbetween0and30.The
+instrumentshipswithadefaultaddressof5.
+– Thissettingisnon-volatile;itwillnotbechangedbypowercyclingor*RSTorSYSTem:PRESet.
+– Yourcomputer’sGPIBinterfacecardaddressmustnotconflictwithanyinstrumentontheinterfacebus.
+
+### 1. PressUtilities>I/OConfig>GPIBtoaccesstheGPIBwindow.
+
+### 2. Fromthiswindow,youcansettheGPIBaddressusingthenumerickeysandpress[Enter].
+
+### 3. PressBacktoexit.
+
+KeysightE36300SeriesUser'sGuide 39
+
+## Page 40
+
+LANconfiguration
+ThefollowingsectionsdescribetheprimaryfrontpanelLANconfigurationfunctionsonthefront-panelmenu.
+TherearenoSCPIcommandstoconfiguretheLANparameters.AllLANconfigurationmustbedonefromthe
+frontpanel.
+AfterchangingtheLANsettings,youmustsavethechanges.PressBackonceyouhavecompletethechanges.
+YouwillbepromptedtopressYestosavetheLANsettingorNotoexitwithoutsaving.PressYescyclespower
+totheinstrumentandactivatesthesettings.LANsettingsarenonvolatile,theywillnotbechangedbypower
+cyclingor*RST.Ifyoudonotwanttosaveyourchanges,pressNotocancelallchanges.
+Whenshipped,DHCPison,whichmayenablecommunicationoverLAN.TheacronymDHCPstandsforDynamic
+HostConfigurationProtocol,aprotocolforassigningdynamicIPaddressestodevicesonanetwork.Withdynamic
+addressing,adevicecanhaveadifferentIPaddresseverytimeitconnectstothenetwork.
+SomeLANsettingsrequireyoutocycleinstrumentpowertoactivatethem.Theinstrumentbrieflydisplaysa
+messagewhenthisisthecase,sowatchthescreencloselyasyouchangeLANsettings.
+ViewingtheLANstatus
+PressUtilities>I/OConfig>LANStatustoviewtheLANstatus.
+TheLANstatusmaybedifferentfromthefrontpanelconfigurationmenusettings-dependingontheconfiguration
+ofthenetwork.Ifthesettingsaredifferent,itisbecausethenetworkhasautomaticallyassigneditsownsettings.
+RestartingtheLAN
+PressUtilities>I/OConfig>LANStatus>LANRestartrestartsthenetworkingusingALLcurrentLANsettings.LAN
+restartdoesnotclearstheWebinterfacepassword.
+
+### 40 KeysightE36300SeriesUser'sGuide
+
+
+## Page 41
+
+ResettingtheLAN
+PressUtilities>I/OConfig>LANSettings>SettoDefaultresetstheLANsettingstotheirfactorydefaultvalues.
+AlldefaultLANsettingsarelistedunderNon-volatileSettingsinProgrammingGuide.
+PressUtilities>I/OConfig>LANStatus>LANResetresetstheLANusingitscurrentsettingsandenablesDHCP
+andDNS.TheLANResetsoftkeyalsoclearsanyuser-definedWebInterfacepassword.
+ModifyingtheLANsettings
+Asshippedfromthefactory,theinstrumentpre-configuredsettingsshouldworkinmostLANenvironments.Referto
+Non-VolatileSettingsintheProgrammingGuideforinformationonthefactory-shippedLANsettings.
+PressUtilities>I/OConfig>LANSettingstoaccesstheLANSettingswindow.Fromthismenu,youcanmanually
+configuretheLANsettings.
+
+### DHCP
+
+DHCP(DynamicHostConfigurationProtocol)canautomaticallyassignadynamicIPaddresstoaLANdevice.Thisis
+typicallytheeasiestwaytoconfiguretheinstrumentforLAN.
+– Thissettingisnon-volatile;itwillnotbechangedbypowercyclingor*RSTorSYSTem:PRESet.
+
+### 1. PressUtilities>I/OConfig>LANSettings>DHCPOntouseDHCPtoautomaticallyassignanIPaddress.
+
+### 2. PressBack.Youwillbepromptedbythebelowmessage.
+
+KeysightE36300SeriesUser'sGuide 41
+
+## Page 42
+
+
+### 3. PressYestosavethesetting.
+
+### 4. PressNotocancelallthechangesandexitwithoutsaving.
+
+TomanuallysetanIPaddress,SubnetMask,orDefaultGateway,pressDHCPOff.Then,changetheIPsetupas
+describedbelow.
+IPAddress
+YoucanenterastaticIPaddressfortheinstrumentasafour-byteintegerexpressedindotnotation.Eachbyteisa
+decimalvalue,withnoleadingzeros(forexample,192.168.2.20).
+– IfDHCPison,itattemptstoassignanIPaddresstotheinstrument.Ifitfails,Auto-IPattemptstoassignanIP
+addresstotheinstrument.
+– ContactyourLANadministratorfordetails.
+– Thissettingisnon-volatile;itwillnotbechangedbypowercyclingor*RSTorSYSTem:PRESet.
+
+### 1. PressUtilities>I/OConfig>LANSettings>DHCPOff.
+
+### 2. SelectIPAddressfieldusingthenavigationkeys.SetthedesiredIPaddressandpressBack.
+
+### 3. PressYestosavethesetting.
+
+### 4. PressNotocancelallthechangesandexitwithoutsaving.
+
+SubnetMask
+SubnettingallowstheLANadministratortosubdivideanetworktosimplifyadministrationandminimizenetwork
+traffic.Thesubnetmaskindicatestheportionofthehostaddressusedtoindicatethesubnet.
+– ContactyourLANadministratorfordetails.
+– Thissettingisnon-volatile;itwillnotbechangedbypowercyclingor*RSTorSYSTem:PRESet.
+
+### 1. PressUtilities>I/OConfig>LANSettings>DHCPOff.
+
+### 2. SelectSubnetMaskfieldusingthenavigationkeys.SetthedesiredsubnetmaskaddressandpressBack.
+
+(Example:255.255.0.0)
+
+### 3. PressYestosavethesetting.
+
+### 4. PressNotocancelallthechangesandexitwithoutsaving.
+
+### 42 KeysightE36300SeriesUser'sGuide
+
+
+## Page 43
+
+Gateway
+Agatewayisanetworkdevicethatconnectsnetworks.ThedefaultgatewaysettingistheIPaddressofsucha
+device.
+– YouneednotsetagatewayaddressifusingDHCP.
+– ContactyourLANadministratorfordetails.
+– Thissettingisnon-volatile;itwillnotbechangedbypowercyclingor*RSTorSYSTem:PRESet.
+
+### 1. PressUtilities>I/OConfig>LANSettings>DHCPOff.
+
+### 2. SelectGatewayfieldusingthenavigationkeys.SettheappropriategatewayaddressandpressBack.
+
+### 3. PressYestosavethesetting.
+
+### 4. PressNotocancelallthechangesandexitwithoutsaving.
+
+DNS
+DNS(DomainNameService)isanInternetservicethattranslatesdomainnamesintoIPaddresses.TheDNSserver
+addressistheIPaddressofaserverthatperformsthisservice.
+– Normally,DHCPdiscoversDNSaddressinformation;youonlyneedtochangethisifDHCPisunusedornot
+functional.ContactyourLANadministratorfordetails.
+– Thissettingisnon-volatile;itwillnotbechangedbypowercyclingor*RSTorSYSTem:PRESet.
+
+### 1. PressUtilities>I/OConfig>LANSettings>AutoDNSOntoconfiguretheaddressingoftheinstrumentinDNS
+
+serverautomatically.
+
+### 2. PressUtilities>I/OConfig>LANSettings>AutoDNSOfftoconfiguretheaddressingoftheinstrumentmanu-
+
+ally.
+
+### 3. SelectDNS(1)AddrandDNS(2)Addrusingthenavigationkeys.ThesefieldsonlyappearwhenAutoDNSisset
+
+toOff.
+
+### 4. SetthedesiredprimaryandsecondaryaddressandpressBack.
+
+### 5. SelectmDNSServicefieldusingthenavigationkeys.
+
+### 6. PressYestosavethesetting.
+
+### 7. PressNotocancelallthechangesandexitwithoutsaving.
+
+KeysightE36300SeriesUser'sGuide 43
+
+## Page 44
+
+DNSHostname
+Ahostnameisthehostportionofthedomainname,whichistranslatedintoanIPaddress.
+Eachpowersupplyisshippedwithadefaulthostnamewiththeformat:Keysight-modelnumber-serialnumber,
+wheremodelnumberisthepowersupply’s6-charactermodelnumber(e.g.E36312A),andserialnumberisthelast
+fivecharactersofthe10-characterpowersupplyserialnumberlocatedonthelabelonthetopoftheunit(e.g.
+45678iftheserialnumberisMY12345678).
+– Theinstrumentreceivesauniquehostnameatthefactory,butyoumaychangeit.Thehostnamemustbeunique
+ontheLAN.
+– Thenamemuststartwithletter;othercharacterscanbeanupperorlowercaseletters,numericdigits,ordashes
+("-").
+– Thissettingisnon-volatile;itwillnotbechangedbypowercyclingor*RSTorSYSTem:PRESet.
+
+### 1. PressUtilities>I/OConfig>LANSettings.
+
+### 2. SelectDNSHostnamefieldusingthenavigationkeys.Press andenterthehostnamewiththekeyboard
+
+provided.PressBack.
+
+### 3. PressYestosavethesetting.
+
+### 4. PressNotocancelallthechangesandexitwithoutsaving.
+
+### 44 KeysightE36300SeriesUser'sGuide
+
+
+## Page 45
+
+mDNSService
+ThemDNSservicenameisregisteredwiththeselectednamingservice.
+Eachpowersupplyisshippedwithadefaultservicenamewiththeformat:Keysight-modelnumberserialnumber,
+wheremodelnumberisthepowersupply’s7-charactermodelnumber(e.g.E36312A),andserialnumberisthelast
+fivecharactersofthe10-characterpowersupplyserialnumberlocatedonthelabelonthetopoftheunit(e.g.45678
+iftheserialnumberisMY12345678).
+– TheinstrumentreceivesauniquemDNSservicenameatthefactory,butyoumaychangeit.ThemDNSservice
+namemustbeuniqueontheLAN.
+– Thenamemuststartwithletter;othercharacterscanbeanupperorlowercaseletters,numericdigits,ordashes
+("-").
+
+### 1. PressUtilities>I/OConfig>LANSettings>mDNSOfftoconfigurestheservicenameregisteredwiththeselec-
+
+tednamingserviceautomatically.
+
+### 2. PressUtilities>I/OConfig>LANSettings>mDNSOntoconfiguretheservicenameoftheinstrumentmanu-
+
+ally.
+
+### 3. SelectmDNSServicefieldusingthenavigationkeys.
+
+### 4. PressmDNSSrvandentertheservicenamewiththekeyboardprovided.
+
+### 5. PressBacktoexit.
+
+Usingsockets
+Powersuppliesallowanycombinationofuptotwosimultaneousdatasocket,controlsocket,andtelnetcon-
+nectionstobemade.
+Keysightinstrumentshavestandardizedonusingport5025forSCPIsocketservices.Adatasocketonthisportcan
+beusedtosendandreceiveASCII/SCPIcommands,queries,andqueryresponses.Allcommandsmustbe
+terminatedwithanewlineforthemessagetobeparsed.Allqueryresponseswillalsobeterminatedwithanewline.
+MoreaboutIPaddressesanddotnotation
+Dot-notationaddresses("nnn.nnn.nnn.nnn"where"nnn"isabytevaluefrom0to255)mustbeexpressedwithcare,
+asmostPCwebsoftwareinterpretsbytevalueswithleadingzerosasoctal(base8)numbers.Forexample,
+"192.168.020.011"isequivalenttodecimal"192.168.16.9"because".020"is16expressedinoctal,and".011"(octal)
+is"9"(base10).Toavoidconfusion,useonlydecimalvaluesfrom0to255,withnoleadingzeros.
+KeysightE36300SeriesUser'sGuide 45
+
+## Page 46
+
+Remote Control
+YoucancontroltheinstrumentviaSCPIwithKeysightIOLibrariesorviaasimulatedfrontpanelwiththe
+instrument'sWebinterface.
+Webinterface
+YoucanmonitorandcontroltheinstrumentfromaWebbrowserbyusingtheinstrument'sWebinterface.To
+connect,simplyentertheinstrument'sIPaddressorhostnameinyourbrowser'saddressbarandpressEnter.
+Ifyouseeanerrorindicating400:BadRequest,thatisrelatedtoanissuewith"cookies"inyourWebbrowser.
+Toavoidthisissue,eitherstarttheWebinterfacebyusingtheIP address(nothostname)intheaddressbar),
+orclearcookiesfromyourbrowserimmediatelybeforestartingtheWebinterface.
+Checkthecheckboxbelowthepictureoftheinstrumenttoenableanindicatorontheinstrument'sfrontpanel.This
+ishelpfulifyouhaveseveralE36300Seriesinstrumentsandyouwishtoidentifytheonetowhichyouareconnected.
+TheConfigureLAN tabonthetopallowsyoutochangetheinstrument'sLANparameters;exercisecautionwhen
+doingso,asyoumayinterruptyourabilitytocommunicatewiththeinstrument.
+WhenyouclicktheControlInstrumenttab,theinstrumentwillaskyouforapassword(defaultiskeysight),andthen
+itwillopenanewpage,shownbelow.
+
+### 46 KeysightE36300SeriesUser'sGuide
+
+
+## Page 47
+
+Thisinterfaceallowsyoutousetheinstrumentjustasyouwouldfromthefrontpanel.Notethecurvedarrowkeys
+thatallowyouto"rotate"theknob.Youcanpressthearrowkeystorotatetheknobclockwiseandcounter-
+clockwise,justasyouwouldpressanyoftheotherkeysonthefrontpanel.
+
+### READWARNING
+
+BesuretoreadandunderstandthewarningatthetopoftheControlInstrumentpage.
+Technicalconnectiondetails
+Inmostcases,youcaneasilyconnecttotheinstrumentwiththeIOLibrariesSuiteorWebinterface.Incertain
+circumstances,itmaybehelpfultoknowthefollowinginformation.
+
+### Interface Details
+
+VXI-11LAN VISAString:TCPIP0::<IPAddress>::inst0::INSTR
+
+### Example:TCPIP0::192.168.10.2::inst0::INSTR
+
+WebUI Portnumber80,URLhttp://<IPaddress>/
+USB USB0::0x2A8D::<ProdID>::<SerialNumber>::0::INSTR
+
+### Example:USB0::0x2A8D::0x0902::MY55160003::0::INSTR
+
+ThevendorID:0x2A8D,theproductIDis0x0902,andtheinstrumentserialnumberisMY55160003.
+TheproductIDvariesbymodel:0x1002(E36311A),0x1102(E36312A),0x1202(E36313A).
+KeysightE36300SeriesUser'sGuide 47
+
+## Page 48
+
+Use the Built-in Help System
+Thebuilt-inhelpsystemprovidescontext-sensitivehelponanyfrontpanelkeyormenusoftkey.Alistofhelptopics
+isalsoavailabletohelpyoulearnabouttheinstrument.
+Viewthehelpinformationforthefrontpanelkey
+Notethatthereisnohelpinformationavailablefor[MeterView],Lock|Unlockand[Tracking]keys.
+Pressandholdanysoftkeyorkey,suchas[AllOn/Off].Ifthemessagecontainsmoreinformationthanwillfitonthe
+display,pressthedownarrowsoftkeytoscrolldown.
+PressBacktoexit.
+Viewthelistofhelptopics
+PressUtilities>Test/Setup>Helptoviewthelistofhelptopics.Pressthearrowsoftkeysorusethefrontpanel
+arrowkeystohighlightthedesiredtopic.ThenpressSelect.
+
+### 48 KeysightE36300SeriesUser'sGuide
+
+
+## Page 49
+
+Inthiscase,thefollowinghelptopicappears:
+Viewtheinstrumentmodelandserialnumber
+PressAbouttoviewtheinstrument'smodelnumber,descriptionandserialnumber.
+PressBacktoexit.
+
+### LOCALLANGUAGE HELP
+
+Allfront-panelkeys'help,andhelptopicsareavailableinEnglish,French,German,Japanese,Korean,Chinese
+andRussian.Toselectthelocallanguage,pressUtilities>Test/Setup>UserSettings>DisplayOptions>
+HelpLang.Thenselectthedesiredlanguage.Themenusoftkeylabelsandstatuslinemessagesarenottrans-
+lated.
+KeysightE36300SeriesUser'sGuide 49
+
+## Page 50
+
+Firmware Update
+Donotturnofftheinstrumentduringtheupdate.
+
+### 1.PressUtilities>Test/Setup>Help>Abouttodeterminewhatinstrumentfirmwareversioniscurrentlyinstalled.
+
+### 2.Gotowww.keysight.com/find/e36300firmwaretofindthelatestfirmwareversion.Ifthismatchestheversion
+
+installedonyourinstrument,thereisnoneedtocontinuewiththisprocedure.Otherwise,downloadthefirmware
+updateutilityandaZIPfileofthefirmware.Detailedfirmwareupdateinstructionsarelocatedonthedownload
+page.
+
+### 50 KeysightE36300SeriesUser'sGuide
+
+
+## Page 51
+
+Front Panel Menu Reference
+Thisisanoverviewofthefront-panelmenus.Pressthesoftkeystoaccessthefrontpanelmenus.
+Menuheading Description
+SourceSettings>
+OCPState Configurestheover-currentprotectionstate.
+OCPDelayStart Configurestheover-currentprotectiondelaystart.
+ProtectionClear Clearstheprotectionfunctionandreturnstheoutputstoitspreviousoperatingstate.
+Sense Configurestheoutputsense.(E36312AandE36313Aonly)
+OutputSettings>(E36312AandE36313Aonly)
+OnOffCoupling> Enablesordisablestheoutputcouplingorsynchronizationbetweenmultipleoutputchannels.
+OutputInhibit> ConfigurestheinhibitinputmodeandDigitalIOPin3.
+OperationMode> Configurestheoutputcapabilitywhentwoindependentoutputsarebeingused.
+OutputLIST>(E36312AandE36313Aonly)
+RunStopped RunsorstopstheoutputLIST.
+Add Insertsanewsteptothelist.
+Delete Deletesaspecifiedstepfromthelist.
+ClearAll Clearsallthestepsinthelist.
+Properties> ConfigurestheoutputLISTsettings.
+DataLogger>(E36312AandE36313Aonly)
+WaveformSettings Adjustswaveformhorizontally(time/division)orvertically(voltage/division,current/divisionorpower-
+/division).
+WaveformHorizontal> Configuresthedataloghorizontalsettings.
+RunStopped Runsorstopsthedatalogger.
+Properties... Configuresthedatalogtracesandvoltageandcurrentmeasurementrangesforindividualoutputs.
+Alsoconfiguresthedatalogduration,sampleperiod,Min/Maxvaluesaswellastriggerposition.
+AutoScale Auto-scalesthetracesonthedisplay.
+Utilities>
+Store/Recall> Savesandrecallsinstrumentstates.
+I/OConfig> DisplaysandconfigurestheI/OparametersforremoteoperationsovertheUSB,LAN,GPIBordigitalIO
+
+### interface(productmodeldependent).
+
+Test/Setup> Accessestheself-test,calibrationandhelpfunctionaswellasconfigurestheuserpreferencesandsets
+dateandtime.
+
+### Error> Displaystheinstrument'serrorqueue.Errorswillbeclearedafterviewingorinstrumentreset.
+
+ManageFiles> Creates,copies,deletes,andrenamesfilesandfoldersonaUSBdriveattachedtothefrontpanel.Also
+allowsyoutocapturethecurrentscreentoeitherabitmap(*.bmp)orportablenetworkgraphics
+(*.png)file.
+Lock|Unlock Locksandunlocksthedisplay.
+KeysightE36300SeriesUser'sGuide 51
+
+## Page 52
+
+
+### 2 General Operating Information
+
+TurningtheUnitOn
+ControllingtheOutputs
+UsingtheProtectionFunction
+Specifying2-Wireor4-WireSense
+UsingtheTrackingOperation
+ConfiguringtheOutputTurnOnTurnOffSequence
+SpecifyingtheOperationMode
+UsingtheDigitalControlPort
+UsingtheOutputLIST
+UsingtheDataLoggerFunction
+Locking/UnlockingtheFrontPanel
+CapturingaScreen
+EnablingtheE3631AMode
+UtilitiesMenu
+ThischapterdescribesthegeneraloperatinginformationoftheE36300
+Series.
+TheE36300 Seriesusescolorsandnumberstoletyoueasily
+identifyinformationrelatedtospecificoutputs.Forexample,all
+theconfigurationanddisplayitemsrelatedtooutput1are
+showninthesamecolorastheoutputselectionkey.
+
+### 52 KeysightE36300SeriesUser'sGuide
+
+
+## Page 53
+
+Turning the Unit On
+Afteryouhaveconnectedthepowercord,presstheOn/Standbykeytoturntheuniton.Thefrontpaneldisplay
+lightsupafterafewseconds.Whenthefrontpanelmeterviewappears,usetheVoltageandCurrentknobstoenter
+voltageandcurrentvalues.Output1isselectedbydefault.
+Pressoneofthethree[On]keystoenableanindividualoutput.Inmeterview,thepowersupplycontinuously
+measuresanddisplaystheoutputvoltageandcurrentofeachoutput.
+Apower-onself-testoccursautomaticallywhenyouturntheuniton.Thisassuresyouthattheinstrumentis
+operational.Ifself-testfails,orifotheroperatingproblemsoccurwithyourinstrument,thefrontpanelerror
+indicator(!Err)appearsattheuppertopofthedisplay.
+KeysightE36300SeriesUser'sGuide 53
+
+## Page 54
+
+Viewtheerrorlog
+PressUtilities>Errortodisplaytheerrorlog.Iftherearemorethan10errorsonthedisplay,pressNexttoscrollto
+thenextpage.
+PressBackor[MeterView]toreturntothemeter-viewdisplay.
+– Errorsarestoredintheordertheyarereceived.Theerrorattheendofthelististhemostrecenterror.
+– Iftherearemorethan20errorsinthequeue,thelasterrorstoredisreplacedwith-350,"Queueoverflow".No
+moreerrorsarestoreduntilyouremoveerrorsfromthequeue.Iftherearenoerrors,theinstrumentrespondswith
++0,"Noerror".
+– Exceptforself-testerrors,errorsareclearedwhenexitingtheErrorLogmenuorwhencyclingpower.
+Ifyoususpectthatthereisaproblemwiththepowersupply,refertotheTroubleshootingsectionintheService
+Guide.
+
+### 54 KeysightE36300SeriesUser'sGuide
+
+
+## Page 55
+
+Controlling the Outputs
+Step1-Selectanoutput
+Pressoneoftheoutputselectionkeystoselectanoutputtocontrol.Thelitkeyidentifiestheselectedoutput.All
+subsequentoutput-specificfrontpanelcommandsaresenttotheselectedoutput.
+Step2-Settheoutputvoltageandcurrent
+TurntheVoltageandCurrentknobs.Theoutputvoltageorcurrentsettingchangeswhentheyareturned.
+Youcanalsoenterthevoltageandcurrentvaluesdirectlyinthenumericentryfields(theSetfields)inthemeter-
+viewdisplay.Usethenavigationkeystoselectthefield;usethenumericentrykeystoenterthevalue.Thevalue
+becomesactivewhenyoupress[Enter].
+Lastly,youcanpresstheSourceSettingskeytoaccesstheSourceSettingswindow.Usethenavigationkeysto
+highlighttheVoltageorCurrentfields.Thenenterthevoltageandcurrentvalueswiththenumerickeys.Youcanuse
+theVoltageandCurrentknobstoadjustthevaluesintheVoltageandCurrentfields.
+Press[Enter]toenterthevalue.PressBacktoreturntothemeter-viewdisplay.
+KeysightE36300SeriesUser'sGuide 55
+
+## Page 56
+
+
+### Tablebelowindicatestheoutputrangeanddefaultvalueforvoltageandcurrentsettings.
+
+Settings Outputrange Defaultvalue
+Voltage Output1:0to6.18V 0V
+Output2:0to25.75V
+Output3:0to25.75V
+WhenE3631ASCPIIDisselected,
+Output1:0to6.18V
+Output2:0to25.75V
+Output3:0to–25.75V
+Current E36311AandE36312A E36311AandE36312A
+Output1:0.001to5.15A Output1:5A
+Output2:0.001to1.03A Output2:1A
+Output3:0.001to1.03A Output3:1A
+
+### E36313A E36313A
+
+Output1:0.002to10.3A Output1:10A.
+Output2:0.001to2.06A Output2:2A
+Output3:0.001to2.06A Output3:2A
+Step3-Enabletheoutput
+Pressthecolor-coded[On]keytoenableanindividualoutput.Whenanoutputison,the[On]keyforthatoutputis
+lit.Whenanoutputisoff,the[On]keyisnotlit.The[AllOn/Off]keyturnalloutputsonoroffsimultaneously.
+Thestateofadisabledoutput(outputoff)isaconditionofzerooutputvoltageandzerosourcecurrent.
+Step4-Viewtheoutputvoltageandcurrent
+Press[MeterView]toviewtheoutputvoltageandcurrent.Whenanoutputisenabled,thefrontpanelmeters
+continuouslymeasureanddisplaytheoutputvoltageandcurrent.
+
+### 56 KeysightE36300SeriesUser'sGuide
+
+
+### Tables on this Page
+
+| Outputrange | Defaultvalue |
+|---|---|
+
+## Page 57
+
+Constantvoltageandconstantcurrent
+Iftheoutputloadresistanceexceedsthevoltagesettingdividedbythecurrentsetting,theinstrumentwilloperatein
+constant-voltage(CV)mode.Thecurrentwillequalthevoltagedividedbytheloadresistance.
+Iftheoutputloadresistanceislessthanthevoltagesettingdividedbythecurrentsetting,theinstrumentwill
+operateinconstant-current(CC)mode.Thevoltagewillequalthecurrentmultipliedbytheloadresistance.
+Fromtheremoteinterface:
+AchannelparameterisrequiredwitheachSCPIcommandtoselectanoutput.Forexample,(@1)selectsoutput1,
+(@2,3)selectsoutput2and3,and(@1:3)selectsoutputs1through3.Theoutputlistmustbeprecededwithan@
+symbolandbeenclosedinparentheses().
+Tosetonlyoutput1to5Vand1A:
+APPLCh1,5,1
+Toenableonlyoutput1:
+
+### OUTPON,(@1)
+
+Toenableoutput1andoutput3:
+
+### OUTPON,(@1,3)
+
+Tomeasuretheoutputvoltageandcurrentofoutput1:
+
+### MEAS:VOLT?(@1)
+
+### MEAS:CURR?(@1)
+
+KeysightE36300SeriesUser'sGuide 57
+
+## Page 58
+
+Using the Protection Function
+Protectionfunction
+Eachoutputhasindependentprotectionfunctions.Afrontpanelstatusindicatorwillturnonwhenaprotection
+functionisset.Protectionfunctionsarelatching,whichmeansthattheymustbeclearedoncetheyareset.
+Ofthefollowingprotectionfunctions,onlyOVandOCareuser-programmable.
+– OV:Over-voltageprotectionisahardwareOVPwhosetriplevelisaprogrammablevalue.TheOVPisalways
+enabled.
+– OC:Over-currentprotectionisaprogrammablefunctionthatcanbeenabledordisabled.Whenenabled,the
+outputwillbedisabledwhentheoutputcurrentreachesthecurrentlimitsetting.
+– OT:Over-temperatureprotectionmonitorsthetemperatureofeachoutputandshutsdowntheoutputifany
+temperatureexceedsthemaximumfactory-definedlimits.
+Configuringprotection
+ProtectionfunctionsareconfiguredontheSourceSettingswindow.
+PressSourceSettingstoaccesstheSourceSettingswindow.
+OVProtection
+Over-voltageprotectiondisablestheoutputiftheoutputvoltagereachestheOVPlevel.
+Tosettheover-voltageprotection,enteranover-voltagevalueintheOVProtectionfield.
+ForE36311AorwhenSCPIIDissettoE3631A,youcanprogramanegativeover-voltageprotectionlevel
+whichwilldisabletheoutputwhennegativevoltagesaredetected.
+
+### 58 KeysightE36300SeriesUser'sGuide
+
+
+## Page 59
+
+Thepowersupply’sOVPcircuitwillprogramtheoutputtozerowhenevertheovervoltageconditionoccurs.If
+externalvoltagesourcesuchasbatteryisconnectedacrosstheoutput,andtheovervoltageconditioninad-
+vertentlyoccurs,thecurrentfromthevoltagesourcewillsinkthroughtheinternalcircuitry;possiblydamaging
+thepowersupply.Toavoidthis,adiodemustbeconnectedinserieswiththeoutputasshownbelow.
+OCPState
+Withover-currentprotectionenabled,thepowersupplydisablestheoutputiftheoutputcurrentreachesthecurrent
+limitsetting,whichcausesatransitionfromCVtoCCmode.
+PressOCPStateOntoenableover-currentprotection.
+PressOCPStateOfftodisableover-currentprotection.
+YoucanalsospecifyadelaytopreventmomentaryCV-to-CCstatuschangesfromtrippingtheOCP.Thedelay
+canbeprogrammedfrom0to3600seconds.Youcanspecifyifthestartofthedelayisinitiatedbyanytrans-
+itionintoCCmode,oronlyattheendofasettingschangeinvoltage,currentoroutputstate.
+OCPDelay
+ThepowersupplymaymomentarilycrossintoCCmodewhenitisturnedon,whenanoutputvalueisprogrammed,
+orwhentheoutputloadisconnected.Inmostcasesthesetemporaryconditionswouldnotbeconsideredanover-
+currentprotectionfault,andhavinganOCPconditiondisablestheoutputwhentheCCstatusbitissetwouldbea
+nuisance.SpecifyinganOCPdelaywillignoretheCCstatusbitduringthespecifieddelayperiod.
+Tosettheover-currentprotectiondelay,enterthedelayvalueintheOCProtectionDelayfield.Thedelaycanbe
+programmedfrom0to3600seconds.
+OCPDelayStart
+SpecifyinganOCPDelayStartletstheOCPcircuitignoretheCCstatusbitduringthespecifieddelayperiod.Once
+theOCPdelaytimehasexpiredandiftheCCmodepersists,theoutputwillshutdown.
+YoucanspecifytheOCPdelaystarttimerthrough:
+– CCTransition:delaytimerstartatanytransitionoftheoutputintoCCmode.PressOCPStartCC.
+KeysightE36300SeriesUser'sGuide 59
+
+## Page 60
+
+– SettingChange:delaytimerstartattheendofasettingschangeinvoltage,current,oroutputstate.PressOCP
+StartSet.
+ClearsandOVPandOCPEvent
+Tocleartheprotectionfunction,firstremovethatconditionthatcausedtheprotectionfault.
+PressProtectionCleartocleartheprotectionfunctionandreturnstheoutputtoitspreviousoperatingstate.
+Fromtheremoteinterface:
+Tosettheover-voltageprotectionforoutput1tothemaximumlimit:
+
+### VOLT:PROTMAX,(@1)
+
+Toenabletheover-currentprotectionforoutput1and3:
+
+### CURR:PROT:STATON,(@1,3)
+
+Tosettheover-currentprotectiondelaytimeforoutput1at3seconds:
+
+### CURR:PROT:DEL3,(@1)
+
+Tosettheover-currentprotectiondelaytimerstartforoutput1toCCtransition:
+
+### CURR:PROT:DEL:STARCCTR,(@1)
+
+Toclearprotectionforoutput1:
+
+### OUTP:PROT:CLE(@1)
+
+### 60 KeysightE36300SeriesUser'sGuide
+
+
+## Page 61
+
+Specifying 2-Wire or 4-Wire Sense (E36312A and E36313A Only)
+When4wmodeisselected,ensuretheloadisconnectedtotherearpaneloutputforaccuratereading.
+DO NOTUSEbothfrontandrearpaneloutputconcurrently.Thismayleadtoinaccurateoutputreading.
+Youhavetheoptiontousetheremotesenseterminalsontherearpaneltomeasurethevoltageatthedeviceunder
+test(DUT).
+
+### 1. PressSourceSettings.
+
+### 2. PressSense2worSense4wtoselect2-wiresenseor4-wiresense.
+
+### 3. PressBacktoexitandreturntothemeter-viewdisplay.
+
+The2wmodeclosesarelaywithinthepowersupplytoshorttheoutputandsenseconnectors.Thismeansthatonly
+twowiresareused,and4-wiresenseisdisabled.The4wmodeopenstherelayinordertoseparatetheoutputand
+4-wiresenseinputs.Bydefault,2wisselected.
+Fromtheremoteinterface:
+Tosettheremotesenserelayto4-wiresenseatoutput3:
+
+### VOLT:SENSEXT,(@3)
+
+KeysightE36300SeriesUser'sGuide 61
+
+## Page 62
+
+Using the Tracking Operation
+TheE36300Seriesprovides0to±25Vtrackingoutputs.Inthetrackmode,twovoltagesfromOutput2andOutput3
+trackeachotherforconvenienceinvaryingthesymmetricalvoltagesneededbyoperationalamplifiersandother
+circuitsusingbalancedpositiveandnegativeinputs.Thestateofthetrackmodeisstoredinvolatilememory.The
+trackmodeisalwaysinoffstateevenwhenpowerisbeingdisconnectedorafteraremoteinterfacereset.
+
+### 1. SetOutput2toyourdesiredvoltage.
+
+### 2. Press[Tracking]toenabletrackmode.YoucanalsoenablethetrackmodebypressingOutputSettings>Oper-
+
+ationMode>ModeTracking.
+Whentrackmodeisenabled,Output3willbesettothesamevoltagelevelastheOutput2andviceversa.The
+currentlimitisindependentlysetforeachoftheoutputsandisnotaffectedbythetrackmode.
+
+### 3. VerifythatbothOutput2and3trackeachotherproperly.
+
+Youcanverifyfromthefront-paneldisplaybycomparingthevoltagevaluesofOutput2andOutput3.
+Inthetrackmode,iftheCCannunciatorislitwhenthedisplayisselectedforthe+25Vsupply,choosea
+highercurrentlimitforthe+25Vsupply.IftheCCannunciatorislitwhenthedisplayisselectedforthe-25V
+supply,chooseahighercurrentlimitforthe–25Vsupply.
+Ensurethetrackmodeisdisabledwhencoupletriggerisenabled(INSTrument:COUPle)inE3631Amode.
+Fromtheremoteinterface:
+Toenabletrackmode:
+
+### OUTP:TRACON
+
+### 62 KeysightE36300SeriesUser'sGuide
+
+
+## Page 63
+
+Configuring the Output Turn On Turn Off Sequence (E36312A and E36313A Only)
+Turn-onandturn-offdelayscontroltheturn-onandturn-offtimingoftheoutputsinrelationtoeachother.
+Step1–Settheoutputvoltageandcurrentoftheoutputchannels:
+Refertosteps1and2underControllingtheOutputsandsettheoutputvoltageandcurrentvaluesofalloutputs
+thatwillbesequenced.
+Step2–Configuretheturn-onturn-offdelays:
+PressOutputSettingstoaccesstheOutputSettings–On/OffDelays.EntertheOnDelaysandOffDelaysforall
+outputsthatwillparticipateintheoutputon/offdelaysequence.Valuescanrangefrom0to3600seconds.
+Step3–Couplingselectedoutputs:
+Thisstepisonlyrequiredifyouwillbeincludingsomeoutputstoparticipateinanoutputon/offdelay
+sequenceorifyouarecouplingmultiplepowersupplies.Ifonlyasingleoutputistobeusedinthesequence,
+youcanskipthisstep.
+Fromthemenu,pressOn/OffCouplingtoaccesstheOn/OffCouplingmodesettings.
+– PressCoupCH1totogglebetweenOffandOninordertoturnofforonthecouplingforOutput1.
+– PressCoupCH2totogglebetweenOffandOninordertoturnofforonthecouplingforOutput2.
+– PressCoupCH3totogglebetweenOffandOninordertoturnofforonthecouplingforOutput3.
+KeysightE36300SeriesUser'sGuide 63
+
+## Page 64
+
+Step4–UsetheAllOutputsOnandOffkeys:
+Onceoutputdelayshavebeenset,press[AllOn/Off]tostarttheOndelayandOffdelaysequence.
+[AllOn/Off]willturnALLoutputsonoroff,whethertheyareconfiguredtoparticipateinanoutputon/offdelay
+sequenceornot.
+Fromtheremoteinterface:
+Toprogramturn-onandturn-offdelaysforoutputs1through3:
+
+### OUTP:DEL:RISE0.01,(@1)
+
+### OUTP:DEL:RISE0.02,(@2)
+
+### OUTP:DEL:RISE0.03,(@3)
+
+### OUTP:DEL:FALL0.04,(@1)
+
+### OUTP:DEL:FALL0.03,(@2)
+
+### OUTP:DEL:FALL0.02,(@3)
+
+Toonlyincludeoutputs1and2inasequence:
+
+### OUTP:COUP:CHANCH1,CH2
+
+Toturnontwocoupledoutputsinasequence:
+
+### OUTPON,(@1:2)
+
+### 64 KeysightE36300SeriesUser'sGuide
+
+
+## Page 65
+
+Specifying the Operation Mode (E36312A and E36313A Only)
+DONOTuseCouplingmodeandTrackingmodewhenAuto-SeriesorAuto-Parallelmodeisselected.
+TheOperationModeallowsyoutospecifytheoutputcapabilitywhentwoindependentoutputsarebeingused.
+– Independant:Thisoperationsupplytwoindependentoutputscapabilitytoamaximumratingof+25V,1A
+(E36312A)and+25V,2A(E36313A).InIndependentmode,theinstrumentisatitsdefaultoutputstate.
+– Auto-Series:Thisoperationincreasetheoutputvoltagecapabilitytoamaximumratingof+50V,1A(E36312A)
+and+50V,2A(E36313A).InAuto-Seriesmode,theinstrumentdoublesthevoltageacrossOutput2andOutput3,
+butOutput3nolongeroperates..
+– Auto-Parallel:Thisoperationincreasethecurrentcapabilitytoamaximumratingof+25V,2A(E36312A)and+25
+V,4A(E36313A).InAuto-Parallelmode,theinstrumentdoublestheoutputcurrentonOutput2,butOutput3no
+longeroperates.
+– Tracking:ThisoperationtracksthevoltageforOutput2andOutput3.SeeUsingtheTrackingOperationfor
+details.
+
+### 1. PressSourceSettings>OperationMode.
+
+### 2. PressIndependent,Series,ParallelorTrackingtoselectthedesiredoperationmode.
+
+### 3. PressBacktoexit.
+
+### 4. ForoutputconnectioninAuto-SeriesandAuto-Parallelmode,seeParallelandSeriesConnectionsfordetails.
+
+Fromtheremoteinterface:
+ToenableAuto-Seriesmode:
+
+### OUTP:PAIRSER
+
+ToenableAuto-Parallelmode:
+
+### OUTP:PAIRPAR
+
+ToenableTrackingmode:
+
+### OUTP:TRACON
+
+KeysightE36300SeriesUser'sGuide 65
+
+## Page 66
+
+Using the Digital Control Port (E36312A and E36313A Only)
+Bi-directionaldigitalIO
+Digitalinput
+Faultoutput
+Inhibitinput
+Fault/inhibitsystemprotection
+Triggerinput
+Triggeroutput
+OutputCoupleControls
+ADigitalControlPortconsistingofthreeI/Opinsisprovidedtoaccessvariouscontrolfunctions.Eachpinisuser-
+configurable.ThefollowingcontrolfunctionsareavailablefortheI/Opins:
+Bi-directionaldigitalIO
+Eachofthethreepinscanbeconfiguredasgeneralpurposebi-directionaldigitalinputsandoutputs.Thepolarityof
+thepinscanalsobeconfigured.Pin4isthesignalcommonforthedigitalI/Opins.Dataisprogrammedaccordingto
+thefollowingbitassignments:
+Pins 3 2 1
+BitWeight 2(msb) 1 0(lsb)
+ThedigitalI/Opincanbeusedtocontrolbothrelaycircuitsaswellasdigitalinterfacecircuits.Thefigureabove
+illustratestypicalrelaycircuitsaswellasdigitalinterfacecircuitconnectionsusingthedigitalI/Ofunctions.
+
+### 66 KeysightE36300SeriesUser'sGuide
+
+
+## Page 67
+
+Fromthefrontpanel:
+
+### 1.PressUtilities>I/OConfig>DigitalIOtoaccesstheDigitalI/Owindow.
+
+### 2.Selectthepinyouwishtoconfigure.Forexample,pressPin1toconfigurePin1.
+
+### 3.PressFunctionandselectDigitalI/O.Selectandprogramtheremainingpinsinthesamemanner.PressBackto
+
+returntopreviouspage.
+
+### 4.Configurethepolarityforeachofthepin.PressPolarityPostoselectPositiveandPolarityNegtoselectNegative.
+
+Selectandprogramtheremainingpinsinthesamemanner.
+
+### 5.TheInandOutfieldonlyapplytotheDigitalI/OandDigitalInfunctions.PressOuttotoggleandenterthebinary
+
+bit(0or1)intotheOutfieldofthedigitalI/Owindow.ForDigitalI/Ofunction,abinarybit1withpositivepolarity
+specifyavoltagehighatthepinwhileabinarybit0withpositivepolarityspecifyavoltagelowatthepin.TheInfield
+reflectstheconditionoftheexternalsignalthatisappliedtothepins.
+Fromtheremoteinterface:
+ToconfigurethedigitalI/Ofunctionforpins1through3:
+
+### DIG:PIN1:FUNCDIO
+
+### DIG:PIN2:FUNCDIO
+
+### DIG:PIN3:FUNCDIO
+
+Toconfigurethepinpolaritytopositiveforpins1through3:
+
+### DIG:PIN1:POLPOS
+
+### DIG:PIN2:POLPOS
+
+### DIG:PIN3:POLPOS
+
+Tosendabinaryweightedvaluetoconfigurepins1through3as“111”:
+
+### DIG:OUTP:DATA7
+
+KeysightE36300SeriesUser'sGuide 67
+
+## Page 68
+
+Digitalinput
+Eachofthethreepinscanbeconfiguredasdigitalinputonly.ThegroundreferencefortheinputpinsisSignal
+Commononpin4.
+Fromthefrontpanel:
+
+### 1.PressUtilities>I/OConfig>DigitalIOtoaccesstheDigitalI/Owindow.
+
+### 2.Selectthepinyouwishtoconfigure.Forexample,pressPin1toconfigurePin1.
+
+### 3.PressFunctionandselectDigitalIn.Selectandprogramtheremainingpinsinthesamemanner.PressBackto
+
+returntopreviouspage.
+
+### 4.Configurethepolarityforeachofthepin.PressPolarityPostoselectPositiveandPolarityNegtoselectNegative.
+
+Selectandprogramtheremainingpinsinthesamemanner.
+
+### 5.TheInandOutfieldonlyapplytotheDigitalI/OandDigitalInfunctions.TheInfieldreflectstheconditionofthe
+
+externalsignalthatisappliedtothepins.Thepinstateisnotaffectedbythevalueofthebinaryoutputword.
+Fromtheremoteinterface:
+Toconfigurethepinfunction:
+
+### DIG:PIN1:FUNCDINP
+
+Toselectthepinpolarity:
+
+### DIG:PIN1:POLPOS
+
+### DIG:PIN1:POLNEG
+
+Toreadthepindata:
+
+### DIG:INP:DATA?
+
+Faultoutput
+Pins1and2canbeconfiguredasafaultoutput.TheFaultOutputfunctionenablesafaultconditiononanychannel
+togenerateaprotectionfaultsignalonthedigitalport.Thefollowingconditionswillgenerateafaultevent:over-
+voltage,over-current,over-temperatureandinhibitsignal.
+Bothpins1and2arededicatedtothisfunction.Pin1isthefaultoutput;pin2isthecommonforpin1.Thisprovides
+foranoptically-isolatedoutput.Thepolarityofpin1canalsobeconfigured.Notethatthefaultoutputsignal
+remainslatcheduntilthefaultconditionisremovedandtheprotectioncircuitiscleared.
+Pin2'sselectedfunctionisignored.Pin2shouldbeconnectedtothegroundoftheexternalcircuit.
+
+### 68 KeysightE36300SeriesUser'sGuide
+
+
+## Page 69
+
+Fromthefrontpanel:
+
+### 1.PressUtilities>I/OConfig>DigitalIOtoaccesstheDigitalI/Owindow.
+
+### 2.PressPin1toconfigurePin1.
+
+### 3.PressFunctionandselectFaultOut.PressBacktoreturntopreviouspage.
+
+### 4.Configurethepolarityforeachofthepin.PressPolarityPostoselectPositiveandPolarityNegtoselectNegative.
+
+Fromtheremoteinterface:
+Toconfigurethepinfunction:
+
+### DIG:PIN1:FUNCFAUL
+
+Toselectthepinpolarity:
+
+### DIG:PIN1:POLPOS
+
+### DIG:PIN1:POLNEG
+
+Inhibitinput
+Pin3canbeconfiguredasaremoteinhibitinput.TheInhibitInputfunctionletsanexternalinputsignalcontrolthe
+outputstateofalltheoutputchannelsinthepowersupply.Thepolarityofpin3canalsobeconfigured.Theinputis
+leveltriggered.Thesignallatencyislessthan450microseconds.Maximumtimerequiredforalltheoutputchannels
+tostarttoturnoffis45ms.Pin4isthecommonforpin3.
+Thefollowingnon-volatileinhibitinputmodescanbeprogrammed:
+LATChing-causesalogic-truetransitionontheInhibitinputtodisabletheoutput.Theoutputwillremaindisabled
+aftertheinhibitsignalisreceived.
+LIVE-allowstheenabledoutputtofollowthestateoftheInhibitinput.WhentheInhibitinputistrue,theoutputis
+disabled.WhentheInhibitinputisfalse,theoutputisre-enabled.
+OFF-TheInhibitinputisignored.
+Fromthefrontpanel:
+ConfigurePin3asaremoteinhibitinput:
+
+### 1.PressUtilities>I/OConfig>DigitalIOtoaccesstheDigitalI/Owindow.
+
+### 2.PressPin3toconfigurePin3.
+
+### 3.PressFunctionandselectInhibitIntoconfigurePin3asaremoteinhibitinput.PressBacktoreturntoprevious
+
+page.
+
+### 4.ConfigurethepolarityforPin3.PressPolarityPostoselectPositiveandPolarityNegtoselectNegative.
+
+Alternatively,youcanconfigurePin3asaremoteinhibitinputbypressingOutputSettings>OutputInhibit>DIOPin
+3INH.Inthissetting,thepolarityissettoPositivebydefault.
+KeysightE36300SeriesUser'sGuide 69
+
+## Page 70
+
+Configuretheinhibitinputmode:
+
+### 1.PresstheOutputSettings>OutputInhibittoconfiguretheinhibitinputmode.
+
+### 2.Selectthedesiredmode(Off,LatchedorLive).
+
+TocleartheInhibitprotectionfunction,firstremovetheexternalInhibitsignal.ThenselectSourceSettings>
+ProtectionClearforalloutputs.ThisclearstheInhibitprotectionfunctionandreturnstheoutputtoitsprevious
+operatingstate.
+Fromtheremoteinterface:
+ToselecttheInhibitfunction:
+
+### DIG:PIN3:FUNCINH
+
+Toselectthepinpolarity:
+
+### DIG:PIN3:POLPOS
+
+### DIG:PIN3:POLNEG
+
+TosetInhibitmodetoLatching:
+
+### OUTP:INH:MODELATC
+
+TosetInhibitmodetoLive:
+
+### OUTP:INH:MODELIVE
+
+TodisabletheInhibitsignal:
+
+### OUTP:INH:MODEOFF
+
+Fault/inhibitsystemprotection
+ThefollowingfigureillustratessomewaysthatyoucanconnecttheFault/Inhibitpinsoftheconnector.
+Asshowninthefigure,whentheFaultoutputsandInhibitinputsofseveralinstrumentsaredaisy-chained,an
+internalfaultconditioninoneoftheunitswilldisablealloutputswithoutinterventionbyeitherthecontrolleror
+externalcircuitry.NotethatwhenusingtheFault/Inhibitsignalsinthismanner,bothsignalsmustbesettothesame
+polarity.
+
+### 70 KeysightE36300SeriesUser'sGuide
+
+
+## Page 71
+
+YoucanalsoconnecttheInhibitinputtoamanualswitchorexternalcontrolsignalthatwillshorttheInhibitpinto
+commonwheneveritisnecessarytodisablealloutputs.Negativepolaritymustbeprogrammedforallpinsinthis
+case.YoucanalsousetheFaultoutputtodriveanexternalrelaycircuitorsignalotherdeviceswheneverauser-
+definablefaultoccurs.
+ClearingaSystemProtectionFault
+Torestoreallinstrumentstoanormaloperatingconditionwhenafaultconditionoccursinadaisy-chainedsystem
+protectionconfiguration,twofaultconditionsmustberemoved:
+
+### 1. TheinitialprotectionfaultorexternalInhibitsignal.
+
+### 2. Thesubsequentdaisy-chainedfaultsignal(whichissourcedbytheInhibitsignal).
+
+Evenwhentheinitialfaultconditionorexternalsignalisremoved,thefaultsignalisstillactiveandwillcontinue
+toshutdowntheoutputsofalltheunits.
+Toclearthedaisy-chainedfaultsignaliftheoperatingmodeoftheInhibitinputisLive,simplycleartheoutput
+protectiononanyONEunitbypressingSourceSettings>ProtectionClearforalloutputs.
+IftheoperatingmodeoftheInhibitinputisLatched,turnofftheinhibitinputandcleartheoutputprotectionforall
+outputsonALLunitsindividually.Tore-enablethechain,re-programtheInhibitinputoneachunittoLatchedmode.
+Triggerinput
+AnyoftheDigitalControlpinscanbeprogrammedtofunctionasatriggerinput.Allpinsarereferencedtothesignal
+commonpin.
+Toinputanexternaltriggersignal,youcanapplyeitheranegative-goingorapositive-goingpulsetothedesignated
+triggerinputpin.Thetriggerlatencyislessthan450microseconds.Theminimumpulsewidthis2microseconds.
+Thepin’spolaritysettingdetermineswhichedgegeneratesatrigger-inevent.Positivemeansarisingedgeand
+Negativemeansafallingedge.
+Youcanconfigurethedataloggerandtheoutputlisttobetriggeredbyexternaltriggersignals.SimplyselectDIO
+TriggerInasthetriggersourcewhenconfiguringthedataloggerandoutputlist.Thiswillenableinputtrigger
+signalsontheconfigureddigitalpins.Atriggerisgeneratedwhenanexternalsignalthatmeetsthesignalcriteriais
+appliedtoanyconfiguredtriggerinputpin.
+Fromthefrontpanel:
+
+### 1.PressUtilities>I/OConfig>DigitalIOtoaccesstheDigitalI/Owindow.
+
+### 2.Selectthepinyouwishtoconfigure.Forexample,pressPin1toconfigurePin1.
+
+### 3.PressFunctionandselectTriggerIn.Selectandprogramtheremainingpinsinthesamemanner.PressBackto
+
+returntopreviouspage.
+
+### 4.Configurethepolarityforeachofthepin.PressPolarityPostoselectPositiveandPolarityNegtoselectNegative.
+
+Selectandprogramtheremainingpinsinthesamemanner.
+KeysightE36300SeriesUser'sGuide 71
+
+## Page 72
+
+Fromtheremoteinterface:
+Toselectthetriggerinputfunction:
+
+### DIG:PIN1:FUNCTINP
+
+Toselectthepinpolarity:
+
+### DIG:PIN1:POLPOS
+
+### DIG:PIN1:POLNEG
+
+Triggeroutput
+AnyoftheDigitalControlpinscanbeprogrammedtofunctionasatriggeroutput.Allpinsarereferencedtothe
+SignalCommonpin.
+Whenconfiguredasatriggeroutput,thedesignatedtriggerpinwillgeneratea10-microsecondtriggerpulsein
+
+### responsetoatriggerevent.Thepolaritysettingcanbeeitherpositive-going(risingedge)ornegative-going(falling
+
+edge)whenreferencedtocommon.
+TriggeroutsignalscanbegeneratedwhenconfiguringthevoltageandcurrentintheOutputLIST.Ifyoucheckthe
+BOSTandEOSTboxeswhenconfiguringtheOutputLIST,anoutputtriggersignalwillbegeneratedonthe
+configureddigitalpinatthestartandendofthevoltageandcurrentstep.
+Fromthefrontpanel:
+
+### 1.PressUtilities>I/OConfig>DigitalIOtoaccesstheDigitalI/Owindow.
+
+### 2.Selectthepinyouwishtoconfigure.Forexample,pressPin1toconfigurePin1.
+
+### 3.PressFunctionandselectTriggerOut.Selectandprogramtheremainingpinsinthesamemanner.PressBackto
+
+returntopreviouspage.
+
+### 4.Configurethepolarityforeachofthepin.PressPolarityPostoselectPositiveandPolarityNegtoselectNegative.
+
+Selectandprogramtheremainingpinsinthesamemanner.
+Fromtheremoteinterface:
+Toselectthetriggeroutputfunction:
+
+### DIG:PIN1:FUNCTOUT
+
+Toselectthepinpolarity:
+
+### DIG:PIN1:POLPOS
+
+### DIG:PIN1:POLNEG
+
+Outputcouplecontrols
+ThisfunctionletsyouconnectmultipleKeysightE36300Seriespowersuppliestogetherandsynchronizetheoutput
+on/offsequenceacrossunits.Eachpowersupplythatwillbesynchronizedmusthaveatleastonecoupledoutput.
+
+### 72 KeysightE36300SeriesUser'sGuide
+
+
+## Page 73
+
+
+### 1. ConfiguretheoutputsoneachpowersupplyasdescribedunderConfiguringtheOutputTurn-On/Turn-Off
+
+Sequence.SettheoutputcouplingmodetoON.
+
+### 2. Setthedelayoffsetofeachindividualunittomatchthelongestdelayoffsetofthepowersupplygroup.
+
+### 3. Connectandconfigurethedigitalconnectorpinsofthesynchronizedpowersuppliesasdescribedinthissec-
+
+tion.
+AllsynchronizedE36300Seriespowersuppliesmusthavethesamefirmwarerevision.Onlypins1though3can
+beconfiguredassynchronizationpins.YoucannotconfiguremorethanoneOnCoupleandoneOffCouplepin
+perpowersupply.Thepolarityofthepinsisnotprogrammable;itissettoNegative.
+Thedigitalconnectorpinsofthesynchronizedpowersuppliesthatcontaincoupledoutputsmustbeconnected
+togetherasshowninthefollowingfigure.Inthisexample,pin2willbeconfiguredastheoutputOncontrol.Pin3will
+beconfiguredastheoutputOffcontrol.ThegroundorCommonpinsalsoneedtobeconnectedtogether.
+Onlytwoofthedigitalconnectorpinsoneachpowersupplycanbeconfiguredas“OnCouple”and“OffCouple”on
+eachsynchronizedpowersupply.Thedesignatedpinswillfunctionasbothaninputandanoutput,withanegative
+transitionononepinprovidingthesynchronizationsignaltotheotherpins.
+Fromthefrontpanel:
+
+### 1.PressUtilities>I/OConfig>DigitalIOtoaccesstheDigitalI/Owindow.
+
+### 2.PressPin2.PressFunctionandselectCoupleOn.
+
+### 3.PressPin3.PressFunctionandselectCoupleOff.
+
+### 4.Repeatthesestepsforpowersupply#2and#3.
+
+Fromtheremoteinterface:
+Toconfigurepin2ofpowersupply#1astheONcontrol:
+
+### DIG:PIN2:FUNCONC
+
+Toconfigurepin3ofpowersupply#1astheOFFcontrol:
+
+### DIG:PIN3:FUNCOFFC
+
+Repeatthesecommandsforpowersupply#2and#3.
+KeysightE36300SeriesUser'sGuide 73
+
+## Page 74
+
+Operation
+Onceconfiguredandenabled,turningtheoutputonoroffonanycoupledoutputwillcauseallcoupledoutputson
+allconfiguredpowersuppliestoturnonoroffaccordingtotheiruser-programmeddelays.Thisappliestothefront
+panelOnandOffkeys,theWebserver,andtoSCPIcommands.
+Turningtheoutputsonoroffusingthefrontpanel[AllOn/Off]keywillcauseallcoupledoutputsaswellasnon-
+coupledoutputsonthatpowersupplytoturnonoroff.
+
+### 74 KeysightE36300SeriesUser'sGuide
+
+
+## Page 75
+
+Using the Output LIST (E36312A and E36313A Only)
+TheOutputLISTallowssingleormultipleoutputstoruninsequence.Youcansetthefollowingsforeachofthe
+outputinsequence.
+
+### 1. Setthestepthatwillgeneratethetriggeroutsignalatthebeginning/endofthestep.
+
+### 2. Setthelastoutputvalueafterthesequencelistcompletes.
+
+### 3. Sethowthelistrespondstotriggers.
+
+### 4. Setthetransientmodeforvoltageandcurrent.
+
+### 5. Setthetriggersourceforthetransientsystem.
+
+### 6. Setthetriggerdelayinseconds.
+
+### 7. Setthelistrepeatcount.
+
+### 8. Setthelisttorepeatcontinuously.
+
+Youcanconfigureupto100voltageandcurrentstepsintheOutputLISTwindow.
+Step1–Add/removestepsto/fromtheLIST
+PressOutputLISTtoaccesstheOutputLISTwindow.
+PressAddtoinsertanewstepbelowtheselectedstep.Notethatthevaluesinthenewsteparecopiedfromthe
+previousstep.Continuetoaddstepsuntilyoursequenceiscomplete.Usethenavigationkeystomovethroughthe
+list.
+PressDeleteifyouwanttodeletetheselectedsteporpressClearAllifyouwanttoremoveallstepsfromthelist.
+KeysightE36300SeriesUser'sGuide 75
+
+## Page 76
+
+Step2–Configuretheoutputsequence
+ConfiguretheVoltage,Current,Time,BOSTandEOSTaccordingly.Usethenavigationkeystoselectthefield;use
+thenumericentrykeystoenterthevalue.Thevalueissetwhenyoupress[Enter].
+Fields Description
+Voltage Setsthevoltagevalueforselectedstepinvoltage.
+Current Setsthecurrentvalueforselectedstepinampere.
+Time Setstherun-timeforselectedstepinseconds.
+BOST Enablescheckboxtosetwhichstepwillgenerateatrigger-outsignalatthebeginningofthestep(BOST).
+EOST Enablescheckboxtosetwhichstepwillgenerateatrigger-outsignalattheendofthestep(EOST).
+Foradditionalsettings,pressPropertiestoopentheOutputLISTPropertieswindow.ConfiguretheOutputLIST
+accordingly.Refertothebelowtablefordetails.
+
+### 76 KeysightE36300SeriesUser'sGuide
+
+
+## Page 77
+
+Settings AvailableKey Description
+Settings
+Voltage/Current DCorList Specifieswhathappenswhentheoutputsequencecompletes.
+AfterList DefaultisDC.
+Actionrequired:
+PressV/IListtotogglebetweenDCandList.
+DC(ReturntoDC ReturnstotheDCvaluethatwasineffectbeforetheoutputsequence
+Value) started.
+List(LastListValue) Remainsatthelastlistvalue.
+Pace DwlorTrg Configuresthepacingofthestep.
+DefaultisDwl.
+Actionrequired:
+PressPacetotogglebetweenDwlandTrg.
+Dwl Thenextstepimmediatelyoutputswhenthedwelltimehaselapsed.
+(Dwell)
+Trg(Trigger) Thenextstepimmediatelyoutputswhenanexternaltriggerisreceived.
+Ifthesteptimecompletesbeforetriggeroccurs,thestepremainsatthe
+lastlistvaluewhilewaitingforthetrigger.
+VoltageMode Fix,StporLst Setsthevoltagemode.Thisdetermineswhathappenstotheoutputvoltagewhenthesystem
+isinitiatedortriggered.
+DefaultisFix
+Note:IfcurrentmodeissettoStep,voltagemodeisnotallowedtosettoListandviceversa.
+Actionrequired:
+PressVModetotogglebetweenFix,StpandLst.
+Fix(Fixed) Keepstheoutputatitsimmediatevalue.
+Stp(Step) Stepstheoutputtothetriggeredlevelwhenatriggeroccurs
+Lst(List) Causestheoutputtofollowthelistvalueswhenatriggeroccurs.
+CurrentMode Fix,StporLst Setsthecurrentmode.Thisdetermineswhathappenstotheoutputcurrentwhenthesystem
+isinitiatedortriggered.
+DefaultisFix
+Note:IfvoltagemodeissettoStep,currentmodeisnotallowedtosettoListandviceversa.
+Actionrequired:
+PressIModetotogglebetweenFix,StpandLst.
+Fix(Fixed) Keepstheoutputatitsimmediatevalue.
+Stp(Step) Stepstheoutputtothetriggeredlevelwhenatriggeroccurs
+Lst(List) Causestheoutputtofollowthelistvalueswhenatriggeroccurs.
+KeysightE36300SeriesUser'sGuide 77
+
+### Tables on this Page
+
+| AvailableKey Settings | Description |
+|---|---|
+
+## Page 78
+
+Settings AvailableKey Description
+Settings
+TriggerSource Key,IOorRmt Setsthetriggersourceforthesystem.
+DefaultisKey.
+Actionrequired:
+PressTrigSrctotogglebetweenKey,IOandRmt.
+Key(ListRun/StopKey) SelectstheRunStoppedsoftkeyasatriggersource.
+IO(DIOTriggerIn) SelectsanyconfigureddigitalIO(withTriggerInput
+function)asatriggersource
+Rmt(RemoteCommand) Selectsaremoteinterfacecommandasatrigger
+source.
+TriggerDelay 0to3600s Setsthetriggerdelayinseconds.
+Defaultis0s.
+RepeatCount 1to9999 Setsthelistrepeatcount.Thissetsthenumberoftimesthatalistisexecutedbeforeit
+completes.
+Defaultis1.
+Continuous - Enablescheckboxtorepeatthelistcontinuously.
+Step3–Runtheoutputsequencelist
+WhenOutputLISTisinitiated,alltheListpropertiescannotbeconfigured,whichincludesaddingorremoving
+stepfromthelist.
+WhenStepmodetransientsystemisinitiated,propertiessuchasvoltagemode,currentmode,triggersource
+andtriggerdelaycannotbeconfigured.
+IfbothVoltageandCurrentModeissettoFixandTriggerSourceissettoKey,pressingRunwillautomatically
+setbothvoltageandcurrentmodetoListandstartthelistoperation.
+– SetVoltageModetoList:PressVModeLst.
+– SetCurrentModetoList:PressIModeLst.
+– SetTriggerSourcetoKey.PressTrigSrcKey.
+– Pressthecolor-coded[On]keytoenabletheselectedoutput.
+– PressRuntostartthelistoperation.Toaborttheoperation,pressStopped.
+– PressBacktoexitandreturntothepreviousmenu.
+
+### 78 KeysightE36300SeriesUser'sGuide
+
+
+### Tables on this Page
+
+| AvailableKey Settings | Description |
+|---|---|
+
+## Page 79
+
+Fromtheremoteinterface:
+ToconfiguretheListvoltageofoutput1with1V,2V,3V,4Vand5V:
+
+### LIST:VOLT1,2,3,4,5,(@1)
+
+ToconfiguretheListcurrentofoutput1with0.1A,0.2V,0.3A,0.4Aand0.5A:
+
+### LIST:CURR0.1,0.2,0.3,0.4,0.5,(@1)
+
+ToconfigurealltheListtimeofoutput1with1s:
+
+### LIST:DWELL1,1,1,1,1,(@1)
+
+ToenablealltheListBOSTofoutput1:
+
+### LIST:TOUT:BOST1,1,1,1,1,(@1)
+
+TodisablealltheListEOSTofoutput1:
+
+### LIST:TOUT:EOST0,0,0,0,0,(@1)
+
+Tosetthevoltagemodeofoutput1toList:
+
+### VOLT:MODELIST,(@1)
+
+Tosetthecurrentmodeofoutput1toList:
+
+### CURR:MODELIST,(@1)
+
+Tosetthetriggersourceofoutput1toKey/Immediate:
+
+### TRIG:SOURIMM,(@1)
+
+Toenableoutput1:
+
+### OUTPON,(@1)
+
+Toinitiateandrunthelist:
+
+### INIT(@1)
+
+KeysightE36300SeriesUser'sGuide 79
+
+## Page 80
+
+Using the Data Logger Function (E36312A and E36313A Only)
+TheDataLoggerallowsyoutoviewandlogoutputvoltageandcurrentdataforupto30,000hours(forsingle
+output,dependingonthememorysize)andupto7MBofdata.
+YoucanconfiguretheDataLoggerViewtodisplayvoltageorcurrentwaveformsforalloutputs.Oncedatalogging
+completes,thedataisautomaticallystoredtoafilenameddefault.dlog.
+YoumustconnectaUSBdrivetothefrontpanelUSBportwhenperformingdatalog.Youarenotabletoper-
+formanydataloggingifaUSBdriveisnotconnected.
+Loggingdata
+Inthefollowingdatalogexample,auser-definedarbitrarywaveformiscapturedonthedatalogger.Thedatalogger
+recordstheactualoutputvoltageofthearbitrarywaveform.
+Step1–Programthesequencefortheoutputchannels
+ConfiguretheoutputsequenceasdescribedunderUsingtheOutputLIST.
+Programtheoutputvoltageandtimevaluesasfollows:
+Step0:1V;0.1A;1s
+Step1:2V;0.1A;1s
+Step2:3V;0.1A;1s
+Step3:4V;0.1A;1s
+Step4:5V;0.1A;1s
+RepeatCount:5
+Pace:Dwell
+VoltageMode:List
+CurrentMode:List
+TriggerSource:ListRun/StopKey
+
+### 80 KeysightE36300SeriesUser'sGuide
+
+
+## Page 81
+
+Step2–Configurethedataloggertraces
+– CheckV1.Onthedataloggerdisplay,usethenavigationkeystoselectV1andpress[Enter].
+– UncheckV2andV3aswellasthecurrentandpowertraces.
+– PressWaveformSettings>Vertical.UseVolts/Div–orVolts/Div+tosetV1to1V/Div.UseOffset+orOffset–to
+movetheV1tracetothebottomofthegrid.
+Tracesarecolorcodedaccordingtooutput.Thegroundsymbolontherightsideofthedisplayindicatestheground
+referenceofthetrace.
+KeysightE36300SeriesUser'sGuide 81
+
+## Page 82
+
+Step3–Configurethedataloggerproperties
+PressLoggingtodisplaytheLoggingpropertiesfield.
+– LeavethedefaultDurationandSamplePeriodat30sand200msrespectively.
+– SettheTriggerSourcetoRun/StopKeybypressingTrigSrcKey.
+Step4–TurnonOutput1,startthesequencingandlogthedata.
+PressBacktoreturnthedisplaytothedataloggerview.
+– PressOutput1[On]toturnonOutput1.
+– PressRunStoppedtorunthedatalogger.ThedataloggerwillbeinitiatedandOutput1traceisdisplayedonthe
+screen.
+– PressOutputLIST>RunStoppedtostartoutputsequencing.
+Thedataloggerwillrunfor30secondsandlogthevoltagedatafromoutput1.Whenthedatalogcompletes,you
+shouldseetheoutputwaveformdisplayedasfollows:
+Amessagewillindicatethattheloggeddatahasbeensavedinafilenameddefault.dlog.Ifyouwishtosavethedata
+underadifferentfilename,youmustspecifythefilenamebeforethedataloggerruns.
+PressFileNamelocatedatthedataloggerPropertiesmenutospecifyafilename.
+
+### 82 KeysightE36300SeriesUser'sGuide
+
+
+## Page 83
+
+Step5–Exportthedata
+Afteryouhavecompletedthedatalogging,youcanusetheExportFilekeytoexporttheloggeddatatoa.csv
+(commaseparatedvalues)file.
+Whenexportingthedata,specifytheoutputyouwanttoexporttheloggeddata.
+PressSavePathtobrowseandspecifythelocationwheretheexportfilewillbeplaced.Usethefront-panel
+navigationkeystonavigatethroughthelist.Theleftandrightarrowscontractorexpandafoldertohideorshowits
+files.PressSelectonceyouhavespecifiedthepathorCanceltoabortthechangesmade.
+PressFileNametoconfigurethefilename.UsethekeyboardtoenteryourdesiredfilenameintheFileNamefield.
+PressBacktosaveorCanceltoabortthechangesmade.
+PressExportFiletoexportthefile.
+Fromtheremoteinterface:
+Toprogramoutputsequenceoffivestepsonoutput1:
+
+### LIST:VOLT1,2,3,4,5,(@1)
+
+### LIST:CURR0.1,0.1,0.1,0.1,0.1,(@1)
+
+### LIST:DWEL1,1,1,1,1,(@1)
+
+### LIST:COUNT5,(@1)
+
+### LIST:STEPAUTO,(@1)
+
+### VOLT:MODELIST,(@1)
+
+### CURR:MODELIST,(@1)
+
+Toinitiatethetriggersystem:
+
+### TRIG:SOURBUS
+
+### INIT(@1)
+
+KeysightE36300SeriesUser'sGuide 83
+
+## Page 84
+
+Tosetupthedatalogforoutput1:
+
+### SENS:DLOG:FUNC:VOLT1,(@1)
+
+### SENS:DLOG:TIME30
+
+### SENS:DLOG:PER0.2
+
+Toinitiatethatdataloggerandspecifythefilenameinwhichtosavethedata:
+
+### TRIG:DLOG:SOURBUS
+
+INIT:DLOG“External:\log1.csv”
+ToturnonOutput1andrunthedatalogger:
+
+### OUTPON,(@1)
+
+### *TRG
+
+Dataloggerview
+PressDataLoggertoaccessthedatalogger.
+Items Description
+
+### 1 Tracecontrols Identifiesthevoltageorcurrenttracethatwillbedisplayed.√indicatesthetraceison.Dashes(----)
+
+indicatethetraceisoff.Selectthetraceandpress[Enter]toturnitonoroff.
+
+### 2 Databar Thedatabarrepresentsalloftheloggeddata.Theyellowpartindicatestheportionofthedatathatisvis-
+
+ibleonthedisplay.Theblackpartrepresentsthedatathatisnotvisible.
+
+### 3 Time/Div Identifiesthehorizontaltime-basesetting.ThiscanbeadjustedusingtheHorizontalTime/Div+and
+
+Time/Div–inWaveformSettings.
+
+### 84 KeysightE36300SeriesUser'sGuide
+
+
+## Page 85
+
+Items Description
+
+### 4 Offsettime Indicatesthetimethattherightgridlineisoffsetorawayfromtheendofthedatalog.Whenthisvalueis
+
+zero,itmeansthattherightgridlineispositionedattheendofthedatalog.Adjustingtheoffsetusing
+theHorizontalOffset+andOffset–inWaveformSettingswillmovethegridawayfromtheendofthe
+datalog,asindicatedbytheOffsetTime.
+
+### 5 Timeelapsed Indicatesthetimeelapsedduringthedatalogandthetotalduration.Thevaluesmatchwhendatalog-
+
+gingfinishes.
+
+### 6 Filename Indicatesthefilenameofthedatathatisbeinglogged.
+
+### 7 Outputtraces Voltagetracelabelsappearontheleftsideofthegrid(V1V2,V3)asshowninthedisplay.
+
+Currenttracelabelsappearontherightsideofthegrid(I1,I2,I3).
+Powertracelabelsappearonthecenterofthegrid(P1,P2,P3).
+PressAutoScaletoauto-scalethedatatraces.
+
+### 8 Groundreference Thegroundreferenceofthetrace.Groundreferencesareoffsetsothattheydonotoverlap.Theground
+
+referenceoffsetvalueisreferencedtothehorizontalcenterlineofthegrid.
+
+### 9 Gridtime Displaysthetimeonthegridline.
+
+### 10 Outofviewarrows Indicatethatthetrace,V3inthefigure,isoutofview.UsetheVerticalVolts/Div+andVolts/Div–orthe
+
+VerticalOffset+andOffset–inWaveformSettingstobringthetraceintoview.PressAutoScaletoauto-
+scalethedatatraces.
+
+### 11 Triggerpointindicator Indicatesthetriggerpositioninthedatalog.Inthisexamplethetriggerpointwasoffsetby50%,andthe
+
+pretriggerandposttriggerdatawaslogged.Thetimeatthetriggerpointisalwayszero.Changethetrig-
+geroffsetintheDataLoggerLoggingSettings.
+Menu Description
+WaveformSettings Setsthewaveformdisplay.SeeAdjustingtheWaveformDisplay.
+RunStopped Runorstopdatalogging.
+Properties Setsthedataloggingandwaveformdisplaysproperties.SeeDataLoggerPropertiesandWaveform
+Settings.
+AutoScale Autoscalesthetracesonthedisplay.
+Adjustingthewaveformdisplay
+PressWaveformSettingstoaccessthewaveformsettingsmenu.PressthefirstsoftkeytotogglebetweenVertical
+andHorizontaltodisplaytheverticalandhorizontalsettingsmenu.TheVerticalsettingsmenuwillchange
+accordinglytotheselectedtrace.
+KeysightE36300SeriesUser'sGuide 85
+
+## Page 86
+
+Menu Description
+Volts/Div+/– Makesthewaveformbiggerorsmallerverticallyinrelationtoitsgroundreference.Specifiedinvolts/division,
+Amps/Div+/– ampere/divisionandwatts/divisionontheyaxis.
+Watts/Div+/–
+Time/Div+/– Stretchesorshrinksthewaveformhorizontallyaroundthehorizontaloffsetreference.Specifiedintime/divisionon
+thexaxis.AppliestoALLtraces.
+Vertical Movesthegroundreferenceofthetraceupordowninrelationtothehorizontalcenterlineofthegrid.
+Offset+/–
+HorizontalOffset+/– Movesthewaveformtotherightorleftofthehorizontaloffsetreference.
+Dataloggerpropertiesandwaveformsettings
+Items Availablesettings Description
+
+### 1 VerticalSettings Tracecheckbox Selectsthetracetodisplayfortheoutput.Ifnocheckboxisenabled,dataloggingwillnot
+
+(Vr) loggedfortheselectedoutput.
+Configuresthevoltage/division,current/division,power/divisionandoffsetsforeachout-
+put.
+
+### 2 HorizontalSet- Time/Division Configurestozoominoroutofthedatasothatyoucanviewwaveformdetails.The
+
+tings(Hr) numbersonthetopofthedisplayindicatethelocationofthedatathatisbeingviewed
+relativetotheentiredatalog.Specifiedintime/divisiononthexaxis.AppliestoALL
+traces.
+Offset Configuresthewaveformlocation(rightorleft)ofthehorizontaloffsetreference.Thetrig-
+gerpointisindicatedbythesolidarrow .
+
+### 86 KeysightE36300SeriesUser'sGuide
+
+
+### Tables on this Page
+
+| Availablesettings | Description |
+|---|---|
+
+## Page 87
+
+Items Availablesettings Description
+
+### 3 Logging(Lg) Duration Configuresthedurationofthedataloginhours,minutes,andseconds.Themaximum
+
+durationis30,000hours.Thelogginginformationappliestodataloggermeasurements
+onalloutputs.
+SamplePeriod Configurestheintervalbetweendatasamplesinmilliseconds,whichcanbesetfrom200
+millisecondsto60seconds.
+TriggerSource Configuresthetriggersourcefordatalogger.
+TriggerPos TriggerPositionspecifiesatriggeroffset.Thisallowsthespecifiedtimeofpretriggerdata
+tobeloggedtothefile.Forexample,ifyouspecifiedadatalogdurationof30sandatrig-
+gerpositionof50%,theDataLoggerwilllog15sofpre-triggerdatatothefilebeforethe
+triggeroccurs.Subsequently,15sofpost-triggerdatawillthenbeloggedtothedatafile.
+LogMin/Maxcheckbox Whenenabled,letsyoulogtheminimumandmaximumvaluesofeachsampletothedata
+logfile.WithLogMin/Maxchecked,theresultingfilesizewilltriple.
+Menu Availablesettings Description
+FileSelection - Configuresthefilelocationandfilenameforloggeddata,exportthefileto.csvformatand
+loadthepreviouslyloggedfiletotheinstrument.
+Preset – ReturnstheDataLoggerViewtothepower-ondisplaysettings.
+Settings Vr,HrorLg SelectstheVerticalSettings,HorizontalSettingsorLoggingSettingsfield.
+Actionrequired:
+PressSettingstotogglebetweenVr,HrandLg.
+TrigSrc Key,IOorRmt Configuresthetriggersourcefordatalogger.
+DefaultisKey.
+Actionrequired:
+PressTrigSrctotogglebetweenKey,IOandRmt.
+Key(ListRun/StopKey) SelectstheRunStoppedkeyasatrigger
+source.
+IO(DIOTriggerIn) SelectsanyconfigureddigitalIO(withTrigger
+Inputfunction)asatriggersource.
+Rmt(RemoteCommand) Selectsaremoteinterfacecommandasatrig-
+gersource.
+LgMinMax OfforOn SetstoenableordisabletheLogMin/Maxcheckbox.Enablingthecheckboxwilllogthe
+minimumandmaximumvaluestothedatalogfile.WithLogMin/Maxchecked,the
+resultingfilesizewilltriple.
+DefaultisOff.
+Actionrequired:
+PressLgMinMaxtotogglebetweenOffandOn.
+KeysightE36300SeriesUser'sGuide 87
+
+### Tables on this Page
+
+| Availablesettings | Description |
+|---|---|
+
+| Availablesettings | Description |
+|---|---|
+
+## Page 88
+
+Fromtheremoteinterface:
+Toenablecurrentorvoltagedataloggingonoutputs1and2:
+
+### SENS:DLOG:FUNC:CURR1,(@1,2)
+
+### SENS:DLOG:FUNC:VOLT1,(@1,2)
+
+Youcannotdatalogoutputpowerfromtheremoteinterface.Toobtainpowerdata,youneedtodatalogboth
+voltageandcurrentandthencalculatethepowerfromtheresultingvoltageandcurrentdata.
+Tologtheminimumandmaximumvaluestothedatalogfileforallenabledoutputs:
+
+### SENS:DLOG:FUNC:MINM1
+
+Tospecifyadatalogof1000secondsonallenabledoutputs:
+
+### SENS:DLOG:TIME1000
+
+Tospecifyasampleperiodof400millisecondsbetweendatasamplesonallenabledoutputs:
+
+### SENS:DLOG:PER0.4
+
+Tosendanimmediatetriggersignaltothedatalogger:
+
+### TRIG:DLOG
+
+Toselecttheimmediatetriggersource(triggerstheDataLoggerimmediatelywheninitiated):
+
+### TRIG:DLOG:SOURIMM
+
+Toselecttherearpaneltriggerinput(allconnectorpinsthathavebeenconfiguredastriggersources):
+
+### TRIG:DLOG:SOUREXT
+
+ToselectaBUStriggersource:
+
+### TRIG:DLOG:SOURBUS
+
+Savethedatalog
+PressFileSelectiontospecifyafilenameinwhichtosavethedatalog.Datawillbeloggedtothisfilenamethenext
+timetheDataLoggerruns.Ifyoudonotspecifyafilename,thedatawillbeloggedtodefault.dlog,whichis
+overwritteneachtimetheDataLoggerruns.
+EnabletheAppenddateandtimetofilenamecheckboxtoincludetimestampinformationonthefilename.
+
+### 88 KeysightE36300SeriesUser'sGuide
+
+
+## Page 89
+
+PressSavePathtobrowseandspecifythelocationwherethedatalogwillbesaved.Usethefront-panelnavigation
+keystonavigatethroughthelist.Theleftandrightarrowscontractorexpandafoldertohideorshowitsfiles.
+Toviewtheavailablefolderandfilesinthedirectory,pressShowingFolderorShowingAll.PressSelectonceyou
+havespecifiedthepathorCanceltoabort.
+PressFileNameandusethekeyboardtoenterthefilenameintheFileNamefield.PressDonetosaveandCancelto
+abort.
+Exportthedata
+ToexportadatalogthathasbeensavedintheUSBdrive,youmustfirstloadthesavedfileintothedatalogger
+view.
+PressExportFiletoexportthedatathatiscurrentlyintheinstrument'sdatalogviewertofile.Theexporteddataisin
+.csvformat.
+Fordetailsonhowtospecifythesavelocationandfilename,refertoSavetheDataLog.
+KeysightE36300SeriesUser'sGuide 89
+
+## Page 90
+
+Loadthedata
+Thefileyouloadmustbefromsameinstrumentmodel.
+PressLoadFiletoloadtheloggeddatatotheinstrument.Youcanloadbothbinaryfilesanddatafilesin.csvformat.
+PressBrowsetobrowseandselectfilefromthedirectory.PressSelecttoselectthefileorCanceltoabort.
+PressLoadtoloadthefile.
+
+### 90 KeysightE36300SeriesUser'sGuide
+
+
+## Page 91
+
+Locking/Unlocking the Front Panel
+Ifyouareinamenu,youmustexitthemenubeforelockingthefrontpanel.
+
+### 1. PressandholdLock|Unlocktolockthefrontpanel.Thisproduceslockicon( )intheuppercornerofthedis-
+
+play,asshownbelow.
+
+### 2. Press[Lock|Unlock]againtounlockthefrontpanel.
+
+Fromtheremoteinterface:
+TolockallfrontpanelkeysincludingLock|Unlockkey:
+
+### SYST:RWL
+
+TolockallfrontpanelkeysexceptLock|Unlockkey:
+
+### SYST:REM
+
+Tounlockthefrontpanel:
+
+### SYST:LOC
+
+Capturing a Screen
+Press[MeterView]formorethanthreesecondstocaptureascreen.Thescreenthatwasactivewillbesavedtothe
+USBflashstorageconnectedtothefrontUSBport.
+Toconfigurethescreencapturestoringpath,refertoUtilitiesMenu-ManageFilesfordetails.
+KeysightE36300SeriesUser'sGuide 91
+
+## Page 92
+
+Enabling the E3631A Mode (Persona Mode)
+TheE3631Amode(alsoknownasPersonamode)allowsyoutochangetheprogrammaticidentityoftheE36300
+SeriesbacktoE3631AforcodecompatibilityandenablesittoworksliketheE3631Ainexistingapplications.
+PressUtilities>Test/Setup>UserSettings>SCPIID.
+PresstoselectSCPIIDE3631AtoenabletheE3631Amode.
+Onceyouenteredthismode,theinstrumentwillbehavelikeanE3631A.SelectSCPIIDE3631xAifyouwantto
+returntotheoriginalinstrumentfeaturesandfunctions.
+Fromtheremoteinterface:
+ToenableE3631Amode:
+
+### SYST:PERS:MODE3631A
+
+### 92 KeysightE36300SeriesUser'sGuide
+
+
+## Page 93
+
+Utilities Menu
+Utilitiesprovidesthefollowingfeatures:
+Storeandrecallstateandpoweronsettings
+ViewUSBandLANstatusaswellasconfigureLAN,GPIB(optionalforE36312AandE36313A),anddigitalIO
+Performinstrumentself-tests,calibrationandconfigurestheinstrument'svarioususersettings,dateandtime
+Displaystheinstrument'serrorqueue
+Managefiles,includingcreatingscreenshots
+Utilities Menu - Store and Recall State
+TheUtilitiesmenuisshownbelow.
+Store/Recallsavesandrecallstates.Ingeneral,statefilesstorevolatilesettingsassociatedwithmeasurements.
+Theinstrumentstatesincludevolatilesettingssuchas:
+– Voltage,current,OVP,OCPdelay,OCPstateandOCPdelaystart
+– Outputsense1
+– Outputstate,selectedoutputandcoupletriggerchannel
+– Operationmode(Independent,Series,ParallelorTrack)
+– Outputon/offsequencing1
+– OutputLISTsettings1
+– Triggersetttings1
+– DigitalI/Ooutputdataandbussetting1
+– Dataloggertriggersource1
+
+### 1.ApplicableforE36312AandE36313AOnly
+
+KeysightE36300SeriesUser'sGuide 93
+
+## Page 94
+
+StoreSettings
+StoreSettingscreatesfoldersandfiles(.csvformat)tostoreinstrument'sstatetoexternalmemory,orstore
+instrument'sstatetointernalmemory.Youcanstoreupto10statesandsetthemaspower-onstate.
+Menu Availablesettings Description
+Action: Store,Folder Allowsyoutoeitherstoreaninstrument'sstateortocreateanewfolder.
+Dest.: Int,Ext Selectswhetheryouwanttostoreastatetointernalorexternalmemory.
+–Internal:\specifiestheinstrument'sinternalmemory.
+–External:\specifiestheUSBportonthefrontpanel.
+Storein State0toState9 Selectsthestatetostorestatesettings.
+SetPwrOn Yes,No Selectstoenableordisablethe'Setthisaspower-onstate'checkbox.Enablingthecheckbox
+willloadtheselectedstoredstateatpower-up.
+Store - Storesthestate.
+
+### 94 KeysightE36300SeriesUser'sGuide
+
+
+### Tables on this Page
+
+| Availablesettings | Description |
+|---|---|
+
+## Page 95
+
+Menu Availablesettings Description
+Action: Store,Folder Allowsyoutoeitherstoreaninstrument'sstateortocreateanewfolder.
+Dest.: Int,Ext Selectswhetheryouwanttostoreastatetointernalorexternalmemory.
+–Internal:\specifiestheinstrument'sinternalmemory.
+–External:\specifiestheUSBportonthefrontpanel.
+Browse - Allowsyoutobrowseandspecifythelocationoftheexternalmemorytosavethestate.
+Filename Specifiesthefilename.Usethevirtualkeyboardtoenteryourdesiredfilename.
+Store - Storesthestate.
+Action:Foldercreatesafolderintheexternalmemory.
+Menu Description
+Browse Allowsyoutobrowseandspecifythelocationwherethefolderwillbeplaced.
+FolderName Specifiesthefoldername.Usethevirtualkeyboardtoenteryourdesiredfoldername.
+CreateFolder Createsanewfolderinthespecifiedlocation.
+KeysightE36300SeriesUser'sGuide 95
+
+### Tables on this Page
+
+| Availablesettings | Description |
+|---|---|
+
+## Page 96
+
+RecallSettings
+Thefileyourecallmustbefromsameinstrumentmodel.
+RecallSettingsallowsyoutobrowsetothestateintheinternalmemoryorbrowsetothestatefile(.csvformat)in
+theexternalmemorytoberecalled.
+Menu Availablesettings Description
+From: Int,Ext Selectswhetheryouwanttorecallaninstrument'sstatefrominternalorexternalmemory.
+–Internal:\specifiestheinstrument'sinternalmemory.
+–External:\specifiestheUSBportonthefrontpanel.
+Recall State0toState9 Selectthestatethatyouwanttorecallfrom.
+Recall - Recallthestate.
+Menu Availablesettings Description
+From: Int,Ext Selectswhetheryouwanttorecallaninstrument'sstatefrominternalorexternalmemory.
+–Internal:\specifiestheinstrument'sinternalmemory.
+–External:\specifiestheUSBportonthefrontpanel.
+Browse - Allowsyoutobrowseandspecifythestatefileintheexternalmemorytorecallfrom.
+Recall - Recallthestate.
+
+### 96 KeysightE36300SeriesUser'sGuide
+
+
+### Tables on this Page
+
+| Availablesettings | Description |
+|---|---|
+
+| Availablesettings | Description |
+|---|---|
+
+## Page 97
+
+PowerOnSetting
+PowerOnselectsthestatethatwillbeloadedatpower-up.Thiscanbeeitherthefactorydefaultstate(Default),or
+user-definedstates(State0toState9).
+PressSetPowerOntosavethesetting.
+SettoDefaults
+SettoDefaultsloadstheinstrument'sfactorydefaultstate.
+KeysightE36300SeriesUser'sGuide 97
+
+## Page 98
+
+Utilities Menu - I/O Configuration
+I/OConfigconfigurestheI/OparametersforremoteoperationsovertheLAN(optionalonsomemodels),USB,or
+GPIB(optional)interface.
+USBStatusdisplaystheUSBconnectstringfortheinstrument.
+LANStatusdisplaysthecurrentLANsettingstatusfortheinstrument.
+LANResetresetstheLANusingitscurrentsettingsandenablesDHCPandDNS.TheLANResetsoftkeyalsoclears
+anyuser-definedWebInterfacepassword.
+LANRestartrestartsthenetworkingusingitscurrentLANsettings.LANrestartdoesnotclearstheuser-defined
+WebInterfacepassword.
+LANSettings
+LANSettingsopensthewindowshownbelow.SettoDefaultsresetstheLANsettingstotheirfactorydefaultvalues.
+
+### 98 KeysightE36300SeriesUser'sGuide
+
+
+## Page 99
+
+DHCPallowsDHCPassignmentoftheinstrument’sIPaddress.Italsoenablestheconfigurationofnetwork
+
+### parametersbasedontheprotocolselected.DHCPOnautomaticallyassignadynamicIPaddresstoaLANdevice.
+
+AutoDNSallowsassignmentoftheDNSaddresses.AutoDNSOnautomaticallyconfigurestheaddressingofthe
+instrumentinDNSserver
+mDNSallowsmodificationofthemDNSServiceName.
+Hostnameallowsmodificationoftheinstrument'sDNShostname.
+DigitalIO(E36312AandE36313Aonly)
+DigitalIO configurestherearpaneldigitalport'spinfunction,polarityandoutputdataappliedtothepin.
+Pinselectsthepinforconfiguration.
+Functionsconfiguresthefunctionforeachpinasshownbelow.
+PolarityconfiguresthepolaritytoPositive(POS)orNegative(NEG)fortheselectedpin.
+Outenables(1)ordisables(0)theoutputdatafortheselectedpin.
+GPIB(optionalandapplicabletoE36312AandE36313Aonly)
+GPIBallowsyoutosettheGPIBaddresstoavaluefrom0to30.Afterchangingtheaddress,cycleinstrumentpower
+forthechangetotakeeffect.
+KeysightE36300SeriesUser'sGuide 99
+
+## Page 100
+
+Utilities Menu - Test / Setup
+Test/Setupprovidesaccesstocalibration,self-test,aswellasconfiguresuserpreferences,setsthedateandtime,
+andaccessesthehelp:
+
+### Calibration
+
+### Calibrationaccessestheinstrumentcalibrationprocedure.
+
+PerformCalibrationopensthecalibrationmenu.Makesureyouhaveruntheself-testbeforeperformingany
+
+### calibration.Referto"CalibrationAdjustmentProcedures"intheServiceGuidefordetails.
+
+Thedefaultsecuritypasscodeis0.PressChangePasscodetochangethepasscodeusingthenumerickeypad.The
+passcodecanbesetupto9digits.
+AutosaveOnwillautomaticallysavethecalibrationdatauponlogout.
+WhenAutosaveisOff,pressCalSavetosavethecalibrationdata.
+ResettoFactoryreturnsthesettingstofactorydefaultsettings.Pressingthiskeysanitizesalluser-accessible
+instrumentmemoryexceptcalibrationconstantsandrebootstheinstrument.
+SelfTest
+SelfTestverifiesproperinstrumentoperation.Referto"Self-TestProcedures"intheServiceGuidefordetails.
+
+### 100 KeysightE36300SeriesUser'sGuide
+
+
+## Page 101
+
+UserSettings
+UserSettingsspecifiesuserpreferencesthatcontrolhowtheuserinteractswiththeinstrument.Thesesettingsare
+storedinnon-volatilememory.
+
+### SCPIID
+
+### SCPIIDdeterminestheinstrument'sresponsetoa*IDN?query.Thisenables*IDN?compatibilitywithexisting
+
+programsthatexpect*IDN?toreturnavalueappropriatetoaE3631A.
+Choicesforeachpowersupplymodelare:
+
+### – E3631A:E3631A
+
+– E3631xA:E36311A,E36312A,E36313A
+WhensettoE3631Amode,theinstrumentwillbehaveexactlyliketheE3631A.Forexample,Output3willchangeto
+-25V.Inthiscase,alltheremotecommandsandtriggersystemwillfollowtheE3631Abehavioraswell.
+SoundSettings
+Beeperenablesordisablesthebeepersoundwhenanerrorisgeneratedfromthefrontpanelorremoteinterface.
+KeyClickenablesordisablestheclickheardwhenafront-panelkeyorsoftkeyispressed.
+DisplayOptions
+DisplayOptionsconfiguresthedisplay.
+Youcanenablesordisablesthedisplayandscreensaver.
+Ifyouturnoffthedisplay,pressanyfront-panelkeytoturnitonagain.
+Bydefault,thescreensaverturnsoffandblanksthescreenafter30minutesofinactivity.Youmaydisablethis
+screensaverfromthefrontpanelonly.
+Thedisplayisenabledwhenpoweriscycled,afteraninstrumentreset(*RST),orwhenyoureturntolocal(front
+panel)operation.PressLock/UnlockorexecutetheSYSTem:LOCalcommandfromtheremoteinterfacetoreturnto
+thelocalstate.
+HelpLangselectsthehelplanguageforfront-paneluse:English,French,German,Japanese,Korean,Simplified
+ChineseorRussian.Allfront-panelkeyhelp,andhelptopicsappearintheselectedlanguage.Thesoftkeylabelsare
+alwaysinEnglish.
+Date/Time
+Date/Timesetstheinstrument'sreal-timeclock,whichalwaysusesa24-hourformat(00:00:00to23:59:59).There
+isnoautomaticsettingofthedateandtime,suchastoadjustfordaylightsavingstime.
+KeysightE36300SeriesUser'sGuide 101
+
+## Page 102
+
+Usethefrontpanelnavigationkeystosettheyear,month,day,hour,andminute.
+LowRange
+LowRangeenablesordisableslowrangecurrentmeasurement.
+Help
+Helpallowsyoutoviewthequickreferencehelptopic.Usethearrowsoftkeysorfrontpanelnavigationkeysto
+navigatethedesiredtopic.PressSelecttoviewthehelpcontent.
+Aboutallowsyoutoviewtheinstrument'smodelnumber,descriptionandserialnumber.
+
+### 102 KeysightE36300SeriesUser'sGuide
+
+
+## Page 103
+
+Utilities Menu - Error
+
+### Errordisplaystheinstrument'serrorqueue,whichincludesupto20errors.Iftherearemorethan10errorsonthe
+
+display,pressNexttoscrolltothenextpage.
+–Errorsarestoredintheordertheyarereceived.Theerrorattheendofthelististhemostrecenterror.
+–Iftherearemorethan20errorsinthequeue,thelasterrorstoredisreplacedwith-350,"Queueoverflow".Nomore
+
+### errorsarestoreduntilyouremoveerrorsfromthequeue.Iftherearenoerrors,theinstrumentrespondswith+0,"No
+
+### error".
+
+–Exceptforself-testerrors,errorswillbeclearedafteryouhavereadthemorafteraninstrumentreset.
+Ifyoususpectthatthereisaproblemwiththepowersupply,referto"Troubleshooting"intheServiceGuide.
+KeysightE36300SeriesUser'sGuide 103
+
+## Page 104
+
+Utilities Menu - Manage Files
+ManageFilesallowsyoutocreate,copy,delete,andrenamefilesandfoldersonaUSBdriveattachedtothefront
+panel.Italsoallowsyoutocapturethecurrentscreentoeitherabitmap(*.bmp)orportablenetworkgraphics
+(*.png)file.Thisisthedefaultoption,asshownbelow.
+Action
+Actionspecifiestheactiontoperform.PressingCaptureDisplaysavesascreencaptureofthedisplayatthemoment
+thatyoupressed[MeterView]formorethan3seconds.
+Delete-Todeleteafileorfolder,pressDeleteandBrowsetothefolderorfiletodelete.PressBrowse>Perform
+Delete>Back.
+Folder-Tocreateafolder,Browsetotheexternallocationforthefolder,pressFolderName,enterafoldername
+andpressDone.PressCreateFolder>Back.
+Copy-Tocopyafile,pressCopy.BrowsetothefiletobecopiedandpressSelect.PressCopyPathandselectan
+externalpathforcopying.PressPerformCopy>Back.
+Rename-Torenameafileorfolder,pressRename.BrowsetothefolderorfiletoberenamedandpressSelect.
+PressNewName,enteranewnameandpressDone.PressPerformRename>Back.
+Browse
+Browseselectsthefileorfolderuponwhichtheactionwillbeperformed.Usethefront-panelnavigationkeysto
+navigatethroughthelist.Theleftandrightarrowscontractorexpandafoldertohideorshowitsfiles.
+PressSelectorCanceltoexitthebrowsewindow.
+
+### 104 KeysightE36300SeriesUser'sGuide
+
+
+## Page 105
+
+FileName
+FileNameallowsyoutousethefront-panelarrows,the[Enter]key,andthesoftkeystoenterafilename.Usethe
+front-panelarrowstopointtoaletter,andPreviousCharandNextChartomovethecursorintheareawherethe
+nameisentered.Intheimagebelow,thereisnoNextCharsoftkeybecausethecursorisattheend.
+PressDoneorCanceltofinish.
+KeysightE36300SeriesUser'sGuide 105
+
+## Page 106
+
+
+### 3 Characteristics and Specifications
+
+ForthecharacteristicsandspecificationsoftheE36300SeriesprogrammableDCpower
+supplies,refertothedatasheetat
+http://literature.cdn.keysight.com/litweb/pdf/5992-2124EN.pdf.
+
+### 106 KeysightE36300SeriesUser'sGuide
+
+
+## Page 107
+
+This information is subject to change
+without notice.
+© Keysight Technologies 2017-2023
+Edition 6, October 2023
+Printed in Malaysia
+
+
+### E36311-90001
+
+www.keysight.com
+
+## Page 108
+
+Alimentations CC programmables
+Série E36300
+
+### GUIDE D'UTILISATION
+
+
+## Page 109
+
+Avertissements 5
+Avisdecopyright 5
+Référencedumanuel 5
+Édition 5
+Publiépar 5
+Garantie 5
+Licencestechnologiques 5
+DroitsduGouvernementdesÉtats-Unis 6
+Licencestierces 6
+Déchetsd’équipementsélectriquesetélectroniques(DEEE) 6
+Certificatsdeconformité 7
+Informationsrelativesàlasécurité 7
+Informationsrelativesàlasécuritéetàlaréglementation 8
+Consignesdesécurité 8
+Symbolesdesécurité 10
+Marquagesréglementaires 11
+Déclarationsud-coréennedeCEMdeclasseA 11
+ExigencesdesécuritéetdeCEM 11
+Conditionsd’environnement 11
+
+### 1 Miseenroute 13
+
+Présentationduproduit 14
+Présentationsuccinctedupanneauavant 15
+Présentationsuccinctedupanneauarrière 17
+Vuemultimètre 18
+Vueenregistreurdedonnées 20
+Schémadedimensions 21
+Configurationdel'instrument 21
+Préparationdel'instrument 22
+Inspectioninitiale 22
+Élémentsstandardslivrés 22
+Révisionsdeladocumentationetdumicrologiciel 22
+Intervalled'étalonnagerecommandé 22
+Optionsetinformationssurlesfusibles 23
+Vérifierquelatensiond'entréeCAetlesparamètresdefusiblesontcorrects 23
+Plagesdeprogrammation 25
+Installation 26
+Branchementducordond'alimentation 26
+Connexiondessorties 27
+Connexionsenparallèleetensérie(E36312AetE36313Aseulement) 30
+Branchementspourmesure 4 fils(E36312AetE36313Aseulement) 32
+Connexionsdel'interface 35
+Installationoptionnelledel'interfaceGPIB(E36312AetE36313Aseulement) 39
+Installationdel'instrumentdansunearmoire 41
+Configurationdel'interfacedistante 42
+KeysightIOLibrariesSuite 42
+ConfigurationGPIB 42
+ConfigurationduLAN 43
+Utilisationdesockets 48
+Ensavoirplussurlesadresses IPetleurnotationparpoints 48
+
+### Commandeàdistance 49
+
+### 2 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 110
+
+
+### InterfaceWeb 49
+
+Détailstechniquesdelaconnexion 50
+Utiliserlesystèmed'aideintégré 51
+Afficherlesinformationsd'aidepourlestouchesdupanneauavant 51
+Afficherlalistedesrubriquesd'aide 51
+Miseàjourmicrologicielle. 53
+Aide-mémoiredesmenusdupanneauavant 54
+
+### 2 Fonctionnementgénéral 57
+
+Miseenmarchedel’appareil 58
+Affichezlejournaldeserreurs 59
+Contrôledessorties 60
+Étape1-Sélectionnerunesortie 60
+Étape2-Réglerlatensionetl’intensitédesortie 60
+Étape3-Activerlasortie 61
+Étape4-Afficherlatensionetl’intensitédesortie 61
+Tensionetintensitéconstantes 62
+Utilisationdelafonctiondeprotection 63
+Fonctiondeprotection 63
+Configurationdelaprotection 63
+DésactiveunOVPetunévénementOCP 65
+Indicationdelamesureà2ou4fils(E36312AetE36313Aseulement) 66
+Utilisationdel'opérationdesuivi 66
+ConfigurationdelaséquenceActivationDésactivationdelasortie(E36312AetE36313Aseulement) 68
+Étape1-Réglerlatensionetl’intensitédesortiedesvoiesdesortie : 68
+Étape2-Configurerlesdélaisd’activation/désactivation : 68
+Étape3-Couplagedessortiessélectionnées : 68
+Étape4-UtiliserlestouchesActivationetdésactivationdetouteslessortie : 69
+Indicationdumodedefonctionnement(E36312AetE36313Aseulement) 70
+Utilisationduportdecommandenumérique(E36312AetE36313Aseulement) 71
+E/Snumériquebidirectionnelle 71
+Entréenumérique 73
+Sortiededéfaillance 73
+Entréed'inhibition 74
+Protectiondusystèmededéfaillance/inhibition 75
+Entréededéclenchement 76
+Sortiededéclenchement 77
+
+### Commandesdecouplagedessorties 78
+
+Utilisationdel’OutputLIST(E36312AetE36313Aseulement) 80
+Étape1–Ajouter/Supprimerdesétapesà/del’ARB 80
+Étape2–Configurerlaséquencedessorties. 81
+Étape3-Exécuterlalistedeséquencedessorties 83
+Utilisationdelafonctiond'enregistreurdedonnées(E36312AetE36313Aseulement) 85
+Enregistrementdedonnées 85
+Étape1-Programmerlaséquencedesvoiesdesortie 85
+Étape2-Configurerlestracesdel'enregistreurdedonnées 86
+Étape3-Configurerlespropriétésdel'enregistreurdedonnées 87
+Étape4-Activerlasortie1,démarrerleséquencementetenregistrerlesdonnées. 87
+Étape5-Exporterlesdonnées 88
+Vueenregistreurdedonnées 89
+Réglagedel'affichagedelaformed'onde 91
+Propriétésdel’enregistreurdedonnéesetparamètresdelaformed'onde 92
+Guided’utilisationdeKeysightsérieE36300 3
+
+## Page 111
+
+Enregistrerlejournaldesdonnées 94
+Verrouillage/déverrouillagedupanneauavant 97
+Captured’unécran 97
+ActivationdumodeE3631A(modePersonna) 98
+Menudesutilitaires 99
+Menudesutilitaires-Enregistreretrappelerl'état 99
+Paramètresd'enregistrement 100
+Paramètresderappel 102
+Paramètreàlamisesoustension 103
+Définirlesvaleurspardéfaut 103
+Menudesutilitaires-ConfigurationE/S 104
+ParamètresLAN 104
+E/Snumérique(E36312AetE36313Aseulement) 105
+GPIB(enoptionetapplicableàE36312AetE36313Aseulement) 105
+Menudesutilitaires-Test/Configuration 106
+Étalonnage 106
+Auto-test 106
+Paramètresdel'utilisateur 107
+Plagebasse 108
+Aide 108
+Menudesutilitaires-Erreur 109
+Menudesutilitaires-Gérerlesfichiers 110
+Action 110
+Parcourir 110
+Nomdefichier 111
+
+### 3 Caractéristiquesetspécifications 113
+
+### 4 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 112
+
+Avertissements
+Avis de copyright
+©KeysightTechnologies2017-2023
+Conformémentauxloisinternationalesrelativesàlapropriétéintellectuelle,toutereproduction,toutstockage
+électroniqueettoutetraductiondecemanuel,totauxoupartiels,sousquelqueformeetparquelquemoyenquece
+soit,sontinterditssaufconsentementécritpréalabledelasociétéKeysightTechnologies, Inc.
+Référence du manuel
+
+### E36311-90002
+
+Édition
+Édition6,juin2023
+Publié par
+KeysightTechnologies
+BayanLepasFreeIndustrialZone
+11900BayanLepas,Penang
+Malaisie
+Garantie
+
+### LESINFORMATIONSCONTENUESDANSCEDOCUMENTSONTFOURNIESENL'ETATETPOURRONTFAIRE
+
+### L'OBJETDEMODIFICATIONSSANSPREAVISDANSLESEDITIONSULTÉRIEURES.DANSLESLIMITESDELA
+
+### LÉGISLATIONENVIGUEUR,KEYSIGHTEXCLUTENOUTRETOUTEGARANTIE,EXPRESSEOUIMPLICITE,
+
+### CONCERNANTCEMANUELETLESINFORMATIONSQU'ILCONTIENT,YCOMPRIS,MAISNONEXCLUSIVEMENT,
+
+### LESGARANTIESIMPLICITESDEQUALITÉMARCHANDEETD'ADÉQUATIONÀUNUSAGEPARTICULIER.KEYSIGHT
+
+### NESAURAITENAUCUNCASETRETENUERESPONSABLEDESERREURSOUDESDOMMAGESACCESSOIRESOU
+
+### INDIRECTSLIESÀLAFOURNITURE,AL'UTILISATIONOUAL'EXACTITUDEDESINFORMATIONSCONTENUES
+
+### DANSCEDOCUMENTOUAUXPERFORMANCESDETOUTPRODUITAUQUELILSERAPPORTE.SIKEYSIGHTET
+
+### L'UTILISATEURSONTLIESPARUNCONTRATECRITSEPAREDONTLESCONDITIONSDEGARANTIE
+
+### CONCERNANTCEDOCUMENTSONTENCONFLITAVECLESPRESENTESCONDITIONS,LESCONDITIONSDELA
+
+### GARANTIEDUCONTRATSEPAREPREVALENT.
+
+Licences technologiques
+Lematérieletleslogicielsdécritsdanscedocumentsontprotégésparunaccorddelicenceetleurutilisationou
+reproductionestsoumiseauxtermesetconditionsdeladitelicence.
+Guided’utilisationdeKeysightsérieE36300 5
+
+## Page 113
+
+Droits du Gouvernement des États-Unis
+LeLogicielestun« logicielinformatiquecommercial »telquedéfiniparlaFederalAcquisitionRegulation
+(« FAR ») 2.101.ConformémentauxFAR 12.212et 27.405-3etàl’addendaFARduMinistèredeladéfense
+(« DFARS »)227.7202,legouvernementdesEtats-Unisacquiertdeslogicielsinformatiquescommerciauxdansles
+mêmesconditionsquecellesdanslesquellesleslogicielssonthabituellementfournisaupublic.Parconséquent,
+KeysightmetleLogicielàladispositiondesclientsdugouvernementdesEtats-Unisdanslecadredesalicence
+commercialestandard,quiestintégréedanssonContratdelicenceutilisateurfinal(CLUF),dontunecopieest
+disponibleàl’adressesuivante :http://www.keysight.com/find/sweula.LalicencementionnéedansleCLUF
+représentel’autoritéexclusiveparlaquellelegouvernementdesEtats-Unisestautoriséàutiliser,modifier,
+distribueroudivulguerleLogiciel.LeCLUFetlalicencequiyestmentionnée,nerequiertounepermetpas,entre
+autres,queKeysight :(1)fournissedesinformationstechniquesrelativesaulogicielinformatiquecommercialniàla
+documentationdulogicielinformatiquecommercialnonhabituellementfourniesaupublic ;ou(2)abandonne,ou
+fournisse,desdroitsgouvernementauxdépassantlesdroitshabituellementfournisaupublicpourutiliser,
+reproduire,communiquer,exécuter,afficheroudivulguerlelogicielinformatiquecommercialouladocumentation
+dulogicielinformatiquecommercial.Aucuneexigencegouvernementaleadditionnelleoutrequecellesénoncées
+dansleCLUFnes’applique,saufsicesconditions,droitsoulicencessontexplicitementexigéspartousles
+fournisseursdelogicielsinformatiquescommerciauxconformémentàlaFARetauxDFARSetsonténoncés
+expressémentparécritailleursdansleCLUF.Keysightn’estenaucuncastenudemettreàjour,deréviseroude
+modifierdequelquefaçonquecesoitleLogiciel.Encequiconcernetouteslesdonnéestechniquestellesque
+définiesparlaFAR 2.101,conformémentaux FAR12.211et27.404.2etauDFARS227.7102,legouvernementdes
+Etats-Unisacquiertdesdroitsn’excédantpaslesDroitslimitéstelsquedéfinisdanslaFAR27.401ouleDFAR
+
+### 227.7103-5(c),applicablesdanstouteslesdonnéestechniques.
+
+Licences tierces
+Certainespartiesdecelogicielsontconcédéessouslicencepardestiers,ycomprislesconditionsgénéralesOpen
+Source.DanslamesureoùceslicencesexigentqueKeysightmettelecodesourceàdisposition,nousleferons
+gratuitement.Pourplusd'informations,veuillezcontacterl’assistanceKeysight,àl’adresse
+https://www.keysight.com/find/assist.
+Déchets d’équipements électriques et électroniques (DEEE)
+CeproduitestconformeauxexigencesmarketingdeladirectiveDEEEenmatièredemiseaurebutdeséquipements
+électriquesetélectroniques.L'étiquettecolléesurleproduit(voirci-dessous)indiquequevousnedevezpasjeter
+cetappareilélectrique/électroniqueaveclesorduresménagères.
+Catégorieduproduit :parréférenceauxtypesd'équipementsdécritsdansl'annexe1deladirectiveWEEE,ce
+produitestclassécommeunproduit"d'instrumentationdesurveillanceetdecontrôle".Nelejetezpasavecles
+orduresménagères.
+Pourretournervosproduitsusagés,contactezvotrerevendeurKeysightleplusprocheouvisitez
+about.keysight.com/en/companyinfo/environment/takeback.shtmlpourdeplusamplesinformations.
+
+### 6 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 114
+
+Certificats de conformité
+IlestpossibledetéléchargerlaDéclarationdeconformitépourcesproduitsetd'autresproduitsKeysightsurle
+Web.Accédezàlapagehttp://regulations.corporate.keysight.com/DoC/search.htmetcliquezsurDéclarationsde
+conformité.PourpourrezalorsexécuterunerechercheparnumérodeproduitpourtrouverladernièreDéclaration
+deconformité.
+Informations relatives à la sécurité
+LamentionATTENTIONsignaleundangerpourlematériel.Silamanœuvreoulaprocédurecorrespondanten’estpasexécutéecor-
+rectement,ilpeutyavoirunrisqued’endommagementdel’appareiloudepertededonnéesimportantes.Enprésencedelamen-
+tionATTENTION,ilconvientdenepaspoursuivretantquelesconditionsindiquéesn’ontpasétéparfaitementcompriseset
+remplies.
+LamentionAVERTISSEMENTsignaleundangerpourlasécuritédel’opérateur.Silamanœuvreoulaprocédurecorrespondante
+n’estpasexécutéecorrectement,ilpeutyavoirunrisquegrave,voiremortelpourlespersonnes.Enprésenced’unemention
+AVERTISSEMENT,ilconvientdes’interrompretantquelesconditionsindiquéesn’ontpasétéparfaitementcomprisesetremplies.
+Guided’utilisationdeKeysightsérieE36300 7
+
+## Page 115
+
+Informations relatives à la sécurité et à la réglementation
+Consignes de sécurité
+Lesconsignesdesécuritéprésentéesdanscettesectiondoiventêtreappliquéesdanstouteslesphasesde
+l’utilisation,del’entretienetdelaréparationdecetéquipement.Lenon-respectdecesprécautionsoudes
+avertissementsspécifiquesmentionnésdanscemanuelconstitueuneviolationdesnormesdesécuritéétablieslors
+delaconception,delafabricationetdel’usagenormaldel’instrument.KeysightTechnologiesnesauraitêtretenu
+responsabledunon-respectdecesconsignes.
+
+### 8 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 116
+
+
+### AVANTLAMISESOUSTENSION
+
+–Vérifiezqueleproduitestconfiguréconformémentàlatensiondelignedisponibleetqu’unfusibleadaptéestins-
+tallé.Utilisezl'étiquettel’arrièredel'instrumentpourconfigurerlapuissance.Reportez-vousàlasectionOptionset
+informationssurlesfusiblespourdeplusamplesinformations.
+–Vérifiezquelesfluctuationsdelatensiond'alimentationnedépassentpas±10 %delatensiond'alimentationnomi-
+nale.
+
+### MISEÀLATERREDEL’INSTRUMENT
+
+Ceproduitestuninstrumentdemesuredelacatégoriedesécurité I(ilcomporteunebornedeterredeprotection).
+Afindeminimiserlesrisquesd’électrocution,sonchâssisetsonarmoiredoiventêtrereliésàuneprisedeterre.
+L'instrumentdoitêtrereliéàunesourcedecourantalternatifparl'intermédiaired'uncordond'alimentationàtrois
+conducteursdontletroisièmefilestconnectésolidementàuneprisedeterre(prisedeterredesécurité)auniveaude
+laprisedecourant.Touteinterruptionduconducteurdeprotection(miseàlaterre)outoutdébranchementdela
+bornedeterredeprotectionentraîneunrisqued'électrocutionpouvantprovoquerdesaccidentsgraves.Si
+l'instrumentdoitêtrealimentéviaunautotransformateurexternepourréduirelatension,assurez-vousquelaborne
+communedel’autotransformateurestconnectéeauneutre(bornemiseàlaterre)deslignesélectriques(alimentation
+secteur).
+
+### NEL’UTILISEZPASDANSUNEATMOSPHÈREEXPLOSIVEOUDESENVIRONNEMENTSHUMIDES
+
+N'utilisezpasl'appareildansdesenvironnementsavecdesgazoudesfuméesinflammables,delavapeuroudesenvi-
+ronnementshumides.
+
+### NEFAITESPASFONCTIONNERDESINSTRUMENTSENDOMMAGÉSOUDÉFECTUEUX
+
+Lesinstrumentsendommagésoudéfectueuxdoiventêtredésactivésetprotégéscontretouteutilisationinvolontaire
+jusqu'àcequ'ilsaientétéréparésparunepersonnequalifiée.
+
+### NEREMPLACEZJAMAISDECOMPOSANTSETN'APPORTEZAUCUNEMODIFICATIONÀ
+
+### L'INSTRUMENT.
+
+Enraisondesrisqueséventuelssupplémentaires,neremplacezpasdecomposantsetn'apportezaucunemodification
+nonautoriséeàl'instrument.Pourtoutentretienouréparation,renvoyezleproduitàunbureaudeventesetdeser-
+viceaprès-venteKeysightTechnologies.Ainsi,l'intégritédesfonctionsdesécuritéseramaintenue.Pourcontacter
+Keysightafind’obtenirdesconseilscommerciauxetuneassistance,reportez-vousauxliensjointssurlesiteKeysight
+suivant :www.keysight.com/find/assist(coordonnéesinternationalesdeserviceaprès-vente).
+
+### UTILISERLECORDOND’ALIMENTATIONFOURNI
+
+Utilisezl'appareilaveclescordonsd’alimentationfournisaveclalivraison.
+
+### UTILISERL’APPAREILCOMMEINDIQUÉ
+
+Sil’appareilestutiliséd’unemanièrenonpréconiséeparlefabricant,ilsepeutquelaprotectiondel’appareilnesoit
+plusefficace.
+
+### NEBLOQUEZPASLESORIFICESD’AÉRATION
+
+Nebloquezaucundesorificesd'aérationdel'appareil.
+
+### OBSERVEZTOUTESLESMARQUESSURL’APPAREILAVANTDELECONNECTERÀUNAPPAREIL
+
+Observeztouslesmarquagesportésparl’appareilavantdelebrancher.
+Guided’utilisationdeKeysightsérieE36300 9
+
+## Page 117
+
+
+### ÉTEIGNEZL’APPAREILAVANTDELECONNECTERAUXBORNESDESORTIE
+
+Coupezl’alimentationdel’appareilavantdeleconnecterauxbornesdesortie.
+
+### VÉRIFIEZQUELECAPOTESTBIENENPLACE
+
+Nefaitespasfonctionnerl’appareilavecsoncapotdémontéoudétaché.
+
+### METTEZL’APPAREILSOUSTENSIONETDÉBRANCHEZTOUTESLESCONNEXIONSAVANT
+
+### D'INSTALLERL'INTERFACEGPIB
+
+Mettezl’instrumenthorstensionetdébrancheztouteslesconnexions,ycomprislecordond'alimentation,de
+l'instrumentavantl'installationdel'interfaceGPIB.
+
+### NETTOYEZAVECUNCHIFFONLÉGÈREMENTHUMIDE
+
+Nettoyezlespartiesexternesdel'instrumentàl'aided'unchiffondouxnonpelucheuxlégèrementhumidifié.N’utilisez
+pasdedétergent,deliquidesvolatilesoudesolvantschimiques.
+ConnectezlecâbleUSBavecnoyaudeferriteauportUSBdupanneauarrièredel'instrument.
+Symboles de sécurité
+Symbole Description
+Attention,risquededanger(reportez-vousaumanuelpourdesinformationsdétailléessurlesavertissementsetlesmises
+engarde)
+Bornedeterre(masse)deprotection.
+Raccordementducadreouduchâssisàlaterre(masse).
+Alimentationenmodeveille.L'instrumentn'estpascomplètementdéconnectédusecteurlorsquel'interrupteurestéteint.
+Courantalternatif(CA).
+Plus,polaritépositive.
+Moins,polariténégative.
+LamentionAVERTISSEMENTsignaleundanger.Silamanœuvreoulaprocédurecorrespondanten'estpasrespectéeou
+correctementréalisée,ilpeutyavoirunrisquedeblessures.EnprésencedelamentionAVERTISSEMENT,ilconvientdene
+paspoursuivretantquelesconditionsindiquéesn'ontpasétéparfaitementcomprisesetrespectées.
+LamentionATTENTIONsignaleundanger.Silaprocédurecorrespondanten’estpasexécutéecorrectementourespectée,
+ilpeutyavoirunrisqued’endommagementoudedestructiond’unepartieoudel’ensembledel’appareil.Enprésencedela
+mentionATTENTION,ilconvientdenepaspoursuivretantquelesconditionsindiquéesn’ontpasétéparfaitement
+comprisesetremplies.
+LamentionREMARQUEsignaledesinformationsimportantes.Ilattirel'attentionsuruneprocédure,unepratique,une
+conditionouautre,qu’ilestimportantdenoter.
+
+### 10 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 118
+
+Marquages réglementaires
+Symbole Description
+LamarqueRCMestunemarquedéposéedel’AustralianCommunicationsandMediaAuthority.
+LemarquageCEestunemarquedéposéedelaCommunautéEuropéenne.CettemarqueCEmontrequele
+produitestconformeàtouteslesDirectivesjuridiqueseuropéennespertinentes.
+ICES/NMB-001indiquequecetappareilISMestconformeàlanormecanadienneICES-001.
+CetappareilISMestconformeàlanormeNMB-001duCanada.ISMGRP.
+1LaclasseAISMGRPindiquequ'ils'agitd'unproduitindustrielscientifiqueetmédicaldegroupe1classeA.
+Cesymboleindiquelapériodependantlaquelleaucunedétériorationoufuitedesubstancestoxiquesou
+dangereusesn’estàattendredanslecadred’uneutilisationnormale.Laduréedevieprévueduproduitestde
+quarante ans.
+CesymboleestunedéclarationdeCEMdeclasseAdeCoréeduSud.Ils'agitd'uninstrumentdeclasseA
+adaptéàunusageprofessionneldansunenvironnementélectromagnétiqueendehorsdudomicile.
+LelabelCSAestunemarquedéposéedel’Associationcanadiennedenormalisation(CanadianStandardsAsso-
+ciation).
+Déclaration sud-coréenne de CEM de classe A
+Informationàl'utilisateur:
+Laconformitédecetéquipementpouruneutilisationdansdesenvironnementsprofessionnelsaétéévaluée.Dans
+unenvironnementrésidentiel,cetéquipementpeutcauserdesinterférencesradio.
+– CettedéclarationEMCnes'appliquequepourleséquipementsutilisésuniquementdansunenvironnement
+professionnel.
+사용자안내문
+이기기는업무용환경에서사용할목적으로적합성평가를받은기기로서
+가정용환경에서사용하는경우전파간섭의우려가있습니다.
+– 사용자안내문은“업무용방송통신기자재”에만적용한다.
+Exigences de sécurité et de CEM
+CettealimentationestconçuedemanièreàseconformerauxexigencesdesécuritéetdecompatibilitéCEM
+(Compatibilitéélectromagnétique)suivantes :
+– Directivebassetension2014/35/EU
+– DirectiveCEM2014/30/EU
+Conditions d’environnement
+LasérieE36300estconçuepourêtreutiliséedansdeslocauxfermésoùlacondensationestfaible.Letableauci-
+dessousindiquelesconditionsd'environnementgénéralesrequisespourcetinstrument.
+Guided’utilisationdeKeysightsérieE36300 11
+
+### Tables on this Page
+
+| 사용자안내문 |
+|---|
+| 이기기는업무용환경에서사용할목적으로적합성평가를받은기기로서 가정용환경에서사용하는경우전파간섭의우려가있습니다. |
+
+## Page 119
+
+Conditionsd’environnement Exigences
+Température Conditionsdefonctionnement :De0à40°C
+Conditionsdestockage :Entre-20et70 °C
+Humidité Conditionsdefonctionnement :Jusqu'à80%d'humiditérelativeà40°C(sans
+condensation)
+Conditionsdestockage :Jusqu'à90%d'humiditérelativeà65°C(sanscondensation)
+Altitude Jusqu’à2 000 m
+Degré depollution 2
+
+### 12 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 120
+
+
+### 1 Mise en route
+
+Présentationduproduit
+Préparationdel'instrument
+Optionsetinformationssurlesfusibles
+Plagesdeprogrammation
+Installation
+Configurationdel'interfacedistante
+
+### Commandeàdistance
+
+Utilisationdusystèmed'aideintégré
+Miseàjourmicrologicielle.
+Aide-mémoiredesmenusdupanneauavant
+Cechapitrevouspermetdecommenceràutiliserl'alimentationCC
+programmabledelasérieE36300.
+Guided’utilisationdeKeysightsérieE36300 13
+
+## Page 121
+
+Présentation du produit
+LasérieKeysightE36300estunesériedetroisblocsCCetd’alimentationssystème.Lestroismodèlesincluent :
+– Troissorties :
+
+### – 6V/5A,+25V/1A,-25V/1A(E36311A)
+
+### – 6V/5A,+25V/1A,+25V/1A(E36312A)
+
+### – 6V/10A,+25V/2A,+25V/2A(E36313A)
+
+– Fonctionnalitéhauteperformance :précision,réponsetransitoireettempsd’augmentation/baisse
+– ÉcranLCD4,3poucescouleuretd'informations
+– Compatibleaveclescodesetfonctionnecommel'E3631AenmodeE3631A
+– Troisunités(3U),facteurdeforme1/2armoire
+– Faiblebruitacoustique
+– Excellenteutilisabilité
+– InterfaceE/S USB
+– SécuritéNISPOM(option)
+– InterfaceWeb
+– ProgrammabilitéSCPI
+– ApplicationBenchVue
+– Garantiede3ansstandard
+– AssistanceinternationaledeKeysight
+Lescaractéristiquesspécifiquesaumodèlesontprésentéesci-dessous.
+Fonction E36311A E36312A E36313A
+Puissancedesortie 80W 80W 160W
+
+### Interfaced'E/S USBstandard USB/LANstandard, USB/LANstandard,
+
+GPIBenoption GPIBenoption
+Mesuredefaibleintensité P P
+Possibilitédelistedesvaleursdesortie P P
+Enregistrementdedonnées P P
+Séquencementdelasortie P P
+Hautepuissance(160W) P
+Modeauto-série/enparallèle P P
+Connexionsarrières P P
+
+### 14 Guided’utilisationdeKeysightsérieE36300
+
+
+### Tables on this Page
+
+| E36311A | E36312A | E36313A |
+|---|---|---|
+
+## Page 122
+
+Présentationsuccinctedupanneauavant
+Élément Description
+
+### 1 Jeud’informations,affichageLEDàcontrasteélevé ;facilementvisiblemêmeàpartird'anglesaigus
+
+### 2 Touchesdesélectiondesortie
+
+Permettentdesélectionnerlasortieàcontrôler.Latouchealluméeindiquelasortiesélectionnée.
+Conseil :Quandcettetoucheestsélectionnée,appuyersurcettetoucheànouveaubasculeentrevuemultipleetvued'uneseule
+sortie.
+
+### 3 BoutonsVoltageetCurrent
+
+Permettentderéglerlatensionetl’intensitédelasortiesélectionnée.
+
+### 4 TouchesMeterView,TrackingetSave/Recall
+
+-LatoucheMeterViewactivelavuemultimètredelasortiesélectionnée.
+-[Tracking]activeoudésactivelemodesuivipourlessorties2et3.(E36312AetE36313Aseulement)
+-[Save/Recall]uvrelemenuStore/Recall.
+
+### 5 Touchesdenavigation.
+
+-Permettentdeparcourirlesboîtesdedialoguedescommandes ;appuyezsurlatoucheEnterpoursélectionnerune
+
+### commande.
+
+### 6 Claviernumérique
+
+-Permetdesaisirdesvaleursnumériques.AppuyezsurlatoucheEnterpourterminerl'entrée
+-Permetdesupprimerlesvaleurssaisiesdanslaboîtededialogueenutilisantlaflècheretourarrière.
+Guided’utilisationdeKeysightsérieE36300 15
+
+## Page 123
+
+Élément Description
+
+### 7 ToucheOutputOn
+
+Permetd’activeroudedésactiverchaquesortieindividuellement ;lasortieestactivéelorsquelatouchecorrespondanteest
+allumée.
+
+### 8 Bornesdesortie
+
+### 9 Référencedemasse
+
+### 10 LatoucheOn/StandbyetindicateurLED
+
+Permetdemettrel'instrumentsoustension.Silevoyantestorange,l'instrumentestalimentéencourantalternatifetenveille ;
+s'ilestvert,l'instrumentestenservice.
+
+### 11 ToucheAllOutputOn/Off
+
+Permetd’activeroudedésactivertouteslessortiesselondesdélaisd’activationetdedésactivationdéfinis.
+
+### 12 Touchesdefonction
+
+Permettentd’accéderaumenudefonctiondupanneauavant.
+
+### 13 Port USB
+
+PermetderaccorderunpériphériquedestockageUSBàl'instrument.(E36312AetE36313Aseulement)
+
+### 16 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 124
+
+Présentationsuccinctedupanneauarrière
+Elément Description
+
+### 1 Portdelabornedesortie2et3(E36312AetE36313Aseulement)
+
+### 2 Référencedemasse(E36312AetE36313Aseulement)
+
+### 3 DispositifdeverrouillageKensington
+
+### 4 Portdelabornedesortie1(E36312AetE36313Aseulement)
+
+### 5 Portdelaborned’E/Snumérique(E36312AetE36313Aseulement)
+
+### 6 PortLAN(E36312AetE36313Aseulement)
+
+### 7 Port USB
+
+### 8 PortGPIB(E36312AetE36313AOptionGPIBseulement)
+
+### 9 EntréeCA
+
+### 10 Ensembleporte-fusibledusélecteurCA
+
+### 11 SélecteurCA
+
+### 12 Orificed’aérationduventilateur
+
+Guided’utilisationdeKeysightsérieE36300 17
+
+## Page 125
+
+Vuemultimètre
+Lepanneauavantdel'alimentationestdotéd'unécranLEDàcontrasteélevé.
+AppuyezsurMeterView.Cettetouchebasculeentrelavuedeplusieurssortiesetdesortieunique.
+Vuedeplusieurssorties Vued’uneseulesortie
+Élément Description
+
+### 1 Identificateurdesortie
+
+Lorsqu’unesortieestsélectionnée,l’arrière-planapparaîtensurbrillance.L’affichagedelasortiesélectionnéeestagrandilorsde
+lavued’uneseulesortie.
+
+### 2 Étatdelamesureàdistance
+
+2filsou4filsindiquequelamesureà2filsou4filsestencoursd’utilisation.
+
+### 3 Étatdelasortie
+
+OFF :Lasortieestdésactivée OV:Protectioncontrelessurtensionsdéclenchée
+CV:Lasortieestenmodedetensionconstante OC:Protectioncontrelessurintensitésdéclenchée
+CC:Lasortieestenmoded’intensitéconstante OT :Protectioncontrelessurchauffesdéclenchée
+UR :Lasortien'estpasrégulée
+
+### 4 Valeursdesortie
+
+Affichelavaleurréelledelatensionetdel’intensitédesortie.Affichelapuissancedansunevueàuneseulesortie.
+
+### 5 Paramètresdesortie
+
+Affichelesparamètresactuelsdelatensionetdel’intensitédesortie.Utiliserleclaviernumériqueoutournezlesboutons
+VoltageouCurrentpourajustercesparamètres.
+
+### 6 Étatdel’interface
+
+:L’instrumentestconnectéàl’USB. :L’instrumentn’estpasconnectéauLAN.
+:L’instrumentestconnectéauLAN. (clignotant) :ConnexionsauLANdéfaillantes
+(clignotant) :L'instrumentestenmoded'identificationvia
+l’interfacedistante.
+
+### 18 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 126
+
+Élément Description
+
+### 7 Valeursnominalesetprotection
+
+Afficheleréglageactueldelaprotectioncontrelessurtensions(OVP)etsilaprotectioncontrelessurintensités(OCP)est
+activée.
+
+### 8 Délaidesortie
+
+AffichelesvaleursdedélaiOCP,OutputOnetOutputOff.
+
+### 9 Menudefonctiondupanneauavant
+
+Guided’utilisationdeKeysightsérieE36300 19
+
+## Page 127
+
+Vueenregistreurdedonnées
+AppuyezsurDataLoggersurlemenudefonctiondupanneauavant.
+Elément Description
+
+### 1 Commandesdestraces
+
+Indiquelatracedetensionoud’intensitéaffichée.Lespointillés(----)indiquentquelatraceindiquéeestdésactivée.
+Sélectionnezlatraceetappuyezsur[Enter]pourl’activerouladésactiver.
+
+### 2 Tracesdesortie
+
+Tracesdetension,d’intensitéoudepuissance.TracesdetensionV1,V2etV3affichées.AppuyezsurAutoScalepourmettreles
+tracesàl’échelleautomatiquement.
+
+### 3 État
+
+IndiquesiDataLoggerestentraind’enregistrer,s’ilaterminéous’ilestvide.
+
+### 4 Nomdefichier
+
+Indiquelefichierdanslequellesdonnéessontentraind’êtreenregistrées.
+
+### 5 Barrededonnéesettempsécoulé
+
+Affichelaprogressiondel’enregistreurdedonnées.Labarrejauneindiquelesdonnéesvisibles.Lesnombressituésàdroite
+indiquentletempsécouléetladuréetotale.
+
+### 6 Temps/Div
+
+Indiqueleréglagedelabasedetempshorizontale.
+
+### 7 Offsettime
+
+Indiqueletempsdedécalageoud’éloignementduborddroitdelagrilleparrapportàlafindel’enregistrementdedonnées.
+
+### 8 Letempssurlagrille
+
+Afficheletempssurleborddelagrille.
+
+### 20 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 128
+
+Schémadedimensions
+Configurationdel'instrument
+Placezlespiedsdel'instrumentsurunesurfacehorizontaleplateetlisse.Connexiondelasortieaupanneauavant
+ouconnexionetfilsdemesureaupanneauarrière(E36312AetE36313Aseulement),Veuillezfaireattentionànepas
+raccourcirlesfilsensemble.Fixezlecâbled'alimentationsurlepanneauarrière,puisbranchez-lesurl'alimentation
+secteur.ConnectezlescâblesLAN,USBouGPIBcommevouslesouhaitez,etvouspouvezégalementsécuriser
+l'instrumentgrâceàuncâbledesécurité.
+Avantdedébrancherlescâblesetlescordonsdel'instrument,éteignez-leàl'aidedelatouched'alimentationdu
+panneauavantetdébranchez-ledelasourced'alimentationendéconnectantlecordond'alimentationamovible.
+Guided’utilisationdeKeysightsérieE36300 21
+
+## Page 129
+
+Préparation de l'instrument
+Inspectioninitiale
+Dèsréceptiondevotresystèmed’alimentation,rechercheztoutsigned'endommagementapparentquiauraitpuse
+produirependantletransport.Sivousenconstatezlaprésence,faiteslesréservesd'usageauprèsdutransporteur
+etprévenezimmédiatementlebureaucommercialetd'assistanceKeysightleplusproche.Rendez-voussur
+www.keysight.com/find/assist.
+Tantquevousn’avezpasvérifiélesystèmed’alimentation,conservezsonconteneurd’expéditionetlesmatériaux
+d’emballage :ceux-civousservirontaucasoùildevraitêtreretourné.Vérifiezquevousavezreçuavecvotre
+appareiltouslesélémentsdelaliste« Élémentsfournisenstandard ».Siuncomposantestmanquant,contactez
+votrebureaucommercialetd'assistanceKeysightleplusproche.
+Élémentsstandardslivrés
+– AlimentationCCKeysightE36311A/E36312A/E36313A
+– Câbled'alimentationCA
+– Certificatd’étalonnage
+– Unkitdeconnecteur(réf :E36312-89001)(E36312AetE36313Aseulement) :
+Unconnecteurfemelledebornier4brochesde10A,3,5mm
+Unconnecteurfemelledebornier4brochesde12A,5mm
+Unconnecteurfemelledebornier8brochesde12A,5mm
+Révisionsdeladocumentationetdumicrologiciel
+LadocumentationKeysightsérieE36300listéeci-dessouspeutêtretéléchargéegratuitementvianotresiteWeb
+www.keysight.com/find/e36300manuals.
+– Guided'utilisationdesalimentationsCCprogrammablesdelasérieKeysightE36300leprésentmanuel.
+– GuidedeprogrammationdesalimentationsCCprogrammablesdelasérieKeysightE36300
+– GuidedeservicesdesalimentationsCCprogrammablesdelasérieKeysightE36300
+Pourladernièrerévisiondumicrologiciel,allezàl’adressewww.keysight.com/find/e36300firmware.
+Intervalled'étalonnagerecommandé
+KeysightTechnologiesrecommandeuncycled'étalonnaged'unanpourlesalimentationsCCprogrammablesdela
+sérieE36300.
+
+### 22 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 130
+
+Options et informations sur les fusibles
+Assurez-vousdecommanderl’optiondel'instrumentcorrespondantàlasourced’intensitéquiserautilisée
+pourl'instrument.
+Lesoptions0EM,0E3et0E9déterminentlatensiondeligned'alimentationsélectionnéeenusine.
+Option Description
+0EM Tensiond’entrée115VCA±10%,50/60Hz
+0E3 Tensiond’entrée230VCA±10%,50/60Hz
+0E9 Tensiond’entrée100VCA±10%,50/60Hz
+Vérifierquelatensiond'entréeCAetlesparamètresdefusiblesontcorrects
+Utilisezlesparamètresdecommutationappropriés
+Pourchangerlesélecteurdetensiond'entréeCAsurl'alimentation,utilisezlesdeuxsélecteursCAsous
+l'alimentationcommeindiqué.
+Parexemple,poursélectionner230V,déplacezlecommutateurdegaucheàgaucheetlecommutateurdedroiteà
+droite,commeillustrédansleschémasouslescommutateurs.
+Poursélectionner115V,déplacezlesdeuxcommutateursversladroite,etpoursélectionner100V,déplacez-les
+l'unversl'autre.
+Guided’utilisationdeKeysightsérieE36300 23
+
+## Page 131
+
+Utilisezlefusibleadapté.
+Letableauci-dessousdécritlefusiblequevousdevezutiliseravecchacunedesoptionsd'alimentation.
+Option Référencedu Description Typedefusible Fabricant Application
+fusible
+E36311A-0E9 2110-1672 Temporisationdufusible4A, Temporisé Littelfuse Tensiondeligne100Vet115V
+
+### E36311A-0EM 125V
+
+### E36312A-0E9
+
+### E36312A-0EM
+
+E36311A-0E3 2110-1640 Temporisationdufusible2A, Slow-Blo Tensiondeligne230V
+
+### E36312A-0E3 250V
+
+E36313A-0E9 2110-1673 Temporisationdufusible7A, Temporisé Tensiondeligne100Vet115V
+
+### E36313A-0EM 125V
+
+E36313A-0E3 2110-0954 Temporisationdufusible3,5A, Slow-Blo Tensiondeligne230V
+
+### 250V
+
+Pourconfigurerlefusibleadapté,suivezlestroisétapesci-dessous :
+Retirezleporte-fusibledeson Retirezetinsérezlefusible Réinsérezleporte-fusibledans
+alimentation. adaptédansleporte-fusible. l'alimentation.
+
+### 24 Guided’utilisationdeKeysightsérieE36300
+
+
+### Tables on this Page
+
+| Référencedu fusible | Description | Typedefusible | Fabricant | Application |
+|---|---|---|---|---|
+
+## Page 132
+
+Plages de programmation
+Letableausuivantmontrelatension,l’intensitéetlapuissancemaximalesqu’ilestpossibledeprogrammerpour
+chaquemodèle.
+Paramètre Sortie+6V Sortie+25V Sortie-25V1
+OutputIdentifier P6V P25V N25V
+OutputNumber 1 2 3
+Voltage MAXimum 6,18V 25,75V 0 V
+MINimum 0 V 0 V -25,75V
+DEFault(*RST) 0 V 0 V 0 V
+Current MAXimum 5,15A 1,03A 1,03A
+
+### 10,3A2 2,06A2 2,06A2
+
+MINimum 0,001A 0,001A 0,001A
+DEFault(*RST) 5A 1A 1A
+
+### 10A2 2A2 2A2
+
+Remarque :
+
+### 1.ApplicableàE36311Aoulorsquel’IDSCPIestréglésurE3631A(E36312AetE36313A).Enfonctionnement
+
+normal,lesE36312AetE36313Adélivrentdu+25V.
+
+### 2.ApplicableàE36313A.
+
+Guided’utilisationdeKeysightsérieE36300 25
+
+### Tables on this Page
+
+| Sortie+6V | Sortie+25V | Sortie-25V1 |
+|---|---|---|
+
+## Page 133
+
+Installation
+Branchementducordond'alimentation
+Connexiondessorties
+Connexionsenparallèleetensérie
+Branchementspourmesure 4 fils
+Connexionsdel'interface
+Installationdel'interfaceGPIBenoption
+Montagedel'instrumentdansunearmoire
+Branchementducordond'alimentation
+
+### RISQUED'INCENDIE
+
+N'utilisezquelecordond'alimentationlivréavecvotreinstrument.L'utilisationd'autrestypesdecordons
+d'alimentationpeutprovoquerunesurchauffedecelui-ci,avecunrisqued'incendie.
+
+### RISQUED'ÉLECTROCUTION
+
+Lecordond'alimentationassurelamiseàlaterreduchâssisparl'intermédiaired'untroisièmeconducteur.
+Vérifiezquevotreprisedecourantcomportetroisconducteurs,labrocheappropriéeétantreliéeàlaterre.
+Assurez-vousqueleparamètreduvoltageencourantalternatifsurlepanneauarrièreestcorrectementdéfini,
+avantdebrancherlecâbled'alimentation.
+Branchezlecordond’alimentationauconnecteurdel’entréeCAsituéàl’arrièredel’appareil.Silecordon
+d'alimentationlivréavecvotreappareilestincorrect,contactezlebureaudeventeetdemaintenanceKeysightle
+plusproche.
+Enleretirant,l'utilisateurdébranchel'entréesecteurdel'appareil.
+
+### 26 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 134
+
+Connexiondessorties
+Toutesleschargesdoiventêtreconnectéesàlaborneàvisdupanneauavantouàlasortiedupanneauarrière.
+Bornespolaires
+
+### RISQUED'ÉLECTROCUTION
+
+Mettezl’alimentationsecteurCAhorstensionavantdebrancherlescâblessurlafaceavant.Touslesfilset
+cavaliersdoiventêtrecorrectementbranchés,lesvisdesborniersétantserréesàfond.
+Lesbornesàvisacceptentdesfilsdesectionmaximale2,5 mm²(AWG 14)dansl’emplacement(A).Fixerlesfilsde
+manièresûreenserrantlesbornesàlamain.Vouspouvezégalementinsérerunefichebananestandardàl’avantdu
+connecteur,dansl’emplacement(B)delaborne.Labornedemassedechâssisestsituéesurlepanneauavantpar
+commodité.
+Intensiténominalemaximale :
+
+### (A)=20A
+
+### (B)=15A
+
+Connexionsdessortiesarrière
+
+### RISQUED'ÉLECTROCUTION
+
+Mettezl’alimentationsecteurCAhorstensionavantdebrancherlescâblessurlafacearrière.Touslesfilset
+cavaliersdoiventêtrecorrectementbranchés,lesvisdesborniersétantserréesàfond.
+Retirezlebouchonduconnecteuravantdebrancherlesfils.Lapriseduconnecteur12Aacceptelesformatsdesfils
+deAWG12àAWG30.Iln'estpasrecommandéd'utiliserdesfilsd'unesectioninférieureàAWG20.Branchezlesfils
+dechargeauxbornes+et-.Branchezlesfilsdemesure(Sense)auxbornes+et-.
+Brancheztouslesfilsdemanièresûreenserrantàfondlesbornesà vis.Insérezlaficheduconnecteuràl’arrièrede
+l’appareil.Fixezleconnecteur12 Aenserrantlesvisdeblocage.Uneborneàvisdechâssisestsituéeprèsde
+l’orificed'aérationduventilateuràdesfinsdemiseàlaterre.
+LesréférencesdetouteslesfichesdukitdeconnecteursontfourniesdanslesÉlémentsfournisenstandard.
+Guided’utilisationdeKeysightsérieE36300 27
+
+## Page 135
+
+Tailledefil
+
+### RISQUED'INCENDIE
+
+Sélectionnezunetailledefilsuffisammentgrandepourtransporteruneintensitédecourt-circuitsanssur-
+chauffe(voirletableausuivant).Poursatisfaireauxrèglesdesécurité,lesfilsdechargedoiventavoirunesec-
+tionsuffisantepournepassurchaufferlorsdupassagedel’intensitédecourt-circuitdel’appareil.
+AWG Intensitémaximale mΩ/pi mΩ/m
+suggérée(A)1
+
+### 12 25 1,59 5,2
+
+### 14 20 2,53 8,3
+
+### 16 13 4,02 13,2
+
+### 18 10 6,39 21,0
+
+### 20 7 10,2 33,5
+
+### 22 5 16,1 52,8
+
+### 24 3,5 25,7 84,3
+
+Remarques :
+1Conducteuruniqueàl'airlibreà30 °Cavecisolation
+Isolationdessorties
+Lessortiesdestroisalimentationssontisoléesdelamasse.Touteslesbornesdesortiepeuventêtremisesàlaterre,
+ouunesourcedetensionexternepeutêtreconnectéeentren'importequellebornedesortieetdemasse.
+Cependant,lesbornesdesortiedoiventresterà±240Vccdemasse.Lesalimentations±25Vsontattachéesentre
+ellesàunebornecommune(applicablepourE36311Aoulorsquel'alimentationestenmodeE3631A).L'unedes
+troisbornespeutêtrereliéeàlamasseaubesoin.Labornedemasseestsituéesurlepanneauavantpar
+commodité.
+Chargesmultiples
+Lorsquevousconnectezplusieurschargesàl'alimentationélectrique,chaquechargedoitêtreconnectéeaux
+bornesdesortieàl'aidedefilsdeconnexionséparés.Celaminimiseleseffetsdecouplagemutuelentrelescharges
+ettirepleinementpartidel'impédancedesortiebassedel'alimentationélectrique.Chaquepairedefilsdoitêtre
+aussicourtequepossibleettorsadéeoublindéeafinderéduirel’inductancedesfilsetlecaptagedebruit.
+Lorsqu’unblindageestutilisé,connectezuneextrémitéàlabornedemassedel'alimentationetlaissezl'autre
+extrémitédébranchée.
+Sidesconsidérationsdecâblagenécessitentl'utilisationdebornessituéesàdistancedel'alimentation,connectez
+lesbornesdesortieauxbornesdedistributionàdistanceàl'aided'unepairedefilstorsadésoublindés.Branchez
+chaquechargeséparémentauxbornesdedistribution.
+Pouruneapplicationàchargesmultiples,toutesleschargesdoiventêtreconnectéesàlaborneàvisdupan-
+neauavantouàlasortiedupanneauarrière.
+
+### 28 Guided’utilisationdeKeysightsérieE36300
+
+
+### Tables on this Page
+
+| Intensitémaximale suggérée(A)1 | mΩ/pi | mΩ/m |
+|---|---|---|
+
+## Page 136
+
+Mettezl’alimentationsecteurCAhorstensionavantdebrancherdeschargesafind’évitertoutedétérioration
+deschargesparlescourants.
+Faceavant
+Panneauarrière(E36312AetE36313Aseulement)
+Guided’utilisationdeKeysightsérieE36300 29
+
+## Page 137
+
+Connexionsenparallèleetensérie(E36312AetE36313Aseulement)
+Connexionsenparallèle
+Connexionsensérie
+Connexionsenparallèle
+Seuleslessortiesdontlesvaleursnominalesdetensionetd’intensitésontidentiquespeuventêtreconnectées
+enparallèle.
+Laconnexionenparallèledeplusieursmodulesdesortiepermetd’obteniruneintensitésupérieureàcelleobtenue
+avecunseulmodule.
+LesfiguresquisuiventillustrentlaconnexiondedeuxsortiesquisontenmodeAuto-parallèle.
+Faceavant
+Panneauarrière
+Lafiguredegaucheillustreunemesurelocale.Silachutedetensiondanslesfilsdechargeposedesproblèmes,la
+figurededroitemontrecommentconnecterlesfilsdemesuredirectementauniveaudelacharge.
+
+### 30 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 138
+
+Connexionsensérie
+
+### RISQUED'ÉLECTROCUTION
+
+Lestensionsflottantesnedoiventpasdépasser240VCC.Aucunebornedesortienedoitêtresoumiseàune
+tensionsupérieureà 240 V CCparrapportàlamasseduchâssis.
+Seuleslessortiesdontlesvaleursnominalesdetensionetd’intensitésontidentiquespeuventêtreconnectées
+ensérie.
+Pouréviterquelesintensitésendommagentlesystèmed'alimentationlorsquelachargeestconnectée,activez
+etdésactiveztoujoursensemblelessortiesconnectéesensérie.Nelaissezpasunesortieactivéeetuneautre
+désactivée.
+Laconnexionensériedeplusieursmodulesdesortiepermetd’obtenirunetensionsupérieureàcelleobtenueavec
+unseulmodule.
+LesfiguresquisuiventillustrentlaconnexiondedeuxsortiesàunechargeuniqueenmodeAuto-série.
+Faceavant
+Guided’utilisationdeKeysightsérieE36300 31
+
+## Page 139
+
+Panneauarrière
+Siunechutedetensiondanslesfilsdechargeposeunproblème,connectezlesfilsdemesuredelasortie 2etdela
+sortie 3pourlamesureà4filscommelemontrelafigurededroite.
+Branchementspourmesure 4 fils(E36312AetE36313Aseulement)
+
+### RISQUED'ÉLECTROCUTION
+
+Débranchezl'alimentationsecteuravantdeprocéderauxbranchementssurlepanneauarrière.Touslesfilset
+cavaliersdoiventêtrecorrectementbranchés,lesvisdesborniersétantserréesàfond.
+L’alimentationintègredesrelaisquiconnectentoudéconnectentlesbornesdemesure±auxbornesdesortie±
+correspondantes.Lorsdel’expédition,lesbornesdemesuresontconnectéesintérieurementauxbornesdesortie.
+Celaestappelémesureàdeuxfilsoumesureslocales.
+Lamesureà4 filsouàdistanceaméliorelarégulationdelatensionauniveaudelachargeensurveillantcette
+tensiondirectementauxbornesdelachargeplutôtqu’auxbornesdesortie.Cecicompenseautomatiquementla
+baissedetensiondanslesfilsdelacharge,cequiestparticulièrementpratiquedanslecadredufonctionnementen
+tensionconstanteoùlesimpédancesdechargevarientoudontlesfilsprésententunerésistancesignificative.La
+mesureàdistancenedépendantpasdesautresfonctionsd'alimentation,ellepeutêtreutilisée,quellequesoitla
+façondontl'instrumentestprogrammé.Lamesureàdistancen'aaucuneffetsurlefonctionnementàintensité
+constante.
+Lesfiguressuivantesillustrentlesconnexionsdelachargedanslecasd’unemesureàdeuxfils,etd’unemesureà4
+fils.
+
+### 32 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 140
+
+Connectezlachargeauxbornesdesortieàl'aidedefilsdistincts.Raccourcissezautantquepossiblelapairedefils,
+ettorsadezourassemblez-laafinderéduireleseffetsd'inductanceetdubruit.Lalongueurdesfilsdechargenedoit
+pasdépasser14,7 mètrespouréviterleseffetsd'inductance.
+Connectezlesfilsdemesureaussiprèsquepossibledelacharge.NerassemblezPASlapairedefilsdemesureavec
+lesfilsdecharge;maintenez-lesséparés.L’intensitéquicirculedanslesfilsdemesuren’estquedequelques
+milliampèresetleursectionpeutêtreinférieureàcelledesfilsdecharge.Noteztoutefoisquetoutechutedetension
+danslesfilsdemesurepeutconduireàunedégradationdelarégulationdelatensiondel'instrument.Essayezde
+maintenirlarésistancedesfilsdemesureendessousde0,5 Ωparfilenviron(cecinécessite20 AWGoupluspour
+unelongueurde50 pieds).
+Aprèsavoirallumél'appareil,activezlamesuredetensionàdistanceà4filsSourceSettings>Sense4w.Reportez-
+vousàlasectionIndicationdelamesureà2filsou4fils.
+Filsdemesureouverts
+Lesfilsdemesurefontpartieduparcoursderéactiondelasortie.Branchez-lesdemanièrequ'ilsnesoientpas
+court-circuitésparinadvertance.L'alimentationestdotéederésistancesdeprotectionquiréduisentl'effetdesfils
+demesureouvertspendantlesmesuresà4fils.Silesfilsdemesures'ouvrentlorsdufonctionnement,l'alimentation
+retourneenmodedemesurelocale,latensionauxbornesdesortieétantapproximativement5% plusélevéequela
+valeurprogrammée.
+Considérationsrelativesàlaprotectioncontrelessurtensions
+Vousdeveztenircomptedeséventuelleschutesdetensiondanslesfilsdechargelorsquevousréglezlepointde
+déclenchementdesurtension.Eneffet,lecircuit OVPeffectuelesmesuresauniveaudesbornesdesortieetnonau
+niveaudesbornesdemesure.Encasdechutedetensiondanslesfilsdecharge,latensionmesuréeparle
+circuit OVPpeutêtresupérieureàcellequiestréguléeauniveaudelacharge.
+Considérationsrelativesaubruitdesortie
+Lesbruitscaptéssurlesfilsdemesureapparaissentauniveaudesbornesdesortieetpeuventavoiruneffetnéfaste
+surlarégulationdelacharge CV.Torsadezlesfilsdemesureouutilisezuncâble-rubanpourminimiserlecaptage
+debruitexterne.Danslesenvironnementsextrêmementbruyants,ilpeutêtrenécessairedeblinderlesfilsde
+Guided’utilisationdeKeysightsérieE36300 33
+
+## Page 141
+
+mesure.Mettezleblindageàlaterreseulementàl'extrémitédublocd'alimentation ;n'utilisezpasleblindage
+commeconducteurdemesure.
+
+### 34 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 142
+
+Connexionsdel'interface
+ConnexionsGPIB
+ConnexionsUSB
+Connexionsréseau(LAN)-localesetprivées
+Connexionsduportnumérique
+Cettesectiondécritlaprocédureàsuivrepourconnecterlesdiversesinterfacesdecommunicationàvotre
+alimentation.Pourdeplusamplesinformationssurlaconfigurationdesinterfacesdecommandeàdistance,
+reportez-vousàlasectionConfigurationdesinterfacesdecommandeàdistance.
+Sivousnel'avezpasencorefait,installezlasuiteKeysightIOLibraries,disponibleàl’adressewww.-
+keysight.com/find/iolib.Pourdeplusamplesinformationssurlesconnexionsdesinterfaces,reportez-vous
+audocumentKeysightTechnologiesUSB/LAN/GPIBInterfacesConnectivityGuide(enanglais),fourniavecla
+suiteKeysightIOLibraries.
+ConnexionsGPIB(enoptionpourE36312AetE36313A)
+Lafigureci-dessousillustreunsystèmed'interface GPIBclassique.
+
+### 1.Sivousn’avezpasencoreinstallédecarted’interface GPIBdansvotreordinateur,éteignez-leetinstallez-la.
+
+### 2.Branchezvotreinstrumentàlacarted'interface GPIBàl'aided'uncâble GPIB.
+
+### 3.Utilisezl'utilitaireConnectionExpertdelasuiteKeysightIOLibrariesSuitepourconfigurerlesparamètresdela
+
+carteGPIB.
+
+### 4.L’alimentationestlivréeavecsonadresseGPIBrégléesur5.Utilisezlemenudupanneauavantsivousdevez
+
+modifierl'adresseGPIB.
+
+### 5.VouspouvezdésormaisutiliserInteractiveIOdepuisl'utilitaireConnectionExpertpourcommuniqueravecvotre
+
+instrument,ouleprogrammeràl'aidedesdiversenvironnementsdeprogrammation.
+ConnexionsUSB
+Lafigureci-dessousillustreunsystèmed'interface USBclassique.
+Guided’utilisationdeKeysightsérieE36300 35
+
+## Page 143
+
+
+### 1.BranchezvotreinstrumentauportUSBdevotreordinateuràl’aided’uncâbleUSB.
+
+### 2.Unefoisl'utilitaireConnectionExpertdelasuiteKeysightIOLibrariesSuiteexécuté,l'ordinateurreconnaît
+
+automatiquementl'instrument.Cetteopérationpeutdurerquelquessecondes.Unefoisl'instrumentreconnu,votre
+ordinateuraffichel'alias VISA,lachaîne IDNetl'adresse VISA.Cesinformationssontsituéesdansledossier USB.
+Vouspouvezégalementafficherl’adresse VISAdel’instrumentdepuislemenudupanneauavant.
+
+### 3.VouspouvezdésormaisutiliserInteractiveIOdepuisl'utilitaireConnectionExpertpourcommuniqueravecvotre
+
+instrument,ouleprogrammeràl'aidedesdiversenvironnementsdeprogrammation.
+Connexionsréseau(LAN)-localesetprivées(E36312AetE36313Aseulement)
+UnsiteLANestunréseaulocaldanslequellesinstrumentsetlesordinateurssontconnectésauréseauviades
+routeurs,desconcentrateurset/oudescommutateurs.Ils'agithabituellementdegrandsréseauxadministrésde
+manièrecentralisée,avecdesservicestelsquedesserveurs DHCPet DNS.Lafigureci-dessousillustreunsystème
+LANdesiteclassique.
+
+### 1.Branchezl'instrumentauLANdesiteouàvotreordinateuràl'aided'uncâbleLAN.Lesparamètres LANde
+
+l'instrumentsontconfigurésenusinepourobtenirautomatiquementuneadresse IPduréseauàl'aided'un
+serveur DHCP(DHCPestactivé).Leserveur DHCPenregistrelenomd’hôtedel’instrumentavecleserveur DNS
+dynamique.Lenomd'hôteainsiquel'adresse IPpermettentalorsdecommuniqueravecl'instrument.LevoyantLAN
+dupanneauavants'allumelorsqueleport LANaétéconfiguré.
+Sivousdevezconfigurermanuellementlesparamètres LANdel’instrument,reportez-vousàlasectionCon-
+figurationdesinterfacesdecommandeàdistancepourdeplusamplesinformationsconcernantcette
+configurationdepuislepanneauavantdel’instrument.
+
+### 2.L’utilitaireConnectionExpertdelasuiteKeysightIOLibrariespermetd’ajouterl’alimentationetdevérifierla
+
+connexion.Pourajouterl'instrument,demandezàConnectionExpertdelerechercher.Sil’instrumentdemeure
+introuvable,ajoutez-leàl’aidedesonnomd’hôteetdesonadresse IP.
+Sicelanefonctionnepas,reportez-vousàlasection« Instructionsdedépannage »dansledocumentKeysight
+TechnologiesUSB/LAN/GPIBInterfacesConnectivityGuide(enanglais),fourniaveclasuiteKeysightIOLibra-
+ries.
+
+### 36 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 144
+
+
+### 3.VouspouvezdésormaisutiliserInteractiveIOdepuisl'utilitaireConnectionExpertpourcommuniqueravecvotre
+
+instrument,ouleprogrammeràl'aidedesdiversenvironnementsdeprogrammation.Vouspouvezégalement
+utiliserlenavigateur Webdevotreordinateurpourcommuniqueravecl'instrumentcommedécritdanslasection
+
+### Commandeàdistance.
+
+UnLANprivéestunréseaudanslequellesinstrumentsetlesordinateurssontreliésdirectement,etnonbranchésà
+un LANdesite.Ils'agithabituellementdepetitsréseaux,sansressourcesadministréesdemanièrecentralisée.La
+figureci-dessousillustreunsystèmeLANprivéclassique.
+
+### 1.Connectezl’instrumentàl’ordinateuràl’aided’uncâble LANcroisé.Vouspouvezégalementrelierl’ordinateuret
+
+l’instrumentàunconcentrateurouàuncommutateurautonomeàl’aidedecâbles LANnormaux.
+Vérifiezquevotreordinateurestconfigurépourobtenirsonadressedepuis DHCPetque NetBIOSsur TCP/IP
+estactivé.Notezquesil’ordinateuraétéconnectéàun LANdesite,ilpeutenavoirconservélesparamètres
+réseau.Attendezuneminuteaprèsl’avoirdébranchédu LANdesiteavantdelebrancherau LAN privé.Cela
+permetàWindowsdedétecterquel’ordinateurestsurunréseaudifférentetderedémarrerlaconfiguration
+réseau.
+
+### 2.Lesparamètres LANdel’instrumentsontconfigurésensortied’usinepourobtenirautomatiquementune
+
+adresse IPdepuisunréseaulocalàl’aided’unserveur DHCP.Vouspouvezlaissercesparamètrestelsquels.La
+plupartdesproduitsKeysightetdesordinateurschoisissentautomatiquementuneadresseIPvial'optionAuto-IPs'il
+n'existepasdeserveur DHCP.Chacuns'auto-attribueuneadresseIPàpartirdubloc169.254.nnn.Notezquecela
+peutprendrejusqu’àuneminute.LevoyantLANdupanneauavants'allumelorsqueleport LANaétéconfiguré.
+L'arrêtduDHCPréduitletempsrequispourconfigurerentièrementuneconnexionréseaulorsque
+l'alimentationestsoustension.Pourconfigurermanuellementlesparamètres LANdel’instrument,reportez-
+vousàlasectionConfigurationdesinterfacesdecommandeàdistancepourdeplusamplesinfor-
+mationsconcernantcetteconfigurationdepuislepanneauavantdel’instrument.
+
+### 3.L’utilitaireConnectionExpertdelasuiteKeysightIOLibrariespermetd’ajouterl’alimentationetdevérifierla
+
+connexion.Pourajouterl'instrument,demandezàConnectionExpertdelerechercher.Sil’instrumentdemeure
+introuvable,ajoutez-leàl’aidedesonnomd’hôteetdesonadresse IP.
+Sicelanefonctionnepas,reportez-vousàlasection« Instructionsdedépannage »dansledocumentKeysight
+TechnologiesUSB/LAN/GPIBInterfacesConnectivityGuide(enanglais),fourniaveclasuiteKeysightIOLibra-
+ries.
+
+### 4.VouspouvezdésormaisutiliserInteractiveIOdepuisl'utilitaireConnectionExpertpourcommuniqueravecvotre
+
+instrument,ouleprogrammeràl'aidedesdiversenvironnementsdeprogrammation.Vouspouvezégalement
+utiliserlenavigateur Webdevotreordinateurpourcommuniqueravecl'instrumentcommedécritdanslasection
+
+### Commandeàdistance.
+
+Guided’utilisationdeKeysightsérieE36300 37
+
+## Page 145
+
+Connexionsduportnumérique(E36312AetE36313Aseulement)
+Chaqueinstrumentestéquipéd'unconnecteurà4 brochespouraccéderauxtroisfonctionsduportdecommande
+numérique.LeconnecteurdecommandenumériqueacceptelesformatsdesfilsdeAWG16àAWG22.
+Ilrelèved’unepratiquetechniquementcorrectedetorsaderetdeblindertouslesfilsdesignauxendirection
+etenprovenancedesconnecteursnumériques.Silesfilsutiliséssontblindés,branchezuniquementuneextré-
+mitédublindageàlamasseduchâssisafind'éviterlesbouclesdemasse.
+Fonctionsdesbroches
+Letableausuivantdécritlesconfigurationspossiblesdesbrochespourlesfonctionsduportnumérique.Pourune
+
+### descriptioncomplètedescaractéristiquesélectriquesduportE/Snumérique,reportez-vousàlafichetechniquedu
+
+produit.
+Fonctionsdelabroche Brochesconfigurablesdisponibles
+DigitalI/OetDigitalIn Broches1à3
+Entrée/Sortiededéclenchementexterne Broches1à3
+Sortiepardéfaut Broches1et2
+Entr.d'inhibition Broche3
+Couplagedessorties Broches1à3
+Commun Broche4
+Outrelesfonctionsdebrocheconfigurables,lapolaritédusignalactivedechaquebrochepeutégalementêtre
+configurée.Lorsqu'unepolaritépositiveestsélectionnée,unsignallogiquevraiestunetensionhautesurlabroche.
+Lorsqu'unepolariténégativeestsélectionnée,unsignallogiquevraiestunetensionbassesurlabroche.
+Pourplusd'informationssurlaconfigurationdesfonctionsduportnumérique,reportez-vousàlasectionUtilisation
+duportdecommandenumérique.
+
+### 38 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 146
+
+Installationoptionnelledel'interfaceGPIB(E36312AetE36313Aseulement)
+
+### METTREHORSTENSIONETDÉBRANCHERTOUTESLESCONNEXIONSAVANTL'INSTALLATION
+
+Mettezl’instrumenthorstensionetdébrancheztouteslesconnexions,ycomprislecordond'alimentation,de
+l'instrumentavantl'installationdel'interfaceGPIB.
+
+### CONSERVERLAPLAQUEDEPROTECTIONGPIB
+
+Aprèsavoirinstallél'optionGPIB,retirezlaplaquedeprotectionpourl'utilisersivoussupprimezl'optionGPIB.
+L'instrumentnedoitjamaisêtreconnectéàl'alimentationouauxentréessurlesbornesdesortiesansquele
+moduleGPIBoulaplaquedeprotectionnerecouvrebienl'ouverturedupanneauarrière.
+Lesoutilssuivantssontnécessaires.
+– TournevistorxT10
+Veillezàmettrel’instrumenthorstensionavantdecontinuer.
+Guided’utilisationdeKeysightsérieE36300 39
+
+## Page 147
+
+UtilisezletournevistorxT10pourretirerlesvisdela Cherchezleconnecteur,justeàl'intérieurde
+plaquedeprotectionGPIB.Conservezlavispourun l'appareil,pourconnecterlecâblefixéaumodule
+usageultérieuraucoursdecetteprocédure. GPIB.
+Ensuite,retirezlaplaquedeprotectionenlafaisant
+glisserverslagauche.
+Raccordezlecâbleauconnecteursituéàl'étape Mettezlemoduledansl'appareiletfaitesglisserla
+précédente. carteGPIBversladroitedesortequ'elleaffleurela
+tôledel'instrument.Utilisezlavisretiréeci-dessus
+pourfixerlaplaqueGPIB.
+Ceciconclutlaprocédured'installationGPIB.
+
+### 40 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 148
+
+Installationdel'instrumentdansunearmoire
+Utilisezlekitdemontageenarmoirecommeindiquéci-dessouspourmonterl'instrumentdansunearmoire.
+Lesinstructionsd'installationsontfourniesaveclekitdemontageenarmoire.
+Pouréviterlasurchauffedel'instrument,nebouchezpasl'écoulementd'airsurl'instrument(entréeetsortie).
+Laissezunespacesuffisantàl’arrière,surlescôtésetsousl’instrumentafindepermettreunecirculationd’air
+internesuffisante.
+L’alimentationpeutêtreinstalléedansunearmoiredebaiestandardde19 pouces.Ellesoccupentunehauteurde
+troisunités(3U).
+Démontezlespiedsavantd’installerl’appareildansl’armoire.N’obstruezpasl’entréeetlessortiesd’airsituéessur
+lescôtésetàl’arrièredel’appareil.
+Montaged’unseulinstrumentdansunearmoire
+Pourinstallerunseulinstrumentdansunrack,commandezlekitd'adaptation(1CM116A).
+Montagedesinstrumentscôteàcôtedansunearmoire
+Pourinstallerdeuxinstrumentscôteàcôtedansunebaie,commandezlekitdeliaison(5061-8769).Utilisezlesrails
+deguidagedansl'armoire.
+Montageenarmoiresanspoignée(1CM104A) Kitdepoignéesavant(1CN107A)
+Montageenarmoireavecpoignée(1CP108A) Pouruninstrumentprécédemmentfournienpoignée,
+
+### commandezlekitdecornières(1CM105A).
+
+Guided’utilisationdeKeysightsérieE36300 41
+
+## Page 149
+
+Configuration de l'interface distante
+L'instrumentprendenchargelescommunicationsavecl'interfacedistantesur3interfaces :USB,GPIBetLAN.
+– Interface USB :UtilisezleportUSBdupanneauarrièrepourcommuniqueravecvotrePC.
+– Interface GPIB :Configurezl'adresseGPIBdel'instrumentetconnectezl'instrumentàvotrePCavecun
+câble GPIB.
+– Interfaceauréseaulocal(LAN) :Pardéfaut,leprotocoleDHCPestactifpourpermettrelescommunicationssur
+unréseaulocal.DHCPestl'abréviationdeDynamicHostConfigurationProtocol ;ils'agitd'unprotocole
+d'affectationd'adressesIPdynamiquesIPauxpériphériquessurunréseau.Avecl'adressagedynamique,un
+périphériquepeutavoiruneadresseIPdifférentechaquefoisqu'ilseconnecteauréseau.
+KeysightIOLibrariesSuite
+Assurez-vousquelasuiteKeysightIOLibrariesestinstalléeavantdeprocéderàlaconfigurationdel'interface
+distante.
+LasuiteKeysightIOLibrariesestunesériedelogicielsdecommanded'instrumentsgratuitsquidécouvre
+automatiquementdesinstrumentsetvouspermetdecommanderdesinstrumentssurLAN,USB,GPIB,RS-232et
+d'autresinterfaces.Pourplusd'informationsoupourtéléchargerIOLibraries,rendez-vousàl’adresse
+www.keysight.com/find/iosuite.
+ConfigurationGPIB
+Iln'existeaucunecommandeSCPIpourconfigurerleparamètredeGPIB.L'intégralitédelaconfigurationdu
+GPIBdoitêtreeffectuéeàpartirdupanneauavant.
+Chaquepériphériquesurl'interfaceGPIB(IEEE-488)doitavoiruneadressecomportantdesnumérosunique
+compriseentre0et30.L'instrumentestlivréavecuneadressepardéfautde5.
+– Ceparamètreestnon volatile ;iln'estpasmodifiéparuneremisesoustensionoulacommande*RSTou
+SYSTem:PRESet.
+– L'interfaceGPIBdevotreordinateurnedoitpasêtreenconflitavecuninstrumentsurlebusdel'interface.
+
+### 1. AppuyezsurUtilities>I/OConfig>GPIBpouraccéderàlafenêtreGPIB.
+
+### 2. Depuiscettefenêtre,vouspouvezdéfinirl'adresseGPIBàl'aidedestouchesnumériquesetappuyezsur[Enter].
+
+### 3. AppuyezsurBackpoursortir.
+
+### 42 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 150
+
+ConfigurationduLAN
+Lesparagraphessuivantsdécriventlesfonctionsdebasedeconfigurationduréseaulocaldupanneauavantviale
+menudupanneauavant.
+Iln'existeaucunecommandeSCPIpourconfigurerlesparamètresduréseauLAN.L'intégralitédelaconfi-
+gurationduLANdoitêtreeffectuéeàpartirdupanneauavant.
+AprèsavoirmodifiélesparamètresduLAN,vousdevezenregistrerlesmodifications.AppuyezsurBackune
+foisquevousavezterminélesmodifications.VousserezinvitéàappuyersurYespourenregistrerleparamètre
+LANouNopoursortirsansenregistrer.AppuyezsurYespourrallumerl'instrumentetactivezlesparamètres.
+LesparamètresduLANnesontpasvolatiles.Ilsnesontpasmodifiésaprèsuneremisesoustensionoulacom-
+mande*RST.Sivousnesouhaitezpasenregistrervosmodifications,appuyezsurNopourannulertoutesles
+modifications.
+Pardéfaut,leprotocoleDHCPestactivépourpermettrelescommunicationssurunréseaulocal.L'acronymeDHCP
+signifieDynamicHostConfigurationProtocol ;ils'agitd'unprotocoled'attributiond'adressesIPdynamiquesàdes
+périphériquessurunréseau.Avecl'adressagedynamique,unpériphériquepeutavoiruneadresseIPdifférente
+chaquefoisqu'ilseconnecteauréseau.
+CertainsparamètresLANnécessitentderedémarrerl'instrumentpourlesactiver.L'instrumentaffichebrièvement
+unmessagedanscecas ;examinezdoncattentivementl'écranlorsquevousmodifiezlesparamètresduréseau.
+Affichagedel'étatduLAN
+AppuyezsurUtilities>I/OConfig>GPIBpourafficherl’étatduLAN.
+L'étatLANpeutêtredifférentdesparamètresdumenudeconfigurationdupanneauavant-enfonctiondela
+configurationduréseau.Lesparamètressontdifférentslorsqueleréseauaaffectélessiensautomatiquement.
+Guided’utilisationdeKeysightsérieE36300 43
+
+## Page 151
+
+RedémarrageduréseaulocalLAN
+AppuyezsurUtilities>I/OConfig>LANStatus>LANRestartpourredémarrerleréseauenutilisantTOUSles
+paramètresLANactuels.LeredémarrageduLANn'effacepaslemotdepassedel'interfaceWeb.
+RéinitialisationduréseaulocalLAN
+AppuyezsurUtilities>I/OConfig>LANSettings>SettoDefaultpourrétablirlesparamètresduLANàleurvaleur
+pardéfautd'usine.
+TouslesparamètrespardéfautduLANsontrépertoriésdanslasectionParamètresnonvolatilesdansleGuidede
+programmation.
+AppuyezsurUtilities>I/OConfig>LANStatus>LANResetpourréinitialiserleLANenutilisantsesparamètres
+actuelsetenactivantDHCPetDNS.LatouchedefonctionLANResetsupprimeégalementlesmotsdepasse
+d'interfaceWebdéfinisparl'utilisateur.
+Modificationdesparamètres LAN
+Lesparamètrespréconfigurésenusinedel'instrumentfonctionnentaveclaplupartdesenvironnementsderéseau
+localReportez-vousauxparamètresnonvolatilesdansleguidedeprogrammationpourobtenirdesinformationssur
+lesparamètresLANdéfinisenusine.
+AppuyezsurUtilities>I/OConfig>LANSettingspouraccéderàlafenêtredesparamètresduLAN.Danscemenu,
+vouspouvezconfigurermanuellementlesparamètresLAN.
+
+### 44 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 152
+
+
+### DHCP
+
+LeprotocoleDHCP(DynamicHostConfigurationProtocol)affecteautomatiquementuneadresseIPdynamiqueàun
+périphériquesurleréseaulocal.C'estgénéralementlemoyenleplussimpledeconfigurerl'instrumentpourle
+réseauLAN.
+– Ceparamètreestnon volatile ;iln'estpasmodifiéparuneremisesoustensionoulacommande*RSTou
+SYSTem:PRESet.
+
+### 1. AppuyezsurUtilities>I/OConfig>LANSettings>DHCPOnpourutiliserleDHCPafind’attribuerauto-
+
+matiquementuneadresseIP.
+
+### 2. AppuyezsurBack.Vousserezinvitéparlemessageci-dessous.
+
+### 3. AppuyezsurYespourenregistrerleréglage.
+
+### 4. AppuyezsurNopourannulertouteslesmodificationsetquittersansenregistrer.
+
+PourdéfinirmanuellementuneadresseIP,lemasquedesous-réseauoulapasserellepardéfaut,appuyezsurDHCP
+Off.Ensuite,modifiezlaconfigurationIPcommedécritci-dessous.
+Adresse IP
+Vouspouvezentreruneadresse IPstatiquepourl'instrumentsouslaformede4 octetsaveclanotationparpoints.
+Chaqueoctetestunevaleurdécimalesanszéroinitial(ex.192.168.2.20).
+– SileprotocoleDHCPestactivé,ilessaied'affecteruneadresseIPàl'instrument.SileprotocoleDHCPéchoue,
+Auto-IPessaied'affecteruneadresseIPàl'instrument.
+– Contactezvotreadministrateurréseaupourplusd'informations
+– Ceparamètreestnon volatile ;iln'estpasmodifiéparuneremisesoustensionoulacommande*RSTou
+SYSTem:PRESet.
+
+### 1. AppuyezsurUtilities>I/OConfig>LANSettings>DHCPOff.
+
+### 2. SélectionnezlechampIPAddressàl'aidedestouchesdenavigation.Définissezl'adresseIPsouhaitéeet
+
+appuyezsurBack.
+
+### 3. AppuyezsurYespourenregistrerleréglage.
+
+### 4. AppuyezsurNopourannulertouteslesmodificationsetquittersansenregistrer.
+
+Guided’utilisationdeKeysightsérieE36300 45
+
+## Page 153
+
+Masquedesous-réseau
+Lemasquedesous-réseaupermetàl'administrateurréseaudesous-diviserunréseaupoursimplifiersagestionet
+minimiserletraficsurleréseau.Lemasquedesous-réseauindiquelapartiedel'adressedel'hôteutiliséepour
+désignerlesous-réseau.
+– Contactezvotreadministrateurréseaupourplusd'informations
+– Ceparamètreestnon volatile ;iln'estpasmodifiéparuneremisesoustensionoulacommande*RSTou
+SYSTem:PRESet.
+
+### 1. AppuyezsurUtilities>I/OConfig>LANSettings>DHCPOff.
+
+### 2. SélectionnezlechampSubnetMaskàl'aidedestouchesdenavigation.Définissezlemasquedesous-réseau
+
+souhaitéetappuyezsurBack.(Exemple :255.255.0.0)
+
+### 3. AppuyezsurYespourenregistrerleréglage.
+
+### 4. AppuyezsurNopourannulertouteslesmodificationsetquittersansenregistrer.
+
+Passerelle
+Unepasserelleestunpériphériquedeconnexionauréseau.Lapasserellepardéfautestl'adresseIPdece
+périphérique.
+– Vousn'avezpasbesoindeconfigurerl'adressed'unepasserellesivousutilisezDHCP.
+– Contactezvotreadministrateurréseaupourplusd'informations
+– Ceparamètreestnon volatile ;iln'estpasmodifiéparuneremisesoustensionoulacommande*RSTou
+SYSTem:PRESet.
+
+### 1. AppuyezsurUtilities>I/OConfig>LANSettings>DHCPOff.
+
+### 2. SélectionnezlechampGatewayàl'aidedestouchesdenavigation.Définissezlapasserellesouhaitéeet
+
+appuyezsurBack.
+
+### 3. AppuyezsurYespourenregistrerleréglage.
+
+### 4. AppuyezsurNopourannulertouteslesmodificationsetquittersansenregistrer.
+
+DNS
+DNS(DomainNameService)estunserviceInternetquitraduitlesnomsdedomaineenadresses IP.L'adressedu
+serveurDNSestl'adresseIPd'unserveurquifournitceservice.
+– Normalement,DHCPrecherchel'adresseDNS ;ilvoussuffitd'indiquersileprotocoleDHCPestinutiliséounon
+fonctionnel.Contactezvotreadministrateurréseaupourplusd'informations
+– Ceparamètreestnon volatile ;iln'estpasmodifiéparuneremisesoustensionoulacommande*RSTou
+SYSTem:PRESet.
+
+### 1. AppuyezsurUtilities>I/OConfig>LANSettings>AutoDNSOnpourconfigurerautomatiquementl'adressage
+
+del'instrumentdansleserveurDNS.
+
+### 46 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 154
+
+
+### 2. AppuyezsurUtilities>I/OConfig>LANSettings>AutoDNSOffpourconfigurermanuellementl'adressagede
+
+l'instrument.
+
+### 3. SélectionnezDNS(1)AddretDNS(2)Addràl'aidedestouchesdenavigation.Ceschampsn'apparaissentquesi
+
+AutoDNSestdésactivé.
+
+### 4. DéfinissezlesadressesprincipaleetsecondairesouhaitéesetappuyezsurBack.
+
+### 5. SélectionnezlechampmDNSServiceàl'aidedestouchesdenavigation.
+
+### 6. AppuyezsurYespourenregistrerleréglage.
+
+### 7. AppuyezsurNopourannulertouteslesmodificationsetquittersansenregistrer.
+
+Nomd’hôteDNS
+Unnomd'hôteestlapartiehôtedunomdudomaine quiestconvertieenadresse IP.
+Chaquealimentationestlivréeavecunnomd’hôtepardéfautauformat :Keysight-numérodemodèle-numérode
+série,oùnumérodemodèlereprésentelenumérodemodèledel'alimentationà6 caractères(parexemple,
+E36312A),etnumérodesériecorrespondauxcinqdernierscaractèresdunumérodesériedel’alimentationà
+
+### 10 caractèressituésurl'étiquetteplacéeau-dessusdel'appareil(parexemple, 45678silenumérodesérie
+
+est MY12345678).
+– L'instrumentreçoitenusineunnomd'hôteuniquequevouspouvezchanger.Cenomdoitêtreuniquesurle
+réseauLAN.
+– Lenomdoitcommencerparunelettre ;lesautrescaractèrespeuventêtredesmajusculesoudesminuscules,des
+chiffresoulecaractèredesoulignement(« - »).
+– Ceparamètreestnon volatile ;iln'estpasmodifiéparuneremisesoustensionoulacommande*RSTou
+SYSTem:PRESet.
+
+### 1. AppuyezsurUtilities>I/OConfig>LANSettings.
+
+### 2. SélectionnezlechampDNSHostnameàl'aidedestouchesdenavigation.Appuyezsur etsaisissezle
+
+nomd'hôteàl’aideduclavierfourni.AppuyezsurBack.
+
+### 3. AppuyezsurYespourenregistrerleréglage.
+
+### 4. AppuyezsurNopourannulertouteslesmodificationsetquittersansenregistrer.
+
+Guided’utilisationdeKeysightsérieE36300 47
+
+## Page 155
+
+ServicemDNS
+LenomduservicemDNSestenregistréavecleservicededésignationsélectionné.
+Chaquealimentationestlivréeavecunnomdeservicepardéfautauformat :Keysight-numérodemodèlenuméro
+desérie,oùnumérodemodèlereprésentelenumérodemodèledel'alimentationà7 caractères(parexemple,
+E36312A),etnumérodesériecorrespondauxcinqdernierscaractèresdunumérodesériedel’alimentationà
+
+### 10 caractèressituésurl'étiquetteplacéeau-dessusdel'appareil(parexemple, 45678silenumérodesérie
+
+est MY12345678).
+– L'instrumentreçoitenusineunnomdeservicenDNSuniquequevouspouvezchanger.LenomdeservicenDNS
+doitêtreuniquesurleLAN.
+– Lenomdoitcommencerparunelettre ;lesautrescaractèrespeuventêtredesmajusculesoudesminuscules,des
+chiffresoulecaractèredesoulignement(« - »).
+
+### 1. AppuyezsurUtilities>I/OConfig>LANSettings>mDNSOffpourconfigurerautomatiquementlenomdeser-
+
+viceenregistréavecleservicedenommagesélectionné.
+
+### 2. AppuyezsurUtilities>I/OConfig>LANSettings>mDNSOnpourconfigurermanuellementlenomdeservice
+
+del'instrument.
+
+### 3. SélectionnezlechampmDNSServiceàl'aidedestouchesdenavigation.
+
+### 4. AppuyezsurmDNSSrvetsaisissezlenomdeserviceàl’aideduclavierfourni.
+
+### 5. AppuyezsurBackpoursortir.
+
+Utilisationdesockets
+Lesblocsd'alimentationacceptenttoutecombinaisond'unmaximumdedeuxconnexionssimultanéespar
+socketdedonnées,socketdecontrôleettelnet.
+LesinstrumentsKeysightontnormalisél'utilisationduport 5025pourlesservicesdesocket SCPI.Unsocketde
+donnéessurceportpermetd'émettreouderecevoirdescommandes,desdemandesetdesréponses ASCII/SCPI.
+Touteslescommandesdoiventseterminerparunenouvellelignepourlemessageàtraiter.Touteslesréponses
+doiventégalementseterminerparunenouvelleligne.
+Ensavoirplussurlesadresses IPetleurnotationparpoints
+Lesadressesnotéesparpoints(« nnn.nnn.nnn.nnn »où« nnn »estlavaleurd'unoctetcompriseentre0et255)
+doiventêtresoigneusementexpriméesdufaitquelaplupartdeslogicielsdesPCinterprètentlesoctetsavecdes
+zérosinitiauxcommedesnombresenbase8.Parexemple,« 192.168.020.011 »estéquivalentàladécimale
+« 192.168.16.9 »,car« .020 »est16expriméenoctal,et« .011 »(octal)est« 9 »(base10).Pourévitertouteconfusion,
+utilisezuniquementdesvaleursdécimalescomprisesentre0et255sanszérod'en-tête.
+
+### 48 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 156
+
+
+### Commande à distance
+
+Vouspouvezcontrôlerl'instrumentviaSCPIàl’aidedesbibliothèquesKeysightIOLibrariesouviaunpanneauavant
+simuléavecl'interfaceWebdel'instrument.
+
+### InterfaceWeb
+
+Vouspouvezsurveilleretcontrôlerl'instrumentàpartird'unnavigateurWebenutilisantl'interfaceWebde
+l'instrument.Pourvousconnecter,saisissezsimplementl'adresseIPoulenomd'hôtedel'instrumentdanslabarre
+d'adressedevotrenavigateuretappuyezsurEnter.
+Sivousvoyezuneerreurindiquant400 :requêteincorrecte,liéeàunproblèmeavecles« cookies »dansvotre
+navigateurWeb.Pouréviterceproblème,démarrezl'interfaceWebenutilisantl'adresseIP(paslenomd'hôte)
+danslabarred'adresseoueffacezlescookiesdevotrenavigateurjusteavantdelancerl'interfaceWeb.
+Cochezlacasesouslaphotodel'instrumentpouractiverunindicateursurlepanneauavantdel'instrument.Ceci
+estutilesivousavezplusieursinstrumentsdelasérieE36300etquevoussouhaitezidentifierceluiauquelvousêtes
+connecté.
+L'ongletConfigureLANenhautvouspermetdemodifierlesparamètresduréseaulocaldel'instrument ;soyez
+prudentlorsquevousfaitescela,carvouspouvezinterromprevotrecommunicationavecl'instrument.
+Lorsquevouscliquezsurl'ongletControlInstrument,l'instrumentvousdemanderaunmotdepasse(lavaleurpar
+défautestkeysight,celaouvriraunenouvellepage,représentéeci-dessous.
+Guided’utilisationdeKeysightsérieE36300 49
+
+## Page 157
+
+Cetteinterfacevouspermetd'utiliserl'instrumentcommevousleferiezàpartirdupanneauavant.Notezlesflèches
+incurvéesquivouspermettentde« fairepivoter »lebouton.Vouspouvezappuyersurlestouchesfléchéespourfaire
+pivoterleboutondanslesensdesaiguillesd'unemontreetdanslesensinversedesaiguillesd'unemontre,tout
+commevouspresseriezl'unedesautrestouchesdupanneauavant.
+
+### LIREL'AVERTISSEMENT
+
+Veillezàlireetàcomprendrel'avertissementenhautdelapageInstrumentdecontrôle.
+Détailstechniquesdelaconnexion
+Danslaplupartdescas,vouspouvezvousconnecterfacilementàl'instrumentaveclasuiteIOLibrariesSuiteou
+l'interfaceWeb.Danscertainescirconstances,ilpeutêtreutiledeconnaîtrelesinformationssuivantes.
+
+### Interface Détails
+
+VXI-11LAN ChaîneVISA :TCPIP0::<AdresseIP>::inst0::INSTR
+Exemple :TCPIP0::192.168.10.2::inst0::INSTR
+IUWeb Numérodeport80,URLhttp://<AdresseIP>/
+USB USB0::0x2A8D::<IDProd>::Numérodesérie>::0::INSTR
+Exemple :USB0::0x2A8D::0x0902::MY55160003::0::INSTR
+L’IDfournisseur :0x2A8D,l'IDduproduitest0x0902etlenumérodesériedel'instrumentestMY55160003.
+L'IDduproduitvarieselonlemodèle :0x1002(E36311A),0x1102(E36312A),0x1202(E36313A).
+
+### 50 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 158
+
+Utiliser le système d'aide intégré
+Lesystèmed’aideintégréfournituneaidecontextuellesurtouteslestouchesdelafaceavantetlestouchesde
+fonctiondesmenus.Unelistedesrubriquesd'aideestégalementdisponiblepourvousaideràenapprendre
+davantagesurl'instrument.
+Afficherlesinformationsd'aidepourlestouchesdupanneauavant
+Notezqu'iln'existeaucuneaidepourlestouches[MeterView],Lock|Unlocket[Tracking].
+Appuyezetmaintenezunetouchedefonctionouunetoucheenfoncée,comme[AllOn/Off].Silemessagecontient
+d’autresinformationsquel'affichage,appuyezsurlatouchedefonctionfléchéeverslebaspourfairedéfilerversle
+bas.
+AppuyezsurBackpoursortir.
+Afficherlalistedesrubriquesd'aide
+AppuyezsurUtilities>Test/Setup>Helppourafficherlalistedesrubriquesd'aide.Appuyezsurlestouchesde
+fonctionfléchéesouutilisezlestouchesfléchéesdupanneauavantpourmettreensurbrillancelarubriquedésirée.
+AppuyezensuitesurSelect.
+Guided’utilisationdeKeysightsérieE36300 51
+
+## Page 159
+
+Danscecas,larubriqued'aidesuivantes’affiche :
+Afficherlesnumérosdemodèleetdesériedel’instrument
+AppuyezsurAboutpourafficherlenumérodemodèle,ladescriptionetlenumérodesériedel'instrument.
+AppuyezsurBackpoursortir.
+
+### AIDEDANSVOTRELANGUE
+
+Touslesmessagesd'aidedestouchesdupanneauavantetlesrubriquesd'aideexistentdansleslangues
+suivantes :Anglais,Français,Allemand,Japonais,Coréen,ChinoisetRusse.Poursélectionnerunelangue,
+appuyezsurUtilities>Test/Setup>UserSettings>DisplayOptions>HelpLang.Sélectionnezensuitela
+languedésirée.Leslibellésdestouchesdefonctiondesmenusetlesmessagesdeslignesd’étatnesontpas
+traduits.
+
+### 52 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 160
+
+Mise à jour micrologicielle.
+Nedésactivezpasl’instrumentpendantlamiseàjour.
+
+### 1.AppuyezsurUtilities>Test/Setup>Help>Aboutpourdéterminerlaversiondumicrologicieldel’instrument
+
+actuellementinstallée.
+
+### 2.Accédezàlapagewww.keysight.com/find/e36300firmwarepourtrouverladernièreversiondumicrologiciel.S'il
+
+correspondàlaversioninstalléesurvotreinstrument,iln’estpasnécessairedepoursuivrecetteprocédure.Sinon,
+téléchargezl’utilitairedemiseàjourdumicrologicieletunfichierZIPdumicrologiciel.Desinstructionsdétailléessur
+lamiseàjourdumicrologicielsontsituéessurlapagedetéléchargement.
+Guided’utilisationdeKeysightsérieE36300 53
+
+## Page 161
+
+Aide-mémoire des menus du panneau avant
+Cettesectionprésentebrièvementlesmenusdupanneauavant.Appuyezsurlestouchesdefonctionpouraccéder
+auxmenusdupanneauavant.
+En-têtedemenu Description
+SourceSettings>
+OCPState Configurel'étatdelaprotectioncontrelessurintensités.
+OCPDelayStart Configureledémarragedudélaideprotectioncontrelessurintensités.
+ProtectionClear Désactivelafonctiondeprotectionetrestaurelessortiesàleurétatdefonctionnementantérieur.
+Sense Configurelamesuredesortie.(E36312AetE36313Aseulement)
+OutputSettings>(E36312AetE36313Aseulement)
+OnOffCoupling> Activeoudésactivelecouplagedesortieoulasynchronisationentreplusieursvoiesdesortie.
+OutputInhibit> Configurelemoded'entréed'inhibitionetlabroche3d'E/Snumérique.
+OperationMode> Configurelacapacitédesortielorsquedeuxsortiesindépendantessontutilisées.
+OutputLIST>(E36312AetE36313Aseulement)
+RunStopped Exécuteouarrêtel’ARBdessorties.
+Add Insèreunenouvelleétapedanslaliste.
+Delete Supprimeuneétapespécifiquedelaliste.
+ClearAll Effacetouteslesétapesdanslaliste.
+Properties> Configurelesparamètresdel’ARBdessorties.
+DataLogger>(E36312AetE36313Aseulement)
+WaveformSettings Règlelaformed'ondehorizontalement(temps/division)ouverticalement(tension/division,inten-
+sité/divisionoupuissance/division).
+WaveformHorizontal> Configurelesparamètreshorizontauxdujournaldesdonnées.
+RunStopped Exécuteouarrêtel'enregistreurdedonnées.
+Properties... Configurelestracesdujournaldesdonnéesetlesplagesdemesuredetensionetd’intensitépourles
+sortiesindividuelles.Configureégalementladuréedujournaldesdonnées,lapériode
+d'échantillonnage,lesvaleursMin/Max,ainsiquelapositiondedéclenchement.
+AutoScale Metautomatiquementàl'échellelestracésàl'écran.
+Utilities>
+Store/Recall> Enregistreetrappellelesétatsdel'instrument.
+I/OConfig> Afficheetconfigurelesparamètresd'E/Spourlesopérationsàdistancesurl'interfaceUSB,LAN,GPIB
+ouE/Snumérique(selonlemodèledeproduit).
+Test/Setup> Accèdeàl'autotest,àl'étalonnageetàlafonctiond'aide,configureégalementlespréférencesde
+l'utilisateuretdéfinitladateetl'heure.
+
+### Error> Affichelafiled’attentedeserreursdel’instrument.Leserreursseronteffacéesaprèslavisualisationou
+
+laréinitialisationdel'instrument.
+
+### 54 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 162
+
+En-têtedemenu Description
+ManageFiles> Crée,copie,supprimeetrenommelesfichiersetlesdossierssurunlecteurUSBconnectéaupanneau
+avant.Vouspermetégalementdecapturerl'écranencoursdansunfichierbitmap(*.bmp)ouunfichier
+graphiquederéseauportable(*.png).
+Lock|Unlock Verrouilleetdéverrouillel'écran.
+Guided’utilisationdeKeysightsérieE36300 55
+
+## Page 163
+
+## Page 164
+
+
+### 2 Fonctionnement général
+
+Miseenmarchedel’appareil
+Contrôledessorties
+Utilisationdelafonctiondeprotection
+Indicationdelamesureà2filsou4fils
+Utilisationdel'opérationdesuivi
+ConfigurationdelaséquenceActivationDésactivationdelasortie
+Indicationdumodedefonctionnement
+Utilisationduportdecommandenumérique
+Utilisationdel’ARBdessorties
+Utilisationdelafonctiond'enregistreurdedonnées
+Verrouillage/déverrouillagedupanneauavant
+Captured’unécran
+ActivationdumodeE3631A
+Menudesutilitaires
+CechapitredécritlefonctionnementgénéraldelasérieE36300.
+LasérieE36300utilisedescouleursetdesnumérospourpou-
+voiridentifierfacilementlesinformationsrelativesauxsorties
+spécifiques.Parexemple,touslesélémentsdeconfigurationet
+d'affichageliésàlasortie 1sontaffichésdanslamêmecouleur
+quelatouchedesélectiondelasortie.
+Guided’utilisationdeKeysightsérieE36300 57
+
+## Page 165
+
+Mise en marche de l’appareil
+Aprèsavoirbranchélecordond'alimentation,appuyezsurlatouchedemisesoustension/enveillepourallumer
+l'appareil.L’écrandupanneauavants’allumeaprèsquelquessecondes.Lorsquelavuemultimètredupanneau
+avantapparaît,utilisezlesboutonsdetensionetd’intensitépourréglerlesvaleursdetensionetd'intensité.Lasortie
+Output 1estsélectionnéepardéfaut.
+Appuyezunedestroistouches[On]pouractiverunesortieindividuelle.EnmodeMeterView,l'alimentationmesure
+encontinuetaffichelatensionetl’intensitédesortiedechaquesortie.
+Unautotestdemisesoustensionesteffectuéautomatiquementdèslamisesoustensiondel'appareil.Ilcer-
+tifiequel'instrumentestopérationnel.Sil'autotestéchoue,ousid'autresdysfonctionnementsseproduisent
+survotreinstrument,l'indicateurd'erreurdupanneauavant(!Err)apparaîtauhautdel'écran.
+
+### 58 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 166
+
+Affichezlejournaldeserreurs
+AppuyezsurUtilities>Errorpourafficherlejournaldeserreurs.S'ilyaplusde10 erreursàl'écran,appuyezsurNext
+pouraccéderàlapagesuivante.
+AppuyezsurBackou[MeterView]pourreveniràl'écrandelavuedumultimètre.
+– Leserreurssontstockéesdansl'ordredeleurréception.L'erreurquisetrouveàlafindelalisteestlaplus
+récente.
+– S'ilyaplusde20erreursdanslafiled'attente,ladernièreerreurenregistréeestremplacéepar-350,« Queue
+overflow ».Aucuneautreerreurn'estenregistréetantquevousnesupprimezpasdeserreursdelafile.S'iln'ya
+aucuneerreur,l'instrumentrépondpar+0,« Aucuneerreur ».
+– Àl’exceptiondeserreursdetestautomatique,leserreurssonteffacéeslorsdelasortiedumenudujournaldes
+erreursoulorsdelaremisesoustension.
+Sivouspensezquel'alimentationprésenteunproblème,reportez-vousàlasectiondedépannagedumanuel
+ServiceGuide(enanglais).
+Guided’utilisationdeKeysightsérieE36300 59
+
+## Page 167
+
+Contrôle des sorties
+Étape1-Sélectionnerunesortie
+Appuyezsurlatouchedesélectiondesortiecorrespondantàlasortieàcontrôler.Latouchealluméeindiquela
+sortiesélectionnée.Touteslescommandessuivantesdepanneauavantspécifiquesàlasortiesontenvoyéesàla
+sortiesélectionnée.
+Étape2-Réglerlatensionetl’intensitédesortie
+Tournezlesboutonsdetensionetd’intensité.Leréglagedelatensionoudel’intensitédesortiechangelorsque
+vouslestournez.
+Vouspouvezégalementsaisirlesvaleursdetensionetd’intensitédirectementàl’aidedeschampsd’entrée
+numérique(leschampsSet)del’écrandelavuemultimètre.Lestouchesdenavigationpermettentdesélectionner
+lechamp,lestouchesduclaviernumériquedesaisirlavaleur.Lavaleurdevientactivelorsquevousappuyezsur
+[Enter].
+Enfin,appuyezensuitesurlatoucheSourceSettingspouraccéderàlafenêtredesparamètresdesource.Utilisezles
+touchesdenavigationpourmettreensurbrillanceleschampsVoltageouCurrent.Saisissezensuitelesvaleursde
+tensionetd’intensitéàl’aideduclaviernumérique.VouspouvezutiliserlesboutonsVoltageetCurrentpourrégler
+lesvaleursdansleschampsVoltageetCurrent.
+Appuyezsur[Enter]pouractivercesvaleurs.AppuyezsurBackpourreveniràl'écrandelavuedumultimètre.
+
+### 60 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 168
+
+Letableauci-dessousindiquelaplagedesortieetlavaleurpardéfautpourlesréglagesdelatensionetducourant.
+Paramètres Plagedesortie Valeurpardéfaut
+Tension Sortie1 :0à6,18V 0 V
+Sortie2 :0à25,75V
+Sortie3 :0à25,75V
+LorsqueE3631ASCPIIDestsélectionné,
+Sortie1 :0à6,18V
+Sortie2 :0à25,75V
+Sortie3 :0à-25,75V
+Courant E36311AetE36312A E36311AetE36312A
+Sortie1 :0,001à5,15A Sortie1 :5A
+Sortie2 :0,001à1,03A Sortie2 :1A
+Sortie3 :0,001à1.03A Sortie3 :1A
+
+### E36313A E36313A
+
+Sortie1 :0,002à10,3A Sortie1 :10A
+Sortie2 :0,001à2,06A Sortie2 :2A
+Sortie3 :0,001à2,06A Sortie3 :2A
+Étape3-Activerlasortie
+Appuyezsurlatouchedecouleur[On]pouractiverunesortieindividuelle.Lorsqu’unesortieestactivée,latouche
+[On]correspondanteestallumée.Lorsqu’unesortieestdésactivée,latouche[On]correspondanten’estpasallumée.
+Latouche[AllOn/Off]activeoudésactivetouteslessortiessimultanément.
+L'étatd'unesortiedésactivée(sortieéteinte)estuneconditiondetensionetd’intensitésourcezéro.
+Étape4-Afficherlatensionetl’intensitédesortie
+Sélectionnez[MeterView]pourafficherlatensionetl’intensitédesortie.Lorsqu'unesortieestactivée,les
+multimètresdupanneauavantmesurentetaffichentcontinuellementlatensionetl’intensitédesortie.
+Guided’utilisationdeKeysightsérieE36300 61
+
+### Tables on this Page
+
+| Plagedesortie | Valeurpardéfaut |
+|---|---|
+
+## Page 169
+
+Tensionetintensitéconstantes
+Silarésistancedechargedesortieestsupérieureauréglagedelatensiondiviséparleréglagedel’intensité,
+l'instrumentfonctionneraenmodedetensionconstante(CV).L’intensitéseraégaleàlatensiondiviséeparla
+résistancedecharge.
+Silarésistancedechargedesortieestinférieureauréglagedetensiondiviséparleréglagedel’intensité,
+l'instrumentfonctionneraenmoded’intensitéconstante(CC).Latensionseraégaleàl’intensitémultipliéeparla
+résistancedecharge.
+Àpartirdel'interfacedistante :
+UnparamètredevoieestrequisavecchaquecommandeSCPIpoursélectionnerunesortie.Parexemple,(@1)
+sélectionnelasortie1,(@2,3)lasortie2et3,et(@1:3)lessorties1à3.Lalistedessortiesdoitêtreprécédéed'un
+symbole@etêtremiseentreparenthèses().
+Pourdéfiniruniquementlessorties1à5Vet1A :
+APPLCh1,5,1
+Pouractiveruniquementlasortie1 :
+
+### OUTPON,(@1)
+
+Pouractiverlessorties1et3 :
+
+### OUTPON,(@1,3)
+
+Pourmesurerlatensiondesortieetl’intensitédesortie1 :
+
+### MEAS:VOLT?(@1)
+
+### MEAS :CURR?(@1)
+
+### 62 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 170
+
+Utilisation de la fonction de protection
+Fonctiondeprotection
+Chaquesortiepossèdedesfonctionsdeprotectionindépendantes.Unvoyantd'étatsituésurlepanneauavant
+s'allumelorsqu'unefonctiondeprotectionestactivée.Lesfonctionsdeprotectionsontdetypeàverrouillage.
+Autrementdit,ellesdoiventêtredésactivéesunefoisqu'ellessontactivées.
+Parmilesfonctionsdeprotectionsuivantes,seulesOVetOCsontprogrammablesparl'utilisateur.
+– OV :LaprotectioncontrelessurtensionsestuneOVPmatérielledontleniveaudedéclenchementestunevaleur
+programmable.L’OVPesttoujoursactivée.
+– OC :Laprotectioncontrelessurintensitésestunefonctionprogrammablequipeutêtreactivéeoudésactivée.
+Lorsqu'elleestactivée,lasortieestdésactivéesil’intensitédesortieatteintlavaleurlimited'intensité.
+– OT :Laprotectioncontrelessurchauffessurveillelatempératuredechaquesortieetarrêtelasortiesiune
+températuredépasseleslimitesmaximalesdéfiniesenusine.
+Configurationdelaprotection
+Lesfonctionsdeprotectionsontconfiguréesdanslafenêtredesparamètresdesource.
+AppuyezsurSourceSettingspouraccéderàlafenêtredesparamètresdesource.
+ProtectionOV
+LaprotectioncontrelessurtensionsdésactivelasortielorsquelatensiondesortieatteintleniveaudéfinidansOVP
+(protectioncontrelessurtensions).
+Pourdéfinirlaprotectioncontrelessurtensions,saisissezunevaleurdesurtensiondanslechampOVProtection
+(Protectioncontrelessurtensions).
+PourE36311AoulorsqueSCPIIDestréglésurE3631A,vouspouvezprogrammerunniveaudeprotection
+contrelessurtensionsnégatifquidésactivelasortielorsquedestensionsnégativessontdétectées.
+Guided’utilisationdeKeysightsérieE36300 63
+
+## Page 171
+
+Lecircuitd'alimentationOVPprogrammeralasortieàzérolorsqu'unesurtensionsurvient.Siunesourcedeten-
+sionexternetellequ'unebatterieestconnectéevialasortieetqu’unesurtensionsurvientparinadvertance,la
+sourcedetensionvaenvoyeruneintensitéencontinuedanslecircuitinterne,endommageantprobablement
+l'alimentation.Pourévitercela,unediodedoitêtreconnectéeensérieaveclasortiecommeindiquéci-des-
+sous.
+Étatd'OCP
+Lorsquelaprotectioncontrelessurintensitésestactivée,l’alimentationdésactivelasortiesil’intensitédesortie
+atteintlalimiteconfigurée,cequiprovoqueunetransitiondumodetensionconstanteaumoded’intensité
+constante.
+AppuyezsurOCPStateOnpouractiverlaprotectioncontrelessurintensités.
+AppuyezsurOCPStateOffpourdésactiverlaprotectioncontrelessurintensités.
+Vouspouvezégalementspécifierundélaipouréviterledéclenchementdel'OCPlorsdeschangementsd'état
+momentanésdetensionconstanteenintensitéconstante.Cedélaipeutêtreprogramméentre0et
+
+### 3 600 secondes.Vouspouvezspécifiersiledémarragedudélaiestlancéparunbasculementenmode CCou
+
+uniquementàlafind'unchangementdeparamètresdansl'étatdelatension,del’intensitéoudelasortie.
+Délaid'OCP
+L'alimentationpeutpassermomentanémentenmodeCClorsdelapremièremisesoustension,lorsqu'unenouvelle
+valeurdesortieaétéprogrammée,oulorsquelachargedesortieestconnectée.Danslaplupartdescas,ces
+conditionstemporairesnesontpasconsidéréescommeunedéfaillancedeprotectioncontrelessurintensités
+(OCP) :ilseraitgênantquedetellesconditionsdésactiventlasortielorsquelebitd'étatCCetdéfini.L'indication
+d'undélaid'OCPpermetd’ignorerlebitd'étatCCpendantlapériodededélaispécifiée.
+Pourréglerledélaideprotectioncontrelessurintensités,saisissezlavaleurdedélaidanslechampOCProtection
+Delay.Cedélaipeutêtreprogramméentre0et3 600 secondes.
+Démarragedudélaid'OCP
+L'indicationd'undélaiOCPpermetaucircuitOCPd'ignorercesmodificationstemporairespendantledélaide
+temporisationspécifié.Unefoisletempsdedélaid'OCPexpiré,silemodeCCpersiste,lasortieestinterrompue.
+
+### 64 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 172
+
+Vouspouvezspécifierletemporisateurdedélaid’OCPvia :
+– BasculementCC :letemporisateurdedélaidémarrelorsdubasculementdelasortieenmodeCC.Appuyezsur
+OCPStartCC.
+– Modificationdeparamètres :letemporisateurdedélaidémarreàlafind'unchangementdeparamètresdans
+l'étatdelatension,del’intensitéoudelasortie.AppuyezsurOCPStartSet.
+DésactiveunOVPetunévénementOCP
+Poureffacerlafonctiondeprotection,supprimeztoutd'abordlaconditionquiaprovoquéledéfautdeprotection.
+AppuyezsurProtectionClearpourdésactiverlafonctiondeprotectionetrestaurerlessortiesàleurétatde
+fonctionnementantérieur.
+Àpartirdel'interfacedistante :
+Pourréglerlaprotectioncontrelessurtensionsdelasortie1àlalimitemaximale :
+
+### VOLT:PROTMAX,(@1)
+
+Pouractiverlaprotectioncontrelessurintensitésdessorties1et3 :
+
+### CURR:PROT:STATON,(@1,3)
+
+Pourréglerledélaideprotectioncontrelessurintensitésdelasortieentre1et3secondes :
+
+### CURR:PROT:DEL3,(@1)
+
+Pourréglerletemporisateurdedélaideprotectioncontrelessurintensitésdelasortie1surlebasculementCC :
+
+### CURR:PROT:DEL:STARCCTR,(@1)
+
+Pourdésactiverlaprotectiondelasortie1 :
+
+### OUTP:PROT:CLE(@1)
+
+Guided’utilisationdeKeysightsérieE36300 65
+
+## Page 173
+
+Indication de la mesure à 2 ou 4 fils (E36312A et E36313A seulement)
+Lorsquelemodeà4 filsestsélectionné,assurez-vousquelachargeestconnectéeàlasortiedupanneau
+arrièrepourunelectureprécise.
+N'UTILISEZPASsimultanémentlepanneaudesortieavantetarrière.Celapeutrendrelalecturedesortie
+incorrecte.
+Vousavezlapossibilitéd'utiliserlesbornesdemesureàdistancesurlepanneauarrièrepourmesurerlatensionsur
+l'appareiltesté(DUT).
+
+### 1. AppuyezsurSourceSettings.
+
+### 2. AppuyezsurSense2wouSense4wpoursélectionnezunemesureà2filsouà4fils.
+
+### 3. AppuyezsurBackpourquitteretreveniràl’écrandelavuemultimètre.
+
+Lemode2wfermeunrelaisàl'intérieurdel'alimentationélectriquepourcourt-circuiterlesconnecteursdesortieet
+demesure.Celasignifiequeseulsdeuxfilssontutilisésetquelamesureà4filsestdésactivée.Lemode4wpermet
+d'ouvrirlerelaisafindeséparerlasortieetlesentréesdemesureà4fils.Pardéfaut,2westsélectionné.
+Àpartirdel'interfacedistante :
+Pourréglerlerelaisdemesureàdistancesurlamesureà4filsàlasortie3 :
+
+### VOLT:SENSEXT,(@3)
+
+Utilisation de l'opération de suivi
+LasérieE36300fournitdessortiesdesuivide0à±25V.Enmodedesuivi,deuxtensionsdessorties2et3sesuivent
+pourfaciliterlavariationdestensionssymétriquesrequisesparlesamplificateursopérationnelsetd’autrescircuits
+enutilisantdesentréespositivesetnégativeséquilibrées.L'étatdumodedesuiviestenregistrédansunemémoire
+volatile.Lemodedesuiviesttoujoursdésactivémêmelorsquel'alimentationestcoupéeouaprèsuneréinitialisation
+del'interfacedistante.
+
+### 1. Réglezlasortie2àlatensiondésirée.
+
+### 2. Appuyezsur[Tracking]pouractiverlemodedesuivi.Vouspouvezégalementactiverlemodedesuivien
+
+appuyantsurOutputSettings>OperationMode>ModeTracking.
+Lorsquelemodedesuiviestactivé,lasortie3estrégléesurlemêmeniveaudetensionquelasortie2etvice
+versa.Lalimited’intensitéestdéfiniedemanièreindépendantepourchacunedessortiesetn'estpasattribuée
+parlemodedesuivi.
+
+### 3. Vérifiezquelessorties2et3sesuiventcorrectement.
+
+Vouspouvezvérifieràpartirdel'écrandupanneauavantencomparantlesvaleursdetensiondelasortie2et
+delasortie3.
+Enmodedesuivi,sil'indicateurCCestallumélorsquel'écranestsélectionnépourl'alimentation+25V,choi-
+sissezunelimited’intensitéplusélevéepourl'alimentation+25V.Sil'indicateurCCestallumélorsquel'écran
+estsélectionnépourl'alimentation-25V,choisissezunelimited’intensitéplusélevéepourl'alimentation-25
+V.
+
+### 66 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 174
+
+Assurez-vousquelemodedesuiviestdésactivélorsqueledéclenchementdecouplageestactivé(INST-
+rument:COUPle)enmodeE3631A.
+Àpartirdel'interfacedistante :
+Pouractiverlemodedesuivi :
+
+### OUTP:TRACON
+
+Guided’utilisationdeKeysightsérieE36300 67
+
+## Page 175
+
+Configuration de la séquence Activation Désactivation de la sortie (E36312A et
+E36313A seulement)
+Lesdélaisd’activationetdedésactivationcontrôlentlatemporisationdel’activationetladésactivationdessorties
+enrelationmutuelle.
+Étape1-Réglerlatensionetl’intensitédesortiedesvoiesdesortie :
+Reportez-vousauxétapes1et2dansContrôledessortiesetréglezlatensiondesortieetlesvaleursd’intensitéde
+touteslessortiesquiserontséquencées.
+Étape2-Configurerlesdélaisd’activation/désactivation :
+AppuyezsurOutputSettingspouraccéderauxparamètresOn/OffDelays.EntrezlesOnDelaysetOffDelayspour
+touteslessortiesquiferontpartiedelaséquencededélaisd’activation/désactivation.Lesvaleurspeuventvarierde
+0à3600secondes.
+Étape3-Couplagedessortiessélectionnées :
+Cetteétapen'estrequisequesivousincluezdessortiesdansuneséquencededélais
+d’activation/désactivationdesortieousivouscouplezplusieursalimentations.Sivousdevezutiliseruneseule
+sortiedanslaséquence,vouspouvezignorercetteétape.
+Danslemenu,appuyezsurOn/OffCouplingpouraccéderauxparamètresdumodedecouplageactivé/désactivé.
+– AppuyezsurCoupCH1pourbasculerentreOffetOnpourdésactiveretactiverlecouplagedelasortie1.
+– AppuyezsurCoupCH2pourbasculerentreOffetOnpourdésactiveretactiverlecouplagedelasortie2.
+– AppuyezsurCoupCH3pourbasculerentreOffetOnpourdésactiveretactiverlecouplagedelasortie3.
+
+### 68 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 176
+
+Étape4-UtiliserlestouchesActivationetdésactivationdetouteslessortie :
+Dèsqueledélaidessortiesaétédéfini,appuyezsur[AllOn/Off]pourdémarrerlaséquencededélaisd'activationou
+dedésactivation.
+Lestouches[AllOn/Off]detouteslessortiesactiventoudésactiventTOUTESlessorties,qu'ellessoientconfi-
+guréespourfairepartied’uneséquencededélaisd’activation/désactivationounon.
+Àpartirdel'interfacedistante :
+Pourprogrammerlesdélaisd’activation/désactivationpourlessorties1à3 :
+
+### OUTP:DEL:RISE0.01,(@1)
+
+### OUTP:DEL:RISE0.02,(@2)
+
+### OUTP:DEL:RISE0.03,(@3)
+
+### OUTP:DEL:FALL0.04,(@1)
+
+### OUTP:DEL:FALL0.03,(@2)
+
+### OUTP:DEL:FALL0.02,(@3)
+
+Pourinclureuniquementlessorties1et2dansuneséquence :
+
+### OUTP:COUP:CHANCH1,CH2
+
+Pouractiverdeuxsortiescoupléesdansuneséquence :
+
+### OUTPON,(@1:2)
+
+Guided’utilisationdeKeysightsérieE36300 69
+
+## Page 177
+
+Indication du mode de fonctionnement (E36312A et E36313A seulement)
+N'UTILISEZPASlemodeCouplagenilemodeSuivilorsquelemodeAuto-sérieouAuto-parallèleestsélec-
+tionné.
+Lemodedefonctionnementvouspermetdespécifierlacapacitédesortielorsdel’utilisationdedeuxsorties
+indépendantes.
+– Indépendant :Cetteopérationfournitdeuxcapacitésdesortieindépendantesàunevaleurmaximalede+25V,1
+A(E36312A)et+25V,2A(E36313A).EnmodeIndépendant,l'instrumentestàsonétatdesortiepardéfaut.
+– Auto-série :Cetteopérationaugmentelacapacitédetensiondesortieàunevaleurmaximalede+50V,1A
+(E36312A)et+50V,2A(E36313A).EnmodeAuto-série,l'instrumentdoublel’intensitédevoltagesurlessorties2et
+3,maislasortie3nefonctionneplus..
+– Auto-parallèle :Cetteopérationaugmentelacapacitédecourantàunevaleurmaximalede+25V,2A(E36312A)
+et+25V,4A(E36313A).EnmodeAuto-parallèle,l'instrumentdoublel’intensitédesortiesurlasortie2,maisla
+sortie3nefonctionneplus.
+– Suivi :Cetteopérationsuitlatensiondessorties2et3.Pourdeplusamplesinformations,reportez-vousàla
+sectionUtilisationdel'opérationdesuivi.
+
+### 1. AppuyezsurSourceSettings>OperationMode.
+
+### 2. AppuyezsurIndependent,Series,ParallelouTrackingpoursélectionnerlemodedefonctionnementdésiré.
+
+### 3. AppuyezsurBackpoursortir.
+
+PourdesconnectionsdesortiesenmodeAuto-sérieetAuto-parallèle;Reportez-cousàlasectionEnparallèleeten
+sérieConnexionspourplusdedétails.
+Àpartirdel'interfacedistante :
+PouractiverlemodeAuto-série :
+
+### OUTP:PAIRSER
+
+PouractiverlemodeAuto-parallèle :
+
+### OUTP:PAIRPAR
+
+Pouractiverlemodedesuivi :
+
+### OUTP:TRACON
+
+### 70 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 178
+
+Utilisation du port de commande numérique (E36312A et E36313A seulement)
+E/Snumériquebidirectionnelle
+Entréenumérique
+Sortiededéfaillance
+Entréed'inhibition
+Protectiondusystèmededéfaillance/inhibition
+Entréededéclenchement
+Sortiededéclenchement
+
+### Commandesdecouplagedessorties
+
+Unportdecommandenumériquecomposédetroisbrochesd'E/Spermetd'accéderàplusieursfonctionsde
+
+### commande.Chaquebrochepeutêtreconfiguréeparl'utilisateur.Lesfonctionsdecommandesuivantessont
+
+disponiblespourlesbrochesd'E/S.
+E/Snumériquebidirectionnelle
+Chacunedestroisbrochespeutêtreconfiguréecommeuneentréeetsortienumériquesbidirectionnelles
+universelles.Lapolaritédesbrochespeutégalementêtreconfigurée.Labroche4estlecommundusignalpourles
+brochesd'E/Snumériques.Lesdonnéessontprogramméesconformémentauxaffectationsdebitssuivantes :
+Broches 3 2 1
+Poidsdubit 2(msb) 1 0(lsb)
+Guided’utilisationdeKeysightsérieE36300 71
+
+## Page 179
+
+Lesbrochesd'E/Snumériquespermettentdecontrôlerlescircuitsderelaisainsiquelescircuitsd'interface
+numériques.Lafigureci-dessusillustrelescircuitsderelaistypesainsiquelesconnexionsdecircuitd'interface
+numériqueàl'aidedesfonctionsd'E/Snumériques.
+Surlepanneauavant :
+
+### 1.AppuyezsurUtilities>I/OConfig>DigitalIOpouraccéderàlafenêtred’E/Snumérique.
+
+### 2.Sélectionnezlabrochequevoussouhaitezconfigurer.Parexemple,appuyezsurPin1pourconfigurerlabroche
+
+### 1.
+
+### 3.AppuyezsurFunction,puissélectionnezDigitalI/OSélectionnezetprogrammezlesautresbrochesdelamême
+
+manière.AppuyezsurBackpourretourneràlapageprécédente.
+
+### 4.Configurezlapolaritépourchaquebroche.AppuyezsurPolarityPospoursélectionnerPositiveetPolarityNeg
+
+poursélectionnerNegative.Sélectionnezetprogrammezlesautresbrochesdelamêmemanière.
+
+### 5.LeschampsInetOutnes'appliquentqu'auxfonctionsDigital I/OetDigital In.AppuyezsurOutpourbasculeret
+
+saisirlebitbinaire(0ou1)danslechampOutdelafenêtred'E/Snumérique.Pourlafonctiond'E/Snumérique,un
+bitbinaire1avecpolaritépositiveindiqueunetensionélevéesurlabroche,tandisqu'unbitbinaire0avecpolarité
+positiveindiqueunetensionfaiblesurlabroche.LechampInreflètelaconditiondusignalexterneappliquésurles
+broches.
+Àpartirdel'interfacedistante :
+Pourconfigurerlafonctiond’E/Snumériquedesbroches1à3 :
+
+### DIG:PIN1:FUNCDIO
+
+### DIG:PIN2:FUNCDIO
+
+### DIG:PIN3:FUNCDIO
+
+Pourconfigurerlapolaritédelabrochesurpositivepourlesbroches1à3 :
+
+### DIG:PIN1:POLPOS
+
+### DIG:PIN2:POLPOS
+
+### DIG:PIN3:POLPOS
+
+Pourenvoyerunevaleurbinairepondéréepourconfigurerlesbroches1à3avec« 111 » :
+
+### DIG:OUTP:DATA7
+
+### 72 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 180
+
+Entréenumérique
+Chacunedestroisbrochespeutêtreconfiguréeuniquementcommeuneentréenumérique.Laréférencedemasse
+desbrochesd'entréeestCommundesignalsurlabroche4.
+Surlepanneauavant :
+
+### 1.AppuyezsurUtilities>I/OConfig>DigitalIOpouraccéderàlafenêtred’E/Snumérique.
+
+### 2.Sélectionnezlabrochequevoussouhaitezconfigurer.Parexemple,appuyezsurPin1pourconfigurerlabroche1.
+
+### 3.AppuyezsurFunction,puissélectionnezDigitalIn.Sélectionnezetprogrammezlesautresbrochesdelamême
+
+manière.AppuyezsurBackpourretourneràlapageprécédente.
+
+### 4.Configurezlapolaritépourchaquebroche.AppuyezsurPolarityPospoursélectionnerPositiveetPolarityNeg
+
+poursélectionnerNegative.Sélectionnezetprogrammezlesautresbrochesdelamêmemanière.
+
+### 5.LeschampsInetOutnes'appliquentqu'auxfonctionsDigital I/OetDigital In.LechampInreflètelaconditiondu
+
+signalexterneappliquésurlesbroches.Iln’estpasaffectéparlavaleurdumotdesortiebinaire.
+Àpartirdel'interfacedistante :
+Pourconfigurerlafonctiondelabroche :
+
+### DIG:PIN1:FUNCDINP
+
+Poursélectionnerlapolaritédelabroche :
+
+### DIG:PIN1:POLPOS
+
+### DIG:PIN1:POLNEG
+
+Pourlirelesdonnéesdelabroche :
+
+### DIG:INP:DATA?
+
+Sortiededéfaillance
+Lesbroches 1et 2peuventêtreconfiguréescommeunesortiededéfaillance.Lafonctiondesortiededéfaillance
+permetàuneconditiondedéfaillancesurunevoiedegénérerunsignaldedéfaillancedeprotectionsurleport
+numérique.Lesconditionssuivantesgénérerontunévénementdedéfaillance :surtension,surintensité,surchauffe
+etsignald'inhibition.
+Lesbroches1et2sontdédiéesàcettefonction.Labroche1estlasortiededéfaillance ;labroche2estlecommun
+delabroche1.Celafournitunesortieoptiquementisolée.Lapolaritédelabroche1peutégalementêtreconfigurée.
+Notezquelesignaldesortiededéfaillancedemeureverrouillétantquel'anomalien'apasétérésolueetquele
+circuitdeprotectionn'apasétédésactivé.
+Lafonctionsélectionnéepourlabrocheestignorée.Labroche2doitêtrereliéeàlamasseducircuitexterne.
+Guided’utilisationdeKeysightsérieE36300 73
+
+## Page 181
+
+Surlepanneauavant :
+
+### 1.AppuyezsurUtilities>I/OConfig>DigitalIOpouraccéderàlafenêtred’E/Snumérique.
+
+### 2.AppuyezsurPin1pourconfigurerlabroche1.
+
+### 3.AppuyezsurFunction,puissélectionnezSortiepardéfaut.AppuyezsurBackpourretourneràlapageprécédente.
+
+### 4.Configurezlapolaritépourchaquebroche.AppuyezsurPolarityPospoursélectionnerPositiveetPolarityNeg
+
+poursélectionnerNegative.
+Àpartirdel'interfacedistante :
+Pourconfigurerlafonctiondelabroche :
+
+### DIG:PIN1:FUNCFAUL
+
+Poursélectionnerlapolaritédelabroche :
+
+### DIG:PIN1:POLPOS
+
+### DIG:PIN1:POLNEG
+
+Entréed'inhibition
+Labroche 3peutêtreconfiguréecommeuneentréed'inhibitionàdistance.Lafonctiond’entréedeneutralisation
+permetàunsignald’entréeexternedecontrôlerl’étatdelasortiedetouteslesvoiesdel’alimentation.Lapolarité
+delabroche3peutégalementêtreconfigurée.Cetteentréeestdéclenchéeparniveau.Letempsdesignaledu
+déclenchementestinférieurà450 microsecondes.Letempsmaximumrequispourquetouteslesvoiesdesortie
+commencentàs'éteindreest45ms.Labroche4estlecommundelabroche3.
+Lesmodesd'entréed'inhibitionnonvolatilessuivantspeuventêtreprogrammés :
+LATChing-unetransitionversl'étatlogiquevraisurl'entréed'inhibitiondésactiveralasortie.Lasortiedemeure
+désactivéeunefoislesignald'inhibitionreçu.
+LIVE-permetàlasortieactivéedesuivrel'étatdel'entréed'inhibition.Lorsquel'entréed'inhibitionestàl'étatvrai,
+lasortieestdésactivée.Lorsquel'entréed'inhibitionestàl'étatfaux,lasortieestréactivée.
+OFF-l'entréed'inhibitionestignorée.
+Surlepanneauavant :
+Configurerlabroche3commeuneentréed'inhibitionàdistance :
+
+### 1.AppuyezsurUtilities>I/OConfig>DigitalIOpouraccéderàlafenêtred’E/Snumérique.
+
+### 2.AppuyezsurPin3pourconfigurerlabroche1.
+
+### 3.AppuyezsurFunctionetsélectionnezInhibitInpourconfigurerlabroche3commeuneentréed'inhibition.
+
+AppuyezsurBackpourretourneràlapageprécédente.
+
+### 4.Configurezlapolaritépourlabroche3.AppuyezsurPolarityPospoursélectionnerPositiveetPolarityNegpour
+
+sélectionnerNegative.
+
+### 74 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 182
+
+Vouspouvezégalementconfigurerlabroche3commeuneentréed'inhibitionenappuyantsurOutputSettings>
+OutputInhibit>DIOPin3INH.Dansceparamètre,lapolaritéestrégléepardéfautsurPositive.
+Configurezlemoded'inhibitiond'entrée :
+
+### 1.AppuyezsurOutputSettings>OutputInhibitpourconfigurerlemoded'inhibitiond'entrée.
+
+### 2.Sélectionnezlemodedésiré(Off,LatchedouLive).
+
+Poureffacerlafonctiondeprotectiond’inhibition,éliminezd'abordlesignald'inhibitionexterne.Puis,sélectionnez
+SourceSettings>ProtectionClearpourtouteslessorties.Cecidésactivelafonctiondeprotectiond’inhibitionet
+restaurelasortieàsonétatdefonctionnementantérieur.
+Àpartirdel'interfacedistante :
+Poursélectionnerlafonctiond'inhibition :
+
+### DIG:PIN3:FUNCINH
+
+Poursélectionnerlapolaritédelabroche :
+
+### DIG:PIN3:POLPOS
+
+### DIG:PIN3:POLNEG
+
+Pourréglerlemoded'inhibitionsurVerrouillage :
+
+### OUTP:INH:MODELATC
+
+Pourréglerlemoded'inhibitionsurActivé :
+
+### OUTP:INH:MODELIVE
+
+Pourdésactiverlesignald'inhibition :
+
+### OUTP:INH:MODEOFF
+
+Protectiondusystèmededéfaillance/inhibition
+Lafiguresuivanteillustreplusieursméthodesdeconnexiondesbrochesdedéfaillance/inhibitionduconnecteur.
+Commelemontrelafigure,lorsquelessortiesdedéfaillanceetlesentréesd'inhibitiondeplusieursinstrumentssont
+connectéesensérie,uneconditiondedéfaillanceinternesurunappareildésactivetouteslessortiessans
+Guided’utilisationdeKeysightsérieE36300 75
+
+## Page 183
+
+interventionducontrôleuroudescircuitsexternes.Sachezquepourutiliserlessignauxdedéfaillance/inhibitionde
+cettefaçon,vousdevezréglerlesdeuxsignauxsurlamêmepolarité.
+Vouspouvezégalementconnecterl'entréed’inhibitionàuncommutateurmanuelouàunsignaldecontrôle
+externe :celui-cicourt-circuitelabroched'inhibitionencommunchaquefoisquecelaestnécessaireafinde
+désactivertouteslessorties.Danscecas,vousdevezprogrammerlapolaritéNegativepourtouteslesbroches.
+Vouspouvezégalementutiliserlasortiededéfaillancepourdirigeruncircuitouunsignalderelaisexternevers
+d'autresappareilschaquefoisqu'ilseproduitunedéfaillancepouvantêtredéfinieparl'utilisateur.
+Correctiond'unedéfaillancedeprotectiondusystème
+Pourrétablirlefonctionnementnormaldetouslesinstrumentslorsqu'uneconditiondedéfaillanceseproduitdans
+uneconfigurationdeprotectiondesystèmesconnectésensérie,vousdevezsupprimerlesdeuxconditionsde
+défaillancesuivantes :
+
+### 1. Ladéfaillancedeprotectioninitialeoulesignald'inhibitionexterneinitial.
+
+### 2. Lesignaldedéfaillanceenchaînequisuit,délivréparlesignald'inhibition.
+
+Mêmelorsquelaconditiondedéfaillanceinitialeoulesignalexterneinitialsontsupprimés,lesignalde
+défaillancedemeureactifetcontinuededésactivertouteslessortiesdel'ensembledesappareils.
+Poureffacerlesignaldedéfaillanceenchaînesilemodedefonctionnementdel'entréed'inhibitionestactivé,il
+suffitdedésactiverlaprotectiondesortiesurunappareilONEenappuyantsurSourceSettings>ProtectionClear
+pourtouteslessorties.
+Silemodedefonctionnementdel'entréed’inhibitionestverrouillé,désactivezl'entréed'inhibitionetlaprotection
+desortiepourtouteslessortiessurTOUSlesappareils.Pourréactiverlaconnexionensérie,reprogrammezl'entrée
+d'inhibitionsurchaqueappareilsurlemodeverrouillé.
+Entréededéclenchement
+Vouspouvezprogrammern'importelaquelledesbrochesdecommandenumériquepourlafairefonctionnercomme
+uneentréededéclenchement.LabrocheCommundesignalestlaréférencedetouteslesbroches.
+Pourentrerunsignaldedéclenchementexterne,appliquezuneimpulsionàfrontnégatifouàfrontpositifàla
+broched'entréededéclenchementindiquée.Letempsdelatencedu déclenchementestinférieurà
+
+### 450 microsecondes.Lalargeurd’impulsionminimaleestde2 microsecondes.Leréglagedelapolaritédelabroche
+
+déterminelefrontquigénéreraunévénementdedéclenchement.Positifsignifieunfrontascendant,etnégatifun
+frontdescendant.
+Vouspouvezconfigurerl'enregistreurdedonnéesetlalistedessortiespourqueledéclenchementsoitprovoqué
+pardessignauxdedéclenchementexternes.IlsuffitdesélectionnerDIOTriggerInentantquesourcede
+déclenchementlorsdelaconfigurationdel'enregistreurdedonnéesetdelalistedessorties.Celaactiverales
+signauxdedéclenchementd'entréesurlesbrochesnumériquesconfigurées.Undéclenchementestgénéré
+lorsqu'unsignalexternerépondantauxcritèresdusignalestappliquéàn'importequellebroched'entréede
+déclenchementconfigurée.
+
+### 76 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 184
+
+Surlepanneauavant :
+
+### 1.AppuyezsurUtilities>I/OConfig>DigitalIOpouraccéderàlafenêtred’E/Snumérique.
+
+### 2.Sélectionnezlabrochequevoussouhaitezconfigurer.Parexemple,appuyezsurPin1pourconfigurerlabroche1.
+
+### 3.AppuyezsurFonction,puissélectionnezTriggerIn.Sélectionnezetprogrammezlesautresbrochesdelamême
+
+manière.AppuyezsurBackpourretourneràlapageprécédente.
+
+### 4.Configurezlapolaritépourchaquebroche.AppuyezsurPolarityPospoursélectionnerPositiveetPolarityNeg
+
+poursélectionnerNegative.Sélectionnezetprogrammezlesautresbrochesdelamêmemanière.
+Àpartirdel'interfacedistante :
+Poursélectionnerlafonctiond'entréededéclenchement :
+
+### DIG:PIN1:FUNCTINP
+
+Poursélectionnerlapolaritédelabroche :
+
+### DIG:PIN1:POLPOS
+
+### DIG:PIN1:POLNEG
+
+Sortiededéclenchement
+Vouspouvezprogrammern'importelaquelledesbrochesdecommandenumériquepourlafairefonctionnercomme
+unesortiededéclenchement.LabrocheCommundesignalestlaréférencedetouteslesbroches.
+Configuréecommeunesortiededéclenchement,labrochedésignéedélivreuneimpulsionde10 microsecondesen
+réponseàunévénementdedéclenchement.Leréglagedelapolaritépeutêtreuneimpulsionàfrontpositifou
+négatifparrapportau commun.
+Lessignauxdedéclenchementpeuventêtregénéréslorsdelaconfigurationdelatensionetdel’intensitédans
+l’OutputLIST.SivouscochezlescasesBOSTetEOSTlorsdelaconfigurationdel’OutputLIST,unsignalde
+déclenchementdesortieseragénérésurlabrochenumériqueconfiguréeaudébutetàlafindel'étapedetensionet
+d’intensité.
+Surlepanneauavant :
+
+### 1.AppuyezsurUtilities>I/OConfig>DigitalIOpouraccéderàlafenêtred’E/Snumérique.
+
+### 2.Sélectionnezlabrochequevoussouhaitezconfigurer.Parexemple,appuyezsurPin1pourconfigurerlabroche1.
+
+### 3.AppuyezsurFonction,puissélectionnezTriggerOut.Sélectionnezetprogrammezlesautresbrochesdelamême
+
+manière.AppuyezsurBackpourretourneràlapageprécédente.
+
+### 4.Configurezlapolaritépourchaquebroche.AppuyezsurPolarityPospoursélectionnerPositiveetPolarityNeg
+
+poursélectionnerNegative.Sélectionnezetprogrammezlesautresbrochesdelamêmemanière.
+Guided’utilisationdeKeysightsérieE36300 77
+
+## Page 185
+
+Àpartirdel'interfacedistante :
+Poursélectionnerlafonctiondesortiededéclenchement :
+
+### DIG:PIN1:FUNCTOUT
+
+Poursélectionnerlapolaritédelabroche :
+
+### DIG:PIN1:POLPOS
+
+### DIG:PIN1:POLNEG
+
+### Commandesdecouplagedessorties
+
+CettefonctionpermetdeconnecterensembleplusieursalimentationsdelasérieE36300deKeysightetde
+synchroniserlaséquenced'activationoudedésactivationdessortiessurlesappareils.Chaquealimentation
+synchroniséedoitposséderaumoinsunesortiecouplée.
+
+### 1. ConfigurezlessortiesdechaquealimentationcommedécritdanslasectionConfigurationd’uneséquenceActi-
+
+vation/Désactivationdesortie.RéglezlemodedecouplagedesortiesurON.
+
+### 2. Réglezledécalagededélaidechaqueappareilafinqu'ilcorrespondeàlavaleurdedécalagededélailaplus
+
+grandedugrouped’alimentations.
+
+### 3. Connectezlesbrochesduconnecteurnumériquedesalimentationssynchronisées(voirlaprésentesection)et
+
+configurez-les.
+TouteslesalimentationsdelasérieE36300synchroniséesdoiventavoirlamêmeversiondumicrologiciel.
+Seuleslesbroches 1 à 3peuventêtreconfiguréescommebrochesdesynchronisation.Vousnepouvezpas
+configurerplusd'unebrocheOnCoupleetunebrocheOffCoupleparalimentation.Lapolaritédesbroches
+n'estpasprogrammable ;elleestrégléesurNegative.
+Lesbrochesduconnecteurnumériquedesalimentationssynchroniséesquicontiennentlessortiescoupléesdoivent
+êtreconnectéesensemble(voirlafigureci-dessous).Danscetexemple,labroche 2estconfiguréecommela
+
+### commanded'activationdelasortie.Labroche 3estconfiguréecommelacommandededésactivationdelasortie.
+
+Vousdevezégalementrelierensemblelesbrochesdemasseoucommun.
+Seulesdeuxdesbrochesduconnecteurnumériquedechaquealimentationsynchroniséepeuventêtreconfigurées
+comme« OnCouple »et« OffCouple »surchaquealimentationsynchronisée.Lesbrochesdésignéesfonctionnentà
+lafoiscommeentréeetcommesortie,avecunetransitionnégativesurunebrocheafindefournirlesignalde
+synchronisationauxautresbroches.
+
+### 78 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 186
+
+Surlepanneauavant :
+
+### 1.AppuyezsurUtilities>I/OConfig>DigitalIOpouraccéderàlafenêtred’E/Snumérique.
+
+### 2.AppuyezsurPin2.AppuyezsurFunction,puissélectionnezCoupleOn.
+
+### 3.AppuyezsurPin3.AppuyezsurFunction,puissélectionnezCoupleOff.
+
+### 4.Répétezcesétapespourlesalimentationsn°2etn°3.
+
+Àpartirdel'interfacedistante :
+Pourconfigurerlabroche2del'alimentationn°1commecommandededésactivation :
+
+### DIG:PIN2:FUNCONC
+
+Pourconfigurerlabroche3del'alimentationn°1commecommanded’activation :
+
+### DIG:PIN3:FUNCOFFC
+
+Répétezcescommandespourlesalimentationsn°2etn°3.
+Opération
+Unefoisl’alimentationconfiguréeetactivée,l'activationouladésactivationden'importequellesortiecouplée
+provoquel'activationouladésactivationdetouteslessortiescouplées,selonleursdélaisprogramméspar
+l'utilisateur.Cecis'appliqueauxtouchesOnetOffdupanneauavant,auserveur Web,etauxcommandesSCPI.
+L'activationouladésactivationdessortiesàl'aidedestouches[AllOn/Off]dupanneauavantprovoquel'activation
+ouladésactivationdetouteslessortiescoupléesetnoncoupléesdecettealimentation.
+Guided’utilisationdeKeysightsérieE36300 79
+
+## Page 187
+
+Utilisation de l’Output LIST (E36312A et E36313A seulement)
+L’OutputLISTpermetd’utiliseruneseulouplusieurssortiesdansuneséquence.Vouspouvezdéfinirleséléments
+suivantspourchacunedessortiesdansuneséquence.
+
+### 1. Définissezl'étapequigénéreralesignaldedéclenchementaudébutouàlafindel'étape.
+
+### 2. Définissezladernièrevaleurdesortieunefoislalistedelaséquenceterminée.
+
+### 3. Définissezlafaçondontlalisterépondauxdéclenchements.
+
+### 4. Définissezlemodetransitoirepourlatensionetl’intensité.
+
+### 5. Définissezlasourcededéclenchementdusystèmetransitoire.
+
+### 6. Définissezledélaidedéclenchementensecondes.
+
+### 7. Définissezlenombrederépétitionsdelaliste.
+
+### 8. Définissezlalisteàrépétercontinuellement.
+
+Vouspouvezconfigurerjusqu'à100étapesdetensionetd’intensitédanslafenêtreOutputLIST.
+Étape1–Ajouter/Supprimerdesétapesà/del’ARB
+AppuyezsurOutputLISTpouraccéderàlafenêtreOutputLIST.
+AppuyezsurAddpourinsérerunenouvelleétapeendessousdel'étapesélectionnée.Notezquelesvaleursdela
+nouvelleétapesontcopiéesàpartirdel'étapeprécédente.Continuezàajouterdesétapesjusqu'àcequevotre
+séquencesoitterminée.Utilisezlestouchesdenavigationpourparcourirlaliste.
+AppuyezsurDeletesivoussouhaitezsupprimerl'étapesélectionnéeousurClearAllsivoussouhaitezsupprimer
+touteslesétapesdelaliste.
+
+### 80 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 188
+
+Étape2–Configurerlaséquencedessorties.
+Configurezlatension,l’intensité,letemps,BOSTetEOSTenconséquence.Lestouchesdenavigationpermettentde
+sélectionnerlechamp,lestouchesduclaviernumériquedesaisirlavaleur.Lavaleurestdéfinielorsquevous
+appuyezsurEnter.
+Champs Description
+Voltage Définitlavaleurdelatensionpourl'étapesélectionnéeenvolts.
+Current Définitlavaleurdel’intensitépourl'étapesélectionnéeenampères.
+Time Définitletempsd'exécutiondel'étapesélectionnéeensecondes.
+BOST Activelacaseàcocherpourdéfinirl’étapequigénéreraunsignaldedéclenchementaudébutdel'étape(BOST).
+EOST Activelacaseàcocherpourdéfinirl’étapequigénéreraunsignaldedéclenchementàlafindel'étape(EOST).
+Pourplusdeparamètres,appuyezsurPropertiespourouvrirlafenêtreOutputLISTProperties.Configurezl’Output
+LISTenconséquence.Reportez-vousautableauci-dessouspourplusdedétails.
+Guided’utilisationdeKeysightsérieE36300 81
+
+## Page 189
+
+Paramètres Paramètresdes Description
+touchesdisponibles
+Voltage/Current DCouList Indiquecequiseproduitlorsquelaséquencedessortiesestterminée.
+AfterList LavaleurpardéfautestDC.
+Actionrequise :
+AppuyezsurV/IListpourbasculerentreDCetList.
+DC(ReturntoDC RevientàlavaleurCCquiétaitenvigueuravantledébutdela
+Value) séquencedessorties.
+List(LastListValue) Restesurladernièrevaleurdelaliste.
+Pace DwlouTrg Configurelerythmedel'étape.
+CeluipardéfautétantDwl.
+Actionrequise :
+AppuyezsurPacepourbasculerentreDwletTrg.
+Dwl (L'étapesuivantes'afficheimmédiatementàlafindeladuréedepalier.)
+(Dwell)
+Trg(Trigger) (L'étapesuivantes'afficheimmédiatementlorsdelaréceptiond'un
+déclenchementexterne.)Siletempsdel'étapesetermineavantquele
+déclenchementneseproduise,l'étaperestesurladernièrevaleurdela
+listedansl'attentedudéclenchement.
+VoltageMode Fix,StpouLst Définitlemodedetension.Cettecommandedéterminecequ'iladvientdelatensiondesortie
+lorsquelesystèmetransitoireestdémarréoudéclenché.
+LavaleurpardéfautestFix
+Remarque :Silemoded’intensitéestréglésurStep,lemodedetensionnepeutpasêtreréglé
+surListetviceversa.
+Actionrequise :
+AppuyezsurVModepourbasculerentreFix,StpetLst.
+Fix(Fixed) Maintientlasortieàsavaleurimmédiate.
+Stp(Step) Faitpasserlasortieauniveaudéclenchélorsqu'undéclenchementse
+produit.
+Lst(List) Permetlaconformitédelasortieauxvaleursdelalistelorsqu'un
+déclenchementseproduit.
+
+### 82 Guided’utilisationdeKeysightsérieE36300
+
+
+### Tables on this Page
+
+| Paramètresdes touchesdisponibles | Description |
+|---|---|
+
+## Page 190
+
+Paramètres Paramètresdes Description
+touchesdisponibles
+CurrentMode Fix,StpouLst Définitl'intensitéCettecommandedéterminecequ'iladvientdel’intensitédesortielorsquele
+systèmeestdémarréoudéclenché.
+LavaleurpardéfautestFix
+Remarque :SilemodedetensionestréglésurStep,lemoded’intensiténepeutpasêtreréglé
+surListetviceversa.
+Actionrequise :
+AppuyezsurIModepourbasculerentreFix,StpetLst.
+Fix(Fixed) Maintientlasortieàsavaleurimmédiate.
+Stp(Step) Faitpasserlasortieauniveaudéclenchélorsqu'undéclenchementse
+produit.
+Lst(List) Permetlaconformitédelasortieauxvaleursdelalistelorsqu'un
+déclenchementseproduit.
+TriggerSource Key,IOouRmt Définitlasourcededéclenchementdusystème.
+LavaleurpardéfautestKey.
+Actionrequise :
+AppuyezsurTrigSrcpourbasculerentreKey,IOetRmt.
+Key(ListRun/StopKey) SélectionnelatouchedefonctionRunStopped
+commesourcededéclenchement.
+IO(DIOTriggerIn) SélectionnetoutefonctionE/Snumériqueavecla
+fonctionTriggerInputconfiguréecommesourcede
+déclenchement.
+Rmt(RemoteCommand) Sélectionneunecommanded'interfacedistante
+commesourcededéclenchement.
+TriggerDelay 0à3600s Définitledélaidedéclenchementensecondes.
+Lavaleurpardéfautest0s.
+RepeatCount 1à9999 Définitlenombrederépétitionsdelaliste.Cettecommandepermetdedéfinirlenombrede
+foisqu'unelisteestexécutéeavantdeseterminer.
+Lavaleurpardéfautest1.
+Continuous - Activelacaseàcocherpourrépéterlalistecontinuellement.
+Étape3-Exécuterlalistedeséquencedessorties
+Lorsdelancementdel’OutputLIST,ilestimpossibledeconfigurertouteslespropriétésdelaliste,cequi
+inclutl'ajoutoulasuppressiondel'étapedelaliste.
+Lorsquelesystèmetransitoireenmodeétapeestdéclenché,ilestimpossibledeconfigurerlespropriétés
+tellesquelemodedetension,lemoded’intensité,lasourcededéclenchementetledélaidedéclenchement.
+Guided’utilisationdeKeysightsérieE36300 83
+
+### Tables on this Page
+
+| Paramètresdes touchesdisponibles | Description |
+|---|---|
+
+## Page 191
+
+Silemodedetensionetd’intensitéestréglésurFixetlasourcededéclenchementestrégléesurKey,appuyer
+surRunvouspermetdeconfigurerautomatiquementlemodedetensionetd’intensitédanslalisteetde
+lancerl'opérationdelaliste.
+– RéglezlemodedetensionsurList :AppuyezsurVModeLst.
+– Réglezlemoded’intensitésurList :AppuyezsurIModeLst.
+– RéglezlasourcededéclenchementsurKey.AppuyezsurTrigSrcKey.
+– Appuyezsurlatouchedecouleur[On]pouractiverlasortiesélectionnée.
+– AppuyezsurRunpourlancerl’opérationdelaliste.Pourannulerl'opération,appuyezsurStopped.
+– AppuyezsurBackpourquitteretreveniraumenuprécédent.
+Àpartirdel'interfacedistante :
+Pourconfigurerlatensiondelalistedelasortie1avec1V,2V,3V,4Vet5V :
+
+### LIST:VOLT1,2,3,4,5,(@1)
+
+Pourconfigurerl’intensitédelalistedelasortie1avec0,1A,0,2V,0,3A,0,4Aet0,5A :
+
+### LIST:CURR0.1,0.2,0.3,0.4,0.5,(@1)
+
+Pourconfigurerletempsdelalistedelasortie1avec1s :
+
+### LIST:DWELL1,1,1,1,1,(@1)
+
+PouractivertouslesBOSTdelalistedelasortie1 :
+
+### LIST:TOUT:BOST1,1,1,1,1,(@1)
+
+PourdésactivertouslesEOSTdelalistedelasortie1 :
+
+### LIST:TOUT:EOST0,0,0,0,0,(@1)
+
+Pourréglerlemodedetensiondelasortie1surList(liste) :
+
+### VOLT:MODELIST,(@1)
+
+Pourréglerlemoded’intensitédelasortie1surList(liste) :
+
+### CURR:MODELIST,(@1)
+
+Pourréglerlasourcededéclenchementdelasortie1surKey/Immediate :
+
+### TRIG:SOURIMM,(@1)
+
+Pouractiverlasortie1 :
+
+### OUTPON,(@1)
+
+Pourlanceretexécuterlaliste :
+
+### INIT(@1)
+
+### 84 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 192
+
+Utilisation de la fonction d'enregistreur de données (E36312A et E36313A seulement)
+LeDataLogger(Enregistreurdedonnées)vouspermetdevisualiseretdeconsignerlesdonnéesdetensionet
+d’intensitédesortiependant30 000heuresmaximum(pourunesortieunique,selonlatailledelamémoire)et
+jusqu'à7Modedonnées.
+Vouspouvezconfigurerl'enregistreurdedonnéespourafficherlessignauxdetensionoud’intensitédetoutesles
+sorties.Unefoisl'enregistrementdesdonnéesterminé,lesdonnéessontautomatiquementstockéesdansunfichier
+nommédefault.dlog.
+VousdevezconnecterunecléUSBsurleportUSBdupanneauavantlorsquevousexécutezl’enregistrement
+d’unjournaldedonnées.Vousnepouvezpaseffectuerd’enregistrementdedonnéessiaucunecléUSBn'est
+connectée.
+Enregistrementdedonnées
+Dansl'exempledejournaldedonnéessuivant,uneformed'ondearbitrairedéfinieparl'utilisateurestcapturéesur
+l'enregistreurdedonnées.L'enregistreurdedonnéesenregistrelatensiondesortieréelledelaformed'onde
+arbitraire.
+Étape1-Programmerlaséquencedesvoiesdesortie
+ConfigurezlaséquencedesortiecommedécritdansUtilisationdel’ARBdessorties.
+Programmezlesvaleursdetensiondesortieetdetempscommesuit :
+Étape 0 :1V ;0,1A ;1s
+Étape 1 :2V ;0,1A ;1s
+Étape 2 :3V ;0,1A ;1s
+Étape 3 :4V ;0,1A ;1s
+Étape 4 :5V ;0,1A ;1s
+Nombrederépétitions :5
+Rythme :Délai
+Modedetension :Liste
+Moded’intensité :Liste
+Sourcededéclenchement :ToucheListRun/StopKey
+Guided’utilisationdeKeysightsérieE36300 85
+
+## Page 193
+
+Étape2-Configurerlestracesdel'enregistreurdedonnées
+– CochezV1.Surl'écrandel'enregistreurdedonnées,utilisezlestouchesdenavigationpoursélectionnerV1et
+appuyezsur[Enter].
+– DécochezV2etV3ainsiquelestracesd’intensitéetd’alimentation.
+– AppuyezsurWaveformSettings>Vertical.UtilisezVolts/Div–ouVolts/Div+pourréglerV1sur1V/Div.Utilisez
+Offset+ouOffset–pourdéplacerlatraceV1verslebasdelagrille.
+Lestracessontreprésentéesdanslacouleurdelasortiecorrespondante.Lesymboledemasseàdroitedel'écran
+indiquelaréférencedemassedelatrace.
+
+### 86 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 194
+
+Étape3-Configurerlespropriétésdel'enregistreurdedonnées
+AppuyezsurLoggingpourafficherlechampLoggingproperties(propriétésd'enregistrement).
+– Laissezladuréeetlapérioded'échantillonnagepardéfautà30set200msrespectivement.
+– RéglezlasourcededéclenchementsurlatoucheExécuter/ArrêterenappuyantsurTrigSrcKey.
+Étape4-Activerlasortie1,démarrerleséquencementetenregistrerlesdonnées.
+AppuyezsurBackpourreveniràlavuedel'enregistreurdedonnées.
+– Appuyezsur[On]pouractiverlasortie1.
+– AppuyezsurRunStoppedpourexécuterl’enregistreurdedonnées.L'enregistreurdedonnéesseralancéetla
+tracedesortie1s'afficheàl'écran.
+– AppuyezsurOutputLIST>RunStoppedpourdémarrerleséquencementdesortie.
+L'enregistreurdedonnéesfonctionnerapendant30secondesetenregistreralesdonnéesdetensionàpartirdela
+sortie1.Lorsquel'enregistrementdujournaldesdonnéesestterminé,vousdevezvoirlaformed'ondedesortie
+s’affichercommesuit :
+Guided’utilisationdeKeysightsérieE36300 87
+
+## Page 195
+
+Unmessageindiquequelesdonnéesenregistréesontétésauvéesdansunfichiernommédefault.dlog.Sivous
+souhaitezenregistrerlesdonnéessousunnomdefichierdifférent,vousdevezspécifierlenomdefichieravantque
+l'enregistreurdedonnéesnes'exécute.
+AppuyezsurleFileNamesituédanslemenudespropriétésdel’enregistreurdedonnéespourspécifierunnomde
+fichier.
+Étape5-Exporterlesdonnées
+prèsavoirterminél'enregistrementdesdonnées,vouspouvezutiliserlatoucheExportFilepourexporterles
+donnéesenregistréesdansunfichier.csv(valeursséparéespardesvirgules).
+Lorsdel'exportationdesdonnées,indiquezlasortiedontvousvoulezexporterlesdonnéesenregistrées.
+AppuyezsurSavePathpourparcouriretindiquerl'emplacementoùlefichierd'exportationseraplacé.Utilisezles
+touchesdenavigationdupanneauavantpourparcourirlaliste.Lesflèchesàgaucheetàdroiteréduisentou
+développentundossierpourmasquerouaffichersesfichiers.AppuyezsurSelectunefoisquevousavezspécifiéle
+chemind'accèsouCancelpourannulerlesmodificationsapportées.
+AppuyezsurFileNamepourconfigurerlenomdufichier.Utilisezleclavierpourentrerlenomdefichierdésirédans
+lechampFileName.AppuyezsurBackpourenregistreretCancelpourannulerlesmodificationseffectuées.
+AppuyezsurExportFilepourexporterlefichier.
+
+### 88 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 196
+
+Àpartirdel'interfacedistante :
+Pourprogrammerlaséquencedesortiedescinqétapessurlasortie1 :
+
+### LIST:VOLT1,2,3,4,5,(@1)
+
+### LIST:CURR0.1,0.1,0.1,0.1,0.1,(@1)
+
+### LIST :DWELL1,1,1,1,1,(@1)
+
+### LIST:COUNT5,(@1)
+
+### LIST :STEPAUTO,(@1)
+
+### VOLT:MODELIST,(@1)
+
+### CURR:MODELIST,(@1)
+
+Pourdémarrerlesystèmededéclenchement :
+
+### TRIG:SOURBUS
+
+### INIT(@1)
+
+Pourconfigurerl’enregistrementdujournaldesdonnéespourlasortie1 :
+
+### SENS :DLOG:FUNC :VOLTON,(@1)
+
+### SENS:DLOG:TIME30
+
+### SENS:DLOG:PER0.2
+
+Pourlancercetenregistreurdedonnéesetspécifierlenomdefichierdanslequelenregistrerlesdonnées :
+
+### TRIG:DLOG:SOURBUS
+
+INIT:DLOG« External:\log1.csv »
+Pouractiverlasortie1etlancerl'enregistreurdedonnées :
+
+### OUTPON,(@1)
+
+### *TRG
+
+Vueenregistreurdedonnées
+AppuyezsurDataLoggerpouraccéderàl’enregistreurdedonnées.
+Guided’utilisationdeKeysightsérieE36300 89
+
+## Page 197
+
+Options Description
+
+### 1 Commandesdes Indiquelatracedetensionoud’intensitéaffichée.√indiquequelatraceestactivée.Despointillés(--
+
+traces --)indiquentquelatraceestdésactivée.Sélectionnezlatraceetappuyezsur[Enter]pourl’activerou
+ladésactiver.
+
+### 2 Barrededonnées Labarrededonnéesreprésentetouteslesdonnéesenregistrées.Lapartiejauneindiquelapartie
+
+desdonnéesaffichéesàl’écran.Lapartienoirereprésentelesdonnéesquinesontpasaffichées.
+
+### 3 Temps/div Indiqueleréglagedelabasedetempshorizontale.CelapeutêtreajustéenutilisantTime/Div+et
+
+Time/Div–horizontaldanslesWaveformSettings.
+
+### 4 Tempsdedécalage Indiqueletempsdedécalageoud’éloignementduborddroitdelagrilleparrapportàlafinde
+
+l’enregistrementdedonnées.Lorsquecettevaleurestnulle,leborddroitdelagrillesesitueàlafin
+del’enregistrement.Fairel'ajustementdudécalageenutilisantOffset+etOffset–horizontaldans
+lesWaveformSettingsdéplaceralagrilleparrapportàlafindel'enregistrementdedonnées,comme
+indiquéparleOffsetTime.
+
+### 5 Tempsécoulé Indiqueletempsécoulépendantl’enregistrementdesdonnéesetladuréetotale.Cesvaleurssont
+
+égaleslorsquel’enregistrementdesdonnéesestterminé.
+
+### 6 Nomdefichier Indiquelenomdefichierdesdonnéesquiestenregistré.
+
+### 7 Tracesdesortie Leslibellésdestracesdetensionapparaissentsurlagauchedelagrille(V1V2,V3)commeindiquéà
+
+l'écran.
+Leslibellésdestracesd’intensitéapparaissentsurladroitedelagrille (I1,I2,I3)
+Leslibellésdestracesdepuissanceapparaissentaucentredelagrille (P1,P2,P3).
+AppuyezsurAutoScalepourmettrelestracesdedonnéesàl'échelleautomatiquement.
+
+### 8 Référencedemasse Laréférencedemassedelatrace.Lesréférencesdemassesontdécaléesafinquelestracesnese
+
+superposentpas.Laréférencedudécalagedelaréférencedemasseestlalignehorizontalecentrale
+delagrille.
+
+### 9 Letempssurlagrille Afficheletempssurleborddelagrille.
+
+### 90 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 198
+
+Options Description
+
+### 10 Flèchesdeposi- Indiquezquelatrace(V3danslafigure)sesituehorsdel’écran.UtilisezlesVolts/Div+etVolts/Div–
+
+tionnementhorsde verticauxoulesOffset+etOffset–verticauxdanslesWaveformSettingspourreplacerlatracedans
+l’écran l'écran.AppuyezsurAutoScalepourmettrelestracesdedonnéesàl’échelleautomatiquement.
+
+### 11 Indicateurdupointde Indiquelapositiondudéclenchementdansl’enregistrementdedonnées.Danscetexemple,cepoint
+
+déclenchement aétédécaléde 50 %,etdesdonnéesdepré-déclenchementetdepost-déclenchementontétéenre-
+gistrées.Letempsaupointdedéclenchementesttoujourszéro.Changezledécalagedudéclen-
+chementdanslesDataLoggerLoggingSettings.
+Menu Description
+WaveformSet- Définitl'affichagedelaformed'onde.Reportez-vousauRéglagedel'affichagedelaformed'onde..
+tings
+RunStopped Exécutezouarrêtezl'enregistreurdedonnées.
+Properties Définitl'enregistrementdesdonnéesetlaformed'ondeaffichelespropriétés.Reportez-vousauPro-
+priétésdel’enregistreurdedonnéesetparamètresdelaformed'onde.
+AutoScale Metautomatiquementàl'échellelestracésàl'écran.
+Réglagedel'affichagedelaformed'onde
+AppuyezsurWaveformSettingspouraccéderaumenudesparamètresdeformed'onde.Appuyezsurlapremière
+touchedefonctionpourbasculerentreVerticaletHorizontalpourafficherlemenudesparamètresverticauxet
+horizontaux.Lemenudesparamètresverticauxchangeraenfonctiondelatracesélectionnée.
+Menu Description
+Volts/Div+/– Dilateoucomprimelaformed'ondeverticalementparrapportàlaréférencedemasse.Indiquéenvolts/division,
+Amps/Div+/– ampères/divisionetwatts/divisionsurl’axevertical.
+Watts/Div+/–
+Time/Div+/– Dilateoucomprimelaformed'ondehorizontalementautourdelaréférencededécalagehorizontale.Indiquéen
+temps/divisionsurl’axehorizontal.S’appliqueàTOUTESlestraces.
+Vertical Déplacelaréférencedemasseverslehautouverslebasparrapportàlalignehorizontaleaucentredelagrille.
+Offset+/–
+HorizontalOffset+/– Déplacelaformed'ondeversladroiteouverslagauchedelaréférencededécalagehorizontale.
+Guided’utilisationdeKeysightsérieE36300 91
+
+## Page 199
+
+Propriétésdel’enregistreurdedonnéesetparamètresdelaformed'onde
+Options Paramètrespro- Description
+posés
+
+### 1 Vertical CaseàcocherTrace Permetdesélectionnerlatraceàafficherpourlasortie.Siaucunecaseàcochern'est
+
+Settings activée,l'enregistrementdesdonnéesn’aurapaslieupourlasortie.
+(Vr) Configurelatension/division,l’intensité/division,l’alimentation/divisionetlesdéca-
+lagespourchaquesortie.
+
+### 2 Horizontal Time/Division Zoomavantouarrièresurlesdonnéesafinquevouspuissiezafficherlesdétailsdes
+
+Settings signaux.Lesnombressituésenhautdel’écranindiquentl’emplacementdesdonnées
+(Hr) affichéesparrapportàlatotalitédel’enregistrementdedonnées.Indiquéen
+temps/divisionsurl’axehorizontal.S’appliqueàTOUTESlestraces.
+Offset Configurel’emplacementdelaformed'onde(versladroiteouverslagauche)parrap-
+portàlaréférencededécalagehorizontale.Lepointdedéclenchementestrepérépar
+uneflècheentraitplein.
+
+### 3 Logging Duration Configureladuréedujournaldesdonnéesenheures,minutesetsecondes.Ladurée
+
+(Lg) maximaleestde30 000 heures.Lesinformationsd'enregistrements'appliquentaux
+mesuresdel'enregistreurdedonnéessurtouteslessorties.
+SamplePeriod Configurel’intervalleentreleséchantillonsdedonnéesenmillisecondes,réglableentre
+
+### 200 microsecondeset 60 secondes.
+
+TriggerSource Configurelasourcededéclenchementdel’enregistreurdedonnées.
+TriggerPos Lapositiondedéclenchementindiqueundécalagededéclenchement.Celapermetde
+préciserlesdonnéesdetempsdeprédéclenchementàenregistrerdanslefichier.Par
+exemple,sivousindiquezuneduréed’enregistrementdedonnéesde 30 setuneposi-
+tiondedéclenchementde 50 %,l’enregistreurdedonnéesenregistre 15 sdedonnées
+deprédéclenchementdanslefichieravantledéclenchement.Parlasuite,15 sdedon-
+néesdepostdéclenchementsontenregistréesdanslefichierdedonnées.
+CaseàcocherLog Unefoisactivé,celavouspermetd'inscrirelesvaleursminimumetmaximumpour
+Min/Max chaqueéchantillonnagedanslefichierd'enregistrementdesdonnéesSilacaseLog
+Min/Maxestcochée,latailledufichiergénéréseratriplée.
+
+### 92 Guided’utilisationdeKeysightsérieE36300
+
+
+### Tables on this Page
+
+| Paramètrespro- posés | Description |
+|---|---|
+
+## Page 200
+
+Options Paramètrespro- Description
+posés
+Menu Paramètresproposés Description
+FileSelection - Permetdeconfigurerl'emplacementdefichieretlenomdefichierpourlesdonnées
+enregistrées,d'exporterlefichierauformat.csvetdechargerlefichierpréalablement
+enregistrédansl'instrument.
+Preset - Remetlavuedel'enregistreurdedonnéesauxparamètresd'affichagelorsdelamise
+soustension.
+Settings Vr,HrouLg PermetdesélectionnerlechampVerticalSettings,HorizontalSettingouLoggingSet-
+tings.
+Actionrequise :
+AppuyezsurSettingspourbasculerentreVr,HretLg.
+TrigSrc Key,IOouRmt ConfigurelasourcededéclenchementpourDataLogger.
+LavaleurpardéfautestKey.
+Actionrequise :
+AppuyezsurTrigSrcpourbasculerentreKey,IOetRmt.
+Key(ListRun/StopKey) SélectionnelatoucheRunStoppedcomme
+sourcededéclenchement.
+IO(DIOTriggerIn) PermetdesélectionnertoutefonctionE/S
+numériqueaveclafonctionTriggerInput
+configuréecommesourcededéclen-
+chement.
+Rmt(RemoteCommand) Sélectionneunecommanded'interfacedis-
+tantecommesourcededéclenchement.
+LgMinMax OffouOn ActiveoudésactivelacaseLogMin/MaxActiverlacaseàcocherenregistrerales
+valeursminimaleetmaximalepourlefichierdedonnéesdujournal.SilacaseJournal
+Min./Max.estcochée,latailledufichiergénéréseratriplée.
+LavaleurpardéfautestOff.
+Actionrequise :
+AppuyezsurLgMinMaxpourbasculerentreOffetOn.
+Guided’utilisationdeKeysightsérieE36300 93
+
+### Tables on this Page
+
+| Paramètrespro- posés | Description |
+|---|---|
+| Paramètresproposés | Description |
+
+## Page 201
+
+Àpartirdel'interfacedistante :
+Pouractiverl'enregistrementdesdonnéesd’intensitéoudetensionsurlessorties1et2 :
+
+### SENS:DLOG:FUNC:CURR1,(@1,2)
+
+### SENS:DLOG:FUNC:VOLT1,(@1,2)
+
+Vousnepouvezpasenregistrerlesdonnéesdel’alimentationdesortiedel'interfacedistante.Pourobtenirdes
+donnéesd’alimentation,vousdevezenregistrerlesdonnéesdetensionetd’intensité,puiscalculerl’alimentationà
+partirdesdonnéesdetensionetd’intensité.
+Pourenregistrerlesvaleursminimalesetmaximalesdanslefichierjournaldesdonnéespourtouteslessorties
+activées :
+
+### SENS:DLOG:FUNC:MINM1
+
+Pourspécifierunjournaldedonnéesde1000secondessurtouteslessortiesactivées :
+
+### SENS:DLOG:TIME1000
+
+Pourspécifierunepérioded'échantillonnagede400millisecondesentreleséchantillonsdedonnéessurtoutesles
+sortiesactivées :
+
+### SENS:DLOG:PER0.4
+
+Pourenvoyerunsignaldedéclenchementimmédiatàl'enregistreurdedonnées :
+
+### TRIG:DLOG
+
+Poursélectionnerlasourcededéclenchementimmédiat(déclenchel'enregistreurdedonnéesimmédiatementlors
+desonlancement) :
+
+### TRIG:DLOG:SOURIMM
+
+Poursélectionnerl'entréededéclenchementdupanneauarrière(touteslesbrochesdeconnecteurontété
+configuréescommesourcesdedéclenchement) :
+
+### TRIG:DLOG:SOUREXT
+
+PoursélectionnerunesourcededéclenchementBUS :
+
+### TRIG:DLOG:SOURBUS
+
+Enregistrerlejournaldesdonnées
+AppuyezsurFileSelectionpourspécifierunnomdefichierdanslequelenregistrerlejournal.Lesdonnéesseront
+enregistréessouscenomdefichierauprochaindémarragedel’enregistreurdedonnées.Sivousn’indiquezpasde
+nomdefichier,lesdonnéessontenregistréesdansdefault.dlog.Cefichierestécraséàchaquedémarragede
+l’enregistreurdedonnées.
+CochezlacaseAppenddateandtimetofilenamepourinclurelesinformationsd'horodatagedanslefichier.
+
+### 94 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 202
+
+AppuyezsurSavePathpourparcouriretspécifierl'emplacementoùlejournalseraenregistré.Utilisezlestouches
+denavigationdupanneauavantpourparcourirlaliste.Lesflèchesàgaucheetàdroiteréduisentoudéveloppentun
+dossierpourmasquerouaffichersesfichiers.
+Pourafficherledossieretlesfichiersdisponiblesdanslerépertoire,appuyezsurShowingFolderouShowingAll.
+AppuyezsurSelectunefoisquevousavezspécifiélechemind'accèsouCancelpourannuler.
+AppuyezsurFileNameetutilisezleclavierpoursaisirlenomdufichierdanslechampdunomdufichier.Appuyez
+surDonepourenregistreretCancelpourannuler.
+Exportationdesdonnées
+Pourexporterunjournaldedonnéesenregistrédansl'instrument,vousdevezd'abordchargerlefichierenre-
+gistrédanslavuedel'enregistreurdedonnées.
+AppuyezsurExportFilepourexporterlesdonnéesquisetrouventactuellementdanslavisionneusedujournalde
+donnéesdel'instrumentdansunfichier.Lesdonnéesexportéessontauformat.csv.
+Pourplusdedétailssurlafaçond’indiquerl'emplacementd'enregistrementetlenomdefichier,reportez-vousàla
+sectionEnregistrerlejournaldesdonnées.
+Guided’utilisationdeKeysightsérieE36300 95
+
+## Page 203
+
+Chargerlesdonnées
+Lefichierquevousavezrappelédoitprovenirdumêmemodèled'instrument.
+AppuyezsurLoadFilepourchargerladateenregistréedansl'instrument.Vouspouvezchargeràlafoislesfichiers
+binairesetlesfichiersdedonnéesauformat.csv.
+AppuyezsurBrowsepourparcouriretsélectionnerlefichierdanslerépertoire.AppuyezsurSelectpoursélectionner
+lefichierouCancelpourannuler.
+AppuyezsurLoadpourchargerlefichier.
+
+### 96 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 204
+
+Verrouillage/déverrouillage du panneau avant
+Sivousêtesdansunmenu,vousdevezlequitteravantdeverrouillerlepanneauavant.
+
+### 1. Maintenezlatouche[Lock|Unlock]enfoncéepourverrouillerlepanneauavant.Celagénèrel'icônedever-
+
+rouillage( )danslecoinsupérieurdel'affichage,commeindiquéci-dessous.
+
+### 2. Appuyezànouveausur[Lock|Unlock]pourdéverrouillerlepanneauavant.
+
+Àpartirdel'interfacedistante :
+Pourverrouillertouteslestouchesdupanneauavant,ycomprislatoucheLock|Unlock :
+
+### SYST:RWL
+
+Pourverrouillertouteslestouchesdupanneauavant,ycomprislatoucheLock|Unlock :
+
+### SYST :REM
+
+Pourdéverrouillerlepanneauavant :
+
+### SYST:LOC
+
+Capture d’un écran
+Appuyezsur[MeterView]pendantplusdetroissecondespourcapturerunécran.L'écranquiétaitactifsera
+enregistrésurlepériphériquedestockageflashUSBconnectéauportUSBavant.
+Pourconfigurerlechemind’enregistrementdescapturesd'écran,reportez-vousauMenudesutilitaires-Gérerles
+fichierspourplusdedétails.
+Guided’utilisationdeKeysightsérieE36300 97
+
+## Page 205
+
+Activation du mode E3631A (mode Personna)
+LemodeE3631A(égalementappelémodePersonna)vouspermetdemodifierl'identitéprogrammatiquedelasérie
+E36300versE3631Aenvuedelacompatibilitéducodeetluipermetdefonctionnercommel'E3631Adansles
+
+### applicationsexistantes.
+
+AppuyezsurUtilities>Test/Setup>UserSettings>SCPIID
+AppuyezsurpoursélectionnerSCPIIDE3631ApouractiverlemodeE3631A.
+Unefoisentrédanscemode,l'instrumentsecomporteracommeunE3631A.SélectionnezSCPIIDE363XXAsivous
+souhaitezrevenirauxcaractéristiquesetfonctionsd'originedel'instrument.
+Àpartirdel'interfacedistante :
+PouractiverlemodeE3631A :
+
+### SYST:PERS:MODE3631A
+
+### 98 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 206
+
+Menu des utilitaires
+Utilitiesoffrelesfonctionssuivantes :
+Enregistreretrappelerl'étatetlesparamètresdemisesoustension
+Afficherl'étatUSBetLANetconfigurerLAN,GPIB(optionnelpourE36312AetE36313A)etE/Snumérique
+Effectuerdesauto-testsdel'instrument,desétalonnagesetuneconfigurationdesparamètresdesdifférents
+utilisateursdel'instrument,ainsiquedeladateetdel'heure.
+Affichelafiled’attentedeserreursdel’instrument.
+Gérerlesfichiers,ycomprislacréationdescapturesd'écran
+Menu des utilitaires - Enregistrer et rappeler l'état
+Lemenudesutilitairess'afficheci-dessous.
+Store/Recallenregistreetrappellelesétats.Engénéral,lesfichiersd'étatenregistrentlesparamètresvolatiles
+associésauxmesures.
+Lesétatsdel'instrumentincluentdesparamètresvolatilescomme :
+– Tension,intensité,OVP,délaiOCP,étatOCPetdémarragedudélaiOCP
+– Mesuredesortie1
+– Étatdesortie,sortiesélectionnéeetvoiededéclenchementdecouplage
+– Modedefonctionnement(Indépendant,Série,ParallèleouSuivi)
+– Séquencementd’activation/dedésactivationdes sorties1
+– Paramètresdel’ARBdessorties1
+– Paramètresdedéclenchement1
+– Donnéesdesortied'E/Snumériquesetparamètredubus1
+– Sourcededéclenchementdel'enregistreurdedonnées1
+
+### 1.ApplicableauxmodèlesE36312AetE36313Aseulement
+
+Guided’utilisationdeKeysightsérieE36300 99
+
+## Page 207
+
+Paramètresd'enregistrement
+StoreSettingscréentdesdossiersetdesfichiers(format.csv)pourenregistrerl'étatdel'instrumentdansla
+mémoireexterneouinterne.Vouspouvezenregistrerjusqu'à10étatsetlesconfigurercommeétatàlamisesous
+tension.
+Menu Paramètrespro- Description
+posés
+Action : Store,Folder Vouspermetd'enregistrerunétatdel'instrumentoudecréerunnouveaudossier.
+Dest. : Int,Ext Indiquesivousvoulezenregistrerunétatdanslamémoireinterneouexterne.
+-Interne :spécifielamémoireinternedel'instrument.
+-Externe :spécifieleportUSBsurlepanneauavant.
+Storein State0àState9 Sélectionnel'étatpourenregistrerlesparamètresd'état.
+SetPwrOn Yes,No Activeoudésactivelacase« Setthisaspower-onstate ».Activerlacaseàcocherchargera
+l'étatenregistrésélectionnéàlamisesoustension.
+Store - Enregistrel'état.
+
+### 100 Guided’utilisationdeKeysightsérieE36300
+
+
+### Tables on this Page
+
+| Paramètrespro- posés | Description |
+|---|---|
+
+## Page 208
+
+Menu Paramètrespro- Description
+posés
+Action : Store,Folder Vouspermetd'enregistrerunétatdel'instrumentoudecréerunnouveaudossier.
+Dest. : Int,Ext Indiquesivousvoulezenregistrerunétatdanslamémoireinterneouexterne.
+-Interne :spécifielamémoireinternedel'instrument.
+-Externe :spécifieleportUSBsurlepanneauavant.
+Browse - Permetdeparcourirlamémoireexterneetdespécifierl'emplacementd'enregistrementde
+l'état.
+Filename Spécifielenomdufichier.Utilisezleclaviervirtuelpoursaisirlenomdefichierdésiré.
+Store - Enregistrel'état.
+Action :Foldercréeundossierdanslamémoireexterne.
+Menu Description
+Browse Vouspermetdeparcouriretdespécifierl'emplacementoùledossierseraplacé.
+FolderName Spécifielenomdudossier.Utilisezleclaviervirtuelpoursaisirlenomdedossierdésiré.
+CreateFolder Créeunnouveaudossieràl'emplacementindiqué.
+Guided’utilisationdeKeysightsérieE36300 101
+
+### Tables on this Page
+
+| Paramètrespro- posés | Description |
+|---|---|
+
+## Page 209
+
+Paramètresderappel
+Lefichierquevousavezrappelédoitprovenirdumêmemodèled'instrument.
+RecallSettingsvouspermetdeparcourirl'étatdanslamémoireinterneoudeparcourirlefichierd'état(format.csv)
+danslamémoireexterneàrappeler.
+Menu Paramètrespro- Description
+posés
+From: Int,Ext Indiquesivoussouhaitezrappelerunétatdel'instrumentàpartirdelamémoireinterneou
+externe.
+-Interne :spécifielamémoireinternedel'instrument.
+-Externe :spécifieleportUSBsurlepanneauavant.
+Recall State0àState9 Sélectionnezl'étatquevoussouhaitezrappeler.
+Recall - Rappelerl'état.
+
+### 102 Guided’utilisationdeKeysightsérieE36300
+
+
+### Tables on this Page
+
+| Paramètrespro- posés | Description |
+|---|---|
+
+## Page 210
+
+Menu Paramètrespro- Description
+posés
+From: Int,Ext Indiquesivoussouhaitezrappelerunétatdel'instrumentàpartirdelamémoireinterneou
+externe.
+-Interne :spécifielamémoireinternedel'instrument.
+-Externe :spécifieleportUSBsurlepanneauavant.
+Browse - Permetdeparcourirlamémoireexterneetdespécifierlefichierd'étatàrappeler.
+Recall - Rappelerl'état.
+Paramètreàlamisesoustension
+PowerOnsélectionnel'étatquiserachargéàlamisesoustension.Celapeutêtresoitl'étatd'usinepardéfaut
+(Default)oudesétatsdéfinisparl'utilisateur(State0àState9).
+AppuyezsurSetPowerOnpourenregistrerleréglage.
+Définirlesvaleurspardéfaut
+SettoDefaultschargel’étatpardéfautdel’instrument.
+Guided’utilisationdeKeysightsérieE36300 103
+
+### Tables on this Page
+
+| Paramètrespro- posés | Description |
+|---|---|
+
+## Page 211
+
+Menu des utilitaires - Configuration E/S
+I/OConfigconfigurelesparamètresd'E/Spourlesopérationsàdistancesurl'interfaceLAN(enoptionsurcertains
+modèles),USBouGPIB(enoption).
+USBStatusaffichelachaînedeconnexionUSBdel'instrument.
+LANStatusaffichel'étatactueldesparamètresLANdel'instrument.
+LANResetréinitialiseleréseaulocalenutilisantsesparamètresactuelsetactiveDHCPetmDNS.Latouchede
+fonctionLANResetsupprimeégalementlesmotsdepassed'interfaceWebdéfinisparl'utilisateur.
+LANRestartredémarreleréseauenutilisantsesparamètresactuels.LeredémarrageduLANn'effacepaslemotde
+passedel'interfaceWebdel'utilisateur.
+ParamètresLAN
+LANSettingsouvrelafenêtreci-dessous.SettoDefaultsréinitialiselesparamètresréseaulocalàleursvaleurs
+d'usinepardéfaut.
+
+### 104 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 212
+
+DHCPpermetl’attributionparDHCPdel’adresseIPdel’instrument.Ilpermetégalementlaconfigurationdes
+paramètresduréseauenfonctionduprotocolesélectionné.DHCPOnattribueautomatiquementuneadresseIP
+dynamiqueàunpériphériquesurleréseaulocal.
+AutoDNSpermetl'attributiondesadressesDNS.AutoDNSOnconfigureautomatiquementl'adressagede
+l'instrumentdansleserveurDNS
+mDNSpermetlamodificationdunomduservicemDNS.
+Hostnamepermetlamodificationdunomd'hôteDNSdel'instrument.
+E/Snumérique(E36312AetE36313Aseulement)
+DigitalIO configurelafonctiondelabrocheduportdupanneauarrière,lapolaritéetlesdonnéesdesortie
+appliquéesàlabroche.
+Pinsélectionnelabrochepourlaconfiguration
+Functionspermetlaconfigurationdelafonctionpourchaquebrochecommeindiquéci-dessous.
+Polaritypermetlaconfigurationdelapolaritésurpositive(POS)ounégative(NEG)pourlabrochesélectionnée.
+Outactive(1)oudésactive(0)lesdonnéesdesortiedelabrochesélectionnée.
+GPIB(enoptionetapplicableàE36312AetE36313Aseulement)
+GPIBvouspermetdedéfinirl'adresseGPIBàunevaleurcompriseentre0et30.Aprèsavoirmodifiél'adresse,
+redémarrezl'instrumentpourquelamodificationprenneeffet.
+Guided’utilisationdeKeysightsérieE36300 105
+
+## Page 213
+
+Menu des utilitaires - Test / Configuration
+Test/Setuppermetd'accéderàl'étalonnage,àl'autotest,maiségalementdeconfigurerlespréférencesde
+l'utilisateur,dedéfinirladateetl'heureetd’accéderàl'aide :
+Étalonnage
+
+### Calibrationaccèdeàlaprocédured'étalonnagedel'instrument.
+
+PerformCalibrationouvrelemenud'étalonnage.Veillezàexécuterl'autotestavantd'effectuerunétalonnage.
+Reportez-vousàlasection« Procéduresderéglagedel’étalonnage »dansleGuidedesservicespourplusdedétails.
+Lecoded'accèsdesécuritépardéfautest0.AppuyezsurChangePasscodepourchangerlecoded'accèsàl'aide
+dupavénumérique.Lecoded'accèspeutcomporterjusqu'à9 chiffres.
+AutosaveOnenregistreautomatiquementlesdonnéesd'étalonnagelorsdeladéconnexion.
+SiAutosaveestdésactivé,utilisezlatoucheCalSavepourenregistrerlesdonnéesd'étalonnage.
+ResettoFactoryréinitialiselesparamètresàleurvaleurpardéfaut.Appuyersurcettetouchepermetdenettoyer
+toutelamémoiredel'instrumentaccessibleàl'utilisateur,àl'exceptiondesconstantesd'étalonnageetredémarre
+l'instrument.
+Auto-test
+SelfTestvérifielebonfonctionnementdel’instrument.Reportez-vousàlasection« Procéduresd'autotest »dansle
+Guidedesservicespourplusdedétails.
+
+### 106 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 214
+
+Paramètresdel'utilisateur
+UserSettingsindiquelespréférencesdel'utilisateurquicontrôlentlafaçondontl'utilisateurinteragitavec
+l'instrument.Lesparamètressontenregistrésenmémoirenonvolatile.
+
+### IDSCPI
+
+### SCPIIDdéterminelaréponsedel’instrumentàlarequête*IDN?.Celapermetlacompatibilité*IDN ?avecles
+
+programmesexistantsquiattendentque*IDN ?renvoieunevaleurappropriéeàunE3631A.
+Lesoptionspourchaquemodèled'alimentationsont :
+
+### – E3631A :E3631A
+
+– E3631xA :E36311A,E36312A,E36313A
+Lorsqu'ilestréglésurlemodeE3631A,l'instrumentsecomporteraexactementcommel'E3631A.Parexemple,la
+sortieOutput3passeraà-25V.Danscecas,touteslescommandesàdistanceetlesystèmededéclenchement
+suivrontégalementlecomportementE3631A.
+Paramètresdessons
+Beeperactiveoudésactivelesignalsonorequiretentitencasdefaussemanipulationdescommandesdupanneau
+avantoudel'interfacedecommandeàdistance.
+Clicdetoucheactiveoudésactiveleclicémislorsquevousappuyezsurunetoucheouunetouchedefonctiondu
+panneauavant.
+Optionsd’affichage
+DisplayOptionsconfigurentl'affichage.
+Vouspouvezactiveroudésactiverl'affichageetl'économiseurd'écran.
+Sivouséteignezl'écran,appuyezsurn'importequelletouchedupanneauavantpourlerallumer.
+Pardéfaut,l'économiseurd'écrans'éteintetéteintl'écranaprès30minutesd'inactivité.Vouspouvezdésactivercet
+économiseurd'écranuniquementsurlafaceavant.
+L'écranestactivélorsquel'alimentationestappliquéeaprèsuneréinitialisationdel'instrument(*RST)oulorsque
+vousrevenezenmodelocal(faceavant).AppuyezsurLock/UnlockouexécutezlacommandeSYSTem:LOCAL
+depuisl'interfacedistantepourreveniràl'étatlocal.
+HelpLanguagevouspermetdesélectionnerlalangued'aidepourl'utilisationdupanneauavant :Anglais,français,
+allemand,japonais,coréen,chinoissimplifiéourusse.Touteslesaidesdestouchesdupanneauavantetles
+rubriquesd'aides'affichentdanslalanguesélectionnée.Leslibellésdestouchesdefonctionsonttoujoursen
+anglais.
+Guided’utilisationdeKeysightsérieE36300 107
+
+## Page 215
+
+Date/heure
+Date/Timerèglel'horlogeentempsréeldel'instrument,quiutilisetoujoursunformatde24heures(00:00:00à
+23:59:59).Iln'yaaucunréglageautomatiquedeladateetdel'heure,demanièreàrégleràl'heured'été.
+Utilisezlestouchesdenavigationdupanneauavantpourréglerl’année,lemois,lejour,l’heureoulesminutes.
+Plagebasse
+LowRangepermetd'activeroudedésactiverlamesuredecourantlaplusfaible.
+Aide
+Helpvouspermetd’afficherlarubriqued'aidederéférencerapide.Utilisezlestouchesdefonctionfléchéesoules
+touchesdenavigationdupanneauavantpournaviguerverslarubriquedésirée.AppuyezsurSelectpourafficherle
+contenudel'aide.
+Aboutvouspermetd’afficherlenumérodemodèle,ladescriptionetlenumérodesériedel'instrument.
+
+### 108 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 216
+
+Menu des utilitaires - Erreur
+
+### Erroraffichelafiled'attented'erreursdel'instrument,quicomprendjusqu'à20 erreurs.S'ilyaplusde10 erreursà
+
+l'écran,appuyezsurNextpouraccéderàlapagesuivante.
+–Leserreurssontstockéesdansl'ordredeleurréception.L'erreurquisetrouveàlafindelalisteestlaplusrécente.
+–S'ilyaplusde20erreursdanslafiled'attente,ladernièreerreurenregistréeestremplacéepar-350,
+« dépassementdelafiled'attente ».Aucuneautreerreurn'estenregistréetantquevousnesupprimezpasdes
+erreursdelafile.S'iln'yaaucuneerreur,l'instrumentrépondpar+0,« Aucuneerreur ».
+-Àl’exceptiondeserreursdetestautomatique,leserreursseronteffacéesaprèsquevouslesayezluesouaprèsla
+réinitialisationdel'instrument.
+Sivouspensezquel'alimentationprésenteunproblème,reportez-vousàlasection« Dépannage »dumanuel
+ServiceGuide(enanglais).
+Guided’utilisationdeKeysightsérieE36300 109
+
+## Page 217
+
+Menu des utilitaires - Gérer les fichiers
+ManageFilesvouspermetdecréer,copier,supprimeretrenommerdesfichiersetdesdossierssurunecléUSB
+connectéeaupanneauavant.Celavouspermetégalementdecapturerl'écranencoursdansunfichierbitmap
+(*.bmp)ouunfichiergraphiquederéseauportable(*.png).Ils’agitdel'optionpardéfaut,commeindiquéci-
+dessous.
+Action
+Actionspécifiel'actionàeffectuer.AppuyersurCaptureDisplayvouspermetd’enregistrerunecaptured'écrande
+l'écranlorsquevousavezappuyésur[MeterView]pendantplusde3secondes.
+Delete :poursupprimerunfichierouundossier,appuyezsurDeleteetBrowsepouraccéderaudossierouaufichier
+àsupprimer.AppuyezsurBrowse>PerformDelete>Back.
+Folder :pourcréerundossier,Browsepouraccéderàl'emplacementexternedudossier,appuyezsurFolderName,
+saisissezunnomdedossieretappuyezsurDone.AppuyezsurCreateFolder>Back.
+Copy :pourcopierunfichier,appuyezsurCopy.Browsepouraccéderaufichieràcopier,puisappuyezsurSelect.
+AppuyezsurCopypathetsélectionnezunchemindecopieexterne.AppuyezsurPerformCopy>Back.
+Rename :pourrenommerunfichierouundossier,appuyezsurRename.Browsepouraccéderaudossierouau
+fichieràrenommer,puisappuyezsurSelect.AppuyezsurNewName,saisissezunnouveaunometappuyezsur
+Done.AppuyezsurPerformRename>Back.
+Parcourir
+Browsevouspermetdesélectionnerlefichierouledossiersurlequell'actionseraeffectuée.Utilisezlestouchesde
+navigationdupanneauavantpourparcourirlaliste.Lesflèchesàgaucheetàdroiteréduisentoudéveloppentun
+dossierpourmasquerouaffichersesfichiers.
+
+### 110 Guided’utilisationdeKeysightsérieE36300
+
+
+## Page 218
+
+AppuyezsurSelectouCancelpourquitterlafenêtredenavigation.
+Nomdefichier
+FileNamevouspermetd'utiliserlesflèchesdupanneauavant,latouche[Enter]etlestouchesdefonctionvous
+permettentdesaisirunnomdefichier.Utilisezlesflèchesdupanneauavantpourchoisirunelettre,puisPrevious
+CharetNextCharpourdéplacerlecurseurdanslazoneoùlenomestsaisi.Dansl'imageci-dessous,iln'yapasde
+touchedefonctionNextCharcarlecurseurestàlafin.
+Appuyezsur[Done]ou[Cancel]pourterminer.
+Guided’utilisationdeKeysightsérieE36300 111
+
+## Page 219
+
+## Page 220
+
+
+### 3 Caractéristiques et spécifications
+
+Pourconnaîtrelescaractéristiquesetlesspécificationsdesalimentations
+CCprogrammablesdelasérieE36300,reportez-vousàlafichetechniqueà
+l’adressehttp://literature.cdn.keysight.com/litweb/pdf/5992-
+2124EN.pdf.
+Guided’utilisationdeKeysightsérieE36300 113
+
+## Page 221
+
+Ces informations peuvent faire l’objet de
+modifications sans préavis.
+©K eysight Technologies 2017-2023
+Édition 6, juin 2023
+Imprimé en Malaisie
+
+
+### E36311-90002
+
+www.keysight.com
+

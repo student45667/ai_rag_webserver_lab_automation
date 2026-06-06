@@ -1,0 +1,77 @@
+# THIS IS VNA EMULATOR
+
+#!/usr/bin/env python3
+import socket
+import threading
+
+def handle(sock, addr):
+    sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+    buf = ""
+    try:
+        while True:
+            data = sock.recv(1024)
+            if not data:
+                break
+            buf += data.decode('utf-8')
+            
+            while "\n" in buf:
+                cmd, buf = buf.split("\n", 1)
+                cmd = cmd.strip()
+                if cmd:
+                    print(f"[RCV] {cmd}")
+                    if cmd == "*IDN?":
+                        resp = "CMT,S2VNA,SN12345678,1.0"
+                    elif cmd == "*OPT?":
+                        resp = "1K,2K"
+                    elif cmd == "*OPC?":
+                        resp = "1"
+                    else:
+                        resp = "ERROR"
+                    print(f"[SND] {resp}")
+                    sock.sendall((resp + "\n").encode())
+    except:
+        pass
+    finally:
+        sock.close()
+
+server = socket.socket()
+server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+server.bind(('0.0.0.0', 5025))
+server.listen(5)
+
+print("[*] Server running on 0.0.0.0:5025")
+
+try:
+    while True:
+        sock, addr = server.accept()
+        threading.Thread(target=handle, args=(sock, addr), daemon=True).start()
+except KeyboardInterrupt:
+    print("[*] Stop")
+
+
+
+#THIS IS CLIENT RECIVING DATA FROM VNA
+
+#!/usr/bin/env python3
+import pyvisa as visa
+import time
+
+rm = visa.ResourceManager('@py')
+inst = rm.open_resource('TCPIP0::10.0.0.106::5025::SOCKET', timeout=10000)
+
+# CRITICAL: Set termination characters
+inst.write_termination = '\n'
+inst.read_termination = '\n'
+inst.timeout = 5000
+
+
+print("[INFO] Testing VNA connection...")
+for cmd in ['*IDN?', '*OPT?', '*OPC?']:
+    print(f"\n[INFO] Sending: {cmd}")
+    response = inst.query(cmd)
+    print(f"[INFO] Response: {response}")
+
+inst.close()
+print("\n[SUCCESS] All tests completed!"
+
+
