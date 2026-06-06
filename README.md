@@ -30,7 +30,43 @@
 [RAG Conversation - Eye Diagram 2 Gbps Signal](RAG%20Conversation%20-%20Eye%20Diagram%202%20Gbps%20Signal.pdf)
 
 
+### Knowledge Base: Lab Instrument Automation & Integration
 
+The RAG automation knowledge base enables programmatic control of laboratory instruments through SCPI/VISA protocols, supporting full test automation from measurement acquisition to data analysis:
+
+**Copper Mountain VNA (Vector Network Analyzer):**
+- SCPI command reference and programming manual
+- One-port and two-port S-parameter calibration automation
+- Power sweep and frequency sweep procedures
+- Binary data transfer (HiSLIP and socket protocols)
+- Multi-VNA orchestration and synchronization
+- External trigger integration and cycle-time optimization
+- Python and C/C++ implementation examples
+- Linux installation and connectivity guides
+
+**Keysight Power Supply (PSU):**
+- Voltage sequencing and multi-output coordination
+- API reference and command set documentation
+- Parameter sweep automation
+- Real-time monitoring and data logging
+- Integration with test workflows
+
+**Keysight Oscilloscope (Scope):**
+- Signal acquisition and waveform capture
+- Triggering modes and external sync
+- Data transfer protocols (Socket, Serial, PXI)
+- Measurement automation (eye diagrams, jitter, rise time)
+- Python and C/C++ example code
+- User manuals and API documentation
+
+**Implementation Examples:**
+- Socket and HiSLIP binary protocols for high-speed data transfer
+- Error handling and device discovery patterns
+- Multi-instrument coordination and synchronization
+- External trigger-based pass/fail signaling
+- Periodic data archival and real-time analysis
+
+This knowledge base transforms ad-hoc manual measurements into fully automated test sequences, enabling unattended characterization, yield analysis, and compliance verification.
 ---
 
 ## Overview
